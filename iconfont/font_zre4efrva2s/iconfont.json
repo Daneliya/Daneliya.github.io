@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "125736542",
+      "name": "消息队列",
+      "font_class": "xiaoxiduilie",
+      "unicode": "e9e3",
+      "unicode_decimal": 59875
+    }
+  ]
+}

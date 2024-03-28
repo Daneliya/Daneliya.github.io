@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux安装MongoDB | xuxiaolong</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/logo2.png">
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/visitor.js"></script>
+    <link rel="stylesheet" href="/iconfont/font_20csbaofexh/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_cs5v8kb16mu/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_rb2ra212g7/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_tufiudzw9qd/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_a7q92la1f6s/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_zre4efrva2s/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_qw4wryn6ml/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_871awunxhy/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_y9b41xpetef/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_mo5yyv3yprm/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_zmhzcngpk2/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_j67xetcspme/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_2tttlrelpoh/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_c103gbzvyng/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_iju5isejpxc/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_3nnhx9n8ea/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_6oyf4j0cvmu/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_tmecser0ml/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/font_o3x7o929hi/iconfont.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js">
+    <meta name="description" content="描述">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.18dd207c.css" as="style"><link rel="preload" href="/assets/js/app.0c2196cb.js" as="script"><link rel="preload" href="/assets/js/11.132fa809.js" as="script"><link rel="preload" href="/assets/js/1.f7139ea4.js" as="script"><link rel="preload" href="/assets/js/136.e5bb0020.js" as="script"><link rel="preload" href="/assets/js/58.df9e26bc.js" as="script"><link rel="prefetch" href="/assets/js/10.315115bf.js"><link rel="prefetch" href="/assets/js/100.3b9b3573.js"><link rel="prefetch" href="/assets/js/101.43c4297b.js"><link rel="prefetch" href="/assets/js/102.8419f2c7.js"><link rel="prefetch" href="/assets/js/103.b6fa6daf.js"><link rel="prefetch" href="/assets/js/104.e7ba86e5.js"><link rel="prefetch" href="/assets/js/105.bde676fd.js"><link rel="prefetch" href="/assets/js/106.66c0eb16.js"><link rel="prefetch" href="/assets/js/107.ca8d5641.js"><link rel="prefetch" href="/assets/js/108.68797ecc.js"><link rel="prefetch" href="/assets/js/109.fa31afcd.js"><link rel="prefetch" href="/assets/js/110.21296ac8.js"><link rel="prefetch" href="/assets/js/111.57e00de4.js"><link rel="prefetch" href="/assets/js/112.eda5c2a0.js"><link rel="prefetch" href="/assets/js/113.0cf2e2f3.js"><link rel="prefetch" href="/assets/js/114.be3fd67e.js"><link rel="prefetch" href="/assets/js/115.564b58ed.js"><link rel="prefetch" href="/assets/js/116.1f41f511.js"><link rel="prefetch" href="/assets/js/117.1f810380.js"><link rel="prefetch" href="/assets/js/118.452a1916.js"><link rel="prefetch" href="/assets/js/119.4907bb5f.js"><link rel="prefetch" href="/assets/js/12.22786558.js"><link rel="prefetch" href="/assets/js/120.68be81f7.js"><link rel="prefetch" href="/assets/js/121.3d677c26.js"><link rel="prefetch" href="/assets/js/122.b14bec6a.js"><link rel="prefetch" href="/assets/js/123.fc75bd63.js"><link rel="prefetch" href="/assets/js/124.60d6c030.js"><link rel="prefetch" href="/assets/js/125.8181c7ae.js"><link rel="prefetch" href="/assets/js/126.59234adf.js"><link rel="prefetch" href="/assets/js/127.ff464258.js"><link rel="prefetch" href="/assets/js/128.9147eb5a.js"><link rel="prefetch" href="/assets/js/129.d9cdbc2e.js"><link rel="prefetch" href="/assets/js/13.2e2e0d38.js"><link rel="prefetch" href="/assets/js/130.ba801233.js"><link rel="prefetch" href="/assets/js/131.7a92f90f.js"><link rel="prefetch" href="/assets/js/132.0e854d93.js"><link rel="prefetch" href="/assets/js/133.3e15e84d.js"><link rel="prefetch" href="/assets/js/134.2c29a3f3.js"><link rel="prefetch" href="/assets/js/135.e63b6691.js"><link rel="prefetch" href="/assets/js/137.4adf1e3d.js"><link rel="prefetch" href="/assets/js/138.45ced808.js"><link rel="prefetch" href="/assets/js/139.27d83c93.js"><link rel="prefetch" href="/assets/js/14.5d99a269.js"><link rel="prefetch" href="/assets/js/140.3a22be5d.js"><link rel="prefetch" href="/assets/js/141.343c91b5.js"><link rel="prefetch" href="/assets/js/142.de97f91a.js"><link rel="prefetch" href="/assets/js/143.1505547a.js"><link rel="prefetch" href="/assets/js/144.d4d8b40e.js"><link rel="prefetch" href="/assets/js/145.9cd75dff.js"><link rel="prefetch" href="/assets/js/146.4f004236.js"><link rel="prefetch" href="/assets/js/147.921a03e7.js"><link rel="prefetch" href="/assets/js/148.59bfe80d.js"><link rel="prefetch" href="/assets/js/149.786aa277.js"><link rel="prefetch" href="/assets/js/15.697411a1.js"><link rel="prefetch" href="/assets/js/150.47fedbe5.js"><link rel="prefetch" href="/assets/js/151.9e52ee73.js"><link rel="prefetch" href="/assets/js/152.e48f47bf.js"><link rel="prefetch" href="/assets/js/153.70d406c5.js"><link rel="prefetch" href="/assets/js/154.db0d1fa4.js"><link rel="prefetch" href="/assets/js/155.3f560a1f.js"><link rel="prefetch" href="/assets/js/156.36a7b772.js"><link rel="prefetch" href="/assets/js/157.fad69fcd.js"><link rel="prefetch" href="/assets/js/158.7337a714.js"><link rel="prefetch" href="/assets/js/159.a0b5e028.js"><link rel="prefetch" href="/assets/js/16.21ed0b1f.js"><link rel="prefetch" href="/assets/js/160.11081528.js"><link rel="prefetch" href="/assets/js/161.60d97941.js"><link rel="prefetch" href="/assets/js/162.84700104.js"><link rel="prefetch" href="/assets/js/163.eb785093.js"><link rel="prefetch" href="/assets/js/164.1fff99dc.js"><link rel="prefetch" href="/assets/js/165.10901d05.js"><link rel="prefetch" href="/assets/js/166.85e3c62f.js"><link rel="prefetch" href="/assets/js/167.319fde73.js"><link rel="prefetch" href="/assets/js/168.e6e0b8e7.js"><link rel="prefetch" href="/assets/js/169.d014df62.js"><link rel="prefetch" href="/assets/js/17.d4f45341.js"><link rel="prefetch" href="/assets/js/170.4061dd0c.js"><link rel="prefetch" href="/assets/js/171.6b7c290c.js"><link rel="prefetch" href="/assets/js/172.1e0e0390.js"><link rel="prefetch" href="/assets/js/173.cbb8542f.js"><link rel="prefetch" href="/assets/js/174.cdb15f43.js"><link rel="prefetch" href="/assets/js/175.22bf8aa8.js"><link rel="prefetch" href="/assets/js/176.3fbac531.js"><link rel="prefetch" href="/assets/js/177.c0fe3619.js"><link rel="prefetch" href="/assets/js/178.d4bedd58.js"><link rel="prefetch" href="/assets/js/179.fcca9c20.js"><link rel="prefetch" href="/assets/js/18.1d64df52.js"><link rel="prefetch" href="/assets/js/180.951bd30f.js"><link rel="prefetch" href="/assets/js/181.92226ee8.js"><link rel="prefetch" href="/assets/js/182.70956679.js"><link rel="prefetch" href="/assets/js/183.b55a1104.js"><link rel="prefetch" href="/assets/js/184.55995233.js"><link rel="prefetch" href="/assets/js/185.577c83e1.js"><link rel="prefetch" href="/assets/js/186.aaa8575b.js"><link rel="prefetch" href="/assets/js/187.93f4904d.js"><link rel="prefetch" href="/assets/js/19.df1b22c2.js"><link rel="prefetch" href="/assets/js/20.8279c2db.js"><link rel="prefetch" href="/assets/js/21.00e789c6.js"><link rel="prefetch" href="/assets/js/22.5eba9eac.js"><link rel="prefetch" href="/assets/js/23.8b4e91d2.js"><link rel="prefetch" href="/assets/js/24.d35eb658.js"><link rel="prefetch" href="/assets/js/25.ff25e942.js"><link rel="prefetch" href="/assets/js/26.ae72c7af.js"><link rel="prefetch" href="/assets/js/27.a816c74f.js"><link rel="prefetch" href="/assets/js/28.7d3c12a8.js"><link rel="prefetch" href="/assets/js/29.d7c19bda.js"><link rel="prefetch" href="/assets/js/3.bf3957b4.js"><link rel="prefetch" href="/assets/js/30.16863a25.js"><link rel="prefetch" href="/assets/js/31.1c9bf595.js"><link rel="prefetch" href="/assets/js/32.0d157d6f.js"><link rel="prefetch" href="/assets/js/33.0f912354.js"><link rel="prefetch" href="/assets/js/34.aa3b6606.js"><link rel="prefetch" href="/assets/js/35.770f7c7c.js"><link rel="prefetch" href="/assets/js/36.004938f6.js"><link rel="prefetch" href="/assets/js/37.aca07923.js"><link rel="prefetch" href="/assets/js/38.56a5dccf.js"><link rel="prefetch" href="/assets/js/39.2cbe218a.js"><link rel="prefetch" href="/assets/js/4.dedf95c8.js"><link rel="prefetch" href="/assets/js/40.f8c3a811.js"><link rel="prefetch" href="/assets/js/41.121f9a35.js"><link rel="prefetch" href="/assets/js/42.9bbe7a31.js"><link rel="prefetch" href="/assets/js/43.44e9b96d.js"><link rel="prefetch" href="/assets/js/44.4bb95d96.js"><link rel="prefetch" href="/assets/js/45.fb3f081b.js"><link rel="prefetch" href="/assets/js/46.9255e9e5.js"><link rel="prefetch" href="/assets/js/47.fdfa1fa5.js"><link rel="prefetch" href="/assets/js/48.e528cf4c.js"><link rel="prefetch" href="/assets/js/49.fa19e47a.js"><link rel="prefetch" href="/assets/js/5.4df055cf.js"><link rel="prefetch" href="/assets/js/50.5a632a52.js"><link rel="prefetch" href="/assets/js/51.a9050b22.js"><link rel="prefetch" href="/assets/js/52.99f17d18.js"><link rel="prefetch" href="/assets/js/53.57617080.js"><link rel="prefetch" href="/assets/js/54.fd6d0a83.js"><link rel="prefetch" href="/assets/js/55.839e49e9.js"><link rel="prefetch" href="/assets/js/56.75923b40.js"><link rel="prefetch" href="/assets/js/57.a4f64497.js"><link rel="prefetch" href="/assets/js/59.c9bb1af1.js"><link rel="prefetch" href="/assets/js/6.b4476723.js"><link rel="prefetch" href="/assets/js/60.cf98b4cc.js"><link rel="prefetch" href="/assets/js/61.f8b2b338.js"><link rel="prefetch" href="/assets/js/62.90ed176e.js"><link rel="prefetch" href="/assets/js/63.c58fc642.js"><link rel="prefetch" href="/assets/js/64.8524a4e4.js"><link rel="prefetch" href="/assets/js/65.2e1412da.js"><link rel="prefetch" href="/assets/js/66.57f75bb0.js"><link rel="prefetch" href="/assets/js/67.5c5ec420.js"><link rel="prefetch" href="/assets/js/68.6a16df28.js"><link rel="prefetch" href="/assets/js/69.8b8bb3c7.js"><link rel="prefetch" href="/assets/js/7.136d477b.js"><link rel="prefetch" href="/assets/js/70.cd55dd63.js"><link rel="prefetch" href="/assets/js/71.04e46d97.js"><link rel="prefetch" href="/assets/js/72.3b715ad3.js"><link rel="prefetch" href="/assets/js/73.6c82dd03.js"><link rel="prefetch" href="/assets/js/74.754a8a54.js"><link rel="prefetch" href="/assets/js/75.9dbf3fca.js"><link rel="prefetch" href="/assets/js/76.856cc09e.js"><link rel="prefetch" href="/assets/js/77.9edd9519.js"><link rel="prefetch" href="/assets/js/78.98892f63.js"><link rel="prefetch" href="/assets/js/79.bf333c67.js"><link rel="prefetch" href="/assets/js/8.a8e89db9.js"><link rel="prefetch" href="/assets/js/80.3410d1ff.js"><link rel="prefetch" href="/assets/js/81.f134a63c.js"><link rel="prefetch" href="/assets/js/82.369bdc89.js"><link rel="prefetch" href="/assets/js/83.8c1b1550.js"><link rel="prefetch" href="/assets/js/84.32cc89c5.js"><link rel="prefetch" href="/assets/js/85.471ce57a.js"><link rel="prefetch" href="/assets/js/86.690e2d47.js"><link rel="prefetch" href="/assets/js/87.47e4cdb6.js"><link rel="prefetch" href="/assets/js/88.b6f7b2cf.js"><link rel="prefetch" href="/assets/js/89.e1b8c5f9.js"><link rel="prefetch" href="/assets/js/9.d37a53a1.js"><link rel="prefetch" href="/assets/js/90.a2ec4e4e.js"><link rel="prefetch" href="/assets/js/91.99f73c97.js"><link rel="prefetch" href="/assets/js/92.698d571a.js"><link rel="prefetch" href="/assets/js/93.7c314a52.js"><link rel="prefetch" href="/assets/js/94.3d25e6aa.js"><link rel="prefetch" href="/assets/js/95.837694ae.js"><link rel="prefetch" href="/assets/js/96.caaae4d6.js"><link rel="prefetch" href="/assets/js/97.890e179e.js"><link rel="prefetch" href="/assets/js/98.657c3d7b.js"><link rel="prefetch" href="/assets/js/99.545a61ee.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.18dd207c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>xuxiaolong</h3> <p class="description" data-v-59e6cb88>描述</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>xuxiaolong</span>
+          
+        <span data-v-59e6cb88>2019 - </span>
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo2.png" alt="xuxiaolong" class="logo"> <span class="site-name">xuxiaolong</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-cafei"></i>
+      Java
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Java/java开发技巧/其他/语法糖.html" class="nav-link"><i class="iconfont icon-LBhouduanfuwuzu"></i>
+  java开发技巧
+</a></li><li class="dropdown-item"><!----> <a href="/Java/JVM性能调优/JVM概念/0_JVM体系结构.html" class="nav-link"><i class="iconfont icon-duozhongzhifu"></i>
+  JVM性能调优
+</a></li><li class="dropdown-item"><!----> <a href="/Java/并发编程/JUC.html" class="nav-link"><i class="iconfont icon-bingfashuliang"></i>
+  并发编程
+</a></li><li class="dropdown-item"><!----> <a href="/Java/容器/Docker/0_Docker介绍及使用.html" class="nav-link"><i class="iconfont icon-rongqi"></i>
+  容器相关
+</a></li><li class="dropdown-item"><!----> <a href="/Java/设计模式/1基本概念/设计模式.html" class="nav-link"><i class="iconfont icon-iconfontmoshi"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/Java/微服务专栏/流控组件Sentinel/微服务保护.html" class="nav-link"><i class="iconfont icon-mseweifuwuyinqing"></i>
+  微服务专栏
+</a></li><li class="dropdown-item"><!----> <a href="/Java/架构设计/分布式/分布式事务/分布式事务Seata.html" class="nav-link"><i class="iconfont icon-jiagou"></i>
+  架构设计
+</a></li><li class="dropdown-item"><!----> <a href="/Java/数据结构/排序算法.html" class="nav-link"><i class="iconfont icon-shujujiegou"></i>
+  数据结构
+</a></li></ul></div></div><div class="nav-item"><a href="/数据库/MongoDB/0_MongoDB简介.html" class="nav-link"><i class="iconfont icon-shujuku"></i>
+  数据库
+</a></div><div class="nav-item"><a href="/Redis/Redis解决限流问题.html" class="nav-link"><i class="iconfont icon-redis"></i>
+  Redis专栏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-zuzhijiagou"></i>
+      常用框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/常用框架/Spring/Spring容器初始化源码解析.html" class="nav-link"><i class="iconfont icon-iconfontmoshi"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/常用框架/Mybatis/Mybatis-Plus-Join连表查询.html" class="nav-link"><i class="iconfont icon-iconfontmoshi"></i>
+  MybatisPlus
+</a></li><li class="dropdown-item"><!----> <a href="/Java/架构设计/分布式/分布式搜索/分布式搜索引擎Elasticsearch01.html" class="nav-link"><i class="iconfont icon-iconfontmoshi"></i>
+  搜索引擎ElasticSearch
+</a></li><li class="dropdown-item"><!----> <a href="/常用框架/Activiti7/Activiti整合Spring.html" class="nav-link"><i class="iconfont icon-iconfontmoshi"></i>
+  工作流引擎Activiti7
+</a></li><li class="dropdown-item"><!----> <a href="/Java/架构设计/分布式/分布式监控/SpringBootAdmin.html" class="nav-link"><i class="iconfont icon-iconfontmoshi"></i>
+  SpringBootAdmin
+</a></li></ul></div></div><div class="nav-item"><a href="/Linux/0_Linux常用命令.html" class="nav-link"><i class="iconfont icon-centos"></i>
+  Linux
+</a></div><div class="nav-item"><a href="/StableDiffusion/StableDiffusion/0_StableDiffusion介绍.html" class="nav-link"><i class="iconfont icon-a-stablediffusion"></i>
+  Stable Diffusion
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-biji"></i>
+      随笔文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/日常笔记/IDEA+Linux远程开发.html" class="nav-link"><i class="undefined"></i>
+  🚀日常笔记
+</a></li><li class="dropdown-item"><!----> <a href="/docs/开发文档/Mysql主从复制.html" class="nav-link"><i class="undefined"></i>
+  🚀开发文档
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-date"></i>
+      项目
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>我的项目🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/Daneliya/springboot_chowder" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  springboot_chowder
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/Daneliya/Daneliya.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  博客项目
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/Daneliya/aggregated-search-platform" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  聚合搜索平台
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/Daneliya/xuapi" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  API 接口开放平台
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>学习项目🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/project.html" class="nav-link"><i class="undefined"></i>
+  学成在线
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont icon-shijianzhou"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      关于
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Daneliya" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/xu_xiaolong" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-mayun"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/logo2.png" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    xuxiaolong
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>147</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>62</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-cafei"></i>
+      Java
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Java/java开发技巧/其他/语法糖.html" class="nav-link"><i class="iconfont icon-LBhouduanfuwuzu"></i>
+  java开发技巧
+</a></li><li class="dropdown-item"><!----> <a href="/Java/JVM性能调优/JVM概念/0_JVM体系结构.html" class="nav-link"><i class="iconfont icon-duozhongzhifu"></i>
+  JVM性能调优
+</a></li><li class="dropdown-item"><!----> <a href="/Java/并发编程/JUC.html" class="nav-link"><i class="iconfont icon-bingfashuliang"></i>
+  并发编程
+</a></li><li class="dropdown-item"><!----> <a href="/Java/容器/Docker/0_Docker介绍及使用.html" class="nav-link"><i class="iconfont icon-rongqi"></i>
+  容器相关
+</a></li><li class="dropdown-item"><!----> <a href="/Java/设计模式/1基本概念/设计模式.html" class="nav-link"><i class="iconfont icon-iconfontmoshi"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/Java/微服务专栏/流控组件Sentinel/微服务保护.html" class="nav-link"><i class="iconfont icon-mseweifuwuyinqing"></i>
+  微服务专栏
+</a></li><li class="dropdown-item"><!----> <a href="/Java/架构设计/分布式/分布式事务/分布式事务Seata.html" class="nav-link"><i class="iconfont icon-jiagou"></i>
+  架构设计
+</a></li><li class="dropdown-item"><!----> <a href="/Java/数据结构/排序算法.html" class="nav-link"><i class="iconfont icon-shujujiegou"></i>
+  数据结构
+</a></li></ul></div></div><div class="nav-item"><a href="/数据库/MongoDB/0_MongoDB简介.html" class="nav-link"><i class="iconfont icon-shujuku"></i>
+  数据库
+</a></div><div class="nav-item"><a href="/Redis/Redis解决限流问题.html" class="nav-link"><i class="iconfont icon-redis"></i>
+  Redis专栏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-zuzhijiagou"></i>
+      常用框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/常用框架/Spring/Spring容器初始化源码解析.html" class="nav-link"><i class="iconfont icon-iconfontmoshi"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/常用框架/Mybatis/Mybatis-Plus-Join连表查询.html" class="nav-link"><i class="iconfont icon-iconfontmoshi"></i>
+  MybatisPlus
+</a></li><li class="dropdown-item"><!----> <a href="/Java/架构设计/分布式/分布式搜索/分布式搜索引擎Elasticsearch01.html" class="nav-link"><i class="iconfont icon-iconfontmoshi"></i>
+  搜索引擎ElasticSearch
+</a></li><li class="dropdown-item"><!----> <a href="/常用框架/Activiti7/Activiti整合Spring.html" class="nav-link"><i class="iconfont icon-iconfontmoshi"></i>
+  工作流引擎Activiti7
+</a></li><li class="dropdown-item"><!----> <a href="/Java/架构设计/分布式/分布式监控/SpringBootAdmin.html" class="nav-link"><i class="iconfont icon-iconfontmoshi"></i>
+  SpringBootAdmin
+</a></li></ul></div></div><div class="nav-item"><a href="/Linux/0_Linux常用命令.html" class="nav-link"><i class="iconfont icon-centos"></i>
+  Linux
+</a></div><div class="nav-item"><a href="/StableDiffusion/StableDiffusion/0_StableDiffusion介绍.html" class="nav-link"><i class="iconfont icon-a-stablediffusion"></i>
+  Stable Diffusion
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-biji"></i>
+      随笔文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/日常笔记/IDEA+Linux远程开发.html" class="nav-link"><i class="undefined"></i>
+  🚀日常笔记
+</a></li><li class="dropdown-item"><!----> <a href="/docs/开发文档/Mysql主从复制.html" class="nav-link"><i class="undefined"></i>
+  🚀开发文档
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-date"></i>
+      项目
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>我的项目🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/Daneliya/springboot_chowder" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  springboot_chowder
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/Daneliya/Daneliya.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  博客项目
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/Daneliya/aggregated-search-platform" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  聚合搜索平台
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/Daneliya/xuapi" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  API 接口开放平台
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>学习项目🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/project.html" class="nav-link"><i class="undefined"></i>
+  学成在线
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont icon-shijianzhou"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      关于
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Daneliya" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/xu_xiaolong" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-mayun"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Linux</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Linux/0_Linux常用命令.html" class="sidebar-link">Linux常用命令</a></li><li><a href="/Linux/1_Linux新建用户并授予root权限.html" class="sidebar-link">Linux新建用户并授予root权限</a></li><li><a href="/Linux/2_Ubuntu桌面版禁止root登录解决方法.html" class="sidebar-link">Ubuntu桌面版禁止root登录解决方法</a></li><li><a href="/Linux/3_Centos7扩容根目录.html" class="sidebar-link">Centos7扩容根目录（/dev/mapper/centos-root）</a></li><li><a href="/Linux/Linux下安装Graylog.html" class="sidebar-link">Linux下安装Graylog</a></li><li><a href="/Linux/Linux下安装Tomcat.html" class="sidebar-link">Linux下安装Tomcat</a></li><li><a href="/Linux/Linux安装MongoDB.html" class="active sidebar-link">Linux安装MongoDB</a></li><li><a href="/Linux/Linux安装MySQL.html" class="sidebar-link">Linux安装MySQL</a></li><li><a href="/Linux/Linux安装Nginx.html" class="sidebar-link">Linux安装Nginx</a></li><li><a href="/Linux/Linux服务器抓包分析HTTP请求.html" class="sidebar-link">/Linux/Linux服务器抓包分析HTTP请求.html</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>Linux安装MongoDB</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>xuxiaolong</span>
+          
+        <span data-v-59e6cb88>2019 - </span>
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">Linux安装MongoDB</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>xuxiaolong</span></i> <!----> <i class="iconfont reco-eye" data-v-8a445198><span id="/Linux/Linux%E5%AE%89%E8%A3%85MongoDB.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-8a445198><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>Linux</span></i></div></div> <div class="theme-reco-content content__default"><h1 id="linux安装mongodb"><a href="#linux安装mongodb" class="header-anchor">#</a> Linux安装MongoDB</h1> <h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <p>MongoDB 是一个由 C++ 语言编写的基于分布式文件存储的数据库，MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。常用用于物流场景-地理位置信息存储、社交场景-储存储用户信息、物联网场景-监控数据、日志记录等，MongoDB在这些场景的应用比其他数据库有这巨大优势。</p> <h2 id="下载mongodb"><a href="#下载mongodb" class="header-anchor">#</a> 下载MongoDB</h2> <p>1、检查CentOS是否已安装过Mongodb：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>rpm -qa | grep mongodb
+service mongodb status
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>2、查看CentOS版本</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>cat /etc/redhat-release
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>3、去到Mongodb官网，选择对应版本下载</p> <p>①：去到官网下载地址：https://www.mongodb.com/try/download/community</p> <p>②：选择对应版本直接下载或者选择“Copy Link”获取下载地址</p> <h2 id="安装mongodb"><a href="#安装mongodb" class="header-anchor">#</a> 安装MongoDB</h2> <p>1、去到MongoDB安装目录，下载MongoDB安装包：</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel80-4.4.13.tgz
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>2、解压MongoDB安装包：</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>tar -zxvf mongodb-linux-x86_64-rhel80-4.4.13.tgz
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>3、重命名解压后的MongoDB文件名：</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>mv mongodb-linux-x86_64-rhel80-4.4.13 mongodb
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>4、在MongoDB文件夹再里创建二个文件夹：</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>mkdir  data   //用来存放数据库数据
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>5、进入MongoDB文件下面的bin目录创建配置文件：</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>vi  mongod.conf
+dbpath=/usr/local/mongodb/data
+
+logpath=/usr/local/mongodb/logs/mongodb.log
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>6、配置MongoDB环境变量</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vim /etc/profile
+source /etc/profile
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>添加内容</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>export MONGODB_HOME=/usr/local/mongodb
+export PATH=$PATH:$MONGODB_HOME/bin
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>7、启动MongoDB，在bin目录下执行启动命令：</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>mongod -f /usr/local/MongoDB/mongod.conf
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>出现successfully即证明服务成功启动！或者用<code>ps aux | grep mongod</code>查看服务是否运行</p> <p>8、创建一个对数据库test具有读写权限的用户</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>db.createUser({
+user:&quot;root&quot;,
+pwd:&quot;123456&quot;,
+roles:[{role:&quot;readWrite&quot;,db:&quot;test&quot;}]
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="脚本安装"><a href="#脚本安装" class="header-anchor">#</a> 脚本安装</h2> <p>准备mongo安装包后执行脚本</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token operator">!</span> /bin/bash
+<span class="token builtin class-name">set</span> <span class="token parameter variable">-e</span>
+<span class="token assign-left variable">mongo_dir</span><span class="token operator">=</span>mongodb-linux-x86_64-rhel70-4.2.24.tgz
+<span class="token assign-left variable">mongo_path</span><span class="token operator">=</span>/home/disk2/tools/mongo
+
+<span class="token comment">#安装Mongo</span>
+<span class="token builtin class-name">echo</span> <span class="token parameter variable">-e</span> <span class="token string">&quot;安装mongo-------------&quot;</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-e</span> <span class="token variable">$mongo_name</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-d</span> <span class="token variable">$mongo_path</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;已存在mongo目录<span class="token variable">${mongo_path}</span>,选择执行后续操作： 1、跳过安装包解压 2、退出安装&quot;</span>
+        <span class="token builtin class-name">read</span> mongo_option
+        <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$mongo_option</span> <span class="token parameter variable">-eq</span> <span class="token number">1</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+            <span class="token builtin class-name">echo</span> <span class="token string">&quot;跳过mongo的解压安装&quot;</span>
+        <span class="token keyword">elif</span> <span class="token punctuation">[</span> <span class="token variable">$mongo_option</span> <span class="token parameter variable">-eq</span> <span class="token number">2</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+            <span class="token builtin class-name">exit</span>            
+        <span class="token keyword">else</span>
+            <span class="token builtin class-name">echo</span> <span class="token string">&quot;所选操作未能识别，退出安装。&quot;</span>
+            <span class="token builtin class-name">exit</span>
+        <span class="token keyword">fi</span>
+    <span class="token keyword">else</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;解压安装包-----&quot;</span>
+        <span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> <span class="token variable">$mongo_name</span> <span class="token variable">$1</span><span class="token operator">&gt;</span> /dev/null
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;开始安装-----&quot;</span>
+        <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> <span class="token variable">$mongo_path</span>
+        <span class="token function">mv</span> <span class="token variable">$mongo_dir</span>/* <span class="token variable">$mongo_path</span>
+        <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> <span class="token variable">$mongo_path</span>/db
+        <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> <span class="token variable">$mongo_path</span>/logs
+        <span class="token function">touch</span> <span class="token variable">$mongo_path</span>/logs/mongodb.log
+        <span class="token function">touch</span> <span class="token variable">$mongo_path</span>/bin/mongodb.conf
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;开始导入配置----&quot;</span>
+<span class="token function">cat</span> <span class="token operator">&gt;</span> <span class="token variable">$mongo_path</span>/bin/mongodb.conf <span class="token operator">&lt;&lt;</span> <span class="token string">EOF
+bind_ip=0.0.0.0
+port=27017
+logappend=true
+logpath=<span class="token variable">$mongo_path</span>/logs/mongodb.log
+dbpath=<span class="token variable">$mongo_path</span>/db
+fork=true
+#auth=true
+EOF</span>
+    <span class="token keyword">fi</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-e</span> /usr/lib/systemd/system/mongodb.service <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+    <span class="token function">rm</span> <span class="token parameter variable">-f</span> /usr/lib/systemd/system/mongodb.service
+<span class="token keyword">else</span>
+<span class="token function">cat</span> <span class="token operator">&gt;</span> /usr/lib/systemd/system/mongodb.service <span class="token operator">&lt;&lt;</span> <span class="token string">EOF
+[Unit]
+Description=mongodb
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+ExecStart=<span class="token variable">$mongo_path</span>/bin/mongod --config <span class="token variable">$mongo_path</span>/bin/mongodb.conf
+ExecReload=/bin/kill -s HUP \<span class="token variable">$MAINPID</span>
+ExecStop=<span class="token variable">$mongo_path</span>/bin/mongod --shutdown --config <span class="token variable">$mongo_path</span>/bin/mongodb.conf
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+EOF</span>
+
+<span class="token function">chmod</span> <span class="token number">754</span> /usr/lib/systemd/system/mongodb.service
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;mongo加入开机自启&quot;</span>
+systemctl daemon-reload
+systemctl <span class="token builtin class-name">enable</span> mongodb
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;启动mongodb-------&quot;</span>
+systemctl start mongodb
+<span class="token keyword">fi</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;添加mongo用户&quot;</span>
+<span class="token variable">$mongo_path</span>/bin/mongo <span class="token number">127.0</span>.0.1:27017/admin mongo_init.js
+
+<span class="token assign-left variable">authline</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">grep</span> <span class="token parameter variable">-n</span> <span class="token string">&quot;auth&quot;</span> $<span class="token punctuation">{</span>mongo_path<span class="token punctuation">}</span>/bin/mongodb.conf <span class="token operator">|</span><span class="token function">cut</span> <span class="token parameter variable">-f1</span> -d<span class="token string">&quot;:&quot;</span><span class="token variable">)</span></span>
+<span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token string">&quot;<span class="token variable">${authline}</span>c auth=true&quot;</span> <span class="token variable">${mongo_path}</span>/bin/mongodb.conf
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;重启mongo&quot;</span>
+systemctl restart mongodb
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;mongo安装完成------&quot;</span>
+<span class="token keyword">else</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;未检测到mongo安装包，请把安装到放到安装脚本目录下&quot;</span>
+<span class="token keyword">fi</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br></div></div></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近修改于: </span> <span class="time">2023/11/14 00:49:03</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/Linux/Linux下安装Tomcat.html" class="prev">
+          Linux下安装Tomcat
+        </a></span> <span class="next"><a href="/Linux/Linux安装MySQL.html">
+          Linux安装MySQL
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/Linux/Linux%E5%AE%89%E8%A3%85MongoDB.html#介绍" class="sidebar-link reco-side-介绍" data-v-b57cc07c>介绍</a></li><li class="level-2" data-v-b57cc07c><a href="/Linux/Linux%E5%AE%89%E8%A3%85MongoDB.html#下载mongodb" class="sidebar-link reco-side-下载mongodb" data-v-b57cc07c>下载MongoDB</a></li><li class="level-2" data-v-b57cc07c><a href="/Linux/Linux%E5%AE%89%E8%A3%85MongoDB.html#安装mongodb" class="sidebar-link reco-side-安装mongodb" data-v-b57cc07c>安装MongoDB</a></li><li class="level-2" data-v-b57cc07c><a href="/Linux/Linux%E5%AE%89%E8%A3%85MongoDB.html#脚本安装" class="sidebar-link reco-side-脚本安装" data-v-b57cc07c>脚本安装</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="reco-bgm-panel" data-v-b1d3339e><audio id="bgm" src="/bgm/和宇宙温柔的关联 - 房东的猫.m4a" data-v-b1d3339e></audio> <div class="reco-float-box" style="bottom:200px;z-index:999999;display:none;" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><img src="/logo2.png" data-v-b1d3339e></div> <div class="reco-bgm-box" style="left:10px;bottom:10px;z-index:999999;" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><div class="reco-bgm-cover" style="background-image:url(/logo2.png);" data-v-b1d3339e><div class="mini-operation" style="display:none;" data-v-b1d3339e><i class="reco-bgm reco-bgm-pause" style="display:none;" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-play" style="display:none;" data-v-b1d3339e></i></div> <div class="falut-message" style="display:none;" data-v-b1d3339e>
+          播放失败
+        </div></div> <div class="reco-bgm-info" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><div class="info-box" data-v-b1d3339e><i class="reco-bgm reco-bgm-music music" data-v-b1d3339e></i>和宇宙温柔的关联</div> <div class="info-box" data-v-b1d3339e><i class="reco-bgm reco-bgm-artist" data-v-b1d3339e></i>房东的猫</div> <div class="reco-bgm-progress" data-v-b1d3339e><div class="progress-bar" data-v-b1d3339e><div class="bar" data-v-b1d3339e></div></div></div> <div class="reco-bgm-operation" data-v-b1d3339e><i class="reco-bgm reco-bgm-last last" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-pause pause" style="display:none;" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-play play" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-next next" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-volume1 volume" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-mute mute" style="display:none;" data-v-b1d3339e></i> <div class="volume-bar" data-v-b1d3339e><div class="bar" data-v-b1d3339e></div></div></div></div> <div class="reco-bgm-left-box" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><i class="reco-bgm reco-bgm-left" data-v-b1d3339e></i></div></div></div><!----></div></div>
+    <script src="/assets/js/app.0c2196cb.js" defer></script><script src="/assets/js/11.132fa809.js" defer></script><script src="/assets/js/1.f7139ea4.js" defer></script><script src="/assets/js/136.e5bb0020.js" defer></script><script src="/assets/js/58.df9e26bc.js" defer></script>
+  </body>
+</html>
