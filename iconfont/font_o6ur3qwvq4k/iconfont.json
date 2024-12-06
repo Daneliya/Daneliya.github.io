@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "37796693",
+      "name": "icon_系统优化-copy",
+      "font_class": "icon_nav_xitongyouhua_default",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    }
+  ]
+}
