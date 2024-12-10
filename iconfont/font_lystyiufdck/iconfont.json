@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "141204948",
+      "name": "AI大模型",
+      "font_class": "AIdamoxing",
+      "unicode": "e689",
+      "unicode_decimal": 59017
+    }
+  ]
+}
