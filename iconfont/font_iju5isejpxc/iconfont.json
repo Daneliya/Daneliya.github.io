@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "125736541",
+      "name": "redis",
+      "font_class": "redis",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    }
+  ]
+}
