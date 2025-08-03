@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3865273",
+      "name": "架构",
+      "font_class": "jiagou",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    }
+  ]
+}
