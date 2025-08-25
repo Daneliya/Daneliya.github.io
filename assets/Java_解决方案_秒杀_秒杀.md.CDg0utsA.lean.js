@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as t}from"./chunks/framework.D5cOWG0Y.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"Java/解决方案/秒杀/秒杀.md","filePath":"Java/解决方案/秒杀/秒杀.md","lastUpdated":1755802517000}'),r={name:"Java/解决方案/秒杀/秒杀.md"};function o(s,c,n,_,d,p){return t(),e("div")}const f=a(r,[["render",o]]);export{m as __pageData,f as default};
