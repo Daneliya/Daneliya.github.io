@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "27545709",
+      "name": "并发数量",
+      "font_class": "bingfashuliang",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    }
+  ]
+}

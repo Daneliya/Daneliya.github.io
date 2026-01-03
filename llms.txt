@@ -1,0 +1,725 @@
+# XXL的小屋
+
+> 个人技术文档
+
+<sapn class="marker-evy">✨荷尽已无擎雨盖，菊残犹有傲霜枝。</sapn>
+
+## Table of Contents
+
+### 简介
+
+- [简介](/01.指南/01.简介/01.简介.md)
+- [快速开始](/01.指南/01.简介/10.快速开始.md): Teek 是一个基于 VitePress 构建的主题，本文专门介绍如何快速安装 Teek。
+- [结构化目录](/01.指南/01.简介/20.结构化目录.md)
+- [永久链接](/01.指南/01.简介/30.永久链接.md)
+
+### 使用
+
+- [Markdown 拓展](/01.指南/10.使用/05.Markdown 拓展.md)
+- [摘要与封面](/01.指南/10.使用/10.摘要与封面.md)
+- [主题增强](/01.指南/10.使用/15.主题增强.md)
+- [样式增强](/01.指南/10.使用/20.样式增强.md)
+- [国际化](/01.指南/10.使用/25.国际化.md)
+- [Vite 插件](/01.指南/10.使用/30.Vite 插件.md)
+- [站点统计](/01.指南/10.使用/35.站点统计.md)
+- [图标使用](/01.指南/10.使用/40.图标使用.md)
+- [私密文章](/01.指南/10.使用/45.私密文章.md)
+
+### 相关
+
+- [插槽布局](/01.指南/20.相关/02.插槽布局.md)
+- [路由钩子](/01.指南/20.相关/05.路由钩子.md)
+- [写作排版](/01.指南/20.相关/10.写作排版.md)
+- [笔记技巧](/01.指南/20.相关/15.笔记技巧.md)
+- [鸣谢](/01.指南/20.相关/99.鸣谢.md)
+
+### 开发
+
+- [开发指南](/01.指南/40.开发/01.开发指南.md)
+- [贡献指南](/01.指南/40.开发/05.贡献指南.md)
+
+### 主题配置
+
+- [配置简介](/10.配置/01.主题配置/01.配置简介.md)
+- [全局配置](/10.配置/01.主题配置/05.全局配置.md)
+- [Banner 配置](/10.配置/01.主题配置/10.Banner 配置.md)
+- [文章列表配置](/10.配置/01.主题配置/15.文章列表配置.md)
+- [卡片栏配置](/10.配置/01.主题配置/20.卡片栏配置.md)
+- [页脚配置](/10.配置/01.主题配置/25.页脚配置.md)
+- [文章配置](/10.配置/01.主题配置/30.文章配置.md)
+- [评论配置](/10.配置/01.主题配置/35.评论配置.md)
+- [插件配置](/10.配置/01.主题配置/40.插件配置.md)
+- [功能页配置](/10.配置/01.主题配置/50.功能页配置.md)
+
+
+
+
+
+
+### Java开发技巧
+
+#### JDK新特性
+
+- [JDK8新特性Optional容器类](/Java/Java开发技巧/01.JDK新特性/1_JDK8新特性Optional容器类.md)
+- [JDK25新特性](/Java/Java开发技巧/01.JDK新特性/2_JDK25新特性.md)
+
+#### 函数式编程
+
+- [函数式编程概念](/Java/Java开发技巧/02.函数式编程/0_函数式编程概念.md)
+- [Lambda表达式](/Java/Java开发技巧/02.函数式编程/1_Lambda表达式.md)
+- [Stream流](/Java/Java开发技巧/02.函数式编程/2_Stream流.md)
+- [函数式接口](/Java/Java开发技巧/02.函数式编程/3_函数式接口.md)
+- [方法引用](/Java/Java开发技巧/02.函数式编程/4_方法引用.md)
+
+#### 高效编程
+
+- [语法糖](/Java/Java开发技巧/03.高效编程/1_语法糖.md)
+- [自定义注解](/Java/Java开发技巧/03.高效编程/2_自定义注解.md)
+- [反射Reflection](/Java/Java开发技巧/03.高效编程/3_反射Reflection.md)
+- [Guava工具包常用API](/Java/Java开发技巧/03.高效编程/4_Guava工具包常用API.md)
+- [资源关闭优化方案](/Java/Java开发技巧/03.高效编程/5_资源关闭优化方案.md)
+- [替换jar包中单个class文件](/Java/Java开发技巧/03.高效编程/6_替换jar包中单个class文件.md)
+- [泛型的使用-方法抽取](/Java/Java开发技巧/03.高效编程/7_泛型的使用-方法抽取.md)
+
+#### IDEA技巧
+
+- [IDEA使用技巧](/Java/Java开发技巧/04.IDEA技巧/1_IDEA使用技巧.md)
+- [IDEA插件](/Java/Java开发技巧/04.IDEA技巧/2_IDEA插件推荐.md)
+
+### JVM性能调优
+
+#### JVM概念
+
+- [JVM体系结构](/Java/JVM性能调优/01.JVM概念/0_JVM体系结构.md)
+- [类加载器](/Java/JVM性能调优/01.JVM概念/1_类加载器.md)
+- [Native、方法区和寄存器](/Java/JVM性能调优/01.JVM概念/2_Native、方法区和寄存器.md)
+- [栈](/Java/JVM性能调优/01.JVM概念/3_栈.md)
+- [堆](/Java/JVM性能调优/01.JVM概念/4_堆.md)
+- [GC垃圾回收](/Java/JVM性能调优/01.JVM概念/5_GC垃圾回收.md)
+- [JMM内存模型](/Java/JVM性能调优/01.JVM概念/6_JMM内存模型.md)
+- [Java 类加载机制](/Java/JVM性能调优/01.JVM概念/Java 类加载机制.md)
+- [JVM及GC一些概念](/Java/JVM性能调优/01.JVM概念/JVM.md)
+- [JVM快速入门篇](/Java/JVM性能调优/01.JVM概念/JVM快速入门篇.md)
+
+#### JVM性能监控与调优
+
+- [性能调优概述](/Java/JVM性能调优/02.JVM性能监控与调优/0_性能调优概述.md)
+- [JVM监控与诊断工具之命令行](/Java/JVM性能调优/02.JVM性能监控与调优/1_JVM监控与诊断工具之命令行.md)
+- [JVM监控与诊断工具之GUI](/Java/JVM性能调优/02.JVM性能监控与调优/2_JVM监控与诊断工具之GUI.md)
+- [JVM运行时参数](/Java/JVM性能调优/02.JVM性能监控与调优/3_JVM运行时参数.md)
+- [分析GC日志](/Java/JVM性能调优/02.JVM性能监控与调优/4_分析GC日志.md)
+- [内存泄露几种情况及案例分析](/Java/JVM性能调优/02.JVM性能监控与调优/5_内存泄露几种情况及案例分析.md)
+- [应用诊断利器Arthas](/Java/JVM性能调优/02.JVM性能监控与调优/Arthas.md)
+- [OOM分类及排查](/Java/JVM性能调优/02.JVM性能监控与调优/OOM分类及排查.md)
+- [性能分析利器VisualVM](/Java/JVM性能调优/02.JVM性能监控与调优/性能分析利器VisualVM的使用.md)
+- [找出某个Java进程中最耗费CPU的Java线程](/Java/JVM性能调优/02.JVM性能监控与调优/找出某个Java进程中最耗费CPU的Java线程.md)
+- [接口超时排查](/Java/JVM性能调优/02.JVM性能监控与调优/接口超时排查.md)
+
+### 中间件
+
+- [Logstash](/Java/中间件/Logstash.md)
+
+### 容器
+
+#### Docker
+
+- [Docker介绍及使用](/Java/容器/Docker/0_Docker介绍及使用.md)
+- [Docker常用命令合集](/Java/容器/Docker/1_Docker常用命令合集.md)
+- [Linux安装Docker](/Java/容器/Docker/2_Linux安装Docker.md)
+- [图形化工具Portainer](/Java/容器/Docker/3_图形化工具Portainer.md)
+- [Compose脚本](/Java/容器/Docker/4_Compose脚本.md)
+- [Docker部署jar包](/Java/容器/Docker/5_Docker部署jar包.md)
+- [Docker安装Graylog](/Java/容器/Docker/镜像安装-Docker安装Graylog.md)
+- [Docker安装MongoDB](/Java/容器/Docker/镜像安装-Docker安装MongoDB.md)
+- [Docker安装MySQL](/Java/容器/Docker/镜像安装-Docker安装MySQL.md)
+- [Docker安装Nginx](/Java/容器/Docker/镜像安装-Docker安装Nginx.md)
+- [Docker安装Redis](/Java/容器/Docker/镜像安装-Docker安装Redis.md)
+
+#### Jenkins
+
+- [Gitlab安装](/Java/容器/Jenkins/Gitlab安装.md)
+- [Jenkins及其所必备环境安装](/Java/容器/Jenkins/Jenkins安装.md)
+- [Jenkins实战之自动化配置](/Java/容器/Jenkins/Jenkins实战之自动化配置.md)
+
+#### K8S
+
+- [Kubernetes](/Java/容器/K8S/Kubernetes.md)
+
+### 并发编程
+
+- [JUC概念](/Java/并发编程/1_JUC.md)
+- [HashMap](/Java/并发编程/2_HashMap.md)
+
+### 微服务专栏
+
+#### SpringCloud
+
+- [SpringCloud简介](/Java/微服务专栏/01.SpringCloud/1_SpringCloud简介.md)
+- [SpringCloud与Restful](/Java/微服务专栏/01.SpringCloud/2_SpringCloud与Restful.md)
+- [Eureka注册服务](/Java/微服务专栏/01.SpringCloud/3_Eureka注册服务.md)
+- [SpringCloud服务组件](/Java/微服务专栏/01.SpringCloud/4_SpringCloud服务组件.md)
+- [SpringCloudConfig](/Java/微服务专栏/01.SpringCloud/5_SpringCloudConfig.md)
+- [SpringCloudStream](/Java/微服务专栏/01.SpringCloud/6_SpringCloudStream.md)
+- [SpringCloudSleuth](/Java/微服务专栏/01.SpringCloud/7_SpringCloudSleuth.md)
+
+#### 服务网关Gateway
+
+- [Gateway服务网关](/Java/微服务专栏/02.服务网关Gateway/Gateway服务网关.md)
+
+#### 注册中心Nacos
+
+- [Nacos安装](/Java/微服务专栏/03.注册中心Nacos/0_Nacos安装.md)
+- [Nacos注册中心](/Java/微服务专栏/03.注册中心Nacos/1_Nacos注册中心.md)
+- [Nacos配置管理](/Java/微服务专栏/03.注册中心Nacos/2_Nacos配置管理.md)
+- [Nacos集群搭建](/Java/微服务专栏/03.注册中心Nacos/3_Nacos集群搭建.md)
+- [Nacos动态读取xml日志配置](/Java/微服务专栏/03.注册中心Nacos/4_Nacos动态读取xml日志配置.md)
+- [Nacos源码分析之ConfigService](/Java/微服务专栏/03.注册中心Nacos/Nacos源码分析之ConfigService.md)
+
+#### 远程调用Feign
+
+- [Feign远程调用](/Java/微服务专栏/04.远程调用Feign/Feign远程调用.md)
+
+#### 流控组件Sentinel
+
+- [微服务保护Sentinel](/Java/微服务专栏/05.流控组件Sentinel/微服务保护.md)
+
+#### 消息总线Bus
+
+- [消息总线Bus](/Java/微服务专栏/06.消息总线Bus/README.md)
+
+#### Quarkus
+
+- [Quarkus](/Java/微服务专栏/07.Quarkus/Quarkus.md)
+
+#### Solon
+
+- [Solon](/Java/微服务专栏/08.Solon/Solon.md)
+
+### 数据结构
+
+- [排序算法](/Java/数据结构/排序算法.md)
+- [查找算法](/Java/数据结构/查找算法.md)
+
+### 架构设计
+
+#### 分布式
+
+##### 分布式缓存
+
+- [分布式缓存概述](/Java/架构设计/分布式/01.分布式缓存/分布式缓存.md)
+
+##### 分布式搜索
+
+- [初识ElasticSearch](/Java/架构设计/分布式/02.分布式搜索/1_搜索引擎Elasticsearch01.md)
+- [Elasticsearch数据搜索](/Java/架构设计/分布式/02.分布式搜索/2_搜索引擎Elasticsearch02.md)
+- [Elasticsearch高级功能](/Java/架构设计/分布式/02.分布式搜索/3_搜索引擎Elasticsearch03.md)
+- [Elasticsearch进阶功能](/Java/架构设计/分布式/02.分布式搜索/4_ElasticSearch进阶功能.md)
+
+##### 分布式消息队列
+
+- [消息队列介绍](/Java/架构设计/分布式/03.分布式消息队列/1_消息队列介绍.md)
+
+###### RabbitMQ
+
+- [RabbitMQ安装](/Java/架构设计/分布式/03.分布式消息队列/02.RabbitMQ/1_RabbitMQ安装.md)
+- [RabbitMQ消息队列](/Java/架构设计/分布式/03.分布式消息队列/02.RabbitMQ/2_RabbitMQ.md)
+- [RabbitMQ高级](/Java/架构设计/分布式/03.分布式消息队列/02.RabbitMQ/3_RabbitMQ高级.md)
+- [RabbitMQ延时队列](/Java/架构设计/分布式/03.分布式消息队列/02.RabbitMQ/4_RabbitMQ延时队列.md)
+- [RabbitMQ日志追踪](/Java/架构设计/分布式/03.分布式消息队列/02.RabbitMQ/5_RabbitMQ日志追踪.md)
+
+##### 分布式事务
+
+- [分布式事务概念](/Java/架构设计/分布式/04.分布式事务/0_分布式事务概念.md)
+- [分布式事务Seata](/Java/架构设计/分布式/04.分布式事务/1_分布式事务Seata.md)
+- [分布式事务框架TX-LCN](/Java/架构设计/分布式/04.分布式事务/2_分布式事务框架TX-LCN.md)
+
+##### 分布式任务调度
+
+- [分布式任务调度框架概述](/Java/架构设计/分布式/05.分布式任务调度/0_分布式任务调度框架概述.md)
+- [XXL-JOB介绍](/Java/架构设计/分布式/05.分布式任务调度/1_XXL-JOB介绍.md)
+- [XXL-JOB执行器配置](/Java/架构设计/分布式/05.分布式任务调度/2_XXL-JOB执行器配置.md)
+- [创建XXL-JOB任务调度](/Java/架构设计/分布式/05.分布式任务调度/3_创建XXL-JOB任务调度.md)
+- [自动创建定时任务](/Java/架构设计/分布式/05.分布式任务调度/4_自动创建定时任务.md)
+
+##### 分布式监控
+
+- [分布式系统中的可观测性](/Java/架构设计/分布式/06.分布式监控/0_可观测性.md)
+- [ARMS 系统监控](/Java/架构设计/分布式/06.分布式监控/1_ARMS系统监控.md)
+- [CAT](/Java/架构设计/分布式/06.分布式监控/CAT.md)
+- [Pinpoint性能监控](/Java/架构设计/分布式/06.分布式监控/Pinpoint.md)
+- [Prometheus监控](/Java/架构设计/分布式/06.分布式监控/Prometheus.md)
+- [SkyWalking链路追踪](/Java/架构设计/分布式/06.分布式监控/SkyWalking.md)
+- [SpringBootAdmin系统监控](/Java/架构设计/分布式/06.分布式监控/SpringBootAdmin.md)
+
+##### 分布式日志收集
+
+- [ElasticStack概述](/Java/架构设计/分布式/07.分布式日志收集/0_ElasticStack概述.md)
+- [ELK篇之安装ElasticSearch和Kibana](/Java/架构设计/分布式/07.分布式日志收集/1_Elasticsearch安装.md)
+- [ELK篇之Logstash使用](/Java/架构设计/分布式/07.分布式日志收集/2_Logstash使用.md)
+- [ELK篇之SpringBoot集成ELK](/Java/架构设计/分布式/07.分布式日志收集/3_SpringBoot集成ELK.md)
+- [EFK篇之Filebeat使用](/Java/架构设计/分布式/07.分布式日志收集/4_EFK篇之Filebeat使用.md)
+- [SpringBoot集成Graylog](/Java/架构设计/分布式/07.分布式日志收集/5_SpringBoot集成Graylog.md)
+
+#### 高可用
+
+##### 0_概述
+
+- [高可用架构设计概述](/Java/架构设计/高可用/0_概述/0_高可用架构设计概述.md)
+
+##### 降级熔断
+
+- [README](/Java/架构设计/高可用/降级熔断/README.md)
+
+##### 限流
+
+- [系统优化之限流](/Java/架构设计/高可用/限流/系统优化之限流.md)
+
+#### 高并发
+
+##### 数据库
+
+- [README](/Java/架构设计/高并发/数据库/README.md)
+
+##### 缓存
+
+- [README](/Java/架构设计/高并发/缓存/README.md)
+
+##### 负载均衡
+
+- [README](/Java/架构设计/高并发/负载均衡/README.md)
+
+### 系统优化
+
+#### 性能优化
+
+- [RxJava响应式编程](/Java/系统优化/性能优化/1_RxJava响应式编程.md)
+- [实时通讯方案](/Java/系统优化/性能优化/2_实时通讯方案.md)
+- [多级缓存](/Java/系统优化/性能优化/3_多级缓存.md)
+- [分库分表实战](/Java/系统优化/性能优化/4_分库分表实战.md)
+- [MySQL Hints](/Java/系统优化/性能优化/5_MySQL Hints.md)
+
+#### 系统优化
+
+- [幂等设计](/Java/系统优化/系统优化/1_幂等设计.md)
+- [线程池隔离](/Java/系统优化/系统优化/2_线程池隔离.md)
+- [API签名认证](/Java/系统优化/系统优化/3_API签名认证.md)
+- [SDK封装](/Java/系统优化/系统优化/4_SDK封装.md)
+- [平台智能化](/Java/系统优化/系统优化/5_平台智能化.md)
+
+### 解决方案
+
+#### 多租户
+
+- [多租户](/Java/解决方案/多租户/多租户.md)
+
+#### 接口设计
+
+- [接口幂等](/Java/解决方案/接口设计/1_接口幂等.md)
+- [接口加密](/Java/解决方案/接口设计/2_接口加密.md)
+- [接口限流](/Java/解决方案/接口设计/3_接口限流.md)
+- [接口优化](/Java/解决方案/接口设计/4_接口优化.md)
+
+#### 支付解决方案
+
+##### 支付宝支付API对接指南
+
+- [商家基本信息获取](/Java/解决方案/支付解决方案/支付宝支付API对接指南/1_商家基本信息获取.md)
+- [支付宝支付环境搭建及配置](/Java/解决方案/支付解决方案/支付宝支付API对接指南/2_支付宝支付环境搭建及配置.md)
+- [支付宝支付请求工具类封装](/Java/解决方案/支付解决方案/支付宝支付API对接指南/3_支付宝支付请求工具类封装.md)
+- [支付宝支付成功回调通知](/Java/解决方案/支付解决方案/支付宝支付API对接指南/4_支付宝支付成功回调通知.md)
+
+#### 数据同步
+
+- [数据同步](/Java/解决方案/数据同步/0_数据同步.md)
+- [Canal](/Java/解决方案/数据同步/1_Canal.md)
+- [Flink](/Java/解决方案/数据同步/2_Flink-CDC.md)
+- [SeaTunnel](/Java/解决方案/数据同步/3_SeaTunnel.md)
+- [DolphinScheduler](/Java/解决方案/数据同步/4_DolphinScheduler.md)
+- [DataX](/Java/解决方案/数据同步/5_DataX.md)
+
+#### 秒杀
+
+- [秒杀](/Java/解决方案/秒杀/秒杀.md)
+
+### 设计模式
+
+#### 基本概念
+
+- [设计模式](/Java/设计模式/01.基本概念/设计模式.md)
+
+#### 创建型
+
+- [创建型](/Java/设计模式/02.创建型/1.md)
+
+#### 结构型
+
+- [结构型](/Java/设计模式/03.结构型/1.md)
+
+#### 行为型
+
+- [策略模式](/Java/设计模式/04.行为型/16_strategy.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Other
+
+- [08\_算法设计与分析](/daily/软件设计师/08_算法设计与分析.md)
+- [1\_PostgreSQL介绍](/数据库/03.PostgreSQL/1_PostgreSQL介绍.md)
+- [标签](/@pages/tagsPage.md)
+- [标准化和软件知识产权基础知识](/daily/软件设计师/11_标准化和软件知识产权基础知识.md)
+- [博客园美化](/daily/博客文档/其他博客文档/博客园美化.md)
+- [布隆过滤器](/Redis/Redis基础/3_布隆过滤器.md)
+- [部署迁移](/数据库/04.分布式数据库TIDB/2_部署迁移.md)
+- [操作系统知识](/daily/软件设计师/04_操作系统知识.md)
+- [插件](/daily/博客文档/VitPress/7_插件.md)
+- [程序设计语言基础知识](/daily/软件设计师/02_程序设计语言基础知识.md)
+- [初始化加载配置](/常用框架/SpringBoot/SpringBoot源码分析/初始化加载配置.md)
+- [大量数据导出](/常用框架/EasyExcel/5_大量数据导出.md)
+- [单人及多人换脸](/StableDiffusion/Midjourney/4_单人及多人换脸.md)
+- [单线程执行逻辑](/Redis/Redis源码/单线程执行逻辑.md)
+- [等保整改](/daily/日常笔记/等保整改.md)
+- [第六讲 中值定理](/daily/高等数学/06_中值定理.md)
+- [调整图片比例](/StableDiffusion/Midjourney/2_调整图片比例.md)
+- [定时调度](/常用框架/SpringBoot/SpringBoot服务整合/7_定时调度.md)
+- [抖音小程序开发](/daily/开发文档/抖音小程序开发.md)
+- [读取资源文件](/常用框架/SpringBoot/SpringBoot程序开发/9_读取资源文件.md)
+- [分类](/@pages/categoriesPage.md)
+- [服务容灾](/daily/面试专栏/微服务相关/5_服务容灾.md)
+- [服务网关](/daily/面试专栏/微服务相关/6_服务网关.md)
+- [高等数学预备知识](/daily/高等数学/01_高等数学预备知识.md)
+- [给AI模型读文件的能力](/Python/AI大模型应用开发/11_给AI模型读文件的能力.md)
+- [给AI模型添加记忆](/Python/AI大模型应用开发/9_给AI模型添加记忆.md)
+- [给AI模型用工具的能力](/Python/AI大模型应用开发/13_给AI模型用工具的能力.md)
+- [工具清单](/daily/日常笔记/工具清单.md)
+- [功能页配置](/10.配置/30.功能页配置.md)
+- [归档](/@pages/archivesPage.md)
+- [规则引擎LiteFlow](/daily/开源项目/2_规则引擎LiteFlow.md)
+- [函数极限与连续性](/daily/高等数学/03_函数极限与连续性.md)
+- [基于Taro开发小程序](/daily/开发文档/基于Taro开发小程序.md)
+- [基于Thymeleaf模板生成HTML并转成PDF](/常用框架/Thymeleaf/2_实战.md)
+- [计算机组成与体系结构](/daily/软件设计师/01_计算机组成与体系结构.md)
+- [加密算法](/daily/日常笔记/加密算法.md)
+- [结构化开发方法](/daily/软件设计师/06_结构化开发方法.md)
+- [静态部署](/daily/博客文档/VitPress/8_静态部署.md)
+- [局部重绘](/StableDiffusion/Midjourney/5_局部重绘.md)
+- [开发技巧](/15.主题开发/70.开发技巧.md)
+- [开发思路](/15.主题开发/01.开发思路.md)
+- [开源项目](/daily/开源项目/0_开源项目.md)
+- [跨域配置与防盗链](/Linux/Nginx/5_跨域配置与防盗链.md)
+- [扩展图片ZoomOut功能](/StableDiffusion/Midjourney/6_扩展图片ZoomOut功能.md)
+- [拦截器](/常用框架/SpringBoot/SpringBoot与Web应用/7_拦截器.md)
+- [零点问题与微分不等式](/daily/高等数学/07_零点问题与微分不等式.md)
+- [面试专栏](/daily/面试专栏/面试专栏.md)
+- [面向对象技术](/daily/软件设计师/07_面向对象技术.md)
+- [命令参数用途列表](/StableDiffusion/Midjourney/1_Midjourney命令参数用途列表.md)
+- [模型下载与使用](/StableDiffusion/StableDiffusion/2_模型使用.md)
+- [目录结构](/15.主题开发/20.目录结构.md)
+- [目录页配置](/10.配置/20.目录页配置.md)
+- [内存淘汰策略](/Redis/Redis基础/2_内存淘汰策略.md)
+- [爬虫的流程](/Python/爬虫/1_爬虫的流程.md)
+- [爬取豆瓣电影Top250](/Python/爬虫/4_爬取豆瓣电影Top250.md)
+- [配置](/10.配置/目录.md)
+- [配置错误页](/常用框架/SpringBoot/SpringBoot与Web应用/4_配置错误页.md)
+- [配置访问路径](/常用框架/SpringBoot/SpringBoot程序开发/4_配置访问路径.md)
+- [配置环境属性](/常用框架/SpringBoot/SpringBoot程序开发/8_配置环境属性.md)
+- [配置中心](/daily/面试专栏/微服务相关/3_配置中心.md)
+- [配置Tomcat运行](/常用框架/SpringBoot/SpringBoot与Web应用/1_配置Tomcat运行.md)
+- [全局统一响应格式、参数校验、异常处理](/常用框架/SpringBoot/SpringBoot程序开发/11_统一返回结果对象.md)
+- [全局异常处理](/常用框架/SpringBoot/SpringBoot与Web应用/5_全局异常处理.md)
+- [容器自定义](/15.主题开发/60.容器自定义.md)
+- [软件工程基础知识](/daily/软件设计师/05_软件工程基础知识.md)
+- [软件设计师考点](/daily/软件设计师/00_软件设计师考点.md)
+- [软件系统分析与设计](/daily/软件设计师/12_软件系统分析与设计.md)
+- [扫码登录](/daily/开发文档/扫码登录.md)
+- [实战1：视频脚本一键生成器](/Python/AI大模型应用开发/7_实战1：视频脚本一键生成器.md)
+- [实战2：爆款小红书文案生成器](/Python/AI大模型应用开发/8_实战2：爆款小红书文案生成器.md)
+- [实战3：克隆AI聊天助手](/Python/AI大模型应用开发/10_实战3：克隆AI聊天助手.md)
+- [实战4：智能PDF问答工具](/Python/AI大模型应用开发/12_实战4：智能PDF问答工具.md)
+- [使用内置对象](/常用框架/SpringBoot/SpringBoot程序开发/6_使用内置对象.md)
+- [使用EasyCaptcha生成验证码](/常用框架/EasyCaptcha/0_使用EasyCaptcha生成验证码.md)
+- [使用Jetty容器](/常用框架/SpringBoot/SpringBoot程序开发/7_使用Jetty容器.md)
+- [数据结构](/daily/软件设计师/03_数据结构.md)
+- [数据库技术基础](/daily/软件设计师/09_数据库技术基础.md)
+- [数据验证](/常用框架/SpringBoot/SpringBoot与Web应用/3_数据验证.md)
+- [数列极限](/daily/高等数学/02_数列极限.md)
+- [提示词工程](/Python/AI大模型应用开发/3_提示词工程.md)
+- [统一父pom管理](/常用框架/SpringBoot/SpringBoot程序开发/1_统一父pom管理.md)
+- [统一日志处理](/常用框架/SpringBoot/SpringBoot程序开发/13_统一日志处理.md)
+- [统一异常处理](/常用框架/SpringBoot/SpringBoot程序开发/12_统一异常处理.md)
+- [图生图](/StableDiffusion/WebUI/2_图生图.md)
+- [玩客云](/daily/日常笔记/玩客云.md)
+- [网络与信息安全基础知识](/daily/软件设计师/10_网络与信息安全基础知识.md)
+- [网站导航](/@pages/nav.md)
+- [微服务概述](/daily/面试专栏/微服务相关/1_微服务概述.md)
+- [文件上传](/常用框架/SpringBoot/SpringBoot与Web应用/6_文件上传.md)
+- [文件上传X Spring File Storage](/daily/开源项目/1_文件上传X-Spring-File-Storage.md)
+- [文生图](/StableDiffusion/WebUI/1_文生图.md)
+- [文章清单](/@pages/articleOverviewPage.md)
+- [样式布局](/15.主题开发/40.样式布局.md)
+- [样式美化](/daily/博客文档/VitPress/6_样式美化.md)
+- [页面](/daily/博客文档/VitPress/2_页面.md)
+- [一元函数微分学的概念与计算](/daily/高等数学/04_一元函数微分学的概念与计算.md)
+- [一元函数微分学的几何应用](/daily/高等数学/05_一元函数微分学的几何应用.md)
+- [远程调用](/daily/面试专栏/微服务相关/4_远程调用.md)
+- [整合Spring配置](/常用框架/SpringBoot/SpringBoot程序开发/10_整合Spring配置.md)
+- [支持这个项目](/personal.md)
+- [指南](/01.指南/目录.md)
+- [主题配置](/15.主题开发/10.主题配置.md)
+- [主题增强拓展](/10.配置/40.主题增强拓展.md)
+- [注册中心](/daily/面试专栏/微服务相关/2_注册中心.md)
+- [资源填充类ResourceDatabasePopulator](/常用框架/SpringBoot/SpringBoot源码分析/资源填充类ResourceDatabasePopulator.md)
+- [组件结构](/15.主题开发/30.组件布局.md)
+- [A2A Agent 分布式智能体](/常用框架/SpringAIAlibaba/Agent Framework/15_A2A Agent分布式智能体.md)
+- [ACID是什么](/数据库/01.MySQL/ACID.md)
+- [Activiti整合Spring](/常用框架/Activiti7/Activiti整合Spring.md)
+- [Actuator监控](/常用框架/SpringBoot/SpringBoot服务整合/8_Actuator监控.md)
+- [Agent Tool 智能体作为工具](/常用框架/SpringAIAlibaba/Agent Framework/12_Agent Tool智能体作为工具.md)
+- [AgentChatUI](/常用框架/SpringAIAlibaba/Agent Chat UI/1_AgentChatUI.md)
+- [Agents](/常用框架/SpringAIAlibaba/Agent Framework/1_Agents.md)
+- [AI大模型科普](/Python/AI大模型应用开发/1_AI大模型科普.md)
+- [AI猫咪剧情号](/StableDiffusion/AIGC/AI猫咪剧情号.md)
+- [AI模型与输入输出](/Python/AI大模型应用开发/6_AI模型与输入输出.md)
+- [AI应用部署](/Python/AI大模型应用开发/17_AI应用部署.md)
+- [AOP拦截器](/常用框架/SpringBoot/SpringBoot与Web应用/8_AOP拦截器.md)
+- [API用法示例](/Python/AI大模型应用开发/4_API用法示例.md)
+- [Assistant API](/Python/AI大模型应用开发/15_Assistant API.md)
+- [BigKey、HotKey 的发现与处理](/Redis/Redis基础/3_BigKey、HotKey 的发现与处理.md)
+- [Caffeine基本概念](/常用框架/Caffeine/0_Caffeine基本概念.md)
+- [Centos7扩容根目录（/dev/mapper/centos-root）](/Linux/Shell命令/3_Centos7扩容根目录.md)
+- [Cockpit服务器管理工具](/Linux/OpenEuler/3_Cockpit服务器管理工具.md)
+- [ComfyUI安装](/StableDiffusion/ComfyUI/1_ComfyUI安装.md)
+- [ComfyUI核心采样器](/StableDiffusion/ComfyUI/3_ComfyUI核心采样器.md)
+- [ComfyUI简介](/StableDiffusion/ComfyUI/0_ComfyUI简介.md)
+- [ComfyUI配置](/StableDiffusion/ComfyUI/2_ComfyUI配置.md)
+- [Config配置](/daily/博客文档/VitPress/1_Config配置.md)
+- [Context Engineering 上下文工程](/常用框架/SpringAIAlibaba/Agent Framework/8_Context Engineering上下文工程.md)
+- [ControlNet控制网](/StableDiffusion/StableDiffusion/3_ControlNet控制网.md)
+- [Criteria与聚合查询](/数据库/02.MongoDB/3_Criteria与聚合查询.md)
+- [CSV数据分析智能工具](/Python/AI大模型应用开发/14_CSV数据分析智能工具.md)
+- [DataEase可视化分析](/daily/开源项目/DataEase可视化分析.md)
+- [DataEase可视化分析](/daily/开源项目/RestCloud.md)
+- [EasyExcel概述](/常用框架/EasyExcel/0_EasyExcel概述.md)
+- [EasyExcel入门之导出Excel](/常用框架/EasyExcel/2_EasyExcel入门之导入Excel.md)
+- [EasyExcel入门之导入Excel](/常用框架/EasyExcel/3_EasyExcel入门之导出Excel.md)
+- [EasyExcel入门之填充Excel](/常用框架/EasyExcel/4_EasyExcel入门之填充Excel.md)
+- [EasyExcel准备操作](/常用框架/EasyExcel/1_EasyExcel准备操作.md)
+- [FastExcel](/常用框架/EasyExcel/6_FastExcel.md)
+- [FlowLong飞龙工作流](/daily/开源项目/3_FlowLong飞龙工作流.md)
+- [Frontmatter](/daily/博客文档/VitPress/3_Frontmatter.md)
+- [frontmatter 配置](/10.配置/10.frontmatter 配置.md)
+- [Github Pages加速](/daily/博客文档/其他博客文档/Github_Pages加速.md)
+- [Github个人主页改造](/daily/博客文档/其他博客文档/Github个人主页改造.md)
+- [Go语言学习](/daily/日常笔记/Go语言学习.md)
+- [Guava-Retry](/常用框架/重试框架/2_Guava-Retry.md)
+- [Hexo博客搭建](/daily/博客文档/其他博客文档/Hexo博客搭建.md)
+- [Hooks 和 Interceptors](/常用框架/SpringAIAlibaba/Agent Framework/2_Hooks和Interceptors.md)
+- [https安全访问](/常用框架/SpringBoot/SpringBoot与Web应用/2_https安全访问.md)
+- [Human-in-the-Loop 人工介入](/常用框架/SpringAIAlibaba/Agent Framework/9_Human-in-the-Loop人工介入.md)
+- [IDEA+Linux远程开发](/daily/日常笔记/IDEA+Linux远程开发.md)
+- [INCR命令之微信文章阅读量](/Redis/Redis实战/3_INCR命令之微信文章阅读量.md)
+- [JDK21新特性](/Java/Java开发技巧/01.JDK新特性/2_JDK21新特性.md)
+- [Kong](/Linux/Nginx/Kong.md)
+- [LangChain介绍](/Python/AI大模型应用开发/5_LangChain介绍.md)
+- [Linux安装MongoDB](/Linux/Linux安装软件/Linux安装MongoDB.md)
+- [Linux安装MySQL](/Linux/Linux安装软件/Linux安装MySQL.md)
+- [Linux安装Nginx](/Linux/Nginx/1_Linux安装Nginx.md)
+- [Linux常用命令](/Linux/Shell命令/0_Linux常用命令.md)
+- [Linux服务器抓包分析HTTP请求](/Linux/Shell命令/4_Linux服务器抓包分析HTTP请求.md)
+- [Linux下安装Graylog](/Linux/Linux安装软件/Linux下安装Graylog.md)
+- [Linux下安装Java](/Linux/Linux安装软件/Linux下安装Java.md)
+- [Linux下安装Tomcat](/Linux/Linux安装软件/Linux下安装Tomcat.md)
+- [Linux新建用户并授予root权限](/Linux/Shell命令/1_Linux新建用户并授予root权限.md)
+- [LOFI音乐频道](/StableDiffusion/AIGC/LOFI.md)
+- [LORA原理与训练](/StableDiffusion/StableDiffusion/4_LORA训练.md)
+- [Markdown](/daily/博客文档/VitPress/4_Markdown.md)
+- [Markdown进阶之路](/daily/日常笔记/Markdown进阶之路.md)
+- [Memory 短期记忆](/常用框架/SpringAIAlibaba/Agent Framework/4_Memory短期记忆.md)
+- [Memory 记忆管理](/常用框架/SpringAIAlibaba/Agent Framework/10_Memory记忆管理.md)
+- [Messages 消息](/常用框架/SpringAIAlibaba/Agent Framework/5_Messages消息.md)
+- [Midjourney垫图](/StableDiffusion/Midjourney/3_Midjourney垫图.md)
+- [Midjourney基础教程](/StableDiffusion/Midjourney/0_Midjourney基础教程.md)
+- [Midjourney萌宠治愈频道](/StableDiffusion/AIGC/Midjourney萌宠治愈频道.md)
+- [Midjourney制作微信表情包](/StableDiffusion/AIGC/Midjourney制作微信表情包.md)
+- [Models 模型](/常用框架/SpringAIAlibaba/Agent Framework/6_Models模型.md)
+- [MongoDB安装](/数据库/02.MongoDB/1_MongoDB安装.md)
+- [MongoDB基本概念](/数据库/02.MongoDB/0_MongoDB简介.md)
+- [MongoDB数据同步](/数据库/02.MongoDB/4_MongoDB数据同步.md)
+- [MongoTemplate基本用法](/数据库/02.MongoDB/2_MongoTemplate基本用法.md)
+- [Multi-agent 多智能体](/常用框架/SpringAIAlibaba/Agent Framework/11_Multi-agent多智能体.md)
+- [Mybatis-Plus-Join连表查询](/常用框架/Mybatis/Mybatis-Plus-Join连表查询.md)
+- [Mybatis增强框架Mybatis-Flex](/常用框架/Mybatis/Mybatis增强框架Mybatis-Flex.md)
+- [MySQL导入MariaDB](/数据库/01.MySQL/MySQL导入MariaDB.md)
+- [MySQL分词搜索](/数据库/01.MySQL/MySQL分词搜索.md)
+- [MySQL分库分表原理](/常用框架/ShardingJdbc/3_MySQL分库分表原理.md)
+- [Mysql集群](/数据库/01.MySQL/Mysql集群.md)
+- [MySQL慢查询优化](/数据库/01.MySQL/MySQL常见问题及解决方案/MySQL慢查询优化.md)
+- [MySQL日期函数](/数据库/01.MySQL/MySQL日期函数.md)
+- [Mysql索引](/数据库/01.MySQL/Mysql索引.md)
+- [MySQL执行分析](/数据库/01.MySQL/MySQL执行分析.md)
+- [MySQL主从复制](/数据库/01.MySQL/MySQL主从复制.md)
+- [Neo4j安装](/数据库/05.Neo4j/1_Neo4j安装.md)
+- [Neo4j数据库创建](/数据库/05.Neo4j/2_Neo4j数据库创建.md)
+- [Neo4j图数据库](/数据库/05.Neo4j/0_Neo4j概念.md)
+- [Nginx常用配置](/Linux/Nginx/2_Nginx常用配置.md)
+- [Nginx负载均衡](/Linux/Nginx/4_Nginx负载均衡.md)
+- [Nginx快速入门](/Linux/Nginx/0_Nginx快速入门.md)
+- [Nginx路由匹配](/Linux/Nginx/3_Nginx路由匹配.md)
+- [OpenAI大模型API基础](/Python/AI大模型应用开发/2_OpenAI大模型API基础.md)
+- [openEuler](/Linux/OpenEuler/1_openEuler.md)
+- [openEuler安装Docker](/Linux/OpenEuler/2_openEuler安装Docker.md)
+- [PDF转换](/daily/开发文档/PDF转换.md)
+- [profile环境配置](/常用框架/SpringBoot/SpringBoot程序开发/20_profile环境配置.md)
+- [Prompt提示词](/StableDiffusion/StableDiffusion/1_Prompt提示词.md)
+- [Python发送HTTP请求](/Python/爬虫/2_Python发送HTTP请求.md)
+- [Python基础语法](/Python/基础语法/Python基础语法.md)
+- [Python解析HTML](/Python/爬虫/3_Python解析HTML.md)
+- [Python使用API](/Python/爬虫/5_Python使用API.md)
+- [Python数据分析](/Python/数据分析/1_Python数据分析.md)
+- [Python数据分析—保存数据](/Python/数据分析/10_Python数据分析—保存数据.md)
+- [Python数据分析—读取CSV](/Python/数据分析/7_Python数据分析—读取CSV.md)
+- [Python数据分析—读取JSON](/Python/数据分析/6_Python数据分析—读取JSON.md)
+- [Python数据分析—可视化数据](/Python/数据分析/13_Python数据分析—可视化数据.md)
+- [Python数据分析—评估数据](/Python/数据分析/8_Python数据分析—评估数据.md)
+- [Python数据分析—清理数据](/Python/数据分析/9_Python数据分析—清理数据.md)
+- [Python数据分析—数据收集](/Python/数据分析/5_Python数据分析—数据收集.md)
+- [Python数据分析—统计学基础](/Python/数据分析/12_Python数据分析—统计学基础.md)
+- [Python数据分析—统计学进阶](/Python/数据分析/14_Python数据分析—统计学进阶.md)
+- [Python数据分析—整理数据](/Python/数据分析/11_Python数据分析—整理数据.md)
+- [Python数据分析—Dataframe](/Python/数据分析/4_Python数据分析—Dataframe.md)
+- [Python数据分析—NumPy](/Python/数据分析/2_Python数据分析—NumPy.md)
+- [Python数据分析—Pandas](/Python/数据分析/3_Python数据分析—Pandas.md)
+- [QT开发](/daily/开发文档/QT开发.md)
+- [RabbitMQAssistant使用](/daily/开发文档/RabbitMQAssistant使用.md)
+- [RAG 检索增强生成](/常用框架/SpringAIAlibaba/Agent Framework/14_RAG检索增强生成.md)
+- [Redis Stack介绍](/Redis/Redis基础/1_RedisStack介绍.md)
+- [Redis概述及使用](/Redis/Redis基础/0_Redis概述及使用.md)
+- [Redis缓存三大问题](/Redis/Redis基础/1_Redis缓存三大问题.md)
+- [Redis解决超卖问题](/Redis/Redis实战/2_Redis实战之解决超卖问题.md)
+- [Redis解决限流问题](/Redis/Redis实战/1_Redis实战之解决限流问题.md)
+- [Redis数据结构](/Redis/Redis数据结构/Redis数据结构.md)
+- [Redis延迟队列](/Redis/Redis基础/5_Redis延迟队列.md)
+- [RedisInsight部署使用](/Redis/Redis基础/2_RedisInsight部署使用.md)
+- [RedisSearch全文搜索引擎](/Redis/Redis基础/RedisSearch全文搜索引擎.md)
+- [RedisTemplate](/Redis/Redis基础/RedisTemplate.md)
+- [RocketMQ-学习笔记01](/Java/架构设计/分布式/03.分布式消息队列/01.RocketMQ/RocketMQ-01.md)
+- [RocketMQ-学习笔记02](/Java/架构设计/分布式/03.分布式消息队列/01.RocketMQ/RocketMQ-02.md)
+- [RocketMQ-学习笔记03](/Java/架构设计/分布式/03.分布式消息队列/01.RocketMQ/RocketMQ-03.md)
+- [Set结构实战之社交应用中的共同好友](/Redis/Redis数据结构/Set结构实战之社交应用中的共同好友.md)
+- [Set结构实战之用户画像标签去重](/Redis/Redis数据结构/Set结构实战之用户画像标签去重.md)
+- [ShardingJdbc的概述](/常用框架/ShardingJdbc/0_ShardingJdbc的概述.md)
+- [ShardingJdbc配置读写分离](/常用框架/ShardingJdbc/2_ShardingJdbc配置读写分离.md)
+- [ShardingJdbc配置分库分表](/常用框架/ShardingJdbc/4_ShardingJdbc配置分库分表.md)
+- [ShardingJdbc准备-安装MySQL及配置主从复制](/常用框架/ShardingJdbc/1_ShardingJdbc准备-安装MySQL及配置主从复制.md)
+- [Spring AI Alibaba 概览](/常用框架/SpringAIAlibaba/1_SpringAIAlibaba概览.md)
+- [Spring Boot项目打包发布](/常用框架/SpringBoot/SpringBoot程序开发/20_SpringBoot项目打包发布.md)
+- [Spring Boot中的异步方法调用](/常用框架/SpringBoot/SpringBoot程序开发/22_SpringBoot中的异步方法调用.md)
+- [Spring-Retry](/常用框架/重试框架/1_Spring-Retry.md)
+- [Spring容器初始化源码解析](/常用框架/Spring/1_Spring容器初始化源码解析.md)
+- [SpringAI Alibaba 整合阿里云百炼 DeepSeek](/常用框架/SpringAI/SpringAI.md)
+- [SpringAOP面向切面编程](/常用框架/Spring/2_SpringAOP面向切面编程.md)
+- [SpringAOP实战之日志拦截](/常用框架/Spring/4_SpringAOP实战之日志拦截.md)
+- [SpringAOP源码分析](/常用框架/Spring/3_SpringAOP源码分析.md)
+- [SpringBoot编程起步](/常用框架/SpringBoot/SpringBoot程序开发/0_SpringBoot编程起步.md)
+- [SpringBoot程序测试](/常用框架/SpringBoot/SpringBoot程序开发/2_SpringBoot程序测试.md)
+- [SpringBoot调试](/常用框架/SpringBoot/SpringBoot程序开发/5_SpringBoot调试.md)
+- [SpringBoot炖Caffeine](/常用框架/Caffeine/1_SpringBoot集成Caffeine.md)
+- [SpringBoot集成Neo4j](/数据库/05.Neo4j/3_SpringBoot集成Neo4j.md)
+- [SpringBoot异步实现方式](/常用框架/SpringBoot/SpringBoot源码分析/SpringBoot异步实现方式.md)
+- [SpringBoot整合安全框架](/常用框架/SpringBoot/SpringBoot服务整合/5_SpringBoot整合安全框架.md)
+- [SpringBoot整合数据源](/常用框架/SpringBoot/SpringBoot服务整合/1_SpringBoot整合数据源.md)
+- [SpringBoot整合消息服务组件](/常用框架/SpringBoot/SpringBoot服务整合/3_SpringBoot整合消息服务组件.md)
+- [SpringBoot整合邮件服务器](/常用框架/SpringBoot/SpringBoot服务整合/6_SpringBoot整合邮件服务器.md)
+- [SpringBoot整合ORM开发框架](/常用框架/SpringBoot/SpringBoot服务整合/2_SpringBoot整合ORM开发框架.md)
+- [SpringBoot整合Redis数据库](/常用框架/SpringBoot/SpringBoot服务整合/4_SpringBoot整合Redis数据库.md)
+- [SpringBoot整合Redisson](/Redis/Redis基础/4_SpringBoot整合Redisson.md)
+- [SpringBoot注解分析](/常用框架/SpringBoot/SpringBoot程序开发/3_SpringBoot注解分析.md)
+- [StableDiffusion介绍](/StableDiffusion/StableDiffusion/0_StableDiffusion介绍.md)
+- [Streamlit入门](/Python/AI大模型应用开发/16_Streamlit入门.md)
+- [Structured Output 结构化输出](/常用框架/SpringAIAlibaba/Agent Framework/7_StructuredOutput结构化输出.md)
+- [Teek主题美化](/daily/博客文档/VitPress/Teek主题美化.md)
+- [Thymeleaf基本语法](/常用框架/Thymeleaf/1_基本语法.md)
+- [TIDB简介](/数据库/04.分布式数据库TIDB/1_TIDB简介.md)
+- [Tools 工具](/常用框架/SpringAIAlibaba/Agent Framework/3_Tools.md)
+- [ubuntu安装应用](/Linux/Ubuntu/ubuntu安装应用.md)
+- [Ubuntu桌面版禁止root登录解决方法](/Linux/Shell命令/2_Ubuntu桌面版禁止root登录解决方法.md)
+- [Untitled](/@pages/loginPage.md)
+- [Untitled](/@pages/riskLinkPage.md)
+- [Untitled](/index_default.md)
+- [Valkey简介](/Redis/Redis基础/Valkey.md)
+- [Vim](/daily/日常笔记/Vim操作技巧.md)
+- [Vite 插件](/15.主题开发/80.Vite 插件.md)
+- [VitPress博客搭建](/daily/博客文档/VitPress/0_Vitpress博客搭建.md)
+- [Vue组件](/daily/博客文档/VitPress/5_Vue组件.md)
+- [Vuepress博客搭建](/daily/博客文档/Vuepress/0_Vuepress博客搭建.md)
+- [VuepressReco博客搭建](/daily/博客文档/Vuepress/1_VuepressReco博客搭建.md)
+- [WebUI介绍](/StableDiffusion/WebUI/0_WebUI介绍.md)
+- [Workflow 工作流](/常用框架/SpringAIAlibaba/Agent Framework/13_Workflow工作流.md)

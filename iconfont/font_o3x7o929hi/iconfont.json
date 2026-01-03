@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "130066759",
+      "name": "stable diffusion",
+      "font_class": "a-stablediffusion",
+      "unicode": "e878",
+      "unicode_decimal": 59512
+    }
+  ]
+}

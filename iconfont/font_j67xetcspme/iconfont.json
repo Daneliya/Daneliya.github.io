@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5484244",
+      "name": "数据结构",
+      "font_class": "shujujiegou",
+      "unicode": "e790",
+      "unicode_decimal": 59280
+    }
+  ]
+}

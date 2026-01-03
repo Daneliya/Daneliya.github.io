@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "125736543",
+      "name": "Leaf",
+      "font_class": "Leaf",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
+    }
+  ]
+}
