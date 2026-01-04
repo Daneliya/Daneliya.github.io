@@ -1,7 +1,8 @@
 ---
 url: /数据库/03.PostgreSQL/1_PostgreSQL介绍.md
 ---
-# 1\_PostgreSQL介绍
+
+# PostgreSQL介绍
 
 ## 前言
 

@@ -216,19 +216,19 @@ DockerHub：
 
 ![image-20210731155844368](/assets/image-20210731155844368.D5CfaYkH.png)
 
-2）根据查看到的镜像名称，拉取自己需要的镜像，通过命令：docker pull nginx
+2）根据查看到的镜像名称，拉取自己需要的镜像，通过命令：`docker pull nginx`
 
 ![image-20210731155856199](/assets/image-20210731155856199.CheEEWJE.png)
 
-3）通过命令：docker images 查看拉取到的镜像
+3）通过命令：`docker images` 查看拉取到的镜像
 
 ![image-20210731155903037](/assets/image-20210731155903037.Vie9MmWd.png)
 
 #### 2.1.4.案例2-保存、导入镜像
 
-需求：利用docker save将nginx镜像导出磁盘，然后再通过load加载回来
+需求：利用`docker save`将nginx镜像导出磁盘，然后再通过load加载回来
 
-1）利用docker xx --help命令查看docker save和docker load的语法
+1）利用`docker xx --help`命令查看`docker save`和`docker load`的语法
 
 例如，查看save命令用法，可以输入命令：
 
@@ -246,7 +246,7 @@ docker save --help
 docker save -o [保存的目标文件名称] [镜像名称]
 ```
 
-2）使用docker save导出镜像到磁盘
+2）使用`docker save`导出镜像到磁盘
 
 运行命令：
 
@@ -258,7 +258,7 @@ docker save -o nginx.tar nginx:latest
 
 ![image-20210731161354344](/assets/image-20210731161354344.BSxjIMrI.png)
 
-3）使用docker load加载镜像
+3）使用`docker load`加载镜像
 
 先删除本地的nginx镜像：
 
@@ -286,13 +286,13 @@ docker load -i nginx.tar
 
 2）查看Redis镜像的名称和版本
 
-3）利用docker pull命令拉取镜像
+3）利用 `docker pull` 命令拉取镜像
 
-4）利用docker save命令将 redis:latest打包为一个redis.tar包
+4）利用 `docker save` 命令将 `redis:latest` 打包为一个 `redis.tar` 包
 
-5）利用docker rmi 删除本地的redis:latest
+5）利用 `docker rmi` 删除本地的 `redis:latest`
 
-6）利用docker load 重新加载 redis.tar文件
+6）利用 `docker load` 重新加载 `redis.tar` 文件
 
 ### 2.2.容器操作
 
@@ -310,17 +310,17 @@ docker load -i nginx.tar
 
 其中：
 
-* docker run：创建并运行一个容器，处于运行状态
+* `docker run`：创建并运行一个容器，处于运行状态
 
-* docker pause：让一个运行的容器暂停
+* `docker pause`：让一个运行的容器暂停
 
-* docker unpause：让一个容器从暂停状态恢复运行
+* `docker unpause`：让一个容器从暂停状态恢复运行
 
-* docker stop：停止一个运行的容器
+* `docker stop`：停止一个运行的容器
 
-* docker start：让一个停止的容器再次运行
+* `docker start`：让一个停止的容器再次运行
 
-* docker rm：删除一个容器
+* `docker rm`：删除一个容器
 
 #### 2.2.2.案例-创建并运行一个容器
 
@@ -348,7 +348,7 @@ docker run --name containerName -p 80:80 -d nginx
 
 #### 2.2.3.案例-进入容器，修改文件
 
-**需求**：进入Nginx容器，修改HTML文件内容，添加“传智教育欢迎您”
+**需求**：进入Nginx容器，修改HTML文件内容，添加“大东北欢迎您”
 
 **提示**：进入容器要用到docker exec命令。
 
@@ -357,7 +357,7 @@ docker run --name containerName -p 80:80 -d nginx
 1）进入容器。进入我们刚刚创建的nginx容器的命令为：
 
 ```sh
-docker exec -it mn bash
+docker exec -it myNginx bash
 ```
 
 命令解读：
@@ -366,11 +366,11 @@ docker exec -it mn bash
 
 * -it : 给当前进入的容器创建一个标准输入、输出终端，允许我们与容器交互
 
-* mn ：要进入的容器的名称
+* mn：要进入的容器的名称
 
 * bash：进入容器后执行的命令，bash是一个linux终端交互命令
 
-2）进入nginx的HTML所在目录 /usr/share/nginx/html
+2）进入nginx的HTML所在目录 `/usr/share/nginx/html`
 
 容器内部会模拟一个独立的Linux文件系统，看起来如同一个linux服务器一样：
 
@@ -395,7 +395,7 @@ cd /usr/share/nginx/html
 容器内没有vi命令，无法直接修改，我们用下面的命令来修改：
 
 ```sh
-sed -i -e 's#Welcome to nginx#传智教育欢迎您#g' -e 's#<head>#<head><meta charset="utf-8">#g' index.html
+sed -i -e 's#Welcome to nginx#大东北欢迎您#g' -e 's#<head>#<head><meta charset="utf-8">#g' index.html
 ```
 
 在浏览器访问自己的虚拟机地址，例如我的是：http://192.168.150.101，即可看到结果：
@@ -438,7 +438,7 @@ docker run命令的常见参数有哪些？
 
 一旦完成数据卷挂载，对容器的一切操作都会作用在数据卷对应的宿主机目录了。
 
-这样，我们操作宿主机的/var/lib/docker/volumes/html目录，就等于操作容器内的/usr/share/nginx/html目录了
+这样，我们操作宿主机的`/var/lib/docker/volumes/html`目录，就等于操作容器内的`/usr/share/nginx/html`目录了
 
 #### 2.3.2.数据集操作命令
 

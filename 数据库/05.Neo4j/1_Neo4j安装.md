@@ -55,15 +55,24 @@ Neo4j应用程序有如下主要的目录结构：
 
 Neo4j的配置文件存储在conf目录下，Neo4j通过配置文件neo4j.conf控制服务器的工作。默认情况下，不需要进行任意配置，就可以启动服务器。
 
-Neo4j的核心数据文件默认存储在data/graph.db目录中，要改变默认的存储目录，可以在配置选项更新。下面的代码展示了限定文件存储在data/graph.db目录中的指令。
-dbms.active\_database=graph.db
-•数据库的安全验证默认是启用的，可以从配置选项中停用该内容。以下代码表示安全验证不启用。
+Neo4j的核心数据文件默认存储在`data/graph.db`目录中，要改变默认的存储目录，可以在配置选项更新。下面的代码展示了限定文件存储在`data/graph.db`目录中的指令。
 
-dbms.security.auth\_enabled=false
-•在配置选项中还可以配置Java堆内存的大小。下列代码分别是配置Java堆内存的最大值和最小值。
+```properties
+dbms.active_database=graph.db
+```
 
-dbms.memory.heap.initial\_size=512m
-dbms.memory.heap.max\_size=512m
+数据库的安全验证默认是启用的，可以从配置选项中停用该内容。以下代码表示安全验证不启用。
+
+```properties
+dbms.security.auth_enabled=false
+```
+
+在配置选项中还可以配置Java堆内存的大小。下列代码分别是配置Java堆内存的最大值和最小值。
+
+```properties
+dbms.memory.heap.initial_size=512m
+dbms.memory.heap.max_size=512m
+```
 
 ### 启动neo4j
 
@@ -75,7 +84,9 @@ dbms.memory.heap.max\_size=512m
 
 Neo4j服务器具有一个集成的浏览器，在一个运行的服务器实例上访问`http://localhost:7474/`，打开浏览器，显示启动页面。
 
-![image-20231125215857448](/assets/image-20231125215857448.hOshAoNd.png)默认的用户名和密码均为**neo4j**
+![image-20231125215857448](/assets/image-20231125215857448.hOshAoNd.png)
+
+默认的用户名和密码均为**neo4j**
 
 登录后需重置密码（至少八位）
 
