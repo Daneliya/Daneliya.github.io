@@ -245,9 +245,9 @@
 
 - [分布式系统中的可观测性](/Java/架构设计/分布式/06.分布式监控/0_可观测性.md)
 - [ARMS 系统监控](/Java/架构设计/分布式/06.分布式监控/1_ARMS系统监控.md)
+- [Prometheus监控](/Java/架构设计/分布式/06.分布式监控/2_Prometheus.md)
 - [CAT](/Java/架构设计/分布式/06.分布式监控/CAT.md)
 - [Pinpoint性能监控](/Java/架构设计/分布式/06.分布式监控/Pinpoint.md)
-- [Prometheus监控](/Java/架构设计/分布式/06.分布式监控/Prometheus.md)
 - [SkyWalking链路追踪](/Java/架构设计/分布式/06.分布式监控/SkyWalking.md)
 - [SpringBootAdmin系统监控](/Java/架构设计/分布式/06.分布式监控/SpringBootAdmin.md)
 
