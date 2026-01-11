@@ -162,9 +162,11 @@
 - [SpringCloudStream](/Java/微服务专栏/01.SpringCloud/6_SpringCloudStream.md)
 - [SpringCloudSleuth](/Java/微服务专栏/01.SpringCloud/7_SpringCloudSleuth.md)
 
-#### 服务网关Gateway
+#### 微服务网关
 
-- [Gateway服务网关](/Java/微服务专栏/02.服务网关Gateway/Gateway服务网关.md)
+- [微服务网关概述](/Java/微服务专栏/02.微服务网关/1_微服务网关概述.md)
+- [Gateway服务网关](/Java/微服务专栏/02.微服务网关/2_Gateway服务网关.md)
+- [Higress服务网关](/Java/微服务专栏/02.微服务网关/3_Higress服务网关.md)
 
 #### 注册中心Nacos
 
@@ -246,9 +248,9 @@
 - [分布式系统中的可观测性](/Java/架构设计/分布式/06.分布式监控/0_可观测性.md)
 - [ARMS 系统监控](/Java/架构设计/分布式/06.分布式监控/1_ARMS系统监控.md)
 - [Prometheus监控](/Java/架构设计/分布式/06.分布式监控/2_Prometheus.md)
+- [SkyWalking链路追踪](/Java/架构设计/分布式/06.分布式监控/3_SkyWalking.md)
 - [CAT](/Java/架构设计/分布式/06.分布式监控/CAT.md)
 - [Pinpoint性能监控](/Java/架构设计/分布式/06.分布式监控/Pinpoint.md)
-- [SkyWalking链路追踪](/Java/架构设计/分布式/06.分布式监控/SkyWalking.md)
 - [SpringBootAdmin系统监控](/Java/架构设计/分布式/06.分布式监控/SpringBootAdmin.md)
 
 ##### 分布式日志收集

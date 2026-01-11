@@ -3936,7 +3936,7 @@ url: /Java/数据结构/查找算法.md
 
 ASL (Aerage Search Length）
 
-![img](/assets/image.BLZ5FY7t.png)
+![img](/assets/image.BMw5v_YR.png)
 
 ### 顺序查找
 
@@ -3944,7 +3944,7 @@ ASL (Aerage Search Length）
 
 顺序表、链表
 
-![img](/assets/image.BLZ5FY7t.png)
+![img](/assets/image.BMw5v_YR.png)
 
 ### 折半查找（二分查找法）
 
@@ -11146,89 +11146,31 @@ url: /daily/日常笔记/工具清单.md
 
 ## 1、🛠️编程开发软件
 
-### Java
-
-* IDEA（开发软件）
-
-* maven      https://blog.csdn.net/a805814077/article/details/100545928
-
-* JDK
-
-* mongodb：https://www.mongodb.com/try/download/community
-
-* mongosh：https://www.mongodb.com/try/download/shell
-
-* Skywalking：https://skywalking.apache.org/downloads
-
-* Jarboot（Java进程启停、管理、诊断的平台）：https://gitee.com/majz0908/jarboot/releases
-
-* JProfiler：https://www.ej-technologies.com/jprofiler
-
-### WEB
-
-* Visual Studio Code（主要写前端）       https://code.visualstudio.com/
-* 微信开发者工具（微信小程序开发）
-* hbuilder
-* hbuilderx         https://www.dcloud.io/hbuilderx.html
-
-### 终端
-
-* xshell（终端连接工具）+ xftp6（终端连接文件传输）     网盘
-* SecureCRSecureFXP（SecureCRTPortable + SecureFXPortable）
-* MobaXterm12（多功能终端软件）
-* WinSCP（Windows环境下使用SSH的开源图形化SFTP客户端）
-* cmder
-* hyper（终端）
-* Windows Terminal（https://baiyue.one/archives/484.html、https://www.sogou.com/link?url=DSOYnZeCC\_qEe93p8Ogn-PatQYvpUP2Pt35SpKM1MkU3Ps4PUPcbbqiYhsw0jQe5）
-
-### 代码管理
-
-* TortoiseSVN              https://tortoisesvn.net/downloads.html
-* Git                                https://gitforwindows.org/
-* TortoiseGIT               https://tortoisegit.org/download/
-
 ### 其它开发相关
 
-* VC++6.0（C语言编辑器）
-* winTC（C语言编辑器）
-* VC2010express（C语言编辑器）
-* VS2008、2012（C语言编辑器）
-* PyCharm（python开发）
-* DevEco Studio（华为提供的集成开发环境）
-* Navicat Premium（数据库管理工具）
-* HeidiSQL（数据库管理工具）
-* Robo 3T（MongoDB最新最佳连接工具）
-* Adminer（数据库连接，https://www.adminer.org）
 * VMware Workstation Pro（虚拟机）
-* GitHub
-* Gitlab、Gogs（Gitlab作为Github的山寨版，功能非常全面，但与此同时也十分臃肿。国人开发的Gogs则十分轻量，据作者说甚至能在一台普通的树莓派Raspberry Pi上运行，作为个人用的代码托管平台，显然Gogs更适合个人。）
-* ApiPost（接口测试）（126邮箱）
-* Postman（接口测试）
-* RunApi（接口文档）（126邮箱）
-* Redis Desktop Manager（RDM）（跨平台的redis可视化工具）
-* [Redis Insight](https://redis.io/insight/)（redis可视化工具、[使用教程](https://blog.csdn.net/yangbindxj/article/details/123184787)）
-* [Tiny RDM](https://redis.tinycraft.cc/zh/) （redis可视化工具）
-* iTunes（ios测试）
-* TSvnPwd （SVN本地密码查看器）
+
 * ReverseProxy（逆向代理服务器）
+
 * MSF（sql注入攻击及渗透工具）
+
 * sqlmap（sql注入攻击及渗透工具）
+
 * Visio（流程图）
+
 * Cocos Creator（游戏开发）
+
 * Fiddler（抓包）
+
 * 按键精灵
+
 * Microsoft Office Access（关系数据库管理系统）
+
 * VisualSet（模块自动化）
+
 * WinMergePortable（代码比较）
-* jmeter（压测）https://jmeter.apache.org/
 
 ## 2、🏢办公软件、笔记、文本、读书
-
-* QQ        https://im.qq.com/
-
-* 微信        https://pc.weixin.qq.com/
-
-* 百度网盘     http://pan.baidu.com/download
 
 * Google Chrome     https://www.google.cn/intl/zh-CN/chrome/
 
@@ -11242,36 +11184,6 @@ url: /daily/日常笔记/工具清单.md
       ImTranslator   百度翻译   翻译
       Tampermonkey   脚本
   ```
-
-* 网易有道词典    http://cidian.youdao.com/
-
-* Notepad++       https://notepad-plus-plus.org/downloads/
-
-* EditPlus（文本编辑器）
-
-* UltraEdit（文本编辑器）
-
-* Sublime Text3
-
-* Typora（Markdown编辑器）
-
-* 为知笔记
-
-* CHM Editor（chm文档编写）
-
-* GitBook（是一个基于 Node.js 的命令行工具，可使用 Github/Git 和 Markdown 来制作精美的电子书，网络连接不太好）
-
-* Kindle（亚马逊阅读器 mobi）
-
-* calibre（阅读&格式转换）
-
-* 静读天下（阅读）
-
-* XMind（关系导图）
-
-* MindMaster（关系导图emmx）
-
-* FreeMind（关系导图）
 
 * 打字测试TT
 
@@ -11297,55 +11209,10 @@ url: /daily/日常笔记/工具清单.md
 
 ## 3、📸多媒体制作
 
-* Adobe Photoshop Pro
-
-* Adobe Premiere Pro（专业版视频剪辑）
-
-  http://www.dakongbai.cn/show.asp?id=4733（向天歌李兴兴PR剪辑上分攻略（B站现价99元））
-
-* Adobe Premiere Elements（家庭版视频剪辑）
-
-* 剪映（对于短视频、信息流或者口播类的更加友好，各种模板特效，ai文字配音等等，很适合信息流视频）
-
-* 达芬奇（风格化的商业广告片，tvc等对于视频拍摄素材的规格和质量要求更高的片子）
-
-* Final Cut Pro（mac混剪）
-
-* Vegas
-
-* 会声会影（家庭版视频剪辑）
-
-* OBS（直播录屏）
-
-* UTAU（歌声合成软件）
-
-* Melodyne（调音，鬼畜）
-
-* freepiano（电脑键盘模拟演奏钢琴软件）
-
-* Foobar2000（音频播放器）
-
-* [KMPlayer](https://www.ghxi.com/kmplayerpc.html)（视频播放器）
-
-* Tinymediamanager（影片搜刮）
-
-* Screenbox（现代化的媒体播放器）
-
-* 格式工厂
-
-* 唧唧Down（B站视频下载）
-
 * 自媒体导航：http://www.zimeiti135.com/
-
-* ACDSee（图片文件管理，查重）
-
 * [qBittorrent](https://github.com/c0re100/qBittorrent-Enhanced-Edition)（基于Qt工具箱和libtorrent-rasterbar，并用C++编写的BitTorrent客户端）
-
 * BitComet（下载）
-
 * uTorrent（下载）
-
-* eagle（图片管理软件）
 
 ## 4、🖥️windows系统相关
 
@@ -11436,22 +11303,6 @@ url: /daily/日常笔记/工具清单.md
 * Cellular-Z（卫星）
 * AccuBattery（手机电池寿命）
 * 一个木函（工具包）
-
-## 6、自媒体
-
-主流平台：
-
-百家号、
-
-头条号（https://mp.toutiao.com/profile\_v3/index）qq，178 xxl666、
-
-大鱼号（https://mp.dayu.com/）126 Xxl66666 178、
-
-企鹅号（https://om.qq.com/userAuth/index收益比较低）、
-
-趣头条（https://baijiahao.baidu.com/builder/app/choosetype）178 xxl666
-
-一点号（http://www.yidianzixun.com/）
 
 ## 7、国外撸美金问卷
 
@@ -20450,7 +20301,7 @@ url: /Java/数据结构/排序算法.md
 
 具体过程为：将第个记录的关键字Ki顺次与其前面记录的关键字Ki-1,ki-2,...ki进行比较，将所有关键字大于K的记录依次向后移动一个位置，直到遇见一个关键字小于或者等于Ki的记录Kj，此时K后面必为空位置，将第i个记录插入空放置即可。
 
-![img](/assets/image.BLZ5FY7t.png)
+![img](/assets/image.BMw5v_YR.png)
 
 ```c
 #include <stdio.h>
@@ -20562,7 +20413,7 @@ void bubble_sort(int arr[], int n) {
 
 用增量来划分子序列的方法，达到减少关键字移动次数的目的。
 
-![img](/assets/image.BLZ5FY7t.png)
+![img](/assets/image.BMw5v_YR.png)
 
 ```c
 void ShellPass(SeqList R, int d)
@@ -31665,7 +31516,7 @@ url: /@pages/nav.md
 
 # 网站导航
 
-## AI工具
+## AI助手工具
 
 ::: navCard
 
@@ -31707,7 +31558,7 @@ url: /@pages/nav.md
 
 ***
 
-## AI编程工具
+## AI编程IDE
 
 ### 国外
 
@@ -31739,7 +31590,7 @@ url: /@pages/nav.md
 
 :::
 
-### 国产
+### 国内
 
 ::: navCard
 
@@ -31765,6 +31616,622 @@ url: /@pages/nav.md
   link: https://codegeex.cn/
   img: /svg/website/codegeex.png
   badge: AI编程工具, 国产
+```
+
+:::
+
+## 🛠️编程开发工具
+
+### Java必备
+
+::: navCard
+
+```yaml
+- name: IDEA
+  desc: JetBrains 提供高效的开发工具和 IDE，帮助开发者提升编码效率与质量。
+  link: https://www.jetbrains.com/idea/
+  img: /svg/website/idea.svg
+  badge: IDE
+  badgeType: tip
+- name: JDK
+  desc: Java 集成开发环境
+  link: https://www.oracle.com/cn/java/technologies/downloads/
+  img: /svg/website/java.svg
+  badge: 开发环境
+- name: Maven
+  desc: Maven 作为 Java 项目的核心构建工具，能自动化处理依赖管理、项目编译、打包部署等流程，是 Java 开发者必备技能。
+  link: https://maven.apache.org/
+  img: /svg/website/Maven.png
+  badge: 构建工具
+```
+
+:::
+
+### 数据库
+
+::: navCard
+
+```yaml
+- name: MySQL
+  desc: 主流的开源关系型数据库的强大功能
+  link: https://www.mysql.com/cn/downloads/
+  img: /svg/website/MySQL.svg
+  badge: 数据库
+  badgeType: tip
+- name: Redis
+  desc: 一个由 Salvatore Sanfilippo 写的 key-value 存储系统，是跨平台的非关系型数据库。
+  link: https://redis.io/
+  img: /svg/website/redis.svg
+  badge: 数据库
+  badgeType: tip
+- name: MongoDB
+  desc: MongoDB 是一个常用的开源文档数据库，在现代 Web 和移动应用中广泛使用。
+  link: https://www.mongodb.com/try/download/shell
+  img: /svg/website/MongoDB.svg
+  badge: 数据库
+- name: MongoDB Shell
+  desc: 连接 MongoDB 最快的方式。通过这款现代且可扩展的命令行界面，轻松查询数据、配置设置及执行其他作——配备语法高亮、智能自动补全、上下文帮助和错误信息。
+  link: https://www.mongodb.com/try/download/shell
+  img: /svg/website/MongoDB.svg
+  badge: 数据库
+```
+
+:::
+
+### 数据库管理
+
+::: navCard
+
+```yaml
+- name: <font color="black">Navicat Premium</font>
+  desc: 强大的一体化数据库开发解决方案，可从单一应用程序无缝连接多个数据库，包括 MySQL、PostgreSQL、MongoDB、MariaDB、SQL Server、Oracle、SQLite …
+  link: https://www.navicat.com.cn/products
+  img: /svg/website/Navicat.png
+  badge: 数据库管理
+  badgeType: tip
+- name: DataGrip
+  desc: 由 JetBrains 开发的一款专业的数据库管理工具，广泛支持多种数据库系统，如 MySQL、PostgreSQL、Oracle、SQL Server、SQLite、MongoDB 等。
+  link: https://www.jetbrains.com/datagrip/
+  img: /svg/website/DataGrip.svg
+  badge: 数据库管理
+  badgeType: tip
+- name: DBeaver
+  desc: 一款开源的数据库管理工具，它支持几乎所有主流的数据库系统。
+  link: https://dbeaver.io/download/
+  img: /svg/website/DBeaver.svg
+  badge: 数据库管理
+- name: SQLyog
+  desc: 一款专门针对MySQL数据库的管理工具。它具有简洁高效的特点，对于MySQL数据库的管理和开发非常方便。其优点之一是性能优化能力强，它可以对MySQL数据库进行性能分析和优化，帮助用户找出数据库性能瓶颈，并提供相应的优化建议。可以分析查询语句的执行计划，找出慢查询的原因，并提供优化方案。
+  link: https://webyog.com/product/sqlyog/
+  img: /svg/website/SQLyog.svg
+  badge: 数据库管理
+- name: Robo 3T
+  desc: 一款专为 MongoDB 设计的开源图形用户界面（GUI）工具。
+  link: https://robomongo.org/
+  img: /svg/website/Robo 3T.svg
+  badge: 数据库管理
+- name: RDM
+  desc: 一款简单快速、跨平台的Redis桌面管理工具，也被称作Redis可视化工具；支持命令控制台操作，以及常用，查询key，rename，delete等操作。
+  link: https://docs.rdm.dev/en/2019/
+  img: /svg/website/Redis Desktop Manager.svg
+  badge: 数据库管理
+- name: Redis Insight
+  desc: Redis官方出品的可视化管理工具，可用于设计、开发、优化你的Redis应用。
+  link: https://redis.io/insight/
+  img: /svg/website/Redis Insight.png
+  badge: 数据库管理
+- name: Tiny RDM
+  desc: 新一代轻量级Redis GUI,直观管理Redis数据库,支持多平台Windows、Mac和Linux系统,安装简单迅速,连接本地及远程Redis,可视化展示键值数据,快速操作键值对,内置控制台直接运行命令,数据浏览备份导出,慢日志查询,新手高级用户首选,大幅提高Redis应用开发效率。
+  link: https://redis.tinycraft.cc/zh/
+  img: /svg/website/Tiny RDM.svg
+  badge: 数据库管理
+  badgeType: tip
+- name: HeidiSQL
+  desc: 一款开源的数据库管理工具，专为MySQL、MariaDB、Microsoft SQL Server和PostgreSQL设计。 该软件由德国开发者Ansgar Becker创建，最初名为MySQL-Front。
+  link: https://www.heidisql.com/
+  img: /svg/website/HeidiSQL.png
+  badge: 数据库管理
+- name: Adminer
+  desc: 一个由单个 PHP 文件实现的免费数据库管理工具，支持 MySQL、MariaDB、PostgreSQL、CockroachDB、SQLite、SQL Server …
+  link: https://www.adminer.org/en/
+  img: /svg/website/Adminer.png
+  badge: 数据库管理
+```
+
+:::
+
+### 代码管理
+
+::: navCard
+
+```yaml
+- name: GitHub
+  desc: GitHub是世界上最大的代码托管平台，超7千万开发者正在使用。
+  link: https://github.com/
+  img: /svg/website/github.svg
+  badge: 代码托管
+  badgeType: tip
+- name: Gitlab
+  desc: 一个开源的仓库管理系统，它使用 Git 作为代码管理工具，并提供了基于 Web 的服务界面。
+  link: https://gitlab.com/
+  img: /svg/website/gitlab.svg
+  badge: 代码托管
+- name: Gogs
+  desc: Gitlab作为Github的山寨版，功能非常全面，但与此同时也十分臃肿。国人开发的Gogs则十分轻量，据作者说甚至能在一台普通的树莓派Raspberry Pi上运行，作为个人用的代码托管平台，显然Gogs更适合个人。
+  link: https://gogs.io/
+  img: /svg/website/gogs.svg
+  badge: 代码托管
+- name: Git
+  desc: 一个 免费开源 的分布式版本控制系统，旨在以速度和效率处理从小型到非常大的项目。 Git 闪电般快，拥有庞大的 GUI 、 托管服务 和 命令行工具 生态系统。
+  link: https://git-scm.cn/
+  img: /svg/website/git.svg
+  badge: 版本控制
+  badgeType: tip
+- name: TortoiseSVN
+  desc: 一个基于 Subversion 的版本控制系统，支持 Windows 操作系统。
+  link: https://tortoisesvn.cn/downloads.html
+  img: /svg/website/TortoiseSVN.svg
+  badge: 版本控制
+- name: TortoiseGIT
+  desc: Windows 下的 Git 图形化客户端，通过右键菜单即可完成大部分 Git 操作，非常适合不熟悉命令行的用户。
+  link: https://tortoisegit.org/
+  img: /svg/website/TortoiseSVN.svg
+  badge: 版本控制
+- name: TSvnPwd
+  desc: 帮助用户查看和管理自己的svn登录账号和密码。 
+  link: http://www.leapbeyond.com/ric/TSvnPD/
+  img: /svg/website/TortoiseSVN.svg
+  badge: SVN密码找回
+
+```
+
+:::
+
+### 终端工具
+
+::: navCard
+
+```yaml
+- name: MobaXterm
+  desc: 一款增强型终端、X 服务器和 Unix 命令集（GNU/ Cygwin）工具箱。
+  link: https://mobaxterm.mobatek.net/
+  img: /svg/website/MobaXterm.png
+  badge: 终端工具
+  badgeType: tip
+- name: WindTerm
+  desc: 一款免费开源的跨平台终端工具，支持Windows、Linux和macOS，体积小巧仅30MB。
+  link: https://github.com/kingToolbox/WindTerm
+  img: /svg/website/WindTerm.png
+  badge: 终端工具
+- name: Xshell
+  desc: 一款功能强大的SSH客户机，可以管理远程主机、优化工作流程、自定义颜色和支持RDP。
+  link: https://www.xshell.com/zh/xshell/
+  img: /svg/website/Xshell.svg
+  badge: 终端工具
+- name: Xftp
+  desc: 一款功能强大的 SFTP 客户机，支持拖放、队列、同步、搜索、过滤等操作，提高传输效率和安全性。
+  link: https://www.xshell.com/zh/xftp/
+  img: /svg/website/Xftp.svg
+  badge: 终端工具
+- name: SecureCRSecureFXP
+  desc: 包括 SecureCRTPortable + SecureFXPortable，是VanDyke Software公司开发的远程访问工具，用于SSH连接、终端模拟、文件传输等。
+  link: https://www.vandyke.com/cgi-bin/releases.php
+  img: /svg/website/SecureCRSecureFXP.png
+  badge: 终端工具
+- name: WinSCP
+  desc: 一款适用于 Windows 的热门免费文件管理器，支持 SFTP、FTP、FTPS、SCP、S3、WebDAV 以及本地到本地文件传输。
+  link: https://winscp.net/eng/index.php
+  img: /svg/website/WinSCP.svg
+  badge: 终端工具
+- name: cmder
+  desc: 增强版的Windows命令行工具。
+  link: https://cmder.app/
+  img: /svg/website/cmder.png
+  badge: 终端工具
+- name: hyper
+  desc: 一个基于 Web 技术、基于 JavaScript、HTML 和 CSS 构建的高度可定制的终端工具
+  link: https://hyper.is/
+  img: /svg/website/hyper.png
+  badge: 终端工具
+```
+
+:::
+
+### API相关
+
+::: navCard
+
+```yaml
+- name: Apifox
+  desc: Apifox = Postman + Swagger + Mock + JMeter。集接口文档工具、接口Mock工具、接口自动化测试工具、接口调试工具于一体，提升 10 倍研发效率。
+  link: https://apifox.com/
+  img: /svg/website/Apifox.svg
+  badge: 接口管理
+  badgeType: tip
+- name: Postman
+  desc: 一款功能强大的API开发工具，广泛应用于API的测试、调试和 文档 生成。
+  link: https://www.postman.com/downloads/
+  img: /svg/website/Postman.svg
+  badge: 接口管理
+- name: ApiPost
+  desc: 一个AI驱动的API研发管理工具，支持多种协议和IDE插件，提供API设计、调试、自动化测试、文档生成等功能，适用于不同规模的团队和行业。
+  link: https://www.apipost.cn/
+  img: /svg/website/ApiPost.svg
+  badge: 接口管理
+- name: RunApi
+  desc: 一款以接口为核心的开发测试工具，功能类似 Postman，但更侧重于接口调试与自动生成在线接口文档，并与 Showdoc 深度集成，实现接口测试、Mock数据、自动化流程测试及团队协作。
+  link: https://www.runapi.com.cn/
+  img: /svg/website/RunApi.png
+  badge: 接口管理
+- name: JMeter
+  desc: 一个开源的性能测试工具，由 Apache 基金会开发，完全基于 Java 实现。它主要用于测试服务器端应用程序的性能，包括静态和动态资源的负载测试和功能测试。
+  link: https://jmeter.apache.org/
+  img: /svg/website/JMeter.svg
+  badge: 接口压测
+
+```
+
+:::
+
+### WEB开发
+
+::: navCard
+
+```yaml
+- name: WebStorm
+  desc: 由JetBrains公司开发的JavaScript及其相关技术进行编码的集成开发环境，支持Windows、Linux、macOS操作系统。
+  link: https://www.jetbrains.com/webstorm/
+  img: /svg/website/WebStorm.svg
+  badge: WEB开发
+  badgeType: tip
+- name: Visual Studio Code
+  desc: 由微软开发的一款跨平台源代码编辑器，支持在 Windows、macOS 和 Linux 上运行。
+  link: https://code.visualstudio.com/
+  img: /svg/website/vscode.svg
+  badge: WEB开发
+- name: HBuilderX
+  desc: 由是 DCloud（数字天堂）推出的一款支持 HTML5 的 Web 开发 IDE。它是 HBuilder 的升级版，旨在为前端开发者提供一个高效、便捷的开发环境。
+  link: https://dcloud.io/hbuilderx.html
+  img: /svg/website/HBuilderX.svg
+  badge: WEB开发
+- name: 微信开发者工具
+  desc: 专为微信小程序、小游戏及公众号网页开发设计的一站式集成开发环境（IDE）。
+  link: https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html
+  img: /svg/website/微信开发者工具.png
+  badge: WEB开发
+```
+
+:::
+
+### 其他开发
+
+::: navCard
+
+```yaml
+- name: PyCharm
+  desc: 一款专为 Python 开发者设计的集成开发环境，提供了智能代码补全、代码分析、版本控制、插件扩展等功能。
+  link: https://www.jetbrains.com/pycharm/
+  img: /svg/website/pycharm.svg
+  badge: Python
+  badgeType: tip
+- name: CLion
+  desc: 由 JetBrains 开发的一款专业 C/C++ 集成开发环境（IDE），旨在提升开发效率并优化开发体验。它集成了代码编辑、编译、调试和重构等功能，广泛应用于多种开发场景。
+  link: https://www.jetbrains.com/clion/
+  img: /svg/website/Clion.svg
+  badge: C语言
+- name: DevEco Studio
+  desc: 专为鸿蒙应用开发设计的集成开发环境 (IDE)，支持手机、平板、2in1、座舱、智能穿戴等多设备一站式开发。提供AI智能辅助编码、实时预览、编译构建、代码调试、性能调优、模拟器 …
+  link: https://developer.huawei.com/consumer/cn/deveco-studio/
+  img: /svg/website/DevEco Studio.png
+  badge: 鸿蒙
+- name: Visual Studio
+  desc: 微软推出的旗舰级集成开发环境，主要支持C#、C++、VB.NET等语言和框架。
+  link: https://visualstudio.microsoft.com/zh-hans/
+  img: /svg/website/Visual Studio.svg
+  badge: C语言
+- name: Visual C++
+  desc: 微软公司的免费C++开发工具，具有集成开发环境，可提供编辑C语言，C++以及C++/CLI等编程语言。VC++集成了便利的除错工具，特别是集成了微软Windows视窗操作系统应用程序接口（Windows API）、三维动画DirectX API，Microsoft .NET框架。 
+  link: https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist
+  img: /svg/website/Visual Studio.svg
+  badge: C语言
+
+```
+
+:::
+
+### 中间件
+
+::: navCard
+
+```yaml
+- name: Skywalking
+  desc: 开源的 应用性能监控（APM） 和 可观测性分析平台，专为 微服务 和 云原生架构 设计。它提供 分布式追踪、服务网格遥测分析、度量聚合 和 可视化 功能，支持多种编程语言的探针。
+  link: https://skywalking.apache.org/
+  img: /svg/website/Skywalking.png
+  badge: 中间件
+  badgeType: tip
+
+```
+
+:::
+
+## 🏢办公软件
+
+### 文本编辑器
+
+::: navCard
+
+```yaml
+- name: Notepad++
+  desc: 一款免费的源代码编辑器和记事本替代品，支持多种编程语言。
+  link: https://notepad-plus-plus.org/downloads/
+  img: /svg/website/Notepad++.png
+  badge: 文本编辑器
+  badgeType: tip
+- name: Sublime Text
+  desc: 一个跨平台的文本编辑器和代码编辑器。它最初被设计为一个具有丰富扩展功能的 Vim。Sublime Text 具有漂亮的用户界面和强大的功能，例如代码缩略图、Python 插件、代码段等。
+  link: https://www.sublimetext.com/
+  img: /svg/website/Sublime Text.png
+  badge: 文本编辑器
+- name: EditPlus
+  desc: 一款适用于Windows的文本编辑器，内置FTP、FTPS和SFTP功能。它可以作为优秀的记事本替代品，同时还为网页作者和程序员提供了许多强大的功能。
+  link: https://www.editplus.com/
+  img: /svg/website/EditPlus.png
+  badge: 文本编辑器
+- name: UltraEdit
+  desc: 一款功能强大的跨平台文本编辑器，支持多种编程语言，适合程序员和开发者使用。
+  link: https://www.ultraedit.com/zh-hans/ultraedit/
+  img: /svg/website/UltraEdit.png
+  badge: 文本编辑器
+- name: CHM Editor
+  desc: 又称chm文档制作工具、chm电子书制作软件，是一种专门用于编辑制作chm格式文档的工具。
+  link: https://chmeditor.com/zh
+  img: /svg/website/CHM Editor.png
+  badge: chm文本编辑器
+- name: GitBook
+  desc: 一个基于 Node.js 的命令行工具，可使用 Github/Git 和 Markdown 来制作精美的电子书，网络连接不太好。
+  link: https://www.gitbook.com/
+  img: /svg/website/GitBook.svg
+  badge: 文档托管
+
+```
+
+:::
+
+### Markdown编辑器
+
+::: navCard
+
+```yaml
+- name: Typora
+  desc: 一款支持实时预览的 Markdown 文本编辑器。
+  link: https://typora.io/
+  img: /svg/website/Typora.png
+  badge: Markdown
+  badgeType: tip
+- name: 为知笔记
+  desc: 一款专业的知识管理工具，支持多端同步、实时协作、可视化知识图谱等功能，帮助用户记录、组织、发现、分享知识。免费试用，满足个人和团队的各类场景需求。
+  link: https://www.wiz.cn/zh-cn/
+  img: /svg/website/为知笔记.png
+  badge: Markdown
+
+
+
+
+
+```
+
+:::
+
+### 思维导图
+
+::: navCard
+
+```yaml
+- name: XMind
+  desc: 一款功能强大的思维导图和头脑风暴软件，支持多平台使用，旨在帮助用户理清思路、捕捉创意并高效组织信息。
+  link: https://xmind.cn/
+  img: /svg/website/XMind.svg
+  badge: 思维导图
+  badgeType: tip
+- name: MindMaster
+  desc: 由深圳市亿图软件有限公司开发的一款跨平台思维导图软件，支持Windows、Mac、Linux、iOS、Android及网页端等多设备同步运行。
+  link: https://mm.edrawsoft.cn/
+  img: /svg/website/MindMaster.svg
+  badge: 思维导图
+- name: FreeMind
+  desc: 一款经典的、基于 Java 的免费开源思维导图工具，帮助您整理思路、激发创意。
+  link: https://freemind.net.cn/
+  img: /svg/website/FreeMind.png
+  badge: 思维导图
+
+
+
+
+```
+
+:::
+
+### 阅读器
+
+::: navCard
+
+```yaml
+- name: Calibre
+  desc: 一款功能强大且易于使用的开源电子书管理工具，支持多种平台和文件格式，适合个人用户管理电子书库。
+  link: https://calibre-ebook.com/zh_CN
+  img: /svg/website/Calibre.png
+  badge: 阅读器,格式转换,PC
+  badgeType: tip
+- name: 微信读书
+  desc: 腾讯推出的阅读类软件，基于微信社交关系链开发，兼容iOS和Android系统。该软件通过整合社交功能与数字阅读服务，打造围绕书籍的互动式阅读场景。
+  link: https://weread.qq.com/
+  img: /svg/website/微信读书.png
+  badge: 阅读器,PC,APP
+- name: Kindle
+  desc: 由亚马逊发布的一款电子书阅读软件，用户可以在手机、平板、电脑等设备上使用该应用来浏览、购买和阅读 Kindle 电子书。此外，Kindle 还包括一系列电子阅读器，旨在提供更好的阅读体验。通过 Kindle 应用，用户可以在不同设备上同步阅读进度，方便随时随地阅读。
+  link: https://apps.apple.com/cn/app/amazon-kindle/id302584613
+  img: /svg/website/亚马逊Kindle.svg
+  badge: 阅读器,PC,APP
+- name: 当当云阅读
+  desc: 当当网专门为手机用户推出的读书软件，涵盖了小说、文学、社科、励志、教育、科技等多个品类的正版电子书和有声读物。该平台于2015年上线，经过多次迭代和升级，现已成为集电子书、纸质书购买、听书和社交互动于一体的综合性阅读平台。
+  link: https://e.dangdang.com/
+  img: /svg/website/当当云阅读.png
+  badge: 阅读器,APP
+
+```
+
+:::
+
+## 📸多媒体相关
+
+### 图片/视频处理
+
+::: navCard
+
+```yaml
+- name: Adobe Photoshop
+  desc: 由Adobe公司提供的图像处理软件，用于编辑和创造以像素构成的数字图像。
+  link: https://www.adobe.com/hk_zh/products/photoshop.html
+  img: /svg/website/PS.svg
+  badge: 图像处理
+  badgeType: tip
+- name: Adobe Premiere Pro
+  desc: 由Adobe公司提供的视频编辑软件，用于剪辑、调色和处理视频素材。
+  link: https://www.adobe.com/cn/creativecloud/roc/business.html
+  img: /svg/website/PR.svg
+  badge: 视频剪辑
+  badgeType: tip
+- name: Final Cut Pro
+  desc: 一款专为 Apple 芯片优化的视频剪辑软件，能支持高分辨率、高帧率和多通道音频，提供多种创意和效率工具。
+  link: https://www.apple.com.cn/final-cut-pro/
+  img: /svg/website/Final Cut Pro X.svg
+  badge: 视频剪辑
+- name: 剪映
+  desc: 对于短视频、信息流或者口播类的更加友好，各种模板特效，ai文字配音等等，很适合信息流视频。
+  link: https://www.capcut.cn/
+  img: /svg/website/剪映.svg
+  badge: 视频剪辑
+- name: 达芬奇
+  desc: 风格化的商业广告片，tvc等对于视频拍摄素材的规格和质量要求更高的片子。
+  link: http://www.blackmagicdesign.com/cn/products/davinciresolve
+  img: /svg/website/达芬奇.png
+  badge: 视频剪辑
+- name: Vegas Pro
+  desc: 一款专业的视频编辑软件，具备强大的后期处理功能。它允许用户对视频素材进行剪辑合成、添加特效、调整颜色、编辑字幕等操作，同时还包括音频处理工具，可以为视频添加音效、录制声音和处理噪声。
+  link: https://www.vegascreativesoftware.com/us/vegas-pro/
+  img: /svg/website/Vegas.svg
+  badge: 视频剪辑
+- name: 会声会影
+  desc: 由加拿大Corel公司发布的一款功能丰富的视频编辑软件。
+  link: https://www.huishenghuiying.com.cn/
+  img: /svg/website/会声会影.png
+  badge: 视频剪辑
+- name: Adobe Animate
+  desc: 由Adobe公司提供一款强大的2D动画制作软件，广泛应用于动画制作、交互式内容设计和游戏开发等领域。
+  link: https://helpx.adobe.com/cn/animate/get-started.html
+  img: /svg/website/adobe_animate.svg
+  badge: 动画制作
+```
+
+:::
+
+### 音频处理
+
+::: navCard
+
+```yaml
+- name: UTAU
+  desc: 一款由饴屋／菖蒲开发制作的免费闭源歌声合成软件，最初为了辅助人力VOCALOID制作而诞生。
+  link: https://mzh.moegirl.org.cn/UTAU
+  img: /svg/website/UTAU.png
+  badge: 歌声合成
+  badgeType: tip
+- name: Melodyne
+  desc: 由Celemony公司开发的音频处理工具，核心功能包括音高修正、节拍调整及多轨音频编辑。
+  link: https://www.celemony.com/en/start
+  img: /svg/website/Melodyne.png
+  badge: 音频
+- name: Freepiano
+  desc: 一款开源的电脑键盘演奏音乐软件，支持多种音源和音频输出方式，可以定义键盘上任意按键的功能和显示，还可以录制和导出乐曲。
+  link: https://freepiano.tiwb.com/cn/
+  img: /svg/website/Freepiano.png
+  badge: 钢琴模拟
+
+
+
+
+
+```
+
+:::
+
+### 播放器
+
+::: navCard
+
+```yaml
+- name: Foobar2000
+  desc: 一款功能强大的音频播放器，以其高音质、灵活的界面自定义和丰富的插件支持而受到音乐爱好者的青睐。
+  link: https://www.foobar2000.org/
+  img: /svg/website/Foobar2000.png
+  badge: 音频播放器
+  badgeType: tip
+- name: KMPlayer
+  desc: 一款功能强大的多媒体播放器，支持几乎所有音视频格式，用户可以通过它享受高质量的视听体验。
+  link: https://kmplayer.com/home
+  img: /svg/website/KMPlayer.png
+  badge: 视频播放器
+- name: Screenbox
+  desc: 一款现代视频播放器，适配 Win10、Win11 及 Xbox 控制台。 其界面美观友好，操作便捷，具备手势控制、窗口快捷键调整等功能，还有画中画模式、保存视频帧、Chromecast 支持等特色，可浏览播放网络媒体文件。
+  link: https://github.com/huynhsontung/Screenbox
+  img: /svg/website/Screenbox.png
+  badge: 视频播放器
+
+
+
+
+```
+
+:::
+
+### 媒体处理与管理工具
+
+::: navCard
+
+```yaml
+- name: OBS
+  desc: 一款开源的音视频录制与直播软件，支持Windows、Mac和Linux系统。它功能强大，适合录屏、直播推流、游戏录制等场景。
+  link: https://obsproject.com/
+  img: /svg/website/OBS.svg
+  badge: 视频录制
+  badgeType: tip
+- name: Tinymediamanager
+  desc: 一款免费（专业版收费）的影视刮削工具，可以自动收集影视剧的各类信息。结合 Jellyfin 等服务共同使用效果非常好。 
+  link: https://www.tinymediamanager.org/
+  img: /svg/website/TinyMediaManager.svg
+  badge: 影片搜刮
+- name: 格式工厂
+  desc: 一款多媒体格式转换软件,支持MP4、MP3、AVI、MOV、JPG、PNG、PDF等格式转换，集合视频转换、视频压缩、音频处理、图片压缩、文档转换等功能。
+  link: http://www.pcfreetime.com/formatfactory/CN/index.html
+  img: /svg/website/格式工厂.png
+  badge: 格式转换
+- name: ACDSee
+  desc: 一款专业的图像管理与编辑软件，无需导入即可高速浏览大量数字图片。
+  link: https://www.acdsee.cn/products/acdsee-official-free
+  img: /svg/website/ACDSee.png
+  badge: 图片管理
+- name: Eagle
+  desc: 一款国人研发的图片管理软件，专为设计师打造，用于高效管理和整理设计素材，因其卓越的性能和贴心的设计而受到设计师们的广泛好评。
+  link: https://cn.eagle.cool/
+  img: /svg/website/Eagle.svg
+  badge: 图片管理
+- name: JiJiDown
+  desc: 一个老牌的下载视频软件，用于下载 bilibili 视频的 PC 应用程序，界面采用 Win10 磁贴风格，唧娜是唧唧的看板娘，画师 あさひクロイ 。
+  link: https://client.sabe.cc/about/
+  img: /svg/website/JiJiDown.png
+  badge: 视频下载
+
 ```
 
 :::
@@ -33179,6 +33646,84 @@ url: /daily/面试专栏/微服务相关/1_微服务概述.md
 8. 分布式追踪和监控：用于跟踪和监控微服务的请求流程和性能指标。常见的实现包括：
    * Spring Cloud Netflix：Spring Cloud Sleuth + Zipkin
    * Spring Cloud Alibaba：SkyWalking、Sentinel Dashboard
+
+---
+
+---
+url: /Java/微服务专栏/02.微服务网关/1_微服务网关概述.md
+---
+
+# 微服务网关概述
+
+微服务网关是微服务架构的统一入‍口，它解决了客户端如何访问多个微服务的问题。没有网关的话，客‌户端需要直接调用各个微服务（输入不同的访问地址），这会导致客‍户端与服务的强耦合，并且难以统一处理认证、限流、监控等横切‍关注点。网关就像一个保安（强行押韵，其实应该理解为门卫），统一‍处理外部请求，然后转发到内部的具体服务。
+
+## 一、没有网关的“痛点”：微服务架构的访问困境
+
+在微服务架构初期，不少团队会忽略网关的作用，让客户端直接调用各个微服务。这种模式在服务数量较少时或许可行，但随着服务拆分越来越细，会逐渐暴露诸多问题：
+
+* **客户端与服务强耦合**：客户端需要存储所有微服务的访问地址（IP+端口），一旦某个服务地址变更、扩容或缩容，客户端都需要同步修改配置，维护成本极高。
+* **横切关注点难以统一处理**：认证授权、限流熔断、日志监控、异常处理等通用功能，若在每个微服务中单独实现，会造成代码冗余、逻辑不一致，后续迭代和维护难度陡增。
+* **服务暴露风险高**：直接暴露微服务地址给外部客户端，容易引发恶意访问、端口扫描等安全问题，无法形成有效的访问隔离。
+* **协议适配繁琐**：客户端可能使用HTTP、WebSocket等多种协议访问服务，而内部微服务可能采用RPC等私有协议，客户端难以直接适配。
+
+而微服务网关的核心价值，就是解决上述痛点，通过“统一入口”的设计，将客户端与内部微服务解耦，同时集中处理所有通用横切关注点，让微服务更专注于自身的业务逻辑。
+
+## 二、微服务网关的核心功能：不止是“转发请求”
+
+优秀的微服务网关绝非简单的“请求转发器”，而是具备一系列强大功能的“智能中枢”，核心能力包括：
+
+1. **路由转发**：这是网关最基础的功能。根据请求的URL、请求头、参数等信息，将请求精准转发至对应的微服务，支持动态路由配置，适配服务注册发现机制。
+2. **认证授权**：统一校验客户端身份（如Token、OAuth2.0等），拒绝未授权请求，避免每个微服务重复实现认证逻辑，保障服务安全。
+3. **限流与熔断**：对请求流量进行控制，防止单个客户端或接口过度调用导致服务雪崩；当后端服务异常时，网关可直接返回降级响应，避免故障扩散。
+4. **日志与监控**：集中采集所有请求的日志信息，统计接口访问量、响应时间、错误率等指标，为问题排查和系统优化提供数据支撑。
+5. **协议转换**：实现客户端协议与内部服务协议的适配，比如客户端用HTTP请求，网关可转换为RPC协议调用内部服务。
+6. **负载均衡**：结合服务注册中心，将请求均匀分发至后端多个服务实例，提升系统吞吐量和可用性。
+7. **灰度发布**：支持按比例、按用户群体将请求转发至不同版本的服务，实现平滑迭代，降低发布风险。
+
+## 三、主流微服务网关技术选型：各有优劣，按需选择
+
+目前业界有多种成熟的微服务网关方案，各自适配不同的技术栈和业务场景，以下是最常用的4种网关技术对比分析：
+
+### 1. Spring Cloud Gateway：Spring生态的“亲儿子”
+
+作为Spring官方出品的网关组件，Spring Cloud Gateway专为Spring Cloud生态设计，是目前微服务架构中最主流的选择之一。
+
+**核心优势**：与Spring Cloud、Spring Boot无缝集成，支持基于Spring MVC的注解式配置，开发门槛低；采用非阻塞式Reactor模式，性能优于传统同步网关；支持动态路由、限流、熔断等功能，且可通过自定义过滤器扩展能力；原生支持服务注册发现（如Eureka、Nacos）。
+
+**适用场景**：以Spring Cloud为技术栈的微服务项目，追求生态一致性和开发效率的团队。
+
+### 2. Higress：阿里开源的云原生“性能王者”
+
+Higress是阿里巴巴开源的云原生API网关，基于Envoy Proxy构建，兼顾了性能、易用性和云原生特性，目前已成为CNCF沙箱项目。
+
+**核心优势**：继承Envoy的高性能特性，支持HTTP/2、gRPC等协议，吞吐量和延迟表现优异；支持Kubernetes原生部署，适配云原生场景；提供可视化控制台，配置简单易用；内置丰富的插件（如认证、限流、监控），且支持自定义插件；兼容Spring Cloud、Dubbo等主流微服务框架。
+
+**适用场景**：云原生环境（K8s集群）、高并发场景，以及希望兼顾性能和易用性的团队。
+
+### 3. Kong：基于Nginx的“插件生态之王”
+
+Kong是一款基于Nginx的开源网关，采用Lua脚本扩展功能，凭借强大的插件生态和高可用性，在业界拥有广泛的应用。
+
+**核心优势**：基于Nginx，稳定性和并发能力有保障；插件生态极其丰富，支持认证、限流、监控、日志等各类场景，且可自定义Lua插件；支持集群部署，易于扩展；适配多种服务注册中心和数据库。
+
+**不足与适用场景**：基于Lua脚本，二次开发门槛高于Spring Cloud Gateway；更适合对性能和插件生态有强需求，且团队具备Lua开发能力的场景。
+
+### 4. Zuul：Netflix的“老牌选手”
+
+Zuul是Netflix开源的微服务网关，曾是Spring Cloud生态中的核心网关组件，目前分为Zuul 1.x和Zuul 2.x两个版本。
+
+**核心优势**：技术成熟稳定，社区文档丰富；与Spring Cloud生态兼容，集成成本低；支持自定义过滤器，扩展灵活。
+
+**不足与适用场景**：Zuul 1.x采用同步阻塞模型，性能较差，无法满足高并发场景；Zuul 2.x虽改为异步非阻塞，但推广度不高，生态不如Spring Cloud Gateway完善。目前更多用于legacy项目，新项目已较少推荐使用。
+
+## 四、总结：如何选择适合自己的网关？
+
+微服务网关是架构中的“刚需组件”，选择时需结合技术栈、业务场景、性能需求和团队能力综合判断：
+
+* 若使用Spring Cloud生态，优先选**Spring Cloud Gateway**，生态一致且开发高效；
+* 若处于云原生环境（K8s），追求高性能和易用性，选**Higress**；
+* 若需要丰富的插件生态，且团队熟悉Lua，可考虑**Kong**；
+* 仅维护老项目时，才考虑**Zuul**，新项目不推荐。
 
 ---
 
@@ -54420,14 +54965,14 @@ Markdown 文档是否在首页的文章列表中显示。
 ---
 
 ---
-url: /Java/微服务专栏/02.服务网关Gateway/Gateway服务网关.md
+url: /Java/微服务专栏/02.微服务网关/2_Gateway服务网关.md
 ---
 
 # Gateway服务网关
 
 Spring Cloud Gateway 是 Spring Cloud 的一个全新项目，该项目是基于 Spring 5.0，Spring Boot 2.0 和 Project Reactor 等响应式编程和事件流技术开发的网关，它旨在为微服务架构提供一种简单有效的统一的 API 路由管理方式。
 
-## 1.为什么需要网关
+## 一、为什么需要网关
 
 Gateway网关是服务的守门神，所有微服务的统一入口。
 
@@ -54454,7 +54999,7 @@ Gateway网关是服务的守门神，所有微服务的统一入口。
 
 Zuul是基于Servlet的实现，属于阻塞式编程。而SpringCloudGateway则是基于Spring5中提供的WebFlux，属于响应式编程的实现，具备更好的性能。
 
-## 2.gateway快速入门
+## 二、gateway快速入门
 
 下面，我们就演示下网关的基本路由功能。基本步骤如下：
 
@@ -54463,11 +55008,11 @@ Zuul是基于Servlet的实现，属于阻塞式编程。而SpringCloudGateway则
 3. 编写基础配置和路由规则
 4. 启动网关服务进行测试
 
-### 1）创建gateway服务，引入依赖
+### 2.1.创建gateway服务，引入依赖
 
 创建服务：
 
-![image-20210714210919458](/assets/image-20210714210919458.BMI2xO5-.png)
+![image-20260111201200962](/assets/image-20260111201200962.D6XAUmG6.png)
 
 引入依赖：
 
@@ -54484,10 +55029,10 @@ Zuul是基于Servlet的实现，属于阻塞式编程。而SpringCloudGateway则
 </dependency>
 ```
 
-### 2）编写启动类
+### 2.2.编写启动类
 
 ```java
-package cn.itcast.gateway;
+package com.xxl.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -54501,7 +55046,7 @@ public class GatewayApplication {
 }
 ```
 
-### 3）编写基础配置和路由规则
+### 2.3.编写基础配置和路由规则
 
 创建application.yml文件，内容如下：
 
@@ -54523,17 +55068,17 @@ spring:
             - Path=/user/** # 这个是按照路径匹配，只要以/user/开头就符合要求
 ```
 
-我们将符合`Path` 规则的一切请求，都代理到 `uri`参数指定的地址。
+将符合`Path` 规则的一切请求，都代理到 `uri`参数指定的地址。
 
 本例中，我们将 `/user/**`开头的请求，代理到`lb://userservice`，lb是负载均衡，根据服务名拉取服务列表，实现负载均衡。
 
-### 4）重启测试
+### 2.4.重启测试
 
-重启网关，访问http://localhost:10010/user/1时，符合`/user/**`规则，请求转发到uri：http://userservice/user/1，得到了结果：
+重启网关，访问 http://localhost:10010/user/1 时，符合`/user/**`规则，请求转发到 uri：http://userservice/user/1，得到了结果：
 
 ![image-20210714211908341](/assets/image-20210714211908341.CLIaN6ol.png)
 
-### 5）网关路由的流程图
+### 2.5.网关路由的流程图
 
 整个访问的流程如下：
 
@@ -54545,7 +55090,7 @@ spring:
 
 1. 创建项目，引入nacos服务发现和gateway依赖
 
-2. 配置application.yml，包括服务基本信息、nacos地址、路由
+2. 配置`application.yml`，包括服务基本信息、nacos地址、路由
 
 路由配置包括：
 
@@ -54557,13 +55102,11 @@ spring:
 
 4. 路由过滤器（filters）：对请求或响应做处理
 
-接下来，就重点来学习路由断言和路由过滤器的详细知识
+## 三、断言工厂
 
-## 3.断言工厂
+在配置文件中写的断言规则只是字符串，这些字符串会被`Predicate Factory`读取并处理，转变为路由判断的条件
 
-我们在配置文件中写的断言规则只是字符串，这些字符串会被Predicate Factory读取并处理，转变为路由判断的条件
-
-例如Path=/user/\*\*是按照路径匹配，这个规则是由
+例如`Path=/user/**`是按照路径匹配，这个规则是由
 
 `org.springframework.cloud.gateway.handler.predicate.PathRoutePredicateFactory`类来
 
@@ -54583,15 +55126,15 @@ spring:
 | RemoteAddr | 请求者的ip必须是指定范围       | - RemoteAddr=192.168.1.1/24                                  |
 | Weight     | 权重处理                       |                                                              |
 
-我们只需要掌握Path这种路由工程就可以了。
+只需要掌握Path这种路由工程就可以了。
 
-## 4.过滤器工厂
+## 四、过滤器工厂
 
 GatewayFilter是网关中提供的一种过滤器，可以对进入网关的请求和微服务返回的响应做处理：
 
 ![image-20210714212312871](/assets/image-20210714212312871.DVTQez-V.png)
 
-### 3.4.1.路由过滤器的种类
+### 4.1.路由过滤器的种类
 
 Spring提供了31种不同的路由过滤器工厂。例如：
 
@@ -54603,13 +55146,13 @@ Spring提供了31种不同的路由过滤器工厂。例如：
 | RemoveResponseHeader | 从响应结果中移除有一个响应头 |
 | RequestRateLimiter   | 限制请求的流量               |
 
-### 3.4.2.请求头过滤器
+### 4.2.请求头过滤器
 
-下面我们以AddRequestHeader 为例来讲解。
+以 `AddRequestHeader` 为例来讲解
 
-> **需求**：给所有进入userservice的请求添加一个请求头：Truth=itcast is freaking awesome!
+> **需求**：给所有进入userservice的请求添加一个请求头：`Truth=Xxl is freaking awesome!`
 
-只需要修改gateway服务的application.yml文件，添加路由过滤即可：
+只需要修改`gateway`服务的`application.yml`文件，添加路由过滤即可：
 
 ```yaml
 spring:
@@ -54621,12 +55164,12 @@ spring:
         predicates: 
         - Path=/user/** 
         filters: # 过滤器
-        - AddRequestHeader=Truth, Itcast is freaking awesome! # 添加请求头
+        - AddRequestHeader=Truth, Xxl is freaking awesome! # 添加请求头
 ```
 
 当前过滤器写在userservice路由下，因此仅仅对访问userservice的请求有效。
 
-### 3.4.3.默认过滤器
+### 4.3.默认过滤器
 
 如果要对所有的路由都生效，则可以将过滤器工厂写到default下。格式如下：
 
@@ -54640,10 +55183,10 @@ spring:
         predicates: 
         - Path=/user/**
       default-filters: # 默认过滤项
-      - AddRequestHeader=Truth, Itcast is freaking awesome! 
+      - AddRequestHeader=Truth, Xxl is freaking awesome! 
 ```
 
-### 3.4.4.总结
+### 4.4.总结
 
 过滤器的作用是什么？
 
@@ -54655,11 +55198,11 @@ defaultFilters的作用是什么？
 
 ① 对所有路由都生效的过滤器
 
-## 5.全局过滤器
+## 五、全局过滤器
 
-上一节学习的过滤器，网关提供了31种，但每一种过滤器的作用都是固定的。如果我们希望拦截请求，做自己的业务逻辑则没办法实现。
+上一节学的过滤器，网关提供了31种，但每一种过滤器的作用都是固定的。如果希望拦截请求，做自己的业务逻辑则没办法实现。
 
-### 3.5.1.全局过滤器作用
+### 5.1.全局过滤器作用
 
 全局过滤器的作用也是处理一切进入网关的请求和微服务响应，与GatewayFilter的作用一样。区别在于GatewayFilter通过配置定义，处理逻辑是固定的；而GlobalFilter的逻辑需要自己写代码实现。
 
@@ -54684,7 +55227,7 @@ public interface GlobalFilter {
 * 权限校验
 * 请求限流等
 
-### 3.5.2.自定义全局过滤器
+### 5.2.自定义全局过滤器
 
 需求：定义全局过滤器，拦截请求，判断请求的参数是否满足下面条件：
 
@@ -54730,7 +55273,7 @@ public class AuthorizeFilter implements GlobalFilter {
 }
 ```
 
-### 3.5.3.过滤器执行顺序
+### 5.3.过滤器执行顺序
 
 请求进入网关会碰到三类过滤器：当前路由的过滤器、DefaultFilter、GlobalFilter
 
@@ -54751,7 +55294,7 @@ public class AuthorizeFilter implements GlobalFilter {
 
 `org.springframework.cloud.gateway.handler.FilteringWebHandler#handle()`方法会加载全局过滤器，与前面的过滤器合并后根据order排序，组织过滤器链
 
-## 6.跨域问题
+## 六、跨域问题
 
 ### 6.1.什么是跨域问题
 
@@ -54763,7 +55306,7 @@ public class AuthorizeFilter implements GlobalFilter {
 
 跨域问题：浏览器禁止请求的发起者与服务端发生跨域ajax请求，请求被浏览器拦截的问题
 
-解决方案：CORS，这个以前应该学习过，这里不再赘述了。不知道的小伙伴可以查看https://www.ruanyifeng.com/blog/2016/04/cors.html
+解决方案：CORS，可以查看详细讲解：https://www.ruanyifeng.com/blog/2016/04/cors.html
 
 ### 6.2.模拟跨域问题
 
@@ -54820,6 +55363,8 @@ spring:
 
 ### 6.3.解决跨域问题
 
+#### 方式一：YML配置跨域
+
 在gateway服务的application.yml文件中，添加下面的配置：
 
 ```yaml
@@ -54842,6 +55387,33 @@ spring:
             allowedHeaders: "*" # 允许在请求中携带的头信息
             allowCredentials: true # 是否允许携带cookie
             maxAge: 360000 # 这次跨域检测的有效期
+```
+
+#### 方式二：Java代码配置跨域
+
+```java
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.reactive.CorsWebFilter;
+import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
+import org.springframework.web.util.pattern.PathPatternParser;
+
+@Configuration
+public class GwCorsFilter {
+   @Bean
+   public CorsWebFilter corsFilter() {
+       CorsConfiguration config = new CorsConfiguration();
+       config.setAllowCredentials(true); // 允许cookies跨域
+       config.addAllowedOrigin("*"); // 允许任何域名使用
+       config.addAllowedHeader("*"); // 允许任何头
+       config.addAllowedMethod("*"); // 允许任何方法（post、get等）
+       config.setMaxAge(18000L); // 预检请求的有效期，单位为秒
+       UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource(new PathPatternParser());
+       source.registerCorsConfiguration("/**", config);
+       return new CorsWebFilter(source);
+   }
+}
 ```
 
 ---
@@ -56435,6 +57007,209 @@ npm show minimist version
 https://blog.csdn.net/weixin\_34067980/article/details/94043735
 
 https://github.com/substack/minimist/commit/4cf1354839cb972e38496d35e12f806eea92c11f#diff-a1e0ee62c91705696ddb71aa30ad4f95)
+
+---
+
+---
+url: /Java/微服务专栏/02.微服务网关/3_Higress服务网关.md
+---
+
+# Higress服务网关
+
+## 一、Higress 是什么
+
+### 简介
+
+Higress 是基于阿里内部多年 Envoy Gateway 实践的 **云原生 + AI 原生** API 网关，采用 C++ 实现，相比传统的 Java 网关具有更高的性能和更低的内存占用，而且能够和 Nacos 和 Dubbo 轻松集成。
+
+什么是 AI 原生呢？可以看看 [官方对 AI 网关的介绍](https://higress.cn/docs/latest/overview/what-is-higress/)，简单来说，Higress 支持多种 AI 协议，提供 AI 可观测性、AI 代理缓存、AI 令牌限流、AI 大模型对接等能力。
+
+|               |                                                              |
+| ------------- | ------------------------------------------------------------ |
+| 传统 API 网关 | ![img](/assets/O1CN01yvRXRl1Ux42Nd4bos_!!6000000002583-2-tps-1904-908.CpaeTHtk.png) |
+| AI 场景       | ![img](/assets/O1CN01TtjqnE1vLVBDlhiJf_!!6000000006156-2-tps-1904-970.Wq-UUd_v.png) |
+
+### 对比
+
+下面是 H‍igress 与 ‌Spring Cl‍oud Gatew‍ay 的详细对比：
+
+| 对比项   | Spring Cloud Gateway       | Higress             |
+| -------- | -------------------------- | ------------------- |
+| 性能     | 中等 (基于 Spring WebFlux) | 高 (基于 Envoy C++) |
+| 内存占用 | 较高 (JVM)                 | 较低 (C++)          |
+| 配置方式 | 代码 +‍ 配置文件            | 控制台 + 配置文件   |
+| 插件生‌态 | Spring 生态                | Envoy ‍+ 自定义插件  |
+| 可观测性 | 依赖 Spri‍ng Actuator       | 内置丰富的监控指‍标  |
+| 云原生   | 支持                       | 原生云原生设计      |
+| 学习成本 | 低 (熟悉 Spring)           | 中等                |
+| AI 支持‍  | 需要自定义开‌发             | 原生 AI‍ 功能支持    |
+
+不过如何你需要在‍网关中写一些业务逻辑，Higr‌ess 可能就不适合了，而 S‍pring Cloud Gat‍eway 是可以在代码中引入并‍且自定义 Java 业务逻辑的。
+
+### 核心功能
+
+作为系统的‍统一入口，Higr‌ess 网关为我们‍提供了以下核心能力‍：
+
+* 统一入口：为所有微服务提供统一的访问入口，简化客户端的调用复杂度。
+* 请求路由：根据请求的路径、参数等信息，将请求路由到正确的微服务实例。
+* 负载均衡：在多个服务实例之间分发请求，提高系统的可用性和性能。
+* 安全认证：统一处理身份验证、权限控制等安全相关功能。
+* 限流熔断：实现请求限流、服务熔断等保护机制，防止系统过载。
+* 监控日志：收集请求日志、监控指标等信息，便于系统运维和问题排查
+
+![img](/assets/O1CN01v4ZbCj1dBjePSMZ17_!!6000000003698-0-tps-1613-926.BfA78bQI.jpg)
+
+## 二、Higress 安装
+
+Higre‍ss 的安装需要 ‌Docker 环境‍支持，如果没有安装‍ Docker 的‍话，必须先安装！
+
+推荐直接 [安装 Docker Desktop](https://www.docker.com/products/docker-desktop/)，会自动安装 Docker 以及可视化管理软件。
+
+但是要注意，Windows 上想运行 Docker 的话，必须要安装 WSL（Linux 子系统），[参考官方安装文档](https://learn.microsoft.com/zh-cn/windows/wsl/install)。
+
+![image-20260111221022275](/assets/image-20260111221022275.CozqU-pG.png)
+
+不过由于安装时可能会出现“与服务器的连接被重置”，建议直接到 [GitHub 下载 WSL 安装包](https://github.com/microsoft/WSL/releases)：
+
+![image-20260111221932110](/assets/image-20260111221932110.B-hBgyoL.png)
+
+注意，如果实在无法安装 WSL，也可以用虚拟机软件。
+
+安装好 D‍ocker 后，可‌以使用以下命令在本‍地启动 Higre‍ss：
+
+```sh
+docker run -d --rm --name higress-ai -v ${PWD}:/data -e O11Y=on \
+        -p 8001:8001 -p 8080:8080 -p 8443:8443  \
+        higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/all-in-one:latest
+```
+
+监听端口说明：
+
+* 8001 端口：Higress UI 控制台入口
+* 8080 端口：网关 HTTP 协议入口
+* 8443 端口：网关 HTTPS 协议入口
+
+可以用 `docker ps` 命令查看启动状态：
+
+![image-20260111222930309](/assets/image-20260111222930309.BG4cnt97.png)
+
+Docker Desktop 中能看到运行的容器：
+
+![image-20260111222206392](/assets/image-20260111222206392.BzU9Ipvo.png)
+
+启动成功后，‍可以通过 8001 端口‌访问 Higress 控‍制台：
+
+![image-20260111223730505](/assets/image-20260111223730505.DGE203ZR.png)
+
+## 三、服务来源配置
+
+在 Hig‍ress 控制台中‌配置服务来源，可以‍从 Nacos 中‍获取服务来源：
+
+![img](/assets/V78os1nWqpJdGuma.W2EPBjJN.webp)
+
+需要注意的‍是，注册中心地址不‌支持 127.0.‍0.1 或 loc‍alhost，需要‍使用本机的内网地址。
+
+Windows 系统通过 `ipconfig` 命令查看：
+
+![image-20260111223202468](/assets/image-20260111223202468.BnVNUQzm.png)
+
+Mac 系统可以直接在网络设置中查看：
+
+![img](/assets/coGMn7P7UAnJgNdi.BToDykpD.webp)
+
+配置完成后‍，Higress ‌会自动发现在 Na‍cos 中注册的所‍有微服务：
+
+![img](/assets/CbXU0Mifj5GFDfFF.DrFtBbFT.webp)
+
+但是 Dubbo + Nacos 默认只注册 Dubbo 服务（RPC接口），而不注册 HTTP 接口。我们对外提供的服务都没有被发现，需要手动注册：
+
+![img](/assets/mmNP32Q8zg2ubgz4.CQZyRxgQ.webp)
+
+所有服务注册完成：
+
+![img](/assets/7wyta6AolF2Qf4Wl.7l0Vw2F1.webp)
+
+## 四、路由配置
+
+手动配置路由规则，为每个服务创建对应的路由：
+
+![img](/assets/aZQyG7KlYZWMgDG6.BKRVsKm7.webp)
+
+选择对应的服务并配置路由规则：
+
+![img](/assets/H6lQbSPDGS0gTURY.Cm4XtojI.png)
+
+这样一来，前端只需要访问网关的地址 `localhost:8080/api/user/xxx`，就会自动转发到对应的服务 `localhost:8124/api/user/xxx`。
+
+路由配置完成：
+
+![img](/assets/9z3iPkV4XKnkNuSk.CUZGwuWw.webp)
+
+完成路由配置后‍，需要修改前端 vite ‌请求代理地址为 8080 ‍端口，然后就可以利用前端来‍测试完整业务流程了，能正常‍登录和生成网站就说明配置成功。
+
+💡 如果你使用了 Spring Cloud 作为服务发现（而不是 Dubbo），可以 [整合 Nacos 快速发现服务](https://nacos.io/docs/latest/ecology/use-nacos-with-spring-cloud)。
+
+## 五、插件配置
+
+Higre‍ss 提供了丰富的‌插件功能，可以满足‍不同场景的需求。分享一些典型的‍场景：
+
+### CORS 跨域配置
+
+可以全局配置 CORS 跨域支持：
+
+![img](/assets/EYkuOBJB70ldJhKf.ZQk6U2zG.webp)
+
+支持表单填写或者 YAML 配置文件：
+
+![img](/assets/93bfEyc8AwtHBJ65.BNFttHDY.webp)
+
+也可以单独针对某个路由配置跨域插件：
+
+![img](/assets/hwtRrnIwAPCTAkjm.sg8XI1uJ.webp)
+
+如图：
+
+![img](/assets/byueUir8Ak0kQn99.Bnu0EpuN.webp)
+
+![img](/assets/4o0SLh1i9UotZYR7.t_EnRfdn.webp)
+
+### 权限认证插件
+
+Higress 提供了多种权限认证插件：
+
+![img](/assets/w5hu2NPuxwlIzyNS.DCfivzVr.webp)
+
+比如 Ke‍y 认证是一个典型‌的 API 认证场‍景（想想调用 AI‍ 时输入的 API‍ Key）：
+
+![img](/assets/uPZQfuJcoDE9aEDu.Q-PXfoAQ.webp)
+
+### 安全性插件
+
+可以配置 IP 限制、请求屏蔽等安全插件：
+
+![img](/assets/G04GnWouM2Ntfh9q.DUFXGgH9.webp)
+
+比如限制禁止某个 IP 访问：
+
+![img](/assets/1IGJUG5rIAjdwmtT.EDUWVHbo.webp)
+
+还可以利用请求屏蔽插件提高安全性。测试一下，禁止访问 `/api/user/get/login` 接口：
+
+![img](/assets/EuhqM5gExjIdCvh8.B3hPdWtR.webp)
+
+配置后该接‍口会返回 404，‌因为被网关拦截了，‍都到不了用户服务：
+
+![img](/assets/9PDeph8E6cgF6gow.DZcnehTx.webp)
+
+### 限流插件
+
+还可以配置限流插件，在网关层面控制请求频率：
+
+![img](/assets/xNlDg7znBYmXFH0X.Du2AVwNi.webp)
+
+比较常用的是‍基于 Key 进行限流‌，Key 可以从请求头‍或 URL 参数中获取‍，比如根据请求参数中的‍ appId 限流。
+
+![img](/assets/DnG0pmbonyZE6BhY.DztrEyJn.webp)
 
 ---
 
@@ -60380,6 +61155,12 @@ Java Mission Control（简称JMC) ， Java官方提供的性能强劲的工具�
 JMC的另一个优点就是：采用取样，而不是传统的代码植入技术，对应用性能的影响非常非常小，完全可以开着JMC来做压测（唯一影响可能是 full gc 多了）。
 
 官方地址：https://github.com/JDKMissionControl/jmc
+
+## Jarboot
+
+Java进程启停、管理、诊断的平台
+
+https://gitee.com/majz0908/jarboot/releases
 
 ## 其他工具
 
@@ -72240,15 +73021,82 @@ url: /Java/架构设计/分布式/06.分布式监控/2_Prometheus.md
 
 # Prometheus
 
-## 概述
+## 一、前言
 
-Prometheus 是一个开源的服务监控系统和时间序列数据库。
+ARMS‍ 可以实现系统级的监控，这种方式简单高效，适合‌快速获得全面的监控能力。但 ARMS 主要关‍注通用的系统指标，如果我们想监控业务特有的指‍标，比如大模型的 Token 使用量、用户的‍活跃度等，就需要自定义的监控方案。
+
+回到最初的几个核心问题，都需要我们自己来考虑了：
+
+1. 统计什么？监控 AI 模型调用相关的业务指标
+2. 如何收集？通过在代码中埋点的方式主动收集数据。
+3. 如何存储？使用 Prometheus 时序数据库存储指标数据。
+4. 如何展示？通过 Grafana 构建可视化监控仪表板。
+
+下面我们进入方案设计阶段，依次对这几个问题进行展开。
+
+### 监控指标设计
+
+首先我们需要明确要监控哪些维度和业务指标。根据 [LangChain4j 可观测性文档](https://docs.langchain4j.dev/tutorials/observability)，我们可以获取到以下数据：
+
+#### 维度
+
+* 用户 ID
+* 应用 ID
+* 模型名称
+* 最大输出 Token 数（maxOutputTokens）
+* AI 回复消息内容
+* 模型生成停止的原因（Finish Reason）
+* 调用状态（成功或失败）
+* 请求时间
+* 调用失败时的错误信息
+
+#### 指标
+
+* 输入 Token 数量
+* 输出 Token 数量
+* 总消耗 Token 数量
+* 响应时长
+
+#### 分析能力
+
+有了上面这些数据，我们能够进行很多分析：
+
+* 模型调用分析：统计不同时间窗口（分钟/小时/天）内各模型、用户、应用的调用次数趋势
+* 模型性能分析：分析各模型的平均响应时间，以及响应时间分布的 P50/P90/P95/P99 百分位数
+* Token 消耗分析：监控不同时间窗口（分钟/小时/天）内输入 Token、输出 Token、总 Token 的消耗
+* 热门应用排行：按调用次数对应用进行排序，识别调用 AI 最频繁的应用
+* 用户活跃排行：按调用次数对用户进行排序，识别调用 AI 最频繁的用户
+* 应用 Token 消耗排行：按 Token 消耗量对应用进行排序，识别消耗最高的应用
+* 用户 Token 消耗排行：按 Token 消耗量用户进行排序，识别消耗最高的用户
+* 错误分析：统计各模型的失败次数，以及不同错误类型的分布占比
+
+### 数据收集方式
+
+在业务监控‍中，数据收集需要开‌发者手动埋点，因为‍只有业务开发者才知‍道要收集什么信息、‍从哪里收集、什么时候收集。
+
+跟业界主流的可观测性实现方案一样，我们的策略是在业务层收集 **最原始、最细粒度** 的数据，这样在查询层就能进行灵活的聚合分析。
+
+## 二、数据存储方案 - Prometheus
 
 > 官网：[Prometheus - Monitoring system & time series database](https://prometheus.io/)
 >
 > 源码：https://github.com/prometheus/prometheus
 
-![img](/assets/082749_47Dp_5189.6l8_Jsh_.png)
+即使没有学‍过 Prometh‌eus，也应该知道‍可以通过数据库存储‍的方式实现监控统计‍。
+
+比如将监控数据存储到‍ MySQL 等关系型数据库中（或者 ‌Elasticsearch），之后从数‍据库中读取。适合需要持久化保存详细数据‍的场景，而且比较灵活，可以自己写 SQ‍L 实现复杂的查询和关联分析。
+
+但缺点是收‍集监控数据可能会比‌较频繁，需要频繁写‍入数据库，容易对应‍用性能产生影响。
+
+因此，专业的事情交给专业的中间件来做吧！
+
+### 什么是 Prometheus？
+
+[Prometheus](https://prometheus.io/docs/introduction/overview/) 是一个开源的服务监控系统和时间序列数据库，专门为时序数据的收集、存储和查询而设计。
+
+Prometheus 的核心理念是将所有监控数据以 **时间序列** 的形式存储。根据它的 [数据模型](https://prometheus.io/docs/concepts/data_model/)，每个时间序列都由指标名称和一组标签唯一标识。比如 `http_requests_total{method="POST", handler="/api/xxl/ai"}` 就表示一个记录 POST 请求接口总数的时间序列。
+
+这样一来，Pr‍ometheus 能够高效地‌处理监控场景中的时间范围查询‍，比如过去一小时内各个接口的‍平均响应时间、CPU 使用率‍超过 80% 的服务器列表等。
 
 特性：
 
@@ -72261,7 +73109,241 @@ Prometheus 是一个开源的服务监控系统和时间序列数据库。
 * 警告和报警
 * 数据导出
 
-## SpringBoot集成使用
+### 核心组件架构
+
+Prometheus 包含几个关键组件，职责明确：
+
+1）**Prometheus Server（核心引擎）**：整个系统的核心，负责数据收集、存储和查询。它定期从配置的目标 **拉取** 指标数据，将数据存储在本地的时序数据库中，并提供 PromQL 查询语言来支持复杂的数据分析。
+
+* **数据抓取**：定期从配置的 Targets 或 Exporters 拉取 */metrics* 数据。
+* **存储**：将时序数据写入内置 TSDB（按 2 小时 block 存储，支持 WAL）。
+* **查询**：内置 PromQL 引擎，支持复杂聚合与分析。
+* **告警**：基于 PromQL 规则触发告警并推送至 Alertmanager。
+
+2）**Exporter（指标采集器）**：翻译‍器，将第三方系统（如数据库、操作系统、消息队列等）‌的指标转换为 Prometheus 格式。比如 N‍ode Exporter 可以收集 Linux 系‍统的 CPU、内存、磁盘等指标，MySQL Exp‍orter 可以收集数据库的性能指标。
+
+* **节点级**：Node Exporter（CPU、内存、磁盘等）。
+* **数据库**：MySQL Exporter、Redis Exporter。
+* **中间件**：Nginx Exporter、Kafka Exporter。
+* **黑盒探测**：Blackbox Exporter（HTTP、TCP、ICMP探测）。
+
+3）**Alertmanager（告警管理器）** ：理告警规‌则和通知分发。当指标触发预‍设的告警条件时，它负责将告‍警信息发送给相应的人员或系‍统，支持邮件等多种通知方式。接收 Prometheus Server 推送的告警，执行**去重、分组、静默、抑制**，并路由到邮件、Slack、Webhook 等通知渠道。
+
+4）**Client Libraries（客户端库）** ：提供各种编程语言的 SDK‌，用于在自研应用中埋点并暴露自定义指标，支持 Go、Java、Python、Ruby 等语言。
+
+5）**Pushgateway（推送网关）** 适用于**短生命周期任务**（如 CronJob），允许任务结束前将指标 Push 到 Pushgateway，由 Server 再 Pull 获取。
+
+6）**Grafana（可选可视化）** 虽然 Prometheus 自带 Web UI，但 Grafana 提供更强大的仪表盘功能，是可视化的标准选择。
+
+![img](/assets/v2-deada13263aaf9b4e16dc560fd0ccebb_1440w.BXZKbVY2.jpg)
+
+### 数据收集原理
+
+Prometheus 采用 **拉取模式** 来收集指标数据，而不是由项目主动推送数据，这是它的核心特征。
+
+它会定期向配置的目标发起 HTTP 请求，从 `/metrics` 端点获取指标数据。
+
+拉模式的好处是：
+
+* 简单可靠：基于标准 HTTP 协议，无需复杂的消息队列或特殊的网络配置
+* 监控目标的发现和管理更加灵活：Prometheus 可以通过服务发现机制自动发现新的监控目标。而且将监控的控制权交给 Prometheus，可以避免目标服务的监控数据推送失败影响业务逻辑。
+
+我们可以通过 [Jobs 和 Instances](https://prometheus.io/docs/concepts/jobs_instances/) 配置需要拉取的数据任务和服务实例，当 Prometheus 抓取目标时，会自动为每个时间序列添加 `job` 和 `instance` 标签来标识数据来源。同时还会生成一些元指标，比如 `up` 指标表示目标是否可达，`scrape_duration_seconds` 记录抓取耗时，这些信息对于监控系统自身的健康检查非常有用。
+
+### 指标类型
+
+如果想在项目中自定义指标收集，需要先了解 Prometheus 的 4 种核心 [指标类型](https://prometheus.io/docs/concepts/metric_types/)，每种类型都针对不同的监控场景进行了优化。
+
+1）Counter：累积计数器，只能增加或重置为零，适合统计请求总数、错误次数等单调递增的指标。在我们的 AI 监控场景中，`ai_model_requests_total` 大模型请求总数就是一个典型的 Counter 指标。
+
+2）Gau‍ge：仪表盘类型，数‌值可以任意上下波动，‍适合记录当前状态值，‍比如内存使用量、当前‍在线用户数、队列长度等。
+
+3）Histog‍ram：直方图类型，用于观察数据‌分布情况，比如请求响应时间的‍分布。它会自动生成多个时间序列，包括‍各个桶的计数、总和以及总数，可以‍用来计算百分位数等统计指标。
+
+4）Summ‍ary：和 Histog‌ram 类似，但它在客户‍端预先计算百分位数，适合‍需要精确百分位数计算但对‍网络传输有要求的场景。
+
+通过合理选‍择指标类型，我们可‌以用最小的存储开销‍获得最大的监控价值‍。
+
+### 存储机制
+
+提到拉模式，可能会有朋友误以为 Prometheus 不存储数据，实际上它拥有自己的高性能时间序列数据库 [TSDB](https://prometheus.io/docs/prometheus/latest/storage/)，单节点就能处理数百万个时间序列，满足大部分企业的监控需求。
+
+新写入的数据首先存储‍在内存中，达到时间阈值（每 2 小时一‌个数据块）后批量写入磁盘，这种设计在保‍证查询性能的同时也提供了良好的写入‍吞吐量。预写日志 WAL 机制确保了数据的‍可靠性，即使系统崩溃也不会丢失数据。
+
+![img](/assets/NuWNujC70caqIZJ3.DCt4hvcR.webp)
+
+### 和传统方案的对比
+
+回到我们的业务监控需求‍，可以利用 Prometheus 提供的 ‌Counter 等指标类型，轻松统计 AI‍ 模型的调用次数、响应时间、Token 消‍耗等关键指标。因为只是在内存中进行简单的数‍字递增统计，所以性能比数据库高很多。
+
+具体的对比表格：
+
+| 对比维度 | 数据库方案                        | Prometheus 方案                      |
+| -------- | --------------------------------- | ------------------------------------ |
+| 核心用途 | 审计、深度分析、事后追溯          | 实时监控、性能分析、告警             |
+| 数据粒度 | 极高：记录每个请‍求的全部细节      | 聚合：只记录统计值，丢失个体请求细节 |
+| 性能‌影响 | 较高：每次请求都需要数据库写入    | 极低：只是内存‍中的原子操作           |
+| 实时性   | 差：从海量数据中实时聚合计算很慢 ‍ | 极好：预聚合数据，查询极快           |
+| 存储成本 | 非常高：与请求‍量成正比            | 非常低：与指标基数成正比             |
+
+因此，我们肯定‍是选择 Prometheu‌s 方案，不仅是因为它更适‍合实时监控分析的需求，而且‍它和 Grafana 也能‍轻松整合，开发成本也很低。
+
+## 三、数据可视化 - Grafana
+
+### 什么是 Grafana？
+
+[Grafana](https://grafana.com/) 是一个开源的数据可视化平台，专门用于创建监控看板。它可以连接多种数据源（包括 Prometheus、MySQL、PostgreSQL、Elasticsearch 等），并提供丰富的图表类型和可视化选项。
+
+![img](/assets/44cqjd2s4a.C5gH5RaV.png)
+
+虽然 Grafana‍ 是一个功能非常丰富的企业级产品，拥有告‌警管理、用户权限控制、插件生态、云服务集‍成等高级特性，但对于我们目前的需求来说，‍将它当作一个看板工具来使用，知道怎么创建‍看板和接入数据进行展示就足够了。
+
+## 四、环境准备
+
+### Prometheus 安装
+
+1）访问 [Prometheus 下载页面](https://prometheus.io/download/)，选择对应的操作系统和架构：
+
+![image-20260112000054521](/assets/image-20260112000054521.81lhUkpJ.png)
+
+2）下载并解压到不包含中文路径的目录。
+
+3）查看默认配置文件 `prometheus.yml`：
+
+```yaml
+# 全局配置
+global:
+  scrape_interval: 15s # 全局抓取间隔，默认每15秒抓取一次
+  evaluation_interval: 15s # 规则评估间隔
+
+# 告警管理器配置（可选）
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# 规则文件配置
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# 抓取配置
+scrape_configs:
+  # Prometheus 自身监控
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+        labels:
+          app: "prometheus"
+```
+
+默认配置会‍监控 Promet‌heus 自己，这‍样我们可以先测试环境是‍否正常。
+
+💡 [Prometheus Rules](https://prometheus.io/docs/prometheus/latest/getting_started/#configure-rules-for-aggregating-scraped-data-into-new-time-series) 是用于定义监控指标的逻辑规则，包括：
+
+* 记录规则：预计算复杂查询并存储为新时间序列以提升性能，而不需要每次都实时计算复杂的查询表达式。
+* 告警规则：定义告警条件并触发通知
+
+4）启动 Prometheus：
+
+```sh
+./prometheus --config.file=prometheus.yml
+```
+
+启动成功后会在 9090 端口提供服务。
+
+5）访问 [http://localhost:9090](http://localhost:9090/) 进入管理界面，建议开启本地时间（不然时间可能少 8 个小时）：
+
+![img](/assets/5eEKvykqyE3xgYIf.D94dTwFm.webp)
+
+访问 http://localhost:9090/metrics 可以看到 Prometheus 自身暴露的指标数据：
+
+![img](/assets/0zPxGctwUDWS9dfZ.Ciy40WY-.webp)
+
+这就是 Prometheus 期望的指标数据格式，每个应用都需要在 `/metrics` 端点暴露类似的数据。
+
+6）在 Prometheus 查询界面可以输入 [PromQL 表达式](https://prometheus.io/docs/prometheus/latest/querying/basics/) 查看指标：
+
+```sh
+prometheus_target_interval_length_seconds
+```
+
+这个指标记录了 ‍Prometheus 抓取目标‌之间的实际时间间隔，比如你配置‍每 15 秒抓取一次，但实际可‍能是 14.8 秒或 15.2‍ 秒，这个指标就记录这些实际值。
+
+![img](/assets/j8uhh1E1QxHUmcGp.C9BMgPZE.webp)
+
+结果中的每‍一行都是一个时间序‌列，大括号内的是标‍签（维度）。其中：
+
+* `quantile="0.01"` 表示第 1 百分位数（最快的 1%）
+* `quantile="0.5"` 表示第 50 百分位数（中位数）
+* `quantile="0.99"` 表示第 99 百分位数（最慢的 1%）
+
+这表示 99% 的抓取都在 15.0012 秒以内完成。
+
+还可以更精确地查询特定百分位数：
+
+```sh
+prometheus_target_interval_length_seconds{quantile="0.99"}
+```
+
+7）在 Gr‍aph 页签可以查看可‌视化图表，比如计算过去‍ 1 分钟内 Prom‍etheus 每秒平均‍创建的内存数据块数：
+
+```sh
+rate(prometheus_tsdb_head_chunks_created_total[1m])
+```
+
+如图：
+
+![img](/assets/SdIqvYk3d221mbHL.DQevCq1i.webp)
+
+### Grafana 安装
+
+1）访问 [Grafana 下载页面](https://grafana.com/grafana/download)，根据操作系统选择对应的安装包：
+
+![image-20260112001005602](/assets/image-20260112001005602.C043tLaC.png)
+
+2）按照对应系统的 [安装文档](https://grafana.com/docs/grafana/latest/setup-grafana/installation/) 进行安装。比如 Windows 系统直接执行 `grafana-server.exe`，Mac 系统执行下列命令：
+
+```sh
+./bin/grafana server
+```
+
+启动成功的日志信息：
+
+![image-20260112001611898](/assets/image-20260112001611898.BRMhXd9X.png)
+
+3）访问 [http://localhost:3000](http://localhost:3000/) 查看看板，默认登录账号密码都是 `admin`：
+
+![image-20260112001546161](/assets/image-20260112001546161.InCplTW4.png)
+
+💡 可以参考 [起始文档](https://grafana.com/docs/grafana/latest/getting-started/build-first-dashboard/) 来学习如何使用 Grafana 构造看板。
+
+### Grafana 整合 Prometheus
+
+Grafana 与 Prometheus 打配合的 [工作原理](https://grafana.com/docs/grafana/latest/datasources/prometheus/) 很简单：Grafana 通过 HTTP API 从 Prometheus 查询数据，然后以图表形式展示。用户可以编写 PromQL 表达式来实现灵活的数据分析。
+
+下面来跑通一下整合流程。
+
+1）参考 [官方文档](https://grafana.com/docs/grafana/latest/getting-started/get-started-grafana-prometheus/)，登录 Grafana 后，需要先添加 Prometheus 作为数据源：
+
+配置 Prometheus 服务器地址，然后测试连接：
+
+💡 除了手动‍配置外，Grafana 还‌支持通过 Provisio‍ning 配置文件自动导入‍数据源和仪表板，这在自动化‍部署（或者多环境）中很有用。
+
+2）快速导‍入现成的仪表板模板‌：  
+
+3）进入看板页面，查看导入的看板：
+
+4）查看看‍板详情，一个仪表板‌可以包含多个 Pa‍nel（图表面板）‍：
+
+每个 Panel 都可以查看具体的数据、状态和查询语句：
+
+5）右上角‍可以将整个仪表板导‌出为 JSON 格‍式，便于分享和备份‍：
+
+同样也可以通过导入 JSON 快速创建仪表板：
+
+## 五、SpringBoot集成使用
 
 ### 1.Spring Boot 工程集成 Micrometer
 
@@ -89906,6 +90988,8 @@ url: /Redis/Redis基础/2_RedisInsight部署使用.md
 
 ![image-20240108002732304](/assets/image-20240108002732304.WfmbDIWW.png)
 
+[使用教程](https://blog.csdn.net/yangbindxj/article/details/123184787)
+
 ---
 
 ---
@@ -99715,7 +100799,7 @@ url: /常用框架/ShardingJdbc/1_ShardingJdbc准备-安装MySQL及配置主从�
 ---
 
 ---
-url: /Java/架构设计/分布式/06.分布式监控/SkyWalking.md
+url: /Java/架构设计/分布式/06.分布式监控/3_SkyWalking.md
 ---
 
 # SkyWalking链路追踪

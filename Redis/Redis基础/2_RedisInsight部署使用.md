@@ -11,3 +11,5 @@ url: /Redis/Redis基础/2_RedisInsight部署使用.md
 ![image-20240108002559983](/assets/image-20240108002559983.BNlYwdpk.png)
 
 ![image-20240108002732304](/assets/image-20240108002732304.WfmbDIWW.png)
+
+[使用教程](https://blog.csdn.net/yangbindxj/article/details/123184787)

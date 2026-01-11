@@ -175,6 +175,12 @@ JMC的另一个优点就是：采用取样，而不是传统的代码植入技�
 
 官方地址：https://github.com/JDKMissionControl/jmc
 
+## Jarboot
+
+Java进程启停、管理、诊断的平台
+
+https://gitee.com/majz0908/jarboot/releases
+
 ## 其他工具
 
 ### Flame Graphs（火焰图）
