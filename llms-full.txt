@@ -3936,7 +3936,7 @@ url: /Java/数据结构/查找算法.md
 
 ASL (Aerage Search Length）
 
-![img](/assets/image.BMw5v_YR.png)
+![img](/assets/image.BLZ5FY7t.png)
 
 ### 顺序查找
 
@@ -3944,7 +3944,7 @@ ASL (Aerage Search Length）
 
 顺序表、链表
 
-![img](/assets/image.BMw5v_YR.png)
+![img](/assets/image.BLZ5FY7t.png)
 
 ### 折半查找（二分查找法）
 
@@ -20301,7 +20301,7 @@ url: /Java/数据结构/排序算法.md
 
 具体过程为：将第个记录的关键字Ki顺次与其前面记录的关键字Ki-1,ki-2,...ki进行比较，将所有关键字大于K的记录依次向后移动一个位置，直到遇见一个关键字小于或者等于Ki的记录Kj，此时K后面必为空位置，将第i个记录插入空放置即可。
 
-![img](/assets/image.BMw5v_YR.png)
+![img](/assets/image.BLZ5FY7t.png)
 
 ```c
 #include <stdio.h>
@@ -20413,7 +20413,7 @@ void bubble_sort(int arr[], int n) {
 
 用增量来划分子序列的方法，达到减少关键字移动次数的目的。
 
-![img](/assets/image.BMw5v_YR.png)
+![img](/assets/image.BLZ5FY7t.png)
 
 ```c
 void ShellPass(SeqList R, int d)
@@ -40152,6 +40152,43 @@ Eureka的实现原理，大概可以从这几个方面来看：
 3. 服务负载均衡: Eureka客户端在调用其他服务时，会从本地缓存中获取服务的注册信息。如果缓存中没有对应的信息，则会向Eureka Server发送查询请求。Eureka Server会返回一个可用的服务实例列表给客户端，客户端可以使用负载均衡算法选择其中一个进行调用。
 
 其它的注册中心，如Nacos、Consul等等，在服务注册和发现上，实现原理都是大同小异。
+
+---
+
+---
+url: /Java/微服务专栏/03.注册中心/1_注册中心概述.md
+---
+
+# 注册中心概述
+
+***
+
+注册中心是微服务架构的核心组件，其核心作用就是解决**服务发现**问题。
+
+那么，什么是服务发现呢？
+
+在微服务环境中，服务实‍例会动态启动和停止，IP 地址和端口也可能经‌常变化，服务消费者需要知道服务提供者的准确地‍址才能发起调用。注册中心就像一个电话簿，服务‍启动时向注册中心报告自己的地址信息，服务调用‍时从注册中心查询目标服务的地址。
+
+## 注册中心作用
+
+* **服务注册与发现**：注册中心是服务实例信息的存储仓库，服务提供者在启动时会自动注册自己，消费者则通过注册中心获取服务地址。
+* **服务健康监控**：注册中心维护服务的健康信息，确保服务的可用性和稳定性。
+* **避免硬编码**：通过动态获取服务地址，避免了在代码中写死IP的问题，提高了系统的灵活性。
+* **服务间通信的枢纽**：注册中心作为服务之间的通讯录，管理服务间的通信，促进服务的交互。
+
+## 主流注册中心产品对比
+
+目前业界主流的注册中心产品各有特点，可根据项目场景选择：
+
+| 产品      | 核心特性                                                     | 适用场景                                                     |
+| :-------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| Eureka    | AP架构（优先保证可用性）、基于REST、自我保护机制、轻量易用   | Spring Cloud Netflix生态，对可用性要求高于一致性的场景       |
+| **Nacos** | 支持AP/CP双模、服务注册发现+配置管理一体化、动态配置、易用性强 | Spring Cloud Alibaba生态，中小团队、需兼顾配置与注册的场景（最主流） |
+| Consul    | CP架构（优先保证一致性）、支持健康检查、服务网格集成、跨数据中心 | 对数据一致性要求高、需服务网格（Service Mesh）的场景         |
+| Zookeeper | CP架构、基于ZAB协议、强一致性、适合作为分布式协调工具        | Dubbo生态，或需分布式锁、分布式协调的场景（注册中心仅为其功能之一） |
+| etcd      | CP架构（基于Raft协议）、强一致性、高可用、键值存储、Watch机制、轻量高效 | Kubernetes生态核心组件、云原生场景、需高可靠键值存储+配置同步的场景 |
+
+注：AP/CP是分布式系统的CAP理论中的概念——AP优先保证可用性（服务不中断），CP优先保证数据一致性（所有节点数据同步）。
 
 ---
 
@@ -69883,16 +69920,16 @@ show slave status; # 8.0.22之前
 ---
 
 ---
-url: /Java/微服务专栏/03.注册中心Nacos/0_Nacos安装.md
+url: /Java/微服务专栏/03.注册中心/3_Nacos安装.md
 ---
 
 # Nacos安装指南
 
-# 1.Windows安装
+## 一、Windows安装
 
 开发阶段采用单机安装即可。
 
-## 1.1.下载安装包
+### 1.1.下载安装包
 
 在Nacos的GitHub页面，提供有下载链接，可以下载编译好的Nacos服务端或者源代码：
 
@@ -69904,11 +69941,9 @@ GitHub的Release下载页：https://github.com/alibaba/nacos/releases
 
 ![image-20210402161102887](/assets/image-20210402161102887.BVrTH8Li.png)
 
-本课程采用1.4.1.版本的Nacos，
+最新版本为1.4.1，下载`nacos-server-1.4.1.zip`包使用。
 
-windows版本使用`nacos-server-1.4.1.zip`包即可。
-
-## 1.2.解压
+### 1.2.解压
 
 将这个包解压到任意非中文目录下，如图：
 
@@ -69919,7 +69954,7 @@ windows版本使用`nacos-server-1.4.1.zip`包即可。
 * bin：启动脚本
 * conf：配置文件
 
-## 1.3.端口配置
+### 1.3.端口配置
 
 Nacos的默认端口是8848，如果你电脑上的其它进程占用了8848端口，请先尝试关闭该进程。
 
@@ -69931,25 +69966,23 @@ Nacos的默认端口是8848，如果你电脑上的其它进程占用了8848端�
 
 ![image-20210402162251093](/assets/image-20210402162251093.B8nquITT.png)
 
-## 1.4.启动
+### 1.4.启动
 
 启动非常简单，进入bin目录，结构如下：
 
 ![image-20210402162350977](/assets/image-20210402162350977.DYFDHidv.png)
 
-然后执行命令即可：
+然后执行命令即可，windows命令：
 
-* windows命令：
-
-  ```
-  startup.cmd -m standalone
-  ```
+```sh
+startup.cmd -m standalone
+```
 
 执行后的效果如图：
 
 ![image-20210402162526774](/assets/image-20210402162526774.D_xu6845.png)
 
-## 1.5.访问
+### 1.5.访问
 
 在浏览器输入地址：http://127.0.0.1:8848/nacos即可：
 
@@ -69959,15 +69992,27 @@ Nacos的默认端口是8848，如果你电脑上的其它进程占用了8848端�
 
 ![image-20210402162709515](/assets/image-20210402162709515.CsW7VTST.png)
 
-# 2.Linux安装
+## 二、Linux安装
 
 Linux或者Mac安装方式与Windows类似。
 
-## 2.1.安装JDK
+### 2.1.安装JDK
 
 Nacos依赖于JDK运行，索引Linux上也需要安装JDK才行。
 
 上传jdk安装包：
+
+::: navCard
+
+```yaml
+- name: JDK8
+  desc: Java 集成开发环境
+  link: https://www.oracle.com/cn/java/technologies/javase/javase8-archive-downloads.html
+  img: /svg/website/java.svg
+  badge: 开发环境
+```
+
+:::
 
 上传到某个目录，例如：`/usr/local/`
 
@@ -69992,7 +70037,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 source /etc/profile
 ```
 
-## 2.2.上传安装包
+### 2.2.上传Nacos安装包
 
 如图：
 
@@ -70002,7 +70047,7 @@ source /etc/profile
 
 ![image-20210402163715580](/assets/image-20210402163715580.DH19jCg5.png)
 
-## 2.3.解压
+### 2.3.解压
 
 命令解压缩安装包：
 
@@ -70024,11 +70069,42 @@ rm -rf nacos-server-1.4.1.tar.gz
 
 ![image-20210402164414827](/assets/image-20210402164414827.C-CRAGtd.png)
 
-## 2.4.端口配置
+### 2.4.端口配置
 
-与windows中类似
+与windows中类似，修改`/conf/application.properties`
 
-## 2.5.启动
+```properties
+#*************** Spring Boot Related Configurations ***************#
+### Default web context path:
+server.servlet.contextPath=/nacos
+### Include message field
+server.error.include-message=ALWAYS
+### Default web server port:
+server.port=8848
+```
+
+### 2.5.单机配置（非必须）
+
+修改`bin`目录下的`startup.sh`
+
+```sh
+[root@localhost bin]# cd nacos/bin/
+[root@localhost bin]# ls
+shutdown.cmd  shutdown.sh  startup.cmd  startup.sh
+[root@localhost bin]# vim startup.sh
+```
+
+找到下面这段配置
+
+![image-20260113000252881](/assets/image-20260113000252881.CGXKZkiw.png)
+
+将MODE的值改为
+
+```sh
+MODE="standalone" # cluster代表集群启动，standalone为单机启动，默认为集群启动
+```
+
+### 2.6.启动
 
 在nacos/bin目录中，输入命令启动Nacos：
 
@@ -70036,37 +70112,101 @@ rm -rf nacos-server-1.4.1.tar.gz
 sh startup.sh -m standalone
 ```
 
-# 3.Nacos的依赖
+### 补充：配置数据库存储
 
-父工程：
+MySQL中创建数据库nacos，导入`nacos/conf/nacos-mysql.sql`的sql文件
 
-```xml
-<dependency>
-    <groupId>com.alibaba.cloud</groupId>
-    <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-    <version>2.2.5.RELEASE</version>
-    <type>pom</type>
-    <scope>import</scope>
-</dependency>
+修改配置文件`nacos/conf/application.properties`
+
+![image-20260113001027190](/assets/image-20260113001027190.DxErUTJL.png)
+
+```properties
+#*************** Config Module Related Configurations ***************#
+### If use MySQL as datasource:
+# spring.datasource.platform=mysql
+
+### Count of DB:
+db.num=1 #取消注释
+
+### Connect URL of DB:
+### 取消注释并修改数据库连接地址，连接用户及用户密码
+db.url.0=jdbc:mysql://127.0.0.1:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+db.user.0=nacos
+db.password.0=nacos
 ```
 
-客户端：
+操作完成，打开浏览器访问localhost:8848，默认用户密码为nacos，nacos。
 
-```xml
-<!-- nacos客户端依赖包 -->
-<dependency>
-    <groupId>com.alibaba.cloud</groupId>
-    <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-</dependency>
+进入配置环境中配置的信息都会保存到MySQL中。
 
+### 补充：配置开机自启
+
+添加nacos.service文件,Exec开头的三个配置路径改为自己的nacos路径即可。
+
+```sh
+vim /lib/systemd/system/nacos.service
 ```
+
+```sh
+[Unit]
+Description=nacos
+After=network.target
+ 
+[Service]
+Type=forking
+ExecStart=/tools/nacos/bin/startup.sh -m standalone
+ExecReload=/tools/nacos/bin/shutdown.sh
+ExecStop=/tools/nacos/bin/shutdown.sh
+PrivateTmp=true
+ 
+[Install]
+WantedBy=multi-user.target
+```
+
+重新加载使nacos服务配置生效。
+
+```sh
+systemctl daemon-reload
+```
+
+设置nacos服务自启
+
+```sh
+systemctl enable nacos.service
+```
+
+修改javac软连接
+
+```sh
+# 查看javac位置
+which javac
+
+# 建立软连接 /usr/local/jdk8u322-b06/bin/javac路径改为自己的，如果提示/usr/bin/javac文件已存在，先删掉，重新建立
+ln -s /usr/local/jdk8u322-b06/bin/javac /usr/bin/javac
+```
+
+启动/停止
+
+```sh
+systemctl start nacos.service
+
+systemctl stop nacos.service
+```
+
+查看启动状态
+
+```sh
+systemctl status nacos.service
+```
+
+## 参考资料
 
 https://www.cnblogs.com/ComfortableM/p/17384518.html
 
 ---
 
 ---
-url: /Java/微服务专栏/03.注册中心Nacos/4_Nacos动态读取xml日志配置.md
+url: /Java/微服务专栏/03.注册中心/6_Nacos动态读取xml日志配置.md
 ---
 
 # Nacos动态读取xml日志配置
@@ -70080,12 +70220,12 @@ https://blog.csdn.net/qq\_39313596/article/details/131011629
 ---
 
 ---
-url: /Java/微服务专栏/03.注册中心Nacos/3_Nacos集群搭建.md
+url: /Java/微服务专栏/03.注册中心/5_Nacos集群搭建.md
 ---
 
 # Nacos集群搭建
 
-# 1.集群结构图
+## 一、集群结构图
 
 官方给出的Nacos集群图：
 
@@ -70105,7 +70245,7 @@ url: /Java/微服务专栏/03.注册中心Nacos/3_Nacos集群搭建.md
 | nacos2 | 192.168.150.1 | 8846 |
 | nacos3 | 192.168.150.1 | 8847 |
 
-# 2.搭建集群
+## 二、搭建集群
 
 搭建集群的基本步骤：
 
@@ -70115,7 +70255,7 @@ url: /Java/微服务专栏/03.注册中心Nacos/3_Nacos集群搭建.md
 * 启动nacos集群
 * nginx反向代理
 
-## 2.1.初始化数据库
+### 2.1.初始化数据库
 
 Nacos默认数据存储在内嵌数据库Derby中，不属于生产可用的数据库。
 
@@ -70326,7 +70466,7 @@ INSERT INTO users (username, password, enabled) VALUES ('nacos', '$2a$10$EuWPZHz
 INSERT INTO roles (username, role) VALUES ('nacos', 'ROLE_ADMIN');
 ```
 
-## 2.2.下载nacos
+### 2.2.下载nacos
 
 nacos在GitHub上有下载地址：https://github.com/alibaba/nacos/tags，可以选择任意版本下载。
 
@@ -70334,7 +70474,7 @@ nacos在GitHub上有下载地址：https://github.com/alibaba/nacos/tags，可�
 
 ![image-20210409212119411](/assets/image-20210409212119411.Byp_1HBg.png)
 
-## 2.3.配置Nacos
+### 2.3.配置Nacos
 
 将这个包解压到任意非中文目录下，如图：
 
@@ -70369,7 +70509,7 @@ db.user.0=root
 db.password.0=123
 ```
 
-## 2.4.启动
+### 2.4.启动
 
 将nacos文件夹复制三份，分别命名为：nacos1、nacos2、nacos3
 
@@ -70401,7 +70541,7 @@ server.port=8847
 startup.cmd
 ```
 
-## 2.5.nginx反向代理
+### 2.5.nginx反向代理
 
 进入[官网](https://nginx.org/en/download.html)，下载稳定版本
 
@@ -70441,7 +70581,7 @@ spring:
       server-addr: localhost:80 # Nacos地址
 ```
 
-## 2.6.优化
+### 2.6.优化
 
 * 实际部署时，需要给做反向代理的nginx服务器设置一个域名，这样后续如果有服务器迁移nacos的客户端也无需更改配置.
 
@@ -70450,14 +70590,14 @@ spring:
 ---
 
 ---
-url: /Java/微服务专栏/03.注册中心Nacos/2_Nacos配置管理.md
+url: /Java/微服务专栏/03.注册中心/4_Nacos配置管理.md
 ---
 
 # Nacos配置管理
 
 Nacos除了可以做注册中心，同样可以做配置管理来使用。
 
-## 1.统一配置管理
+## 一、统一配置管理
 
 当微服务部署的实例越来越多，达到数十、数百时，逐个修改微服务配置就会让人抓狂，而且很容易出错。我们需要一种统一配置管理方案，可以集中管理所有实例的配置。
 
@@ -70487,7 +70627,7 @@ Nacos一方面可以将配置集中管理，另一方可以在配置变更时，
 
 ![img](/assets/L0iFYNF-1694452160186.C9_6LeNO.png)
 
-1）引入nacos-config依赖
+#### 1）引入nacos-config依赖
 
 首先，在user-service服务中，引入nacos-config的客户端依赖：
 
@@ -70499,7 +70639,7 @@ Nacos一方面可以将配置集中管理，另一方可以在配置变更时，
 </dependency>
 ```
 
-2）添加bootstrap.yaml
+#### 2）添加bootstrap.yaml
 
 然后，在user-service中添加一个bootstrap.yaml文件，内容如下：
 
@@ -70524,7 +70664,7 @@ spring:
 
 ![image-20210714170845901](/assets/image-20210714170845901-1694452160186.iiCwtZHR.png)
 
-3）读取nacos配置
+#### 3）读取nacos配置
 
 在user-service中的UserController中添加业务逻辑，读取pattern.dateformat配置：
 
@@ -70533,10 +70673,10 @@ spring:
 完整代码：
 
 ```java
-package cn.itcast.user.web;
+package com.xxl.user.web;
 
-import cn.itcast.user.pojo.User;
-import cn.itcast.user.service.UserService;
+import com.xxl.user.pojo.User;
+import com.xxl.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -70568,23 +70708,23 @@ public class UserController {
 
 ![image-20210714170449612](/assets/image-20210714170449612-1694452160186.CgaRrUv8.png)
 
-## 2.配置热更新
+## 二、配置热更新
 
 我们最终的目的，是修改nacos中的配置后，微服务中无需重启即可让配置生效，也就是**配置热更新**。
 
 要实现配置热更新，可以使用两种方式：
 
-### 2.1.方式一
+### 2.1.方式一：@RefreshScope
 
-在@Value注入的变量所在类上添加注解@RefreshScope：
+在`@Value`注入的变量所在类上添加注解`@RefreshScope`：
 
 ![image-20210714171036335](/assets/image-20210714171036335-1694452160186.BL86lGTX.png)
 
-### 2.2.方式二
+### 2.2.方式二：@ConfigurationProperties
 
-使用@ConfigurationProperties注解代替@Value注解。
+使用`@ConfigurationProperties`注解代替`@Value`注解。
 
-在user-service服务中，添加一个类，读取patterrn.dateformat属性：
+在user-service服务中，添加一个类，读取`patterrn.dateformat`属性：
 
 ```java
 package cn.itcast.user.config;
@@ -70608,11 +70748,11 @@ public class PatternProperties {
 完整代码：
 
 ```java
-package cn.itcast.user.web;
+package com.xxl.user.web;
 
-import cn.itcast.user.config.PatternProperties;
-import cn.itcast.user.pojo.User;
-import cn.itcast.user.service.UserService;
+import com.xxl.user.config.PatternProperties;
+import com.xxl.user.pojo.User;
+import com.xxl.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -70643,7 +70783,7 @@ public class UserController {
 }
 ```
 
-## 3.配置共享
+## 三、配置共享
 
 其实微服务启动时，会去nacos读取多个配置文件，例如：
 
@@ -70655,13 +70795,13 @@ public class UserController {
 
 下面我们通过案例来测试配置共享
 
-### 1）添加一个环境共享配置
+### 3.1.添加一个环境共享配置
 
 我们在nacos中添加一个userservice.yaml文件：
 
 ![image-20210714173233650](/assets/image-20210714173233650-1694452160186.CAH8QDoC.png)
 
-### 2）在user-service中读取共享配置
+### 3.2.在user-service中读取共享配置
 
 在user-service服务中，修改PatternProperties类，读取新添加的属性：
 
@@ -70671,7 +70811,7 @@ public class UserController {
 
 ![image-20210714173721309](/assets/image-20210714173721309-1694452160186.C4Az1x9T.png)
 
-### 3）运行两个UserApplication，使用不同的profile
+### 3.3.运行两个UserApplication，使用不同的profile
 
 修改UserApplication2这个启动项，改变其profile值：
 
@@ -70693,18 +70833,20 @@ public class UserController {
 
 可以看出来，不管是dev，还是test环境，都读取到了envSharedValue这个属性的值。
 
-### 4）配置共享的优先级
+### 3.4.配置共享的优先级
 
 当nacos、服务本地同时出现相同属性时，优先级有高低之分：
 
 ![image-20210714174623557](/assets/image-20210714174623557-1694452160187.ChOYnlFH.png)
+
+## 参考资料
 
 https://blog.csdn.net/u011066470/article/details/129271345
 
 ---
 
 ---
-url: /Java/微服务专栏/03.注册中心Nacos/Nacos源码分析之ConfigService.md
+url: /Java/微服务专栏/03.注册中心/7_Nacos源码分析之ConfigService.md
 ---
 
 # Nacos源码分析之ConfigService
@@ -70714,18 +70856,20 @@ https://blog.csdn.net/god\_86/article/details/106394522
 ---
 
 ---
-url: /Java/微服务专栏/03.注册中心Nacos/1_Nacos注册中心.md
+url: /Java/微服务专栏/03.注册中心/2_Nacos注册中心.md
 ---
 
 # Nacos注册中心
 
-## 1.认识和安装Nacos
+## 一、认识和安装Nacos
 
-[Nacos](https://nacos.io/)是阿里巴巴的产品，现在是[SpringCloud](https://spring.io/projects/spring-cloud)中的一个组件。相比[Eureka](https://github.com/Netflix/eureka)功能更加丰富，在国内受欢迎程度较高。
+[Nacos](https://nacos.io/)（Naming and Configuration Service）由阿里开源，是易于构建云原生应用的动态服务发现、配置管理和服务管理平台。它集成了服务注册与发现、配置中心、服务元数据管理等功能，是构建微服务架构的重要基础设施。
+
+Nacos 现在是[SpringCloud](https://spring.io/projects/spring-cloud)中的一个组件。相比[Eureka](https://github.com/Netflix/eureka)功能更加丰富，在国内受欢迎程度较高。
 
 ![image-20210713230444308](/assets/image-20210713230444308.Bu_xI9a3.png)
 
-## 2.服务注册到nacos
+## 二、服务注册到nacos
 
 Nacos是SpringCloudAlibaba的组件，而SpringCloudAlibaba也遵循SpringCloud中定义的服务注册、服务发现规范。因此使用Nacos和使用Eureka对于微服务来说，并没有太大区别。
 
@@ -70734,7 +70878,7 @@ Nacos是SpringCloudAlibaba的组件，而SpringCloudAlibaba也遵循SpringCloud�
 * 依赖不同
 * 服务地址不同
 
-### 1）引入依赖
+### 2.1.引入依赖
 
 在cloud-demo父工程的pom文件中的`<dependencyManagement>`中引入SpringCloudAlibaba的依赖：
 
@@ -70751,15 +70895,16 @@ Nacos是SpringCloudAlibaba的组件，而SpringCloudAlibaba也遵循SpringCloud�
 然后在user-service和order-service中的pom文件中引入nacos-discovery依赖：
 
 ```xml
+<!-- nacos客户端依赖包 -->
 <dependency>
     <groupId>com.alibaba.cloud</groupId>
     <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
 </dependency>
 ```
 
-> **注意**：不要忘了注释掉eureka的依赖。
+> **注意**：如果之前使用了eureka，不要忘了注释掉eureka的依赖。
 
-### 2）配置nacos地址
+### 2.2.配置nacos地址
 
 在user-service和order-service的application.yml中添加nacos地址：
 
@@ -70770,15 +70915,15 @@ spring:
       server-addr: localhost:8848
 ```
 
-> **注意**：不要忘了注释掉eureka的地址
+> **注意**：如果之前使用了eureka，不要忘了注释掉eureka的地址
 
-### 3）重启
+### 2.3.重启
 
 重启微服务后，登录nacos管理页面，可以看到微服务信息：
 
 ![image-20210713231439607](/assets/image-20210713231439607.CqQVmFmy.png)
 
-## 3.服务分级存储模型
+## 三、服务分级存储模型
 
 一个**服务**可以有多个**实例**，例如user-service，可以有:
 
@@ -70804,7 +70949,7 @@ Nacos就将同一机房内的实例 划分为一个**集群**。
 
 杭州机房内的order-service应该优先访问同机房的user-service。
 
-### 5.3.1.给user-service配置集群
+### 3.1.给user-service配置集群
 
 修改user-service的application.yml文件，添加集群配置：
 
@@ -70835,7 +70980,7 @@ spring:
 
 ![image-20210713233727923](/assets/image-20210713233727923.CCy4TsUT.png)
 
-### 5.3.2.同集群优先的负载均衡
+### 3.2.同集群优先的负载均衡
 
 默认的`ZoneAvoidanceRule`并不能实现根据同集群优先来实现负载均衡。
 
@@ -70864,7 +71009,15 @@ userservice:
     NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule # 负载均衡规则 
 ```
 
-## 4.权重配置
+详细负载均衡组件策略可参考：[Ribbon负载均衡组件](/java/mse/serviced-component)
+
+[Spring Cloud Ribbon 中的 7 种负载均衡策略](https://xie.infoq.cn/article/6b442ce0eea211e1653ec3baf)
+
+[Spring Cloud Alibaba Nacos 负载均衡策略Ribbon配置](https://www.cnblogs.com/mingforyou/p/15501867.html)
+
+[nacos实现指定ribbon负载均衡策略的三种方式](https://blog.csdn.net/weixin_42684368/article/details/135241924)
+
+## 四、权重配置
 
 实际部署中会出现这样的场景：
 
@@ -70884,7 +71037,7 @@ userservice:
 
 > **注意**：如果权重修改为0，则该实例永远不会被访问
 
-## 5.环境隔离
+## 五、环境隔离
 
 Nacos提供了namespace来实现环境隔离功能。
 
@@ -70894,7 +71047,7 @@ Nacos提供了namespace来实现环境隔离功能。
 
 ![image-20210714000101516](/assets/image-20210714000101516.DOCB2N7n.png)
 
-### 5.5.1.创建namespace
+### 5.1.创建namespace
 
 默认情况下，所有service、data、group都在同一个namespace，名为public：
 
@@ -70912,7 +71065,7 @@ Nacos提供了namespace来实现环境隔离功能。
 
 ![image-20210714000522913](/assets/image-20210714000522913.CZC4aYz-.png)
 
-### 5.5.2.给微服务配置namespace
+### 5.2.给微服务配置namespace
 
 给微服务配置namespace只能通过修改配置来实现。
 
@@ -70938,9 +71091,9 @@ spring:
 
 ![image-20210714000941256](/assets/image-20210714000941256.BL40SNw8.png)
 
-## 6.Nacos与Eureka的区别
+## 六、Nacos与Eureka的区别
 
-Nacos的服务实例分为两种l类型：
+Nacos的服务实例分为两种类型：
 
 * 临时实例：如果实例宕机超过一定时间，会从服务列表剔除，默认的类型。
 
