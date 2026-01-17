@@ -4,27 +4,37 @@ url: /Java/架构设计/分布式/06.分布式监控/3_SkyWalking.md
 
 # SkyWalking链路追踪
 
-> 官网：https://skywalking.apache.org
-
 ## 一、简介
 
-* 什么是链路追踪
+### 什么是链路追踪
 
 随着微服务分布式系统变得日趋复杂，越来越多的组件开始走向分布式化，如分布式服务、分布式数据库、分布式缓存等，使得后台服务构成了一种复杂的分布式网络。在服务能力提升的同时，复杂的网络结构也使问题定位更加困难。在一个请求在经过诸多服务过程中，出现了某一个调用失败的情况，查询具体的异常由哪一个服务引起的就变得十分抓狂，问题定位和处理效率是也会非常低。
 
 分布式链路追踪就是将一次分布式请求还原成调用链路，将一次分布式请求的调用情况集中展示，比如各个服务节点上的耗时、请求具体到达哪台机器上、每个服务节点的请求状态等等。
 
-* 为什么要使用链路追踪
+> 推荐阅读两篇文章：
+>
+> [《OpenTracing 官方标准 —— 中文版》](https://github.com/opentracing-contrib/opentracing-specification-zh)
+>
+> Google 论文 [《Dapper，大规模分布式系统的跟踪系统》](http://www.iocoder.cn/Fight/Dapper-translation/?self)
+
+### 为什么要使用链路追踪
 
 链路追踪为分布式应用的开发者提供了完整的调用链路还原、调用请求量统计、链路拓扑、应用依赖分析等工具，可以帮助开发者快速分析和诊断分布式应用架构下的性能瓶颈，提高微服务时代下的开发诊断效率。
 
-* skywalking 链路追踪
+### SkyWalking 链路追踪
+
+> 官网地址：https://skywalking.apache.org
+>
+> 官方文档：https://github.com/apache/skywalking/tree/master/docs
+>
+> **中文**文档：https://github.com/SkyAPM/document-cn-translation-of-skywalking
 
 `SkyWalking`是一个可观测性分析平台（Observability Analysis Platform 简称OAP）和应用性能管理系统（Application Performance Management 简称 APM）。
 
 提供分布式链路追踪，服务网格（Service Mesh）遥测分析，度量（Metric）聚合和可视化一体化解决方案。
 
-SkyWalking 特点
+### SkyWalking 特点
 
 * 多语言自动探针，java，.Net Code ,Node.Js
 * 多监控手段，语言探针和Service Mesh
@@ -33,11 +43,30 @@ SkyWalking 特点
 * 支持警告
 * 优秀的可视化效果。
 
+### 整体架构
+
 下面是`SkyWalking`的架构图：
 
 ![skywalking](/assets/cf05a5a5_1151004.C_vDX2UO.png)
 
-## 二、安装
+整个架构，分成上、下、左、右四部分：
+
+> 考虑到让描述更简单，我们舍弃掉 Metric 指标相关，而着重在 Tracing 链路相关功能。
+
+* 上部分 **Agent** ：负责从应用中，收集链路信息，发送给 SkyWalking OAP 服务器。目前支持 SkyWalking、Zikpin、Jaeger 等提供的 Tracing 数据信息。而我们目前采用的是，SkyWalking Agent 收集 SkyWalking Tracing 数据，传递给服务器。
+* 下部分 **SkyWalking OAP** ：负责接收 Agent 发送的 Tracing 数据信息，然后进行分析(Analysis Core) ，存储到外部存储器( Storage )，最终提供查询( Query )功能。
+* 右部分 **Storage** ：Tracing 数据存储。目前支持 ES、MySQL、Sharding Sphere、TiDB、H2 多种存储器。而我们目前采用的是 ES ，主要考虑是 SkyWalking 开发团队自己的生产环境采用 ES 为主。
+* 左部分 **SkyWalking UI** ：负责提供控台，查看链路等等。
+
+## 二、单机环境安装
+
+![SkyWalking 单机环境](/assets/0081Kckwly1gkl533oq0xj30ww0pomzt.I8R1H4cQ.jpg)
+
+* 第一步，搭建一个 Elasticsearch 服务。
+* 第二步，下载 SkyWalking 软件包。
+* 第三步，搭建一个 SkyWalking OAP 服务。
+* 第四步，启动一个 Spring Boot 应用，并配置 SkyWalking Agent。
+* 第五步，搭建一个 SkyWalking UI 服务。
 
 从地址`https://archive.apache.org/dist/skywalking/`
 
@@ -136,6 +165,8 @@ java -javaagent:/data/apache-skywalking-apm-bin-es7/agent/skywalking-agent.jar -
 ```
 
 参考资料：
+
+https://skywalking.apache.org/zh/2020-04-19-skywalking-quick-start
 
 \[1]. https://blog.csdn.net/chengqwertyuiop/article/details/125065633
 
