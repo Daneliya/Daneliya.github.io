@@ -3936,7 +3936,7 @@ url: /Java/数据结构/查找算法.md
 
 ASL (Aerage Search Length）
 
-![img](/assets/image.BMw5v_YR.png)
+![img](/assets/image.BLZ5FY7t.png)
 
 ### 顺序查找
 
@@ -3944,7 +3944,7 @@ ASL (Aerage Search Length）
 
 顺序表、链表
 
-![img](/assets/image.BMw5v_YR.png)
+![img](/assets/image.BLZ5FY7t.png)
 
 ### 折半查找（二分查找法）
 
@@ -5719,6 +5719,56 @@ public class MyXxlJob {
 ---
 
 ---
+url: /Java/容器/Docker/02.Docker安装/5_搭建个人镜像仓库.md
+---
+
+# 搭建个人镜像仓库
+
+https://blog.csdn.net/weixin\_44008788/article/details/144722354
+
+https://cr.console.aliyun.com/
+
+使用阿里云容器镜像服务（ACR）创建并上传自定义镜像，我会按 “注册配置→准备镜像→推送镜像” 的完整流程，一步步教你操作，确保新手也能轻松完成。
+
+### 前提条件
+
+1. 已注册阿里云账号（https://www.aliyun.com/）；
+2. 本地安装 Docker（确保`docker -v`能正常输出版本）；
+3. 网络能正常访问阿里云服务。
+
+***
+
+## 步骤 1：开通阿里云容器镜像服务并创建镜像仓库
+
+### 1.1 开通 ACR 服务
+
+1. 登录阿里云控制台，搜索 “容器镜像服务”（ACR）；
+2. 选择 “个人版 / 企业版”（个人版免费够用），点击 “立即开通”，按提示完成开通（无需额外付费，基础版免费）。
+
+### 1.2 创建镜像仓库
+
+1. 开通后进入 ACR 控制台，选择左侧 “镜像仓库”→“实例列表”，点击默认实例（如`registry.cn-hangzhou.aliyuncs.com`）进入；
+
+2. 点击 “创建镜像仓库”，填写核心信息：
+
+   * **仓库名称**：自定义（如`my-first-image`）；
+   * **命名空间**：选已有的或新建（如`my-namespace`，唯一标识）；
+   * **仓库类型**：公开 / 私有（测试选公开，生产选私有）；
+   * **摘要 / 描述**：可选，填镜像说明；
+
+3. 点击 “创建”，完成后会看到仓库的**公网地址**（如`registry.cn-hangzhou.aliyuncs.com/my-namespace/my-first-image`），保存这个地址，后续推送镜像要用。
+
+### 1.3 获取阿里云镜像仓库登录信息
+
+1. 在镜像仓库详情页，点击 “管理”→“凭证管理”；
+2. 记录：
+   * 登录服务器：如`registry.cn-hangzhou.aliyuncs.com`；
+   * 用户名：阿里云账号 ID（或子账号）；
+   * 密码：需先设置 “访问凭证”（个人版可直接用阿里云账号密码，或创建 AccessKey）。
+
+---
+
+---
 url: /常用框架/EasyExcel/5_大量数据导出.md
 ---
 
@@ -5747,7 +5797,7 @@ https://blog.csdn.net/weixin\_43949154/article/details/122071510
 ---
 
 ---
-url: /StableDiffusion/Midjourney/4_单人及多人换脸.md
+url: /AIGC/04.Midjourney/4_单人及多人换脸.md
 ---
 
 # 单人及多人换脸
@@ -6058,7 +6108,7 @@ $①最值原理 由于f(x)在\[a,b]上连续，则f(x)有最大值M和最小值
 ---
 
 ---
-url: /StableDiffusion/Midjourney/2_调整图片比例.md
+url: /AIGC/04.Midjourney/2_调整图片比例.md
 ---
 
 # 调整图片比例
@@ -15497,7 +15547,7 @@ jobs:
 ---
 
 ---
-url: /StableDiffusion/Midjourney/5_局部重绘.md
+url: /AIGC/04.Midjourney/5_局部重绘.md
 ---
 
 # 局部重绘
@@ -17185,16 +17235,31 @@ https://zhuanlan.zhihu.com/p/461510148
 | onekeyadmin        |      | https://gitee.com/ikam/onekeyadmin              | 基于Thinkphp6+Element的插件化管理系统，网站、小程序、商城、CMS、APP、ERP、API接口一个系统全部搞定，无需脚手架开箱即用！ |
 | vben admin         |      | https://doc.vvbin.cn/guide/introduction.html    | 基于 Vue3.0、Vite、 Ant-Design-Vue、TypeScript 的后台解决方案，目标是为开发中大型项目提供开箱即用的解决方案。 |
 
-## 🦄脚本类
+## 🦄脚本、第三方下载类
 
-| 名称              | 描述         | 地址                                                         | 简介 |
-| ----------------- | ------------ | ------------------------------------------------------------ | ---- |
-| douyin-downloader | 抖音视频下载 | [douyin-downloader](https://github.com/jiji262/douyin-downloader) |      |
+| 名称                  | 描述             | 地址                                                         | 简介                                                         | 使用说明                                            |
+| --------------------- | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------- |
+| douyin-downloader     | 抖音视频下载     | [douyin-downloader](https://github.com/jiji262/douyin-downloader) |                                                              |                                                     |
+| WeiboAlbumDownloader⭐ | 微博图片视频下载 | [WeiboAlbumDownloader](https://github.com/hupo376787/WeiboAlbumDownloader) | 微博相册下载工具C#版，带UI界面                               | [使用说明](/open_source/guide/WeiboAlbumDownloader) |
+| weibo-crawler         | 微博图片视频下载 | [weibo-crawler](https://github.com/dataabc/weibo-crawler)    | 新浪微博爬虫，用python爬取新浪微博数据，并下载微博图片和微博视频，可保存到数据库 |                                                     |
+
+::: imgCard
+
+```yaml
+- img: /img/2022-09-10 16_12_18_f1df3aa1-afb5-4f48-84b8-42133c112da6.jpg
+  link: https://github.com/hupo376787/WeiboAlbumDownloader
+  name: WeiboAlbumDownloader⭐
+  desc: 微博相册下载工具C#版，带UI界面
+  author: hupo376787
+  avatar: /svg/website/github.svg
+```
+
+:::
 
 ---
 
 ---
-url: /Linux/Nginx/5_跨域配置与防盗链.md
+url: /Linux/03.Nginx/5_跨域配置与防盗链.md
 ---
 
 # 跨域配置与防盗链
@@ -17505,7 +17570,7 @@ npm add vitepress-theme-teek@latest -D
 ---
 
 ---
-url: /StableDiffusion/Midjourney/6_扩展图片ZoomOut功能.md
+url: /AIGC/04.Midjourney/6_扩展图片ZoomOut功能.md
 ---
 
 # 扩展图片ZoomOut功能
@@ -18855,7 +18920,7 @@ Teek 的灵感主要来自于 [vuepress-theme-vdoing](https://doc.xugaoyi.com/)�
 ---
 
 ---
-url: /StableDiffusion/Midjourney/1_Midjourney命令参数用途列表.md
+url: /AIGC/04.Midjourney/1_Midjourney命令参数用途列表.md
 ---
 
 # 命令参数用途列表
@@ -19269,7 +19334,7 @@ X表情符号可以取消和删除图像，同时也会从画廊中输出
 ---
 
 ---
-url: /StableDiffusion/StableDiffusion/2_模型使用.md
+url: /AIGC/01.StableDiffusion/2_模型使用.md
 ---
 
 # 模型下载与使用
@@ -20311,7 +20376,7 @@ url: /Java/数据结构/排序算法.md
 
 具体过程为：将第个记录的关键字Ki顺次与其前面记录的关键字Ki-1,ki-2,...ki进行比较，将所有关键字大于K的记录依次向后移动一个位置，直到遇见一个关键字小于或者等于Ki的记录Kj，此时K后面必为空位置，将第i个记录插入空放置即可。
 
-![img](/assets/image.BMw5v_YR.png)
+![img](/assets/image.BLZ5FY7t.png)
 
 ```c
 #include <stdio.h>
@@ -20423,7 +20488,7 @@ void bubble_sort(int arr[], int n) {
 
 用增量来划分子序列的方法，达到减少关键字移动次数的目的。
 
-![img](/assets/image.BMw5v_YR.png)
+![img](/assets/image.BLZ5FY7t.png)
 
 ```c
 void ShellPass(SeqList R, int d)
@@ -30710,7 +30775,7 @@ import { yourClickIconName } from "vitepress-theme-teek/icons";
 ---
 
 ---
-url: /StableDiffusion/WebUI/2_图生图.md
+url: /AIGC/02.WebUI/2_图生图.md
 ---
 
 # 图生图
@@ -30718,7 +30783,7 @@ url: /StableDiffusion/WebUI/2_图生图.md
 ---
 
 ---
-url: /Java/容器/Docker/3_图形化工具Portainer.md
+url: /Java/容器/Docker/02.Docker安装/3_图形化工具Portainer.md
 ---
 
 # 图形化工具Portainer
@@ -31616,11 +31681,17 @@ url: /@pages/nav.md
   link: https://www.wuli.art/
   img: /svg/website/呜哩AI.ico
   badge: AI绘画
-  
+- name: 即梦AI
+  desc: 字节跳动旗下剪映团队开发的一站式AI创意艺术创作平台，集成了最新的人工智能技术，旨在为用户提供简单易用、功能强大的创作环境。即梦支持AI绘画和视频生成，能够根据用户的提示词生成艺术作品，成为艺术家、设计师及所有对视觉艺术感兴趣的人的创意伙伴。此外，即梦还具备独特的多模态能力，吸引了越来越多的开发者和内容创作者。
+  link: https://jimeng.jianying.com/
+  img: /svg/website/即梦AI.ico
+  badge: AI绘画
   
 ```
 
 :::
+
+模型对比：https://lmsys.org/blog
 
 ***
 
@@ -34378,7 +34449,7 @@ X FIle Storage还有访问策略、签名生成、Metadata 和 UserMetadata上�
 ---
 
 ---
-url: /StableDiffusion/WebUI/1_文生图.md
+url: /AIGC/02.WebUI/1_文生图.md
 ---
 
 # 文生图
@@ -42930,7 +43001,7 @@ Transformer由两个主要部分组成：
 ---
 
 ---
-url: /StableDiffusion/AIGC/AI猫咪剧情号.md
+url: /AIGC/05.AIGC/AI猫咪剧情号.md
 ---
 
 # AI猫咪剧情号
@@ -43609,6 +43680,14 @@ Streamlit 社区云部署需从 GitHub 仓库获取代码，因此需先将项�
 部署成功后，任何人都可通过生成的链接访问你的应用。你可以将链接分享给他人，无需配置服务器即可实现公网访问。
 
 通过 Streamlit 社区云，无需复杂的服务器配置，几分钟内即可完成应用部署，是快速分享 Streamlit 项目的理想选择。
+
+---
+
+---
+url: /AIGC/05.AIGC.md
+---
+
+# AIGC
 
 ---
 
@@ -45318,7 +45397,7 @@ https://cloud.tencent.com/developer/article/1642255
 ---
 
 ---
-url: /Linux/Shell命令/3_Centos7扩容根目录.md
+url: /Linux/01.Shell命令/3_Centos7扩容根目录.md
 ---
 
 # Centos7扩容根目录（/dev/mapper/centos-root）
@@ -45585,7 +45664,7 @@ Gparted的iso镜像，官网地址：https://sourceforge.net/projects/gparted/fi
 ---
 
 ---
-url: /Linux/OpenEuler/3_Cockpit服务器管理工具.md
+url: /Linux/05.OpenEuler/3_Cockpit服务器管理工具.md
 ---
 
 # Cockpit服务器管理工具
@@ -45776,7 +45855,15 @@ firewall-cmd --reload
 ---
 
 ---
-url: /StableDiffusion/ComfyUI/1_ComfyUI安装.md
+url: /AIGC/03.ComfyUI.md
+---
+
+# ComfyUI
+
+---
+
+---
+url: /AIGC/03.ComfyUI/1_ComfyUI安装.md
 ---
 
 # ComfyUI安装
@@ -45894,7 +45981,7 @@ Then you can launch ComfyUI with: `python main.py --directml` `pip install torch
 ---
 
 ---
-url: /StableDiffusion/ComfyUI/3_ComfyUI核心采样器.md
+url: /AIGC/03.ComfyUI/3_ComfyUI核心采样器.md
 ---
 
 # ComfyUI核心采样器
@@ -45942,7 +46029,7 @@ ComfyUI KSampler 中的相关选项
 ---
 
 ---
-url: /StableDiffusion/ComfyUI/0_ComfyUI简介.md
+url: /AIGC/03.ComfyUI/0_ComfyUI简介.md
 ---
 
 # ComfyUI简介
@@ -45964,7 +46051,7 @@ ComfyUI是一种新型的Stable Diffusion用户界面，因其独树一帜的“
 ---
 
 ---
-url: /StableDiffusion/ComfyUI/2_ComfyUI配置.md
+url: /AIGC/03.ComfyUI/2_ComfyUI配置.md
 ---
 
 # ComfyUI配置
@@ -46026,28 +46113,6 @@ The default installation includes a fast latent preview method that's low-resolu
 无限圣杯手册(含满血整合包)：https://shimo.im/docs/Ee32m0w80rfLp4A2
 
 AIGODLIKE社区(支持COMFYUI图像解析)：https://www.aigodlike.com
-
----
-
----
-url: /Java/容器/Docker/4_Compose脚本.md
----
-
-# Compose脚本
-
-通过`docker-compose`编排一系列环境进行一键快速部署运行，小白运维神器。
-
-### 一、环境准备
-
-```
-# 安装git命令： yum install -y git
-git clone https://gitee.com/xu_xiaolong/docker-compose.git
-cd docker-compose/compose
-```
-
-### 二、运行服务
-
-> 环境部署见每个服务下的`run.md`； eg: `docker-compose/compose/portainer/run.md`
 
 ---
 
@@ -46218,7 +46283,7 @@ url: /常用框架/SpringAIAlibaba/Agent Framework/8_Context Engineering上下�
 ---
 
 ---
-url: /StableDiffusion/StableDiffusion/3_ControlNet控制网.md
+url: /AIGC/01.StableDiffusion/3_ControlNet控制网.md
 ---
 
 # ControlNet控制网
@@ -47634,10 +47699,10 @@ https://developer.aliyun.com/article/1045779
 ---
 
 ---
-url: /Java/容器/Docker/镜像安装-Docker安装Graylog.md
+url: /Java/容器/Docker/04.Docker实例/Docker安装Graylog.md
 ---
 
-# Docker安装Graylog
+# Docker 安装 Graylog
 
 前期准备
 
@@ -47705,7 +47770,357 @@ https://archivedocs.graylog.org/en/latest/pages/searching/query\_language.html
 ---
 
 ---
-url: /Java/容器/Docker/镜像安装-Docker安装MongoDB.md
+url: /Java/容器/Docker/02.Docker安装/4_Docker 资源清理.md
+---
+
+# Docker 资源清理
+
+```Bash
+root@ekroot-b760mds3hddr4:~# du -h --max-depth=1 /var/lib/docker/ | sort -hr
+43G     /var/lib/docker/
+31G     /var/lib/docker/containers
+13G     /var/lib/docker/overlay2
+435M    /var/lib/docker/volumes
+193M    /var/lib/docker/tmp
+5.1M    /var/lib/docker/image
+112K    /var/lib/docker/network
+112K    /var/lib/docker/buildkit
+16K     /var/lib/docker/plugins
+4.0K    /var/lib/docker/swarm
+4.0K    /var/lib/docker/runtimes
+```
+
+看到`/var/lib/docker/containers`（31G）和`/var/lib/docker/overlay2`（13G）占用了大量磁盘空间，这是 Docker 运行中常见的存储占用问题 —— 前者主要是容器日志和运行数据，后者是容器镜像的分层存储。
+
+## 一、安全检查（避免误操作）
+
+首先确认哪些容器 / 镜像可以清理，执行以下命令查看当前 Docker 资源使用情况：
+
+```Bash
+# 查看Docker磁盘使用概况
+docker system df
+
+# 查看运行中的容器（避免删错正在运行的）
+docker ps
+
+# 查看所有容器（包括已停止的）
+docker ps -a
+
+# 查看所有镜像
+docker images
+```
+
+## 二、分步清理（按优先级从安全到深度）
+
+1. #### 清理无用资源（最安全，优先执行）
+
+Docker 提供了一键清理命令，只会删除**未被使用**的资源（已停止的容器、悬空镜像、未被挂载的卷、失效的网络），不会影响运行中的容器：
+
+```Bash
+# 一键清理（推荐先执行dry-run预览要删的内容）
+docker system prune --dry-run
+
+# 确认后执行真正的清理（加-a会删除所有未被使用的镜像，包括未关联容器的）
+docker system prune -a
+# 执行时会提示确认，输入y回车即可
+```
+
+1. #### 清理容器日志（解决 containers 目录过大的核心）
+
+`containers`目录大通常是因为容器日志（`-json.log`文件）无限制增长，先定位大日志文件：
+
+```Bash
+# 查找容器日志文件并按大小排序（显示前20个）
+find /var/lib/docker/containers/ -name "*.log" -type f -exec du -h {} + | sort -rh | head -20
+```
+
+##### 方式 1：临时清理大日志文件（立即释放空间）
+
+```Bash
+# 清空单个大日志文件（替换为你的日志路径）
+truncate -s 0 /var/lib/docker/containers/[容器ID]/[容器ID]-json.log
+
+# 批量清空所有容器日志（谨慎执行，会清空所有日志）
+find /var/lib/docker/containers/ -name "*.log" -type f -exec truncate -s 0 {} \;
+```
+
+##### 方式 2：永久限制容器日志大小（避免后续再次占满）
+
+修改 Docker 全局配置，限制所有容器的日志大小：
+
+```Bash
+# 编辑Docker配置文件（没有则新建）
+vim /etc/docker/daemon.json
+```
+
+添加以下内容（限制单容器日志最大 100MB，最多保留 3 个日志文件）：
+
+```JSON
+{"log-driver": "json-file","log-opts": {"max-size": "100m","max-file": "3"}}
+```
+
+重启 Docker 生效：
+
+```Bash
+systemctl daemon-reload
+systemctl restart docker
+```
+
+> 注意：该配置仅对**新建的容器**生效，已存在的容器需要重启后才会应用（或重新创建）。
+
+1. #### 清理 overlay2 目录（删除无用镜像 / 分层）
+
+`overlay2`是镜像的分层存储目录，大小大说明有大量未被使用的镜像分层：
+
+```Bash
+# 1. 删除已停止的容器（先确认这些容器不需要了）
+docker rm $(docker ps -aq --filter "status=exited")
+
+# 2. 删除悬空镜像（无标签、未被任何容器使用的镜像）
+docker rmi $(docker images -f "dangling=true" -q)
+
+# 3. 删除指定的无用镜像（替换为镜像ID/名称）
+docker rmi [镜像ID/镜像名:标签]
+```
+
+1. #### 清理未使用的卷（volumes 目录）
+
+如果`volumes`目录也偏大，清理未被挂载的卷（注意：卷可能包含重要数据，确认无用再删）：
+
+```Bash
+# 查看未被使用的卷
+docker volume ls -qf dangling=true
+
+# 删除未被使用的卷
+docker volume rm $(docker volume ls -qf dangling=true)
+```
+
+## 三、验证清理结果
+
+清理完成后，再次查看磁盘使用情况，确认空间已释放：
+
+```Bash
+# 重新查看Docker各目录大小
+du -s -h /var/lib/docker/*
+
+# 查看Docker磁盘使用概况
+docker system df
+```
+
+## 总结
+
+1. **紧急释放空间**：先执行`docker system prune -a`清理无用资源，再清空超大容器日志（`truncate -s 0`）。
+2. **长期预防**：修改`/etc/docker/daemon.json`限制容器日志大小，避免日志无限增长。
+3. **核心注意**：清理前务必确认运行中的容器和重要镜像 / 卷，`docker system prune -a`不会删除正在运行的容器关联资源，是相对安全的操作。
+
+如果清理后空间仍不足，可以进一步检查是否有大型镜像未清理，或考虑迁移 Docker 存储目录到更大的磁盘。
+
+---
+
+---
+url: /Java/容器/Docker/03.Docker使用/7_Docker Compose.md
+---
+
+# Docker Compose
+
+通过`docker-compose`编排一系列环境进行一键快速部署运行，小白运维神器。
+
+### 一、环境准备
+
+```
+# 安装git命令： yum install -y git
+git clone https://gitee.com/xu_xiaolong/docker-compose.git
+cd docker-compose/compose
+```
+
+### 二、运行服务
+
+> 环境部署见每个服务下的`run.md`； eg: `docker-compose/compose/portainer/run.md`
+
+---
+
+---
+url: /Java/容器/Docker/03.Docker使用/6_Docker Dockerfile.md
+---
+
+# Docker Dockerfile
+
+## 什么是 Dockerfile？
+
+Dockerfile 是一个文本文件，包含了构建 Docker 镜像的所有指令。
+
+Dockerfile 是一个用来构建镜像的文本文件，文本内容包含了一条条构建镜像所需的指令和说明。
+
+通过定义一系列命令和参数，Dockerfile 指导 Docker 构建一个自定义的镜像。
+
+## 使用 Dockerfile 定制镜像
+
+如何运行 Dockerfile 文件来定制一个镜像，下面是构建的流程。
+
+**1、定制一个 nginx 镜像（构建好的镜像内会有一个 /usr/share/nginx/html/index.html 文件）**
+
+在一个空目录下，新建一个名为 Dockerfile 文件，并在文件内添加以下内容：
+
+```dockerfile
+FROM nginx
+RUN echo '这是一个本地构建的nginx镜像' > /usr/share/nginx/html/index.html
+```
+
+详细步骤
+
+```sh
+root@ekroot-b760mds3hddr4:/home/disk2/tools# mkdir Dockerfile
+root@ekroot-b760mds3hddr4:/home/disk2/tools# cd Dockerfile/
+root@ekroot-b760mds3hddr4:/home/disk2/tools/Dockerfile# vi Dockerfile
+root@ekroot-b760mds3hddr4:/home/disk2/tools/Dockerfile# cat Dockerfile
+FROM nginx
+RUN echo '这是一个本地构建的nginx镜像' > /usr/share/nginx/html/index.html
+root@ekroot-b760mds3hddr4:/home/disk2/tools/Dockerfile#
+```
+
+**2、FROM 和 RUN 指令的作用**
+
+**FROM**：定制的镜像都是基于 FROM 的镜像，这里的 nginx 就是定制需要的基础镜像。后续的操作都是基于 nginx。
+
+**RUN**：用于执行后面跟着的命令行命令。有以下俩种格式：
+
+shell 格式：
+
+```dockerfile
+RUN <命令行命令>
+# <命令行命令> 等同于，在终端操作的 shell 命令。
+```
+
+exec 格式：
+
+```dockerfile
+RUN ["可执行文件", "参数1", "参数2"]
+# 例如：
+# RUN ["./test.php", "dev", "offline"] 等价于 RUN ./test.php dev offline
+```
+
+**注意**：Dockerfile 的指令每执行一次都会在 docker 上新建一层。所以过多无意义的层，会造成镜像膨胀过大。例如：
+
+```dockerfile
+FROM centos
+RUN yum -y install wget
+RUN wget -O redis.tar.gz "http://download.redis.io/releases/redis-5.0.3.tar.gz"
+RUN tar -xvf redis.tar.gz
+```
+
+以上执行会创建 3 层镜像。可简化为以下格式：
+
+```dockerfile
+FROM centos
+RUN yum -y install wget \
+    && wget -O redis.tar.gz "http://download.redis.io/releases/redis-5.0.3.tar.gz" \
+    && tar -xvf redis.tar.gz
+```
+
+如上，以 **&&** 符号连接命令，这样执行后，只会创建 1 层镜像。
+
+## 开始构建镜像
+
+在 Dockerfile 文件的存放目录下，执行构建动作。
+
+以下示例，通过目录下的 Dockerfile 构建一个 nginx:v3（镜像名称:镜像标签）。
+
+```sh
+docker build -t nginx:v3 .
+```
+
+**注**：最后的 **.** 代表本次执行的上下文路径。
+
+::: note 上下文路径
+
+是指 docker 在构建镜像，有时候想要使用到本机的文件（比如复制），docker build 命令得知这个路径后，会将路径下的所有内容打包。
+
+**解析**：由于 docker 的运行模式是 C/S。我们本机是 C，docker 引擎是 S。实际的构建过程是在 docker 引擎下完成的，所以这个时候无法用到我们本机的文件。这就需要把我们本机的指定目录下的文件一起打包提供给 docker 引擎使用。
+
+如果未说明最后一个参数，那么默认上下文路径就是 Dockerfile 所在的位置。
+
+**注意**：上下文路径下不要放无用的文件，因为会一起打包发送给 docker 引擎，如果文件过多会造成过程缓慢。
+
+:::
+
+详细步骤
+
+```sh
+root@ekroot-b760mds3hddr4:/home/disk2/tools/Dockerfile# docker build -t nginx:v3 .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM nginx
+latest: Pulling from library/nginx
+119d43eec815: Pull complete
+700146c8ad64: Pull complete
+d989100b8a84: Pull complete
+500799c30424: Pull complete
+10b68cfefee1: Pull complete
+57f0dd1befe2: Pull complete
+eaf8753feae0: Pull complete
+Digest: sha256:c881927c4077710ac4b1da63b83aa163937fb47457950c267d92f7e4dedf4aec
+Status: Downloaded newer image for nginx:latest
+ ---> 4af177a024eb
+Step 2/2 : RUN echo '这是一个本地构建的nginx镜像' > /usr/share/nginx/html/index.html
+ ---> Running in 5fb656ca7dc8
+ ---> Removed intermediate container 5fb656ca7dc8
+ ---> 8ef3ffdb8757
+Successfully built 8ef3ffdb8757
+Successfully tagged nginx:v3
+root@ekroot-b760mds3hddr4:/home/disk2/tools/Dockerfile# docker images
+REPOSITORY                                             TAG                IMAGE ID       CREATED          SIZE
+nginx                                                  v3                 8ef3ffdb8757   29 seconds ago   161MB
+portainer/portainer                                    latest             5f11582196a4   1 years ago      287MB
+```
+
+## 指令详解
+
+| Dockerfile 指令 | 说明                                                         |
+| :-------------- | :----------------------------------------------------------- |
+| FROM            | 指定基础镜像，用于后续的指令构建。                           |
+| MAINTAINER      | 指定Dockerfile的作者/维护者。（已弃用，推荐使用LABEL指令）   |
+| LABEL           | 添加镜像的元数据，使用键值对的形式。                         |
+| RUN             | 在构建过程中在镜像中执行命令。                               |
+| CMD             | 指定容器创建时的默认命令。（可以被覆盖）                     |
+| ENTRYPOINT      | 设置容器创建时的主要命令。（不可被覆盖）                     |
+| EXPOSE          | 声明容器运行时监听的特定网络端口。                           |
+| ENV             | 在容器内部设置环境变量。                                     |
+| ADD             | 将文件、目录或远程URL复制到镜像中。                          |
+| COPY            | 将文件或目录复制到镜像中。                                   |
+| VOLUME          | 为容器创建挂载点或声明卷。                                   |
+| WORKDIR         | 设置后续指令的工作目录。                                     |
+| USER            | 指定后续指令的用户上下文。                                   |
+| ARG             | 定义在构建过程中传递给构建器的变量，可使用 "docker build" 命令设置。 |
+| ONBUILD         | 当该镜像被用作另一个构建过程的基础时，添加触发器。           |
+| STOPSIGNAL      | 设置发送给容器以退出的系统调用信号。                         |
+| HEALTHCHECK     | 定义周期性检查容器健康状态的命令。                           |
+| SHELL           | 覆盖Docker中默认的shell，用于RUN、CMD和ENTRYPOINT指令。      |
+
+https://blog.csdn.net/wanshuai12138/article/details/123376307
+
+https://blog.csdn.net/weixin\_49171365/article/details/131031451
+
+https://www.cnblogs.com/Howinfun/p/11658516.html
+
+https://blog.csdn.net/y1391625461/article/details/119803859
+
+https://blog.csdn.net/chengxuyuan316/article/details/125773171
+
+---
+
+---
+url: /Java/容器/Docker/02.Docker安装.md
+---
+
+# Docker安装
+
+---
+
+---
+url: /Java/容器/Docker/04.Docker实例/Docker安装MongoDB.md
 ---
 
 # Docker安装MongoDB
@@ -47810,7 +48225,7 @@ docker rm my-mongo-container
 ---
 
 ---
-url: /Java/容器/Docker/镜像安装-Docker安装MySQL.md
+url: /Java/容器/Docker/04.Docker实例/Docker安装MySQL.md
 ---
 
 # Docker安装MySQL
@@ -47874,7 +48289,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'xxl'@'%';
 ---
 
 ---
-url: /Java/容器/Docker/镜像安装-Docker安装Nginx.md
+url: /Java/容器/Docker/04.Docker实例/Docker安装Nginx.md
 ---
 
 # Docker安装Nginx
@@ -47935,7 +48350,7 @@ docker run --rm \
 ---
 
 ---
-url: /Java/容器/Docker/镜像安装-Docker安装Redis.md
+url: /Java/容器/Docker/04.Docker实例/Docker安装Redis.md
 ---
 
 # Docker安装Redis
@@ -47991,25 +48406,7 @@ docker exec -it redis-test /bin/bash
 ---
 
 ---
-url: /Java/容器/Docker/5_Docker部署jar包.md
----
-
-# Docker部署jar包
-
-https://blog.csdn.net/wanshuai12138/article/details/123376307
-
-https://blog.csdn.net/weixin\_49171365/article/details/131031451
-
-https://www.cnblogs.com/Howinfun/p/11658516.html
-
-https://blog.csdn.net/y1391625461/article/details/119803859
-
-https://blog.csdn.net/chengxuyuan316/article/details/125773171
-
----
-
----
-url: /Java/容器/Docker/1_Docker常用命令合集.md
+url: /Java/容器/Docker/01.Docker教程/1_Docker常用命令合集.md
 ---
 
 # Docker常用命令合集
@@ -48074,7 +48471,15 @@ attached模式可能调试起来更为方便，因此Docker也提供了detached�
 ---
 
 ---
-url: /Java/容器/Docker/0_Docker介绍及使用.md
+url: /Java/容器/Docker/01.Docker教程.md
+---
+
+# Docker教程
+
+---
+
+---
+url: /Java/容器/Docker/01.Docker教程/0_Docker介绍及使用.md
 ---
 
 # 初识Docker
@@ -49026,6 +49431,22 @@ docker push 192.168.150.101:8080/nginx:1.0
 ```sh
 docker pull 192.168.150.101:8080/nginx:1.0 
 ```
+
+---
+
+---
+url: /Java/容器/Docker/04.Docker实例.md
+---
+
+# Docker实例
+
+---
+
+---
+url: /Java/容器/Docker/03.Docker使用.md
+---
+
+# Docker使用
 
 ---
 
@@ -62142,7 +62563,7 @@ Non-Heap Memory Usage: init = 2555904(2496K) used = 10066008(9830K) committed = 
 ---
 
 ---
-url: /Linux/Nginx/Kong.md
+url: /Linux/03.Nginx/Kong.md
 ---
 
 # Kong
@@ -62579,7 +63000,15 @@ LangChain提供了许多模块化组件，这些组件是构建复杂AI应用的
 ---
 
 ---
-url: /Java/容器/Docker/2_Linux安装Docker.md
+url: /Linux/02.Linux安装软件.md
+---
+
+# Linux安装软件
+
+---
+
+---
+url: /Java/容器/Docker/02.Docker安装/2_Linux安装Docker.md
 ---
 
 # Linux安装Docker
@@ -62810,7 +63239,7 @@ https://blog.csdn.net/pushiqiang/article/details/78682323
 ---
 
 ---
-url: /Linux/Linux安装软件/Linux安装MongoDB.md
+url: /Linux/02.Linux安装软件/Linux安装MongoDB.md
 ---
 
 # Linux安装MongoDB
@@ -62998,7 +63427,7 @@ fi
 ---
 
 ---
-url: /Linux/Linux安装软件/Linux安装MySQL.md
+url: /Linux/02.Linux安装软件/Linux安装MySQL.md
 ---
 
 # Linux安装MySQL
@@ -63151,7 +63580,7 @@ Enter password:*******
 ---
 
 ---
-url: /Linux/Nginx/1_Linux安装Nginx.md
+url: /Linux/03.Nginx/1_Linux安装Nginx.md
 ---
 
 # Linux安装Nginx
@@ -63560,16 +63989,16 @@ https://blog.csdn.net/xinxian1768/article/details/131165831
 ---
 
 ---
-url: /Linux/Shell命令/0_Linux常用命令.md
+url: /Linux/01.Shell命令/0_Linux常用命令.md
 ---
 
 # Linux常用命令
 
-### 命令大全
+## 命令大全
 
 <https://www.runoob.com/linux/linux-command-manual.html>
 
-### 命令操作之文件与目录
+## 命令操作之文件与目录
 
 * **is**：查看文件和目录列表
 * **ls -a**：查看文件和目录列表（包含隐藏文件）
@@ -63585,8 +64014,9 @@ url: /Linux/Shell命令/0_Linux常用命令.md
 * **解压**：`tar -zxvf 文件地址+名称`
 * **解压zip格式**：`unzip 文件地址+名称`
 * **重命名**：`mv 旧文件地址加名称 新文件地址加名称`
+* 查询IP：`ip addr`，查询指定网卡IP：`ip addr show eth0`、`ip addr show ens33`，输出到文件：`ip addr > ip.txt`
 
-### 命令操作之文件位置
+## 命令操作之文件位置
 
 实际工作中文件多了，可能就会忘掉它的位置，这个时候就可以使用一些出文件所在目录的地址，提升了文件查找的效率。
 
@@ -63596,7 +64026,7 @@ url: /Linux/Shell命令/0_Linux常用命令.md
 
 * find  实际搜寻硬盘查询文件名称。
 
-1、whereis
+### 1、whereis
 
 whereis命令是定位可执行文件、源代码文件、帮助文件在文件系统中的位置。
 
@@ -63613,7 +64043,7 @@ bash: /bin/bash /etc/bash.bashrc /usr/share/man/man1/bash.1.gz
 
 说明： 以上输出信息从左至右分别为查询的程序名、bash路径、bash的man 手册页路径。
 
-2、find
+### 2、find
 
 Linux下find命令在目录结构中搜索文件，并执行指定的操作。
 
@@ -63631,7 +64061,7 @@ sudo find / -name ``"*.log"
 
 说明：在根目录查找 以.log结尾的文件。 "/"代表当前目录
 
-3、which
+### 3、which
 
 which命令的作用是，在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。
 
@@ -63645,7 +64075,7 @@ which java
 
 说明：查看java可执行文件的地址
 
-### 命令操作之进程和磁盘管理
+## 命令操作之进程和磁盘管理
 
 * **查看进程**：`ps -ef|grep java` （查看所有java运行的进程）
 * **结束进程**：`kill -9 pid`
@@ -63655,7 +64085,7 @@ which java
 * **实时显示系统中各个进程的资源占用状况**：top
 * **查看单个进程占用资源状况**：`top -d 1 -p pid`（pid 进程id）
 
-### 命令操作之查看占用端口的进程
+## 命令操作之查看占用端口的进程
 
 * lsof命令：lsof(list open files)命令可以列出当前系统中打开的所有文件，包括网络端口。可以使用lsof命令查看某个端口被哪个进程占用。具体的命令为：**sudo lsof -i :端口号**，其中端口号为需要查询的端口号。
 
@@ -63688,7 +64118,7 @@ which java
 >
 > windows查看进程：https://blog.csdn.net/mrxutada/article/details/119203981
 
-### 防火墙相关
+## 防火墙相关
 
 firewalld与iptables命令：https://zhuanlan.zhihu.com/p/452927048
 
@@ -63763,14 +64193,14 @@ sudo ufw disable
 # 需要注意的是，对防火墙的任何更改都需要使用 sudo 权限进行设置。
 ```
 
-### 查看Linux系统版本
+## 查看Linux系统版本
 
 1. 使用`cat`命令查看`/etc/issue`文件。这种方法适用于所有Linux发行版，但在双核CPU中，`cpuinfo`中会看到两个CPU，可能会让人误以为是两个单核的CPU，实际上应该通过`Physical Processor ID`来区分单核和双核。
 2. 使用`uname`命令查看系统信息。例如，`uname -a`命令可以查看系统的内核名/版本、网络主机名、操作系统等信息。
 3. 查看配置文件`/etc/issue`或`/etc/*release`文件。这些文件中会写有操作系统和版本号等信息。例如，对于Redhat/Centos系统，可以查看`/etc/redhat_release`文件；对于Debian系统，可以查看`/etc/os-release`文件。
 4. 此外，还可以通过查看内存文件`/proc/version`来查看操作系统版本号、内核版本号、网络主机名等信息。
 
-### 使用curl命令在Linux服务器调用接口
+## 使用curl命令在Linux服务器调用接口
 
 一般情况我们测试对方ip端口，都是用**telnet**命令来测试通不通
 
@@ -63807,7 +64237,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"name":"test"}' http://loc
 curl -X POST -H 'content-type: application/xml'  -d @/home/disk/file/myxmlfile.txt http://192.168.1.1:8080/api/uploadfile
 ```
 
-### 未知的名称或服务及java.net.UnknownHostException异常
+## 未知的名称或服务及java.net.UnknownHostException异常
 
 java.net.UnknownHostException异常
 
@@ -63823,7 +64253,83 @@ Failed to restart network.service: Unit network.service not found.
 
 https://blog.csdn.net/qq\_33468857/article/details/125135211
 
-### 查看所有java应用的内存占用情况
+## 查询出系统中所有java进程及占用内存
+
+### 方案 1：最简洁（ps + jps 组合，快速查看物理内存）
+
+这是日常使用最方便的命令，直接输出所有 Java 进程的 PID、内存（MB）、进程名称，无需脚本：
+
+```Bash
+jps -q | grep -v Jps | xargs -I {} sh -c 'echo -n "PID: {} | 内存(MB): $((`ps -p {} -o rss= | tr -d " "`/1024)) | 进程名: "; jps -l | grep ^{} | awk "{print \$2}"'
+```
+
+#### 输出示例：
+
+```Bash
+PID: 1234 | 内存(MB): 896 | 进程名: org.apache.catalina.startup.Bootstrap
+PID: 5678 | 内存(MB): 452 | 进程名: demo-1.0.0.jar
+```
+
+#### 说明：
+
+* `jps -q`：只输出 Java 进程 ID（排除 jps 自身）；
+* `ps -p {} -o rss=`：获取进程物理内存（单位 KB），`tr -d " "` 去除空格；
+* `$((.../1024))`：将 KB 换算为 MB，更易读；
+* `jps -l`：匹配进程对应的主类 / Jar 包名。
+
+### 方案 2：更详细（ps 全字段，含 CPU / 虚拟内存）
+
+如果需要更多维度的信息（如 CPU 占用、虚拟内存、启动命令），用这个命令：
+
+```Bash
+ps -eo pid,ppid,pcpu,rss,vsz,cmd | grep -E 'java|jar' | grep -v grep | awk '{printf "PID: %s | CPU: %s%% | 物理内存(MB): %s | 虚拟内存(GB): %.2f | 命令: %s\n", $1, $3, $4/1024, $5/1024/1024, $0}'
+```
+
+#### 输出示例：
+
+```Bash
+PID: 1234 | CPU: 0.5% | 物理内存(MB): 896 | 虚拟内存(GB): 3.20 | 命令: /usr/bin/java -jar tomcat.jar
+PID: 5678 | CPU: 1.2% | 物理内存(MB): 452 | 虚拟内存(GB): 2.15 | 命令: java -Xmx512m com.demo.App
+```
+
+#### 字段说明：
+
+* `pid`：进程 ID；`pcpu`：CPU 占用百分比；
+* `rss`：物理内存（MB）；`vsz`：虚拟内存（GB）；
+* `cmd`：完整的 Java 启动命令（含 JVM 参数）。
+
+### 方案 3：专业级（jstat 查看 JVM 堆内存详情）
+
+如果需要分析 JVM 内部堆内存（Eden / 老年代 / 元空间）的使用情况（而非系统物理内存），用这个循环命令：
+
+```Bash
+echo "===== Java进程JVM堆内存详情 ====="
+for pid in $(jps -q | grep -v Jps); do
+    echo -e "\n【进程ID: $pid | 进程名: $(jps -l | grep "^$pid" | awk '{print $2}')】"
+    jstat -gc $pid | awk 'NR==2{printf "Eden已用: %.2fMB | 老年代已用: %.2fMB | 元空间已用: %.2fMB\n", $6/1024, $8/1024, $10/1024}'
+done
+```
+
+#### 输出示例：
+
+```Bash
+===== Java进程JVM堆内存详情 =====
+
+【进程ID: 1234 | 进程名: org.apache.catalina.startup.Bootstrap】
+Eden已用: 128.50MB | 老年代已用: 456.20MB | 元空间已用: 89.30MB
+
+【进程ID: 5678 | 进程名: demo-1.0.0.jar】
+Eden已用: 89.20MB | 老年代已用: 210.50MB | 元空间已用: 67.80MB
+```
+
+#### 说明：
+
+* 聚焦 JVM 内部内存分配，适合排查内存泄漏、堆溢出等问题；
+* `Eden`：新生代 Eden 区已用；`老年代`：Old 区已用；`元空间`：Metaspace 已用。
+
+### 方案4：top
+
+依赖 JDK 自带的 jps/jstat 和系统自带的 ps/grep/awk
 
 ```sh
 top -b -n 1 | grep java| awk '{print "PID:"$1",mem:"$6",CPU percent:"$9"%","mem percent:"$10"%"}'
@@ -63853,7 +64359,13 @@ PID:761835,mem:1.8g,CPU percent:0.0% mem percent:2.8%
 PID:800379,mem:2.3g,CPU percent:0.0% mem percent:3.7%
 ```
 
-### 系统清理
+### 总结
+
+1. **快速查看**：用方案 1（jps+ps 组合），一键输出 PID、内存（MB）、进程名，最易用；
+2. **多维度分析**：用方案 2（ps 全字段），含 CPU、虚拟内存、启动命令；
+3. **JVM** **深度排查**：用方案 3（jstat），查看堆内存内部使用情况。
+
+## 系统清理
 
 当 Linux 系统中`/data`目录空间满了，可以按以下步骤逐步清理，确保安全且高效地释放空间：
 
@@ -63948,7 +64460,7 @@ find /data -type f -size +1G -exec ls -lh {} \;
 * 对大文件目录（如日志、备份）单独挂载分区，避免占满`/data`。
 * 启用日志轮转（`logrotate`），自动压缩和删除旧日志。
 
-### yum配置
+## yum配置
 
 [CentOS7配置阿里yum源 超详细！！！-阿里云开发者社区 (aliyun.com)](https://developer.aliyun.com/article/1366034)
 
@@ -63957,7 +64469,7 @@ find /data -type f -size +1G -exec ls -lh {} \;
 ---
 
 ---
-url: /Linux/Shell命令/4_Linux服务器抓包分析HTTP请求.md
+url: /Linux/01.Shell命令/4_Linux服务器抓包分析HTTP请求.md
 ---
 
 # Linux服务器抓包分析HTTP请求
@@ -64007,7 +64519,7 @@ https://zhuanlan.zhihu.com/p/34839086
 ---
 
 ---
-url: /Linux/Linux安装软件/Linux下安装Graylog.md
+url: /Linux/02.Linux安装软件/Linux下安装Graylog.md
 ---
 
 # Linux下安装Graylog
@@ -64181,7 +64693,7 @@ du: cannot access 'proc/212753': No such file or directory
 ---
 
 ---
-url: /Linux/Linux安装软件/Linux下安装Java.md
+url: /Linux/02.Linux安装软件/Linux下安装Java.md
 ---
 
 # Linux下安装Java
@@ -64240,7 +64752,7 @@ https://blog.csdn.net/qq\_35112567/article/details/131832497
 ---
 
 ---
-url: /Linux/Linux安装软件/Linux下安装Tomcat.md
+url: /Linux/02.Linux安装软件/Linux下安装Tomcat.md
 ---
 
 # Linux下安装Tomcat
@@ -64250,7 +64762,7 @@ https://zhuanlan.zhihu.com/p/555992010
 ---
 
 ---
-url: /Linux/Shell命令/1_Linux新建用户并授予root权限.md
+url: /Linux/01.Shell命令/1_Linux新建用户并授予root权限.md
 ---
 
 # Linux新建用户并授予root权限
@@ -64321,7 +64833,7 @@ chmod -v u-w /etc/sudoers
 ---
 
 ---
-url: /StableDiffusion/AIGC/LOFI.md
+url: /AIGC/05.AIGC/LOFI.md
 ---
 
 # LOFI音乐频道
@@ -64437,7 +64949,7 @@ https://blog.csdn.net/lumengmeng\_csdn/article/details/89482086
 ---
 
 ---
-url: /StableDiffusion/StableDiffusion/4_LORA训练.md
+url: /AIGC/01.StableDiffusion/4_LORA训练.md
 ---
 
 # LORA原理与训练
@@ -67314,7 +67826,15 @@ public static void messagesInReactAgent() throws GraphRunnerException {
 ---
 
 ---
-url: /StableDiffusion/Midjourney/3_Midjourney垫图.md
+url: /AIGC/04.Midjourney.md
+---
+
+# Midjourney
+
+---
+
+---
+url: /AIGC/04.Midjourney/3_Midjourney垫图.md
 ---
 
 # Midjourney垫图
@@ -67326,7 +67846,7 @@ https://www.yuque.com/u32937722/qb6y63/sata02aq53qhll78
 ---
 
 ---
-url: /StableDiffusion/Midjourney/0_Midjourney基础教程.md
+url: /AIGC/04.Midjourney/0_Midjourney基础教程.md
 ---
 
 # Midjourney基础教程
@@ -67396,7 +67916,7 @@ Discord网址：<https://discord.com/>
 ---
 
 ---
-url: /StableDiffusion/AIGC/Midjourney萌宠治愈频道.md
+url: /AIGC/05.AIGC/Midjourney萌宠治愈频道.md
 ---
 
 # Midjourney萌宠治愈频道
@@ -67495,7 +68015,7 @@ Bling特效
 ---
 
 ---
-url: /StableDiffusion/AIGC/Midjourney制作微信表情包.md
+url: /AIGC/05.AIGC/Midjourney制作微信表情包.md
 ---
 
 # Midjourney制作微信表情包
@@ -68207,6 +68727,25 @@ public static void reactAgentConfiguration() {
     System.out.println(response.getText());
 }
 ```
+
+---
+
+---
+url: /AIGC/05.AIGC/Moltbot个人AI助手部署.md
+---
+# Moltbot个人AI助手部署
+
+https://zhuanlan.zhihu.com/p/1999125164705723831
+
+https://cloud.tencent.com/developer/article/2624105
+
+https://blog.wenhaofree.com/posts/articles/2026-01-26-clawdbot-guide-analysis/
+
+云服务部署
+
+阿里云：https://www.aliyun.com/benefit/scene/moltbot
+
+火山引擎：https://www.volcengine.com/docs/6396/2189942
 
 ---
 
@@ -71581,7 +72120,15 @@ url: /数据库/05.Neo4j/0_Neo4j概念.md
 ---
 
 ---
-url: /Linux/Nginx/2_Nginx常用配置.md
+url: /Linux/03.Nginx.md
+---
+
+# Nginx
+
+---
+
+---
+url: /Linux/03.Nginx/2_Nginx常用配置.md
 ---
 
 # Nginx常用配置
@@ -71729,7 +72276,7 @@ server {
 ---
 
 ---
-url: /Linux/Nginx/4_Nginx负载均衡.md
+url: /Linux/03.Nginx/4_Nginx负载均衡.md
 ---
 
 # Nginx负载均衡
@@ -71946,7 +72493,7 @@ http {
 ---
 
 ---
-url: /Linux/Nginx/0_Nginx快速入门.md
+url: /Linux/03.Nginx/0_Nginx快速入门.md
 ---
 
 # Nginx快速入门
@@ -72004,7 +72551,7 @@ eg：推荐redis 可以做 session 共享，不建议 nginx 做 session 共享�
 ---
 
 ---
-url: /Linux/Nginx/3_Nginx路由匹配.md
+url: /Linux/03.Nginx/3_Nginx路由匹配.md
 ---
 
 # Nginx路由匹配
@@ -72712,7 +73259,7 @@ API Playground的功能与优势
 ---
 
 ---
-url: /Linux/OpenEuler/1_openEuler.md
+url: /Linux/05.OpenEuler/1_openEuler.md
 ---
 
 # openEuler
@@ -72750,7 +73297,15 @@ vmware安装openEuler：https://blog.csdn.net/qq\_45945548/article/details/12052
 ---
 
 ---
-url: /Linux/OpenEuler/2_openEuler安装Docker.md
+url: /Linux/05.OpenEuler.md
+---
+
+# OpenEuler
+
+---
+
+---
+url: /Linux/05.OpenEuler/2_openEuler安装Docker.md
 ---
 
 # openEuler安装Docker
@@ -73954,7 +74509,7 @@ docker run -d --name grafana -p 3000:3000 -v /usr/local/grafana:/var/lib/grafana
 ---
 
 ---
-url: /StableDiffusion/StableDiffusion/1_Prompt提示词.md
+url: /AIGC/01.StableDiffusion/1_Prompt提示词.md
 ---
 
 # Prompt提示词
@@ -101177,6 +101732,14 @@ url: /常用框架/ShardingJdbc/1_ShardingJdbc准备-安装MySQL及配置主从�
 ---
 
 ---
+url: /Linux/01.Shell命令.md
+---
+
+# Shell命令
+
+---
+
+---
 url: /Java/架构设计/分布式/06.分布式监控/3_SkyWalking.md
 ---
 
@@ -101737,6 +102300,236 @@ public class AsyncConfig2 implements AsyncConfigurer {
 ### 总结
 
 *@Async*注解提供了一种简单而强大的方式来实现异步方法调用，可以显著提高应用程序的性能。通过自定义线程池，可以进一步优化资源使用和控制异步任务的执行。在使用时，需要注意一些限制条件，以确保异步调用能够正确执行。
+
+---
+
+---
+url: /Java/容器/Docker/03.Docker使用/spring-boot-docker-compose.md
+---
+# spring-boot-docker-compose
+
+新拿到一个 Spring Boot 项目的代码，想把代码跑起来试试，第一个烦恼是不是自己的电脑上没有安装或没有启动对应环境（MySQL、Redis、MQ消息队列等等）。
+
+这些环境装完或者启动完，大半天就过去了。然后还要设置账号密码和配置里的一致等等。最崩溃的是换个项目又要重新忙活一次。
+
+**Spring Boot 3** 引入了对 Docker Compose 的支持，使得在 Spring Boot 应用程序中管理容器变得更加方便。
+
+> **Docker Compose** 是一个用于定义和运行多容器 Docker 应用程序的工具。通过一个简单的 YAML 文件，可以配置应用程序所需的所有服务，并使用单个命令启动和停止它们。
+
+### 引入依赖
+
+现在 Spring Boot 3 新加了一个包 `spring-boot-docker-compose`：
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-docker-compose</artifactId>
+    <version>3.4.0</version>
+</dependency>
+```
+
+这个包用处就是自动帮你在docker里拉取对应的镜像环境并且自动启动。
+
+### 创建 Docker Compose 文件
+
+创建一个 docker-compose.yml 文件来定义服务
+
+```yaml
+# Docker Compose配置文件
+# 使用版本3.8的Compose文件格式
+version: '3.8'
+
+# 定义服务
+services:
+  # MongoDB服务
+  db:
+    # 使用最新版本的MongoDB镜像
+    image: mongo:latest
+    # 映射端口：主机端口:容器端口
+    ports:
+      # - '27017:27017' # 固定端口映射方式
+      - '27017' # 左边不写固定端口，让Docker分配随机端口防止冲突
+    # 挂载卷，用于持久化数据
+    volumes:
+      - db:/data/db
+
+  # MySQL服务
+  mysql:
+    # 使用8.0版本的MySQL镜像
+    image: mysql:8.0
+    # 映射端口：只指定容器端口，让Docker分配随机主机端口防止冲突
+    ports:
+      # - '3306:3306'  # 固定端口映射方式
+      - '3306' # 左边不写固定端口，让Docker分配随机端口防止冲突
+    # 环境变量配置
+    environment:
+      MYSQL_ROOT_PASSWORD: root  # MySQL root用户密码
+      MYSQL_DATABASE: test        # 默认创建的数据库名称
+      MYSQL_USER: test            # 创建的普通用户名称
+      MYSQL_PASSWORD: test        # 普通用户的密码
+    # 挂载卷
+    volumes:
+      - mysql-data:/var/lib/mysql           # 持久化MySQL数据
+      - mysql-init:/docker-entrypoint-initdb.d  # 初始化脚本目录
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"] # 检查MySQL是否健康
+      interval: 10s # 检查间隔时间
+      timeout: 5s # 超时时间
+      retries: 5 # 重试次数
+
+  # Redis服务
+  redis:
+    # 使用7.0版本的Redis镜像
+    image: redis:7.0
+    # 映射端口：主机端口:容器端口
+    ports:
+      # - '6379:6379'
+      - '6379' # 左边不写固定端口，让Docker分配随机端口防止冲突
+    # 挂载卷，用于持久化数据
+    # volumes:
+    #   - redis-data:/data
+    # 启动命令，启用AOF持久化
+    # command: redis-server --appendonly yes
+
+# 定义卷
+volumes:
+  # MongoDB数据卷
+  db:
+    driver: local
+  # MySQL数据卷
+  mysql-data:
+    driver: local
+  # MySQL初始化脚本卷
+  mysql-init:
+    driver: local
+  # Redis数据卷
+  redis-data:
+    driver: local
+```
+
+### 配置 Spring Boot 应用程序
+
+需要告诉 Spring Boot 3 Docker Compose 文件的位置。可以在 application.yml 文件中添加以下配置：
+
+```yaml
+spring:
+ docker:
+   compose:
+     enabled: true
+     file: docker-compose.yml
+```
+
+启动之后会看到拉取镜像的日志了：
+
+## IDEA连接远程
+
+在 IDEA 中使用`spring-boot-docker-compose`插件，将 Spring Boot 项目部署到**远程服务器的 Docker**上并启动，核心是配置 IDEA 连接远程 Docker、编写`docker-compose.yml`，并通过插件或命令完成部署启动。下面分步骤讲解，从环境准备到项目启动，确保每一步都可落地。
+
+### 一、前置条件（必做）
+
+1. 远程服务器准备：
+   * 已安装 Docker 和 Docker Compose（推荐 Docker 20.10+）；
+   * 开启 Docker 远程访问（允许 IDEA 连接）；
+   * 服务器开放 Docker 远程端口（默认 2375，需防火墙放行）。
+2. 本地 IDEA 准备：
+   * IDEA 2022.3+（内置`spring-boot-docker-compose`插件，低版本需手动安装）；
+   * 项目引入 Spring Boot 3.1+（`spring-boot-docker-compose`从 3.1 开始内置支持）；
+   * 本地安装`docker-compose`（可选，仅用于本地调试命令）。
+
+### 二、步骤 1：配置远程 Docker（让 IDEA 连接远程服务器的 Docker）
+
+这是核心前提，IDEA 需能访问远程服务器的 Docker 守护进程：
+
+#### 1.1 远程服务器开启 Docker 远程访问
+
+编辑 Docker 配置文件，开启 TCP 端口访问：
+
+```bash
+# 1. 编辑Docker配置（不同系统路径可能不同）
+vim /etc/docker/daemon.json
+
+# 2. 添加以下内容（允许远程访问，注意替换服务器内网IP）
+{
+  "hosts": ["tcp://0.0.0.0:2375", "unix:///var/run/docker.sock"]
+}
+
+# 3. 重启Docker服务
+systemctl daemon-reload
+systemctl restart docker
+
+# 4. 验证端口是否开放（服务器执行）
+netstat -tnlp | grep 2375
+# 输出类似：tcp6       0      0 :::2375                 :::*                    LISTEN      1234/dockerd
+```
+
+> 安全提示：生产环境需限制 IP 访问（如仅允许你的本地 IP），或使用 TLS 加密（参考 Docker 官方文档）。
+
+#### 1.2 IDEA 配置远程 Docker 连接
+
+1. 打开 IDEA → 点击顶部`File` → `Settings` → `Build, Execution, Deployment` → `Docker`；
+2. 点击`+`添加 Docker 连接，选择`TCP socket`；
+3. 配置参数：
+   * Name：自定义（如`Remote-Docker`）；
+   * Engine API URL：`tcp://远程服务器IP:2375`（如`tcp://192.168.1.100:2375`）；
+4. 点击`Test Connection`，提示`Connection successful`即配置成功；
+5. 点击`Apply` → `OK`保存。
+
+注意上述设置完还会报错
+
+```
+com.intellij.execution.ExecutionException: Cannot run program "docker"
+```
+
+![image-20260128154944173](/assets/image-20260128154944173.CobSjvd5.png)
+
+需要取消自动检测，手动设置下Docker的执行路径
+
+Docker执行脚本的下载地址：https://download.docker.com/win/static/stable/x86\_64/
+
+![image-20260128155721668](/assets/image-20260128155721668.DCIzqQa7.png)
+
+执行后还会报错
+
+![image-20260128160103375](/assets/image-20260128160103375.B4AaQYNP.png)
+
+在上述流程后，仍有可能出现buildx工具无法找到的情况，此时进行如下操作
+
+* 在你的用户文件夹下（或在文件管理地址栏输入 `%USERPROFILE%` 定位）
+* 新建 `.docker` 文件夹（注意有个“.”）
+* 在 `.docker` 下面再新建一个 `cli-plugins`文件夹
+* 下载文件：
+
+https://github.com/docker/buildx/releases/download/v0.13.1/buildx-v0.13.1.windows-amd64.exe
+
+* 下载下来，然后重命名为 `docker-buildx.exe`，然后放入`cli-plugins`文件夹中
+
+![image-20260128170016263](/assets/image-20260128170016263.BWhG7Bxf.png)
+
+## TLS认证连接
+
+直接暴露`tcp://0.0.0.0:2375` 存在安全风险（无认证），且该配置在部分 Docker 版本中会与系统默认配置冲突；更推荐使用 TLS 认证的方式，而非直接暴露 2375 端口（无认证的 2375 端口是高危操作）。
+
+https://www.cnblogs.com/guangdelw/p/17565051.html
+
+https://www.cnblogs.com/walterlong/articles/11444770.html
+
+https://blog.csdn.net/wssdds/article/details/124916924
+
+https://blog.csdn.net/refuse\_wwj/article/details/119242525
+
+[在 Docker 容器中运行数据库 | IntelliJ IDEA 文档](https://www.jetbrains.com/zh-cn/help/idea/running-a-dbms-image.html)
+
+[Spring Boot 3 中对 Docker Compose 的支持 - spring 中文网](https://springdoc.cn/docker-compose-support-spring-boot/)
+
+https://blog.csdn.net/2301\_76154806/article/details/141404952
+
+https://ximeneschen.blog.csdn.net/article/details/125651027
+
+[docker-compose部署springboot项目\_docker-compose springboot-CSDN博客](https://blog.csdn.net/xujingyiss/article/details/119179987)
+
+https://blog.csdn.net/qq\_46028493/article/details/148593977
+
+[【IDEA】解决idea2024无法使用远程构建dockerfile的问题\_idea2024 docker-CSDN博客](https://blog.csdn.net/Equent/article/details/137779505)
 
 ---
 
@@ -107055,7 +107848,15 @@ url: /Java/微服务专栏/01.SpringCloud/6_SpringCloudStream.md
 ---
 
 ---
-url: /StableDiffusion/StableDiffusion/0_StableDiffusion介绍.md
+url: /AIGC/01.StableDiffusion.md
+---
+
+# StableDiffusion
+
+---
+
+---
+url: /AIGC/01.StableDiffusion/0_StableDiffusion介绍.md
 ---
 
 # StableDiffusion介绍
@@ -109943,7 +110744,15 @@ ToolCallback weatherTool = FunctionToolCallback
 ---
 
 ---
-url: /Linux/Ubuntu/ubuntu安装应用.md
+url: /Linux/04.Ubuntu.md
+---
+
+# Ubuntu
+
+---
+
+---
+url: /Linux/04.Ubuntu/ubuntu安装应用.md
 ---
 
 # ubuntu安装应用
@@ -109959,7 +110768,7 @@ https://blog.csdn.net/weixin\_44193315/article/details/115112607
 ---
 
 ---
-url: /Linux/Shell命令/2_Ubuntu桌面版禁止root登录解决方法.md
+url: /Linux/01.Shell命令/2_Ubuntu桌面版禁止root登录解决方法.md
 ---
 
 # Ubuntu桌面版禁止root登录解决方法
@@ -111779,7 +112588,15 @@ $ yarn & npm install
 ---
 
 ---
-url: /StableDiffusion/WebUI/0_WebUI介绍.md
+url: /AIGC/02.WebUI.md
+---
+
+# WebUI
+
+---
+
+---
+url: /AIGC/02.WebUI/0_WebUI介绍.md
 ---
 
 # WebUI介绍
@@ -111851,6 +112668,48 @@ WebUI是一款基于AI模型（如Stable Diffusion）的用户界面工具，允
 ### 第二种方式：使用整合包
 
 **“整合包”** 一般指开发者对Automatic1111制作的Stable Diffusion WebUI进行打包并使其程序化的一种方式。使用整合包，一般可以省去一些自主配置环境依赖、下载必要模型的功夫。如果你打算使用整合包，以下是一些我推荐的整合包：
+
+---
+
+---
+url: /daily/开源项目/使用教程/WeiboAlbumDownloader.md
+---
+
+# WeiboAlbumDownloader 使用教程
+
+## 一、设置
+
+获取微博用户uid以及web版微博Cookie，点击设置里面扫码获取即可。
+
+![image-20260125171730416](/assets/image-20260125171730416.QoaZU_71.png)
+
+如果想要在下载完发送push+通知，请填写PushPlusToken字段。不填就不发送。
+
+如果想要开启定时任务，即在某个时间自动触发批量下载任务，那么需要填写EnableCrontab和Crontab字段。
+
+## 二、获取需要下载微博用户信息
+
+PC打开[weibo.com](https://weibo.com/)，点击某一用户头像，进入主页。uid就是地址栏中的最后一串数字，比如https://weibo.com/u/1000000000。
+
+下载开始
+
+![Snipaste\_2026-01-25\_17-02-47](/assets/Snipaste_2026-01-25_17-02-47.BAMZKTCD.png)
+
+下载中
+
+![Snipaste\_2026-01-25\_14-39-58](/assets/Snipaste_2026-01-25_14-39-58.DlWIXJMz.png)
+
+放止反爬虫限制
+
+![Snipaste\_2026-01-25\_14-39-48](/assets/Snipaste_2026-01-25_14-39-48.BAcH2yZf.png)
+
+下载完成
+
+![Snipaste\_2026-01-25\_16-57-14](/assets/Snipaste_2026-01-25_16-57-14.BIXwexT7.png)
+
+下载目录
+
+![image-20260125172320822](/assets/image-20260125172320822.VXs0Rvia.png)
 
 ---
 

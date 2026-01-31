@@ -94,11 +94,17 @@ url: /@pages/nav.md
   link: https://www.wuli.art/
   img: /svg/website/呜哩AI.ico
   badge: AI绘画
-  
+- name: 即梦AI
+  desc: 字节跳动旗下剪映团队开发的一站式AI创意艺术创作平台，集成了最新的人工智能技术，旨在为用户提供简单易用、功能强大的创作环境。即梦支持AI绘画和视频生成，能够根据用户的提示词生成艺术作品，成为艺术家、设计师及所有对视觉艺术感兴趣的人的创意伙伴。此外，即梦还具备独特的多模态能力，吸引了越来越多的开发者和内容创作者。
+  link: https://jimeng.jianying.com/
+  img: /svg/website/即梦AI.ico
+  badge: AI绘画
   
 ```
 
 :::
+
+模型对比：https://lmsys.org/blog
 
 ***
 
