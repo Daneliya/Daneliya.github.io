@@ -567,6 +567,7 @@
 - [AgentChatUI](/常用框架/SpringAIAlibaba/Agent Chat UI/1_AgentChatUI.md)
 - [Agents](/常用框架/SpringAIAlibaba/Agent Framework/1_Agents.md)
 - [AI大模型科普](/Python/AI大模型应用开发/1_AI大模型科普.md)
+- [AI绘画提示词](/AIGC/05.AIGC/AI绘画提示词.md)
 - [AI猫咪剧情号](/AIGC/05.AIGC/AI猫咪剧情号.md)
 - [AI模型与输入输出](/Python/AI大模型应用开发/6_AI模型与输入输出.md)
 - [AI应用部署](/Python/AI大模型应用开发/17_AI应用部署.md)
