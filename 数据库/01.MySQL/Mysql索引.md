@@ -95,6 +95,8 @@ CREATE INDEX index_name_no ON t_dept(name,no);
 
 参考资料
 
+https://www.xysycx.cn/articles/2020/12/05/1607146183637.html
+
 https://zhuanlan.zhihu.com/p/293553628
 
 https://www.runoob.com/mysql/mysql-index.html

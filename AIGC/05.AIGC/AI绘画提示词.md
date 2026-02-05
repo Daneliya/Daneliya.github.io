@@ -59,6 +59,20 @@ data:
     name: 3D城市地貌
     desc: 3D城市地貌
 
+  - img: ./AI绘画提示词.assets/city_scenery_poster_qingdao.png
+    link: /aigc/painting-prompt#城市风景海报
+    name: 城市风景海报
+    desc: 城市风景海报
+
+  - img: ./AI绘画提示词.assets/micro_3d_scene.jfif
+    link: /aigc/painting-prompt#微型 3D 场景
+    name: 微型 3D 场景
+    desc: 微型 3D 场景
+
+  - img: ./AI绘画提示词.assets/cute_sticker_style_emoji_pack.png
+    link: /aigc/painting-prompt#可爱贴纸风格表情包
+    name: 可爱贴纸风格表情包
+    desc: 可爱贴纸风格表情包
 ```
 
 :::
@@ -306,3 +320,103 @@ Details: Blend the architecture harmoniously with nature, creating a lively and 
 效果图
 
 ![gemini-3-pro-image-preview\_a\_Create\_a\_whimsical\_qingdao](/assets/gemini-3-pro-image-preview_a_Create_a_whimsical_qingdao.CEsW66bP.png)
+
+### 城市风景海报
+
+```markdown
+生成一张“【目的地】代表性旅游经典图谱”的超宽屏信息图海报，画面比例 **21:9**，横向构图，**8K超清**。整体采用**陶瓷釉面与玉质温润风**：极简大气、高端时尚、东方轻奢，画面“温润、通透、克制”，像博物馆精品展陈与高级品牌包装的融合。全部文字中文。
+
+## 背景与整体材质基调
+- 背景为浅米白/雾白渐变，像高端瓷器展台环境的干净底色
+- 全局光照柔和、温润：HDRI柔光 + 轻微轮廓光，避免强对比与硬阴影
+- 色彩：以**玉白、青白、淡青绿、暖米色**为主，点缀少量**朱砂/浅金**（全图不超过3–4个主色相）
+
+## 版式：8列等宽“瓷牌/玉牌”卡片（严格8列）
+中部严格 **8列等宽栅格**，每列是一张“瓷牌式信息卡”：
+- 卡片材质像**白瓷釉面**：圆角、细腻高光、轻微釉面反射、边缘干净
+- 卡片边缘可有极轻“描金线”或“玉边”效果（非常克制）
+- 卡片阴影柔软，像摆放在展台上
+
+## 核心：景观写实3D（PBR）+ 温润釉感调色
+每列顶部展示一个真实存在的代表性经典（自动从【目的地】选取8个，不虚构），采用**写实3D景观（PBR渲染）**，但整体观感需“温润如玉”：
+- 材质真实：石材、木构、瓦片、水体、植被符合物理规律（反射/粗糙度/法线细节）
+- 调色统一：高光柔、对比适中、色彩低饱和偏温润（像玉/釉的观感）
+- 构图体现宏大：远近层次 + 尺度参照（微小人物/树木/船只），强调“雄伟壮丽”但不靠强特效
+- 水体（若有）：柔和反射与折射，浅滩渐变细腻
+- 避免：卡通低模、塑料感、过度锐化、夸张科幻光效
+
+## 细节展示：釉彩“纹样小盘 / 玉佩小窗”
+每列右下角用一个小的细节窗口（全局统一一种形态）：
+- 选项A：**小圆盘**（像瓷碟），展示关键细节纹理（石刻、壁画、瓦当、水波、沙纹）
+- 选项B：**玉佩形小窗**（圆润轮廓），展示局部材质与纹理
+- 外观要有釉面/玉质的温润高光，边缘圆润
+- 用极细引线连接到主3D景观，并附2–6字短标签
+
+## 每列文字（短、雅、清）
+- 景点名（中文4–8字；字体建议：思源宋体/宋体风格，配合东方气质）
+- 两行信息：
+- `看点：` ≤8字
+- `适合：` ≤6字
+文字颜色用墨灰/青黛灰，强调色仅用于小点或分隔线。
+
+## 顶部标题区（精品展签风）
+- 主标题：`【目的地】代表性旅游经典图谱`（端正、留白大）
+- 副标题：一句话定位（≤18字，偏雅致）
+- 右上角5枚“釉色点”（青白、粉青、月白、暖米、朱砂点缀）
+
+## 底部信息带（展陈说明牌风）
+底部通栏用细线分隔成四段（像展柜说明牌）：
+- 目的地速览：1句≤22字
+- 游览建议：3条（每条≤12字）
+- 文化冷知识：3条（每条≤18字）
+- 时间线：3–6节点（朝代/年份+关键词），用极简线性图标串联（线条细、统一）
+
+## 自动选景规则
+覆盖至少5类：自然景观、历史古迹、城市地标、博物馆/文化场馆、特色街区/夜景、非遗/民俗体验；不足用稳妥通用项补齐（如“【目的地】博物馆”“老城历史街区”）。景点名称务必真实可靠，不确定则用通用称呼，不编造。
+
+## 输出约束
+全中文；极简留白、强对齐；无英文、无logo、无水印；**8K**超清，适配文旅大屏与社媒横版封面。
+```
+
+效果图
+
+![city\_scenery\_poster\_qingdao](/assets/city_scenery_poster_qingdao.CCEnae5v.png)
+
+### 微型 3D 场景
+
+```markdown
+Present a clear, 45° top-down isometric miniature 3D cartoon scene of the iconic scene [SCENE NAME] from [MOVIE/SHOW], with soft refined textures, realistic PBR materials, and gentle lifelike lighting.
+Create a small raised diorama-style base that includes the most recognizable elements of this scene, along with tiny stylized characters if needed (no facial details).
+Use a clean solid [BACKGROUND COLOR] background.
+
+At the top-center, display [MOVIE/SHOW] in large bold text, directly beneath it show [SCENE NAME] in medium text, and place the official logo associated with [MOVIE/SHOW] below the subtext.
+All text must automatically match the background contrast (white or black).
+
+Composition: perfectly centered layout, square 1080x1080, ultra-clean, high-clarity diorama aesthetic.
+```
+
+效果图
+
+![micro\_3d\_scene](AI绘画提示词.assets/micro_3d_scene.jfif)
+
+### 可爱贴纸风格表情包
+
+```markdown
+使用附加的参考图像作为基础角色。创建一个包含至少20个可爱贴纸风格插画的单个高分辨率拼贴画，保持她的脸部、肤色、发型和整体外观与参考完全相同。
+
+艺术风格：3D皮克斯风格/迪士尼启发的卡通、柔和电影光线、光滑柔和色彩、大眼睛、圆润可爱的脸部比例、超精致3D渲染。
+
+角色细节：柔和棕色头发松散扎起、大眼睛、白色无袖上衣、可爱轻微的小头身比例。
+
+表情和反应（全部不同）：开心大笑、惊讶、震惊、害羞微笑、生气、困惑、哭泣、困倦、眨眼、和平手势、吹吻、拿手机、思考、扶额、拿咖啡、手捂嘴笑、烦恼、兴奋、爱心反应、可爱中性姿势（20+）。
+
+贴纸设计：每个反应作为单独贴纸、每个贴纸周围有干净白色轮廓、柔和投影、无文字、无水印。
+
+布局：所有贴纸整齐排列在一个拼贴画中、均衡网格布局、柔和米色/柔和背景、Instagram/WhatsApp贴纸包美学。
+
+质量：超详细、高分辨率、光滑3D效果、专业贴纸包外观、可爱且富有表现力。
+```
+
+效果图
+
+![cute\_sticker\_style\_emoji\_pack](/assets/cute_sticker_style_emoji_pack.C-FwHNEs.png)

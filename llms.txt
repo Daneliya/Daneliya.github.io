@@ -206,7 +206,8 @@
 
 #### 流控组件Sentinel
 
-- [微服务保护Sentinel](/Java/微服务专栏/05.流控组件Sentinel/微服务保护.md)
+- [微服务保护Sentinel](/Java/微服务专栏/05.流控组件Sentinel/1_Sentinel微服务保护.md)
+- [2\_Sentinel规则持久化](/Java/微服务专栏/05.流控组件Sentinel/2_Sentinel规则持久化.md)
 
 #### 消息总线Bus
 
@@ -337,6 +338,12 @@
 
 - [多租户](/Java/解决方案/多租户/多租户.md)
 
+#### 工具类
+
+- [IKAnalyzer 分词器](/Java/解决方案/工具类/IKAnalyzer分词器.md)
+- [Jsoup 爬虫](/Java/解决方案/工具类/Jsoup爬虫.md)
+- [二维码生成](/Java/解决方案/工具类/二维码生成.md)
+
 #### 接口设计
 
 - [接口幂等](/Java/解决方案/接口设计/1_接口幂等.md)
@@ -366,6 +373,10 @@
 
 - [秒杀](/Java/解决方案/秒杀/秒杀.md)
 
+#### 语音识别
+
+- [语音识别](/Java/解决方案/语音识别/语音识别.md)
+
 ### 设计模式
 
 #### 基本概念
@@ -383,6 +394,8 @@
 #### 行为型
 
 - [策略模式](/Java/设计模式/04.行为型/16_strategy.md)
+
+
 
 
 
@@ -592,6 +605,7 @@
 - [DataEase可视化分析](/daily/开源项目/DataEase可视化分析.md)
 - [DataEase可视化分析](/daily/开源项目/RestCloud.md)
 - [Docker介绍及使用](/Java/容器/Docker/01.Docker教程/0_Docker介绍及使用.md)
+- [douyin-downloader 使用教程](/daily/开源项目/使用教程/douyin-downloader.md)
 - [EasyExcel概述](/常用框架/EasyExcel/0_EasyExcel概述.md)
 - [EasyExcel入门之导出Excel](/常用框架/EasyExcel/2_EasyExcel入门之导入Excel.md)
 - [EasyExcel入门之导入Excel](/常用框架/EasyExcel/3_EasyExcel入门之导出Excel.md)
