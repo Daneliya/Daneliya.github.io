@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数据同步 | xiaolong</title>
+    
+    <meta name="generator" content="VitePress v1.6.4">
+    <link rel="preload stylesheet" href="/assets/style.Du365hsd.css" as="style">
+    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
+    <script type="module" src="/assets/chunks/metadata.5cba8676.js"></script>
+    <script type="module" src="/assets/app.BIC_JYCd.js"></script>
+    <link rel="preload" href="/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/assets/chunks/theme.DGoReom8.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.CMIDsdwV.js">
+    <link rel="modulepreload" href="/assets/Java_解决方案_数据同步_0_数据同步.md.CayPdhUj.lean.js">
+    <link rel="icon" type="image/svg+xml" href="/logo.svg">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh-CN">
+    <meta property="og:title" content="Teek | VitePress Theme">
+    <meta property="og:site_name" content="Teek">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" description="欢迎来到 vitepress-theme-teek 使用文档,Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置,Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景">
+    <meta name="description" description="欢迎来到 vitepress-theme-teek 使用文档,Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置,Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景">
+    <meta name="author" content="Teek">
+    <meta name="keywords" description="欢迎来到 vitepress-theme-teek 使用文档,Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置,Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6079554807639839" crossorigin="anonymous"></script>
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body><!--teleport start anchor--><div style="display:none;" class="tk-spotlight-hover tk-spotlight-hover__aside" aria-hidden="true" focusable="false"></div><!--teleport anchor-->
+    <div id="app"><!--[--><!--v-if--><!--v-if--><!--v-if--><!--[--><!--v-if--><!----><!--v-if--><div class="tk-right-bottom-button tk-wallpaper-outside flx-column"><!--[--><!--]--><div title="返回顶部" class="tk-right-bottom-button__button back-top" style="--tk-progress:0;display:none;" role="button" aria-label="返回顶部" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span class="content">0</span></div><div title="前往评论" class="tk-right-bottom-button__button" role="button" aria-label="前往评论" style="display:none;"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="M273.536 736H800a64 64 0 0 0 64-64V256a64 64 0 0 0-64-64H224a64 64 0 0 0-64 64v570.88zM296 800 147.968 918.4A32 32 0 0 1 96 893.44V256a128 128 0 0 1 128-128h576a128 128 0 0 1 128 128v416a128 128 0 0 1-128 128z"
+    ></path>
+    <path
+      fill="currentColor"
+      d="M512 499.2a51.2 51.2 0 1 1 0-102.4 51.2 51.2 0 0 1 0 102.4zm192 0a51.2 51.2 0 1 1 0-102.4 51.2 51.2 0 0 1 0 102.4zm-384 0a51.2 51.2 0 1 1 0-102.4 51.2 51.2 0 0 1 0 102.4z"
+    ></path>
+  </svg></i></div><!--v-if--><!--[--><!--]--></div><!--]--><div class="Layout tk-layout has-sidebar-trigger" data-v-9a104c51><!--[--><!--]--><!--[--><span tabindex="-1" data-v-0b0ada53></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-0b0ada53>Skip to content</a><!--]--><!----><header class="VPNav" data-v-9a104c51 data-v-ae24b3ad><div class="VPNavBar" data-v-ae24b3ad data-v-6aa21345><div class="wrapper" data-v-6aa21345><div class="container" data-v-6aa21345><div class="title" data-v-6aa21345><div class="VPNavBarTitle has-sidebar" data-v-6aa21345 data-v-1168a8e4><a class="title" href="/" data-v-1168a8e4><!--[--><!--]--><!--[--><img class="VPImage logo" src="/logo.png" alt data-v-8426fc1a><!--]--><span data-v-1168a8e4>xiaolong</span><!--[--><!--]--></a></div></div><div class="content" data-v-6aa21345><div class="content-body" data-v-6aa21345><!--[--><!--]--><div class="VPNavBarSearch search" data-v-6aa21345><!--[--><!----><div id="local-search"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-6aa21345 data-v-dc692963><span id="main-nav-aria-label" class="visually-hidden" data-v-dc692963> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/" tabindex="0" data-v-dc692963 data-v-e56f3d57><!--[--><span data-v-e56f3d57>🏡主页</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-dc692963 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-cf11d7a2><span class="text" data-v-cf11d7a2><!----><span data-v-cf11d7a2>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/java.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Java</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-cf11d7a2></span></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><div class="items" data-v-b98bc113><!--[--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/Java%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/01.JDK%E6%96%B0%E7%89%B9%E6%80%A7/1_JDK8%E6%96%B0%E7%89%B9%E6%80%A7Optional%E5%AE%B9%E5%99%A8%E7%B1%BB.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/code.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Java开发技巧</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/JVM%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/01.JVM%E6%A6%82%E5%BF%B5/0_JVM%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/JVM.svg" alt="" style="width: 16px; height: 16px;">
+              <span>JVM性能调优</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/1_JUC.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/并发编程.svg" alt="" style="width: 16px; height: 16px;">
+              <span>并发编程</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E5%AE%B9%E5%99%A8/Docker/01.Docker%E6%95%99%E7%A8%8B/0_Docker%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BD%BF%E7%94%A8.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/docker.svg" alt="" style="width: 16px; height: 16px;">
+              <span>容器相关</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01.%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/设计模式.svg" alt="" style="width: 16px; height: 16px;">
+              <span>设计模式</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%93%E6%A0%8F/01.SpringCloud/1_SpringCloud%E7%AE%80%E4%BB%8B.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/mse.svg" alt="" style="width: 16px; height: 16px;">
+              <span>微服务专栏</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E5%88%86%E5%B8%83%E5%BC%8F/01.%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/架构设计.svg" alt="" style="width: 16px; height: 16px;">
+              <span>架构设计</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98API%E5%AF%B9%E6%8E%A5%E6%8C%87%E5%8D%97/1_%E5%95%86%E5%AE%B6%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/解决方案.svg" alt="" style="width: 16px; height: 16px;">
+              <span>解决方案</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/数据结构.svg" alt="" style="width: 16px; height: 16px;">
+              <span>数据结构</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/1_%E5%B9%82%E7%AD%89%E8%AE%BE%E8%AE%A1.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/系统优化.svg" alt="" style="width: 16px; height: 16px;">
+              <span>系统优化</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-dc692963 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-cf11d7a2><span class="text" data-v-cf11d7a2><!----><span data-v-cf11d7a2>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/python.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Python</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-cf11d7a2></span></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><div class="items" data-v-b98bc113><!--[--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Python/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/Python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/基础语法.svg" alt="" style="width: 16px; height: 16px;">
+              <span>基础语法</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/1_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/数据分析.svg" alt="" style="width: 16px; height: 16px;">
+              <span>数据分析</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Python/%E7%88%AC%E8%99%AB/1_%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/爬虫.svg" alt="" style="width: 16px; height: 16px;">
+              <span>爬虫</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/1_AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A7%91%E6%99%AE.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/人工智能.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AI大模型应用开发</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-dc692963 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-cf11d7a2><span class="text" data-v-cf11d7a2><!----><span data-v-cf11d7a2>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/database.svg" alt="" style="width: 16px; height: 16px;">
+              <span>数据库</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-cf11d7a2></span></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><div class="items" data-v-b98bc113><!--[--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/database/mysql/acid.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/MySQL.svg" alt="" style="width: 16px; height: 16px;">
+              <span>MySQL</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/database/mongodb/mongodb-introduction.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/MongoDB.svg" alt="" style="width: 16px; height: 16px;">
+              <span>MongoDB</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/database/postgresql/postgresql-introduction.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/PostgreSQL.svg" alt="" style="width: 16px; height: 16px;">
+              <span>PostgreSQL</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/database/tidb/tidb-introduction.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/TiDB.svg" alt="" style="width: 16px; height: 16px;">
+              <span>分布式数据库TIDB</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/database/neo4j/neo4j-introduce.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Neo4j.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Neo4j</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/Redis/Redis%E5%9F%BA%E7%A1%80/1_Redis%E7%BC%93%E5%AD%98%E4%B8%89%E5%A4%A7%E9%97%AE%E9%A2%98.html" tabindex="0" data-v-dc692963 data-v-e56f3d57><!--[--><span data-v-e56f3d57>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/redis.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Redis专栏</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-dc692963 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-cf11d7a2><span class="text" data-v-cf11d7a2><!----><span data-v-cf11d7a2>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/framework.svg" alt="" style="width: 16px; height: 16px;">
+              <span>常用框架</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-cf11d7a2></span></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><div class="items" data-v-b98bc113><!--[--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Activiti7/Activiti%E6%95%B4%E5%90%88Spring.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/工作流.svg" alt="" style="width: 16px; height: 16px;">
+              <span>工作流引擎Activiti7</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Caffeine/0_Caffeine%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/缓存.svg" alt="" style="width: 16px; height: 16px;">
+              <span>缓存框架Caffeine</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/EasyCaptcha/0_%E4%BD%BF%E7%94%A8EasyCaptcha%E7%94%9F%E6%88%90%E9%AA%8C%E8%AF%81%E7%A0%81.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/验证码.svg" alt="" style="width: 16px; height: 16px;">
+              <span>验证码EasyCaptcha</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/EasyExcel/0_EasyExcel%E6%A6%82%E8%BF%B0.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/EasyExcel.svg" alt="" style="width: 16px; height: 16px;">
+              <span>表格工具EasyExcel</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/java/framework/distributed/elasticSearch01.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/ElasticSearch.svg" alt="" style="width: 16px; height: 16px;">
+              <span>搜索引擎ElasticSearch</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Mybatis/Mybatis-Plus-Join%E8%BF%9E%E8%A1%A8%E6%9F%A5%E8%AF%A2.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Mybatis.svg" alt="" style="width: 16px; height: 16px;">
+              <span>三剑客Mybatis</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/ShardingJdbc/0_ShardingJdbc%E7%9A%84%E6%A6%82%E8%BF%B0.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/手动分表.svg" alt="" style="width: 16px; height: 16px;">
+              <span>分库分表ShardingJdbc</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/1_Spring%E5%AE%B9%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Spring.svg" alt="" style="width: 16px; height: 16px;">
+              <span>三剑客Spring</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/SpringBoot/SpringBoot%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/0_SpringBoot%E7%BC%96%E7%A8%8B%E8%B5%B7%E6%AD%A5.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/SpringBoot.svg" alt="" style="width: 16px; height: 16px;">
+              <span>三剑客SpringBoot</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/framework/springAI/overview.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/spring-ai.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AI框架Spring AI</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/framework/springAIAlibaba/overview.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/阿里巴巴.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AI框架Spring AI Alibaba</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/java/framework/distributed/springBootAdmin.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/监控.svg" alt="" style="width: 16px; height: 16px;">
+              <span>监控工具SpringBootAdmin</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/java/framework/distributed/distributedTaskScheduling.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/xxl-job.svg" alt="" style="width: 16px; height: 16px;">
+              <span>任务调度XXL-JOB</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/framework/thymeleaf/thymeleafBasicGrammar.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/thymeleaf.svg" alt="" style="width: 16px; height: 16px;">
+              <span>模板引擎Thymeleaf</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/framework/retry/springRetry.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/重试.svg" alt="" style="width: 16px; height: 16px;">
+              <span>重试框架Retry</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/Linux/01.Shell%E5%91%BD%E4%BB%A4/0_Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html" tabindex="0" data-v-dc692963 data-v-e56f3d57><!--[--><span data-v-e56f3d57>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/linux.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Linux</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-dc692963 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-cf11d7a2><span class="text" data-v-cf11d7a2><!----><span data-v-cf11d7a2>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/aigc.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AIGC</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-cf11d7a2></span></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><div class="items" data-v-b98bc113><!--[--><!--[--><div class="VPMenuGroup" data-v-b98bc113 data-v-69e747b5><p class="title" data-v-69e747b5>AI 应用开发</p><!--[--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/1_%E5%90%8D%E8%AF%8D%E6%A6%82%E5%BF%B5.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/vuepress.svg" alt="" style="width: 16px; height: 16px;">
+              <span>名词概念</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-b98bc113 data-v-69e747b5><p class="title" data-v-69e747b5>AI 绘画</p><!--[--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/01.StableDiffusion/0_StableDiffusion%E4%BB%8B%E7%BB%8D.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/StableDiffusion.svg" alt="" style="width: 16px; height: 16px;">
+              <span>StableDiffusion</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/02.WebUI/0_WebUI%E4%BB%8B%E7%BB%8D.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/WebUI.svg" alt="" style="width: 16px; height: 16px;">
+              <span>WebUI</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/03.ComfyUI/0_ComfyUI%E7%AE%80%E4%BB%8B.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/ComfyUI.png" alt="" style="width: 16px; height: 16px;">
+              <span>ComfyUI</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/04.Midjourney/0_Midjourney%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Midjourney.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Midjourney</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/05.AIGC/AI%E7%BB%98%E7%94%BB%E6%8F%90%E7%A4%BA%E8%AF%8D.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/其他.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AIGC项目</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-dc692963 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-cf11d7a2><span class="text" data-v-cf11d7a2><!----><span data-v-cf11d7a2>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/notes.svg" alt="" style="width: 16px; height: 16px;">
+              <span>随笔文档</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-cf11d7a2></span></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><div class="items" data-v-b98bc113><!--[--><!--[--><div class="VPMenuGroup" data-v-b98bc113 data-v-69e747b5><p class="title" data-v-69e747b5>博客笔记</p><!--[--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/Vuepress/0_Vuepress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/vuepress.svg" alt="" style="width: 16px; height: 16px;">
+              <span>VuePress</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/VitPress/0_Vitpress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/vuepress-open.svg" alt="" style="width: 16px; height: 16px;">
+              <span>VitPress</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/%E5%85%B6%E4%BB%96%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/Github_Pages%E5%8A%A0%E9%80%9F.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/其他.svg" alt="" style="width: 16px; height: 16px;">
+              <span>其他</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-b98bc113 data-v-69e747b5><p class="title" data-v-69e747b5>日常笔记</p><!--[--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/IDEA+Linux%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/note.svg" alt="" style="width: 16px; height: 16px;">
+              <span>日常笔记</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/PDF%E8%BD%AC%E6%8D%A2.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/开发文档.svg" alt="" style="width: 16px; height: 16px;">
+              <span>开发文档</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/0_%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/开源.svg" alt="" style="width: 16px; height: 16px;">
+              <span>开源项目</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/考试.svg" alt="" style="width: 16px; height: 16px;">
+              <span>软考中级</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E9%9D%A2%E8%AF%95%E4%B8%93%E6%A0%8F/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9B%B8%E5%85%B3/1_%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/谈话面试.svg" alt="" style="width: 16px; height: 16px;">
+              <span>面试专栏</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/1_%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/数学.svg" alt="" style="width: 16px; height: 16px;">
+              <span>高等数学</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-b98bc113 data-v-69e747b5><p class="title" data-v-69e747b5>关于本站</p><!--[--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/nav.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/官网网站.svg" alt="" style="width: 16px; height: 16px;">
+              <span>网站导航</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/archives.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/归档2.svg" alt="" style="width: 16px; height: 16px;">
+              <span>文章归档</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/articleOverview.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/清单2.svg" alt="" style="width: 16px; height: 16px;">
+              <span>文章清单</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-6aa21345 data-v-6c893767><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-6c893767 data-v-5337faa4 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-5337faa4></span><span class="vpi-moon moon" data-v-5337faa4></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-6aa21345 data-v-0394ad82 data-v-7bc22406><!--[--><a class="VPSocialLink no-icon" href="https://gitee.com/xu_xiaolong" aria-label="gitee" target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><span class="vpi-social-gitee"></span></a><a class="VPSocialLink no-icon" href="https://github.com/Daneliya" aria-label="github" target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-6aa21345 data-v-bb2aa2f0 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-cf11d7a2><span class="vpi-more-horizontal icon" data-v-cf11d7a2></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><!----><!--[--><!--[--><!----><div class="group" data-v-bb2aa2f0><div class="item appearance" data-v-bb2aa2f0><p class="label" data-v-bb2aa2f0>主题</p><div class="appearance-action" data-v-bb2aa2f0><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-bb2aa2f0 data-v-5337faa4 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-5337faa4></span><span class="vpi-moon moon" data-v-5337faa4></span><!--]--></span></span></button></div></div></div><div class="group" data-v-bb2aa2f0><div class="item social-links" data-v-bb2aa2f0><div class="VPSocialLinks social-links-list" data-v-bb2aa2f0 data-v-7bc22406><!--[--><a class="VPSocialLink no-icon" href="https://gitee.com/xu_xiaolong" aria-label="gitee" target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><span class="vpi-social-gitee"></span></a><a class="VPSocialLink no-icon" href="https://github.com/Daneliya" aria-label="github" target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--[--><!--[--><!--[--><!--]--><!--[--><div class="tk-theme-enhance flx-align-center"><!--[--><i class="tk-icon" style="--icon-size:20px;--icon-color-hover:var(--tk-theme-color);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="m512 863.36 384-54.848v-638.72L525.568 222.72a96 96 0 0 1-27.136 0L128 169.792v638.72zM137.024 106.432l370.432 52.928a32 32 0 0 0 9.088 0l370.432-52.928A64 64 0 0 1 960 169.792v638.72a64 64 0 0 1-54.976 63.36l-388.48 55.488a32 32 0 0 1-9.088 0l-388.48-55.488A64 64 0 0 1 64 808.512v-638.72a64 64 0 0 1 73.024-63.36z"
+    ></path>
+    <path fill="currentColor" d="M480 192h64v704h-64z"></path>
+  </svg></i><!--]--></div><!--teleport start--><!--teleport end--><!--]--><!--]--><!--]--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-6aa21345 data-v-e5dd9c1c><span class="container" data-v-e5dd9c1c><span class="top" data-v-e5dd9c1c></span><span class="middle" data-v-e5dd9c1c></span><span class="bottom" data-v-e5dd9c1c></span></span></button></div></div></div></div><div class="divider" data-v-6aa21345><div class="divider-line" data-v-6aa21345></div></div></div><!----></header><div class="VPLocalNav has-sidebar empty" data-v-9a104c51 data-v-a6f0e41e><div class="container" data-v-a6f0e41e><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-a6f0e41e><span class="vpi-align-left menu-icon" data-v-a6f0e41e></span><span class="menu-text" data-v-a6f0e41e>菜单</span></button><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-a6f0e41e data-v-8a42e2b4><button data-v-8a42e2b4>返回顶部</button><!----></div></div></div><aside class="VPSidebar" data-v-9a104c51 data-v-319d5ca6><div class="curtain" data-v-319d5ca6></div><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-319d5ca6><span class="visually-hidden" id="sidebar-aria-label" data-v-319d5ca6> Sidebar Navigation </span><!--[--><!--[--><!--v-if--><!--]--><!--]--><!--[--><div class="no-transition group" data-v-c40bc020><section class="VPSidebarItem level-0 collapsible" data-v-c40bc020 data-v-b3fd67f8><div class="item" role="button" tabindex="0" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><h2 class="text" data-v-b3fd67f8>多租户</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-b3fd67f8><span class="vpi-chevron-right caret-icon" data-v-b3fd67f8></span></div></div><div class="items" data-v-b3fd67f8><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E5%A4%9A%E7%A7%9F%E6%88%B7/%E5%A4%9A%E7%A7%9F%E6%88%B7.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>多租户</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-c40bc020><section class="VPSidebarItem level-0 collapsible" data-v-c40bc020 data-v-b3fd67f8><div class="item" role="button" tabindex="0" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><h2 class="text" data-v-b3fd67f8>工具类</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-b3fd67f8><span class="vpi-chevron-right caret-icon" data-v-b3fd67f8></span></div></div><div class="items" data-v-b3fd67f8><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E5%B7%A5%E5%85%B7%E7%B1%BB/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%94%9F%E6%88%90.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>二维码生成</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E5%B7%A5%E5%85%B7%E7%B1%BB/IKAnalyzer%E5%88%86%E8%AF%8D%E5%99%A8.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>IKAnalyzer 分词器</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E5%B7%A5%E5%85%B7%E7%B1%BB/Jsoup%E7%88%AC%E8%99%AB.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>Jsoup 爬虫</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-c40bc020><section class="VPSidebarItem level-0 collapsible" data-v-c40bc020 data-v-b3fd67f8><div class="item" role="button" tabindex="0" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><h2 class="text" data-v-b3fd67f8>接口设计</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-b3fd67f8><span class="vpi-chevron-right caret-icon" data-v-b3fd67f8></span></div></div><div class="items" data-v-b3fd67f8><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/1_%E6%8E%A5%E5%8F%A3%E5%B9%82%E7%AD%89.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>接口幂等</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/2_%E6%8E%A5%E5%8F%A3%E5%8A%A0%E5%AF%86.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>接口加密</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/3_%E6%8E%A5%E5%8F%A3%E9%99%90%E6%B5%81.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>接口限流</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/4_%E6%8E%A5%E5%8F%A3%E4%BC%98%E5%8C%96.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>接口优化</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-c40bc020><section class="VPSidebarItem level-0 collapsible" data-v-c40bc020 data-v-b3fd67f8><div class="item" role="button" tabindex="0" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><h2 class="text" data-v-b3fd67f8>秒杀</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-b3fd67f8><span class="vpi-chevron-right caret-icon" data-v-b3fd67f8></span></div></div><div class="items" data-v-b3fd67f8><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E7%A7%92%E6%9D%80/%E7%A7%92%E6%9D%80.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>秒杀</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-c40bc020><section class="VPSidebarItem level-0 collapsible" data-v-c40bc020 data-v-b3fd67f8><div class="item" role="button" tabindex="0" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><h2 class="text" data-v-b3fd67f8>数据同步</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-b3fd67f8><span class="vpi-chevron-right caret-icon" data-v-b3fd67f8></span></div></div><div class="items" data-v-b3fd67f8><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/0_%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>数据同步</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/1_Canal.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>Canal</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/2_Flink-CDC.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>Flink</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/3_SeaTunnel.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>SeaTunnel</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/4_DolphinScheduler.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>DolphinScheduler</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/5_DataX.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>DataX</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-c40bc020><section class="VPSidebarItem level-0 collapsible" data-v-c40bc020 data-v-b3fd67f8><div class="item" role="button" tabindex="0" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><h2 class="text" data-v-b3fd67f8>语音识别</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-b3fd67f8><span class="vpi-chevron-right caret-icon" data-v-b3fd67f8></span></div></div><div class="items" data-v-b3fd67f8><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>语音识别</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-c40bc020><section class="VPSidebarItem level-0 collapsible" data-v-c40bc020 data-v-b3fd67f8><div class="item" role="button" tabindex="0" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><h2 class="text" data-v-b3fd67f8>支付解决方案</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-b3fd67f8><span class="vpi-chevron-right caret-icon" data-v-b3fd67f8></span></div></div><div class="items" data-v-b3fd67f8><!--[--><section class="VPSidebarItem level-1 collapsible" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" role="button" tabindex="0" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><h3 class="text" data-v-b3fd67f8>支付宝支付API对接指南</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-b3fd67f8><span class="vpi-chevron-right caret-icon" data-v-b3fd67f8></span></div></div><div class="items" data-v-b3fd67f8><!--[--><div class="VPSidebarItem level-2 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98API%E5%AF%B9%E6%8E%A5%E6%8C%87%E5%8D%97/1_%E5%95%86%E5%AE%B6%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>商家基本信息获取</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98API%E5%AF%B9%E6%8E%A5%E6%8C%87%E5%8D%97/2_%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8A%E9%85%8D%E7%BD%AE.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>支付宝支付环境搭建及配置</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98API%E5%AF%B9%E6%8E%A5%E6%8C%87%E5%8D%97/3_%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E8%AF%B7%E6%B1%82%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%B0%81%E8%A3%85.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>支付宝支付请求工具类封装</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98API%E5%AF%B9%E6%8E%A5%E6%8C%87%E5%8D%97/4_%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%88%90%E5%8A%9F%E5%9B%9E%E8%B0%83%E9%80%9A%E7%9F%A5.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>支付宝支付成功回调通知</p><!--]--></a><!----></div><!----></div><!--]--></div></section><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-9a104c51 data-v-1428d186><div class="VPDoc has-sidebar has-aside" data-v-1428d186 data-v-39a288b8><!--[--><!--]--><div class="container" data-v-39a288b8><div class="aside" data-v-39a288b8><div class="aside-curtain" data-v-39a288b8></div><div class="aside-container" data-v-39a288b8><div class="aside-content" data-v-39a288b8><div class="VPDocAside" data-v-39a288b8 data-v-3f215769><!--[--><!--]--><!--[--><!--[--><!--[--><!--[--><!--[--><!--[--><!--]--><div class="tk-article-share"><button class="tk-article-share__button flx-center" aria-label="分享此页面" aria-live="polite"><div class="flx-center"><i class="tk-icon" style="margin-right:4px;--icon-color-hover:var(--tk-theme-color);"><svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    aria-hidden="true"
+    role="img"
+    class="iconify iconify iconify--solar"
+    alt="Icon"
+    width="1em"
+    height="1em"
+    viewBox="0 0 24 24"
+    style="vertical-align: -0.125em"
+  >
+    <path
+      fill="currentColor"
+      fill-rule="evenodd"
+      d="M13.803 5.333c0-1.84 1.5-3.333 3.348-3.333A3.34 3.34 0 0 1 20.5 5.333c0 1.841-1.5 3.334-3.349 3.334a3.35 3.35 0 0 1-2.384-.994l-4.635 3.156a3.34 3.34 0 0 1-.182 1.917l5.082 3.34a3.35 3.35 0 0 1 2.12-.753a3.34 3.34 0 0 1 3.348 3.334C20.5 20.507 19 22 17.151 22a3.34 3.34 0 0 1-3.348-3.333a3.3 3.3 0 0 1 .289-1.356L9.05 14a3.35 3.35 0 0 1-2.202.821A3.34 3.34 0 0 1 3.5 11.487a3.34 3.34 0 0 1 3.348-3.333c1.064 0 2.01.493 2.623 1.261l4.493-3.059a3.3 3.3 0 0 1-.161-1.023"
+      clip-rule="evenodd"
+    ></path>
+  </svg></i> 分享此页面</div></button></div><!--[--><!--]--><!--]--><!--[--><!--]--><!--]--><!--]--><!--]--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-3f215769 data-v-a5bbad30><div class="content" data-v-a5bbad30><div class="outline-marker" data-v-a5bbad30></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-a5bbad30>本页导航</div><ul class="VPDocOutlineItem root" data-v-a5bbad30 data-v-b933a997><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-3f215769></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-39a288b8><div class="content-container" data-v-39a288b8><!--[--><!--[--><!--[--><!--[--><!--]--><!--[--><!--[--><!--]--><div class="tk-article-analyze flx-justify-between" aria-label="文章分析"><div class="tk-article-breadcrumb" role="navigation" aria-label="文章面包屑"><div class="tk-breadcrumb" role="navigation" aria-label="面包屑"><!--[--><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><a href="/" title="首页" class="home hover-color" aria-label="首页"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="M192 413.952V896h640V413.952L512 147.328zM139.52 374.4l352-293.312a32 32 0 0 1 40.96 0l352 293.312A32 32 0 0 1 896 398.976V928a32 32 0 0 1-32 32H160a32 32 0 0 1-32-32V398.976a32 32 0 0 1 11.52-24.576"
+    ></path>
+  </svg></i></a><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><!--[--><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><span href title="Java" class="" aria-label="Java">Java</span><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><span href title="解决方案" class="" aria-label="解决方案">解决方案</span><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><span href title="数据同步" class="" aria-label="数据同步">数据同步</span><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><!--]--><!--]--></div></div><div class="tk-article-analyze__wrapper flx-align-center"><div class="tk-article-info article" role="group" aria-label="文章信息"><!--[--><!--[--><span class="tk-article-info__item" role="group" aria-label="作者"><i class="tk-icon tk-article-info__icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <path
+    fill="currentColor"
+    d="M512 512a192 192 0 1 0 0-384 192 192 0 0 0 0 384m0 64a256 256 0 1 1 0-512 256 256 0 0 1 0 512m320 320v-96a96 96 0 0 0-96-96H288a96 96 0 0 0-96 96v96a32 32 0 1 1-64 0v-96a160 160 0 0 1 160-160h448a160 160 0 0 1 160 160v96a32 32 0 1 1-64 0"
+  ></path>
+</svg></i><a title="作者" href="https://github.com/Daneliya" target="_blank" class="hover-color" aria-label="xiaolong">xiaolong</a></span><!--]--><!--[--><span class="tk-article-info__item" role="group" aria-label="创建时间"><i class="tk-icon tk-article-info__icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <path
+    fill="currentColor"
+    d="M128 384v512h768V192H768v32a32 32 0 1 1-64 0v-32H320v32a32 32 0 0 1-64 0v-32H128v128h768v64zm192-256h384V96a32 32 0 1 1 64 0v32h160a32 32 0 0 1 32 32v768a32 32 0 0 1-32 32H96a32 32 0 0 1-32-32V160a32 32 0 0 1 32-32h160V96a32 32 0 0 1 64 0zm-32 384h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64m0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64m192-192h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64m0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64m192-192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64m0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64"
+  ></path>
+</svg></i><a title="创建时间" class="hover-color" aria-label="2026-02-09">2026-02-09</a></span><!--]--><!--[--><!--v-if--><!--]--><!--[--><!--v-if--><!--]--><!--[--><!--v-if--><!--]--><!--]--><!--[--><!--]--></div><div class="flx-center"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="m512 863.36 384-54.848v-638.72L525.568 222.72a96 96 0 0 1-27.136 0L128 169.792v638.72zM137.024 106.432l370.432 52.928a32 32 0 0 0 9.088 0l370.432-52.928A64 64 0 0 1 960 169.792v638.72a64 64 0 0 1-54.976 63.36l-388.48 55.488a32 32 0 0 1-9.088 0l-388.48-55.488A64 64 0 0 1 64 808.512v-638.72a64 64 0 0 1 73.024-63.36z"
+    ></path>
+    <path fill="currentColor" d="M480 192h64v704h-64z"></path>
+  </svg></i><a title="文章字数" class="hover-color" aria-label="文章字数">3135</a></div><div class="flx-center"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="M512 896a384 384 0 1 0 0-768 384 384 0 0 0 0 768m0 64a448 448 0 1 1 0-896 448 448 0 0 1 0 896"
+    ></path>
+    <path fill="currentColor" d="M480 256a32 32 0 0 1 32 32v256a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32"></path>
+    <path fill="currentColor" d="M480 512h256q32 0 32 32t-32 32H480q-32 0-32-32t32-32"></path>
+  </svg></i><a title="预计阅读时长" class="hover-color" aria-label="预计阅读时长">11.9m</a></div><!--v-if--></div></div><!--[--><!--]--><!--]--><!----><!----><!----><!--v-if--><!--[--><div class="tk-sidebar-trigger" title="侧边栏展开/折叠" role="button" aria-label="侧边栏展开/折叠"><div class="tk-right-bottom-button__button"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg
+    viewBox="0 0 48 48"
+    display="inline-block"
+    vertical-align="middle"
+    min-width="1.2rem"
+    width="1.2em"
+    height="1.2em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4">
+      <path d="M6 7h36M8 24h32" />
+      <path stroke-linejoin="round" d="M13.99 30L8 24.005L14 18m20.01 0L40 23.995L34 30" />
+      <path d="M6 41h36" />
+    </g>
+  </svg></i></div></div><!--]--><!--]--><!--]--><!--]--><main class="main" data-v-39a288b8><div style="position:relative;" class="vp-doc _Java_%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88_%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5_0_%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5" data-v-39a288b8><div><div style="display:none;" hidden="true" aria-hidden="true">Are you an LLM? You can read better optimized documentation at /Java\解决方案\数据同步\0_数据同步.md for this page in Markdown format</div><h1 id="数据同步" tabindex="-1">数据同步 <a class="header-anchor" href="#数据同步" aria-label="Permalink to &quot;数据同步&quot;">​</a></h1><h2 id="_1-前言" tabindex="-1">1. 前言 <a class="header-anchor" href="#_1-前言" aria-label="Permalink to &quot;1. 前言&quot;">​</a></h2><p>在实际项目开发中，我们经常将 MySQL 作为业务数据库，用于事务性处理和数据持久化。而ES 作为查询数据库，用来实现读写分离，缓解 MySQL 数据库的查询压力，应对海量数据的复杂查询。</p><p>这其中有一个很重要的问题，就是如何实现 MySQL 数据库和 ES 的数据同步。本文将探讨几种常见的实现方案和技术选型。</p><h2 id="_2-数据同步方案" tabindex="-1">2.数据同步方案 <a class="header-anchor" href="#_2-数据同步方案" aria-label="Permalink to &quot;2.数据同步方案&quot;">​</a></h2><h3 id="_2-1-同步双写" tabindex="-1">2.1 同步双写 <a class="header-anchor" href="#_2-1-同步双写" aria-label="Permalink to &quot;2.1 同步双写&quot;">​</a></h3><p>这是一种最为简单的方式，在将数据写到 MySQL 时，同时将数据写到 ES。</p><p><img src="/assets/5a87604b-ed89-4dfc-80a3-69f897b0cee6.Dxzprc0k.png" alt="5a87604b-ed89-4dfc-80a3-69f897b0cee6" loading="lazy"></p><p>伪代码如下</p><div class="language-java vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">/**</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> * 新增商品</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">*/</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">@</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">Transactional</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">rollbackFor</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Exception.class)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> addGoods</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(GoodsDto goodsDto) {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    //1、保存Mysql</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    Goods goods </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Goods</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    BeanUtils.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">copyProperties</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(goodsDto,goods);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    GoodsMapper.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">insert</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">     //2、保存ES</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     IndexRequest indexRequest </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> IndexRequest</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;goods_index&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;_doc&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     indexRequest.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">source</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(JSON.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">toJSONString</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(goods), XContentType.JSON);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     indexRequest.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">setRefreshPolicy</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(WriteRequest.RefreshPolicy.IMMEDIATE);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     highLevelClient.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">index</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(indexRequest);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>优点：</p><ul><li>业务逻辑简单；</li><li>实时性高。</li></ul><p>缺点：</p><ul><li>硬编码，有需要写入 MySQL 的地方都需要添加写入 ES 的代码；</li><li>业务强耦合；</li><li>存在双写失败丢数据风险；</li><li>性能较差，本来 MySQL 的性能不是很高，再加一个 ES，系统的性能必然会下降。</li></ul><h3 id="_2-2-异步双写" tabindex="-1">2.2 异步双写 <a class="header-anchor" href="#_2-2-异步双写" aria-label="Permalink to &quot;2.2 异步双写&quot;">​</a></h3><p>针对多数据源写入的场景，可以借助 MQ 实现异步的多源写入。</p><p><img src="/assets/c098f954-4f05-4e27-9342-d16ee474edac.CY1u6SjJ.png" alt="c098f954-4f05-4e27-9342-d16ee474edac" loading="lazy"></p><p>优点：</p><ul><li>性能高；</li><li>不易出现数据丢失问题，主要基于 MQ 消息的消费保障机制，比如 ES 宕机或者写入失败，还能重新消费 MQ 消息；</li><li>多源写入之间相互隔离，便于扩展更多的数据源写入。</li></ul><p>缺点：</p><ul><li>硬编码问题，接入新的数据源需要实现新的消费者代码；</li><li>系统复杂度增加，引入了消息中间件；</li><li>MQ是异步消费模型，用户写入的数据不一定可以马上看到，造成延时。</li></ul><h3 id="_2-3-基于-sql-抽取" tabindex="-1">2.3 基于 SQL 抽取 <a class="header-anchor" href="#_2-3-基于-sql-抽取" aria-label="Permalink to &quot;2.3 基于 SQL 抽取&quot;">​</a></h3><p>上面两种方案中都存在硬编码问题，代码的侵入性太强，如果对实时性要求不高的情况下，可以考虑用定时器来处理：</p><ol><li>数据库的相关表中增加一个字段为 timestamp 的字段，任何 CURD 操作都会导致该字段的时间发生变化；</li><li>原来程序中的 CURD 操作不做任何变化；</li><li>增加一个定时器程序，让该程序按一定的时间周期扫描指定的表，把该时间段内发生变化的数据提取出来；</li><li>逐条写入到 ES 中。</li></ol><p><img src="/assets/c0043f97-4770-4c85-92d7-62387e545e62.D6zyek6l.png" alt="c0043f97-4770-4c85-92d7-62387e545e62" loading="lazy"></p><p>优点：</p><ul><li>不改变原来代码，没有侵入性、没有硬编码；</li><li>没有业务强耦合，不改变原来程序的性能；</li><li>Worker 代码编写简单不需要考虑增删改查。</li></ul><p>缺点：</p><ul><li>时效性较差，由于是采用定时器根据固定频率查询表来同步数据，尽管将同步周期设置到秒级，也还是会存在一定时间的延迟；</li><li>对数据库有一定的轮询压力，一种改进方法是将轮询放到压力不大的从库上。</li></ul><blockquote><p>经典方案：借助 Logstash 实现数据同步，其底层实现原理就是根据配置定期使用 SQL 查询新增的数据写入 ES 中，实现数据的增量同步。</p></blockquote><h3 id="_2-4-基于-binlog-实时同步" tabindex="-1">2.4 基于 Binlog 实时同步 <a class="header-anchor" href="#_2-4-基于-binlog-实时同步" aria-label="Permalink to &quot;2.4 基于 Binlog 实时同步&quot;">​</a></h3><p>上面三种方案要么有代码侵入，要么有硬编码，要么有延迟，那么有没有一种方案既能保证数据同步的实时性又没有代入侵入呢？</p><p>当然有，可以利用 MySQL 的 Binlog 来进行同步。</p><p><img src="/assets/0333083a-6fec-4321-829f-5fb9b247bbbd.B0ZYG0by.png" alt="0333083a-6fec-4321-829f-5fb9b247bbbd" loading="lazy"></p><p>具体步骤如下：</p><ul><li>读取 MySQL 的 Binlog 日志，获取指定表的日志信息；</li><li>将读取的信息转为 MQ；</li><li>编写一个 MQ 消费程序；</li><li>不断消费 MQ，每消费完一条消息，将消息写入到 ES 中。</li></ul><p>优点：</p><ul><li>没有代码侵入、没有硬编码；</li><li>原有系统不需要任何变化，没有感知；</li><li>性能高；</li><li>业务解耦，不需要关注原来系统的业务逻辑。</li></ul><p>缺点：</p><ul><li>构建 Binlog 系统复杂；</li><li>如果采用 MQ 消费解析的 Binlog 信息，也会像方案二一样存在 MQ 延时的风险。</li></ul><h2 id="_3-数据迁移工具选型" tabindex="-1">3. 数据迁移工具选型 <a class="header-anchor" href="#_3-数据迁移工具选型" aria-label="Permalink to &quot;3. 数据迁移工具选型&quot;">​</a></h2><p>对于上面 4 种数据同步方案，“基于 Binlog 实时同步”方案是目前最常用的，也诞生了很多优秀的数据迁移工具，这里主要对这些迁移工具进行介绍。</p><p>这些数据迁移工具，很多都是基于 Binlog 订阅的方式实现，<strong>模拟一个 MySQL Slave 订阅 Binlog 日志，从而实现 CDC</strong>（Change Data Capture），将已提交的更改发送到下游，包括 INSERT、DELETE、UPDATE。</p><p>至于如何伪装？大家需要先了解 MySQL 的主从复制原理，需要学习这块知识的同学，可以看我之前写的高并发教程，里面有详细讲解。</p><h3 id="_3-1-cannel" tabindex="-1">3.1 Cannel <a class="header-anchor" href="#_3-1-cannel" aria-label="Permalink to &quot;3.1 Cannel&quot;">​</a></h3><p>基于数据库增量日志解析，提供增量数据订阅&amp;消费，目前主要支持 MySQL。</p><p>Canal 原理就是伪装成 MySQL 的从节点，从而订阅 master 节点的 Binlog 日志，主要流程为：</p><ol><li>Canal 服务端向 MySQL 的 master 节点传输 dump 协议；</li><li>MySQL 的 master 节点接收到 dump 请求后推送 Binlog 日志给 Canal 服务端，解析 Binlog 对象（原始为 byte 流）转成 Json 格式；</li><li>Canal 客户端通过 TCP 协议或 MQ 形式监听 Canal 服务端，同步数据到 ES。</li></ol><p><img src="/assets/0e91763e-50e8-4870-8583-d4abba1a6959.CtzPx8_g.png" alt="0e91763e-50e8-4870-8583-d4abba1a6959" loading="lazy"></p><p>下面是 Cannel 执行的核心流程，其中 Binlog Parser 主要负责 Binlog 的提取、解析和推送，EventSink 负责数据的过滤 、路由和加工，仅作了解即可。</p><p><img src="/assets/5fb504e9-256d-41a0-8663-4b97790c29d9.PA_dxnu0.png" alt="5fb504e9-256d-41a0-8663-4b97790c29d9" loading="lazy"></p><h3 id="_3-2-阿里云-dts" tabindex="-1">3.2 阿里云 DTS <a class="header-anchor" href="#_3-2-阿里云-dts" aria-label="Permalink to &quot;3.2 阿里云 DTS&quot;">​</a></h3><p>数据传输服务 DTS（Data Transmission Service）支持 RDBMS、NoSQL、OLAP 等多种数据源之间的数据传输。</p><p>它提供了数据迁移、实时数据订阅及数据实时同步等多种数据传输方式。相对于第三方数据流工具，DTS 提供丰富多样、高性能、高安全可靠的传输链路，同时它提供了诸多便利功能，极大方便了传输链路的创建及管理。</p><p>特点：</p><ul><li>多数据源：支持 RDBMS、NoSQL、OLAP 等多种数据源间的数据传输；</li><li>多传输方式：支持多种传输方式，包括数据迁移、实时数据订阅及数据实时同步；</li><li>高性能：底层采用了多种性能优化措施，全量数据迁移高峰期时性能可以达到70MB/s，20万的TPS，使用高规格服务器来保证每条迁移或同步链路都能拥有良好的传输性能；</li><li>高可用：底层为服务集群，如果集群内任何一个节点宕机或发生故障，控制中心都能够将这个节点上的所有任务快速切换到其他节点上，链路稳定性高；</li><li>简单易用：提供可视化管理界面，提供向导式的链路创建流程，用户可以在其控制台简单轻松地创建传输链路；</li><li>需要付费。</li></ul><p>再看看 DTS 的系统架构。</p><p><img src="/assets/56f3faeb-e1bb-49f5-9076-3f5b696be66e.BjUMdU1M.png" alt="56f3faeb-e1bb-49f5-9076-3f5b696be66e" loading="lazy"></p><ul><li>高可用：数据传输服务内部每个模块都有主备架构，保证系统高可用。容灾系统实时检测每个节点的健康状况，一旦发现某个节点异常，会将链路快速切换到其他节点。</li><li>数据源地址动态适配：对于数据订阅及同步链路，容灾系统还会监测数据源的连接地址切换等变更操作，一旦发现数据源发生连接地址变更，它会动态适配数据源新的连接方式，在数据源变更的情况下，保证链路的稳定性。</li></ul><p>更多内容，请查看阿里官方文档：<a href="https://help.aliyun.com/product/26590.html" target="_blank" rel="noreferrer">https://help.aliyun.com/product/26590.html</a></p><h3 id="_3-3-databus" tabindex="-1">3.3 Databus <a class="header-anchor" href="#_3-3-databus" aria-label="Permalink to &quot;3.3 Databus&quot;">​</a></h3><p>Databus 是一个低延迟、可靠的、支持事务的、保持一致性的数据变更抓取系统。由 LinkedIn 于 2013 年开源。</p><p>Databus 通过挖掘数据库日志的方式，将数据库变更实时、可靠的从数据库拉取出来，业务可以通过定制化 client 实时获取变更并进行其他业务逻辑。</p><p>特点：</p><ul><li>多数据源：Databus 支持多种数据来源的变更抓取，包括 Oracle 和 MySQL。</li><li>可扩展、高度可用：Databus 能扩展到支持数千消费者和事务数据来源，同时保持高度可用性。</li><li>事务按序提交：Databus 能保持来源数据库中的事务完整性，并按照事务分组和来源的提交顺寻交付变更事件。</li><li>低延迟、支持多种订阅机制：数据源变更完成后，Databus 能在毫秒级内将事务提交给消费者。同时，消费者使用D atabus 中的服务器端过滤功能，可以只获取自己需要的特定数据。</li><li>无限回溯：对消费者支持无限回溯能力，例如当消费者需要产生数据的完整拷贝时，它不会对数据库产生任何额外负担。当消费者的数据大大落后于来源数据库时，也可以使用该功能。</li></ul><p>再看看 Databus 的系统架构。</p><p>Databus 由 Relays、bootstrap 服务和 Client lib 等组成，Bootstrap 服务中包括 Bootstrap Producer 和 Bootstrap Server。</p><p><img src="/assets/0ff175b6-de60-476c-9de0-5cac6f88dee2.UGONFCbT.png" alt="0ff175b6-de60-476c-9de0-5cac6f88dee2" loading="lazy"></p><ul><li>快速变化的消费者直接从 Relay 中取事件；</li><li>如果一个消费者的数据更新大幅落后，它要的数据就不在 Relay 的日志中，而是需要<strong>请求 Bootstrap 服务，返回的将会是自消费者上次处理变更之后的所有数据变更快照。</strong></li></ul><p>开源地址：<a href="https://github.com/linkedin/databus" target="_blank" rel="noreferrer">https://github.com/linkedin/databus</a></p><h3 id="_3-4-其它" tabindex="-1">3.4 其它 <a class="header-anchor" href="#_3-4-其它" aria-label="Permalink to &quot;3.4 其它&quot;">​</a></h3><p><strong>Flink</strong></p><ul><li>有界数据流和无界数据流上进行有状态计算分布式处理引擎和框架。</li><li>官网地址：<a href="https://flink.apache.org" target="_blank" rel="noreferrer">https://flink.apache.org</a></li></ul><p><strong>CloudCanal</strong></p><ul><li>数据同步迁移系统，商业产品。</li><li>官网地址：<a href="https://www.clougence.com/?utm_source=wwek" target="_blank" rel="noreferrer">https://www.clougence.com/?utm_source=wwek</a></li></ul><p><strong>Maxwell</strong></p><ul><li>使用简单，直接将数据变更输出为json字符串，不需要再编写客户端。</li><li>官网地址：<a href="http://maxwells-daemon.io" target="_blank" rel="noreferrer">http://maxwells-daemon.io</a></li></ul><p><strong>DRD</strong></p><ul><li>阿里巴巴集团自主研发的分布式数据库中间件产品，专注于解决单机关系型数据库扩展性问题，具备轻量(无状态)、灵活、稳定、高效等特性。</li><li>官方地址：<a href="https://www.aliyun.com/product/drds" target="_blank" rel="noreferrer">https://www.aliyun.com/product/drds</a></li></ul><p><strong>yugong</strong></p><ul><li>帮助用户完成从 Oracle 数据迁移到 MySQL。</li><li>访问地址：<a href="https://github.com/alibaba/yugong" target="_blank" rel="noreferrer">https://github.com/alibaba/yugong</a></li></ul><h3 id="kettle" tabindex="-1">Kettle <a class="header-anchor" href="#kettle" aria-label="Permalink to &quot;Kettle&quot;">​</a></h3><p>Kettle是一款国外开源的ETL工具，用java编写，可以在视窗、Linux和Unix上运行，数据抽取高效稳定，中文称水壶。这个项目的主要程序员MATT想把各种数据放进一个水壶，然后以指定的格式流出。它是一个ETL工具集，允许你管理来自不同数据库的数据，并通过提供一个图形用户环境来描述你想做什么，而不是你想怎么做。Kettle中有两个脚本文件，转换和作业。转换完成了数据的基本转换，而作业完成了对整个工作流的控制。</p><p>优点：功能强大，支持几乎所有数据库；</p><p>缺点: 需要用户自己一步步配置，学习成本高；通过查询语句select同步的；</p><p>项目地址：<a href="https://github.com/pentaho/pentaho-kettle" target="_blank" rel="noreferrer">https://github.com/pentaho/pentaho-kettle</a></p><p><a href="https://www.jb51.net/article/267074.htm" target="_blank" rel="noreferrer">https://www.jb51.net/article/267074.htm</a></p><p><a href="https://www.cnblogs.com/easyjie/p/15740627.html" target="_blank" rel="noreferrer">https://www.cnblogs.com/easyjie/p/15740627.html</a></p><h3 id="dbmotion" tabindex="-1">DBMotion <a class="header-anchor" href="#dbmotion" aria-label="Permalink to &quot;DBMotion&quot;">​</a></h3><p><a href="https://www.cnblogs.com/libruce/p/18011741" target="_blank" rel="noreferrer">https://www.cnblogs.com/libruce/p/18011741</a></p><div class="language- vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>version: &#39;3.0&#39;</span></span>
+<span class="line"><span>services:</span></span>
+<span class="line"><span>  #dts-mysql:</span></span>
+<span class="line"><span>  #  image: mysql:latest</span></span>
+<span class="line"><span>  #  container_name: dts-mysql</span></span>
+<span class="line"><span>  #  environment:</span></span>
+<span class="line"><span>  #    MYSQL_ROOT_PASSWORD: admin</span></span>
+<span class="line"><span>  #  command: [&#39;mysqld&#39;, &#39;--character-set-server=utf8mb4&#39;, &#39;--collation-server=utf8mb4_unicode_ci&#39;, --default-time-zone=UTC]</span></span>
+<span class="line"><span>  #  ports:</span></span>
+<span class="line"><span>  #    - &quot;3307:3306&quot;</span></span>
+<span class="line"><span>  dts-api-server:</span></span>
+<span class="line"><span>    image: squids/dbmotion-community:latest</span></span>
+<span class="line"><span>    container_name: dts-api-server</span></span>
+<span class="line"><span>    environment:</span></span>
+<span class="line"><span>      - SERVER_MODE=DOCKER</span></span>
+<span class="line"><span>      # - MYSQL_URI=root:admin@(dts-mysql)/dbmotion</span></span>
+<span class="line"><span>      - MYSQL_URI=root:ek4601@192.168.100.106:3306/dbmotion</span></span>
+<span class="line"><span>    #depends_on:</span></span>
+<span class="line"><span>    #  - dts-mysql</span></span>
+<span class="line"><span>    volumes:</span></span>
+<span class="line"><span>      - /var/run/docker.sock:/var/run/docker.sock</span></span>
+<span class="line"><span>      - /var/dbmotion:/dbmotion/log</span></span>
+<span class="line"><span>    privileged: true</span></span>
+<span class="line"><span>  dts-ui:</span></span>
+<span class="line"><span>    image: squids/dbmotion-ui-community:latest</span></span>
+<span class="line"><span>    container_name: dts-ui</span></span>
+<span class="line"><span>    ports:</span></span>
+<span class="line"><span>      - &quot;30000:80&quot;</span></span>
+<span class="line"><span>    depends_on:</span></span>
+<span class="line"><span>      # - dts-mysql</span></span>
+<span class="line"><span>      - dts-api-server</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h3 id="apache-seatunnel" tabindex="-1">Apache Seatunnel <a class="header-anchor" href="#apache-seatunnel" aria-label="Permalink to &quot;Apache Seatunnel&quot;">​</a></h3><p><a href="https://blog.csdn.net/qq_36434219/article/details/134857560" target="_blank" rel="noreferrer">Apache Seatunnel部署（apache-seatunnel-2.3.3-bin.tar.gz + apache-seatunnel-web-1.0.0-bin.tar.gz）_com.hazelcast.internal.diagnostics.healthmonitor-CSDN博客</a></p><h3 id="streamsets-etl" tabindex="-1">StreamSets ETL <a class="header-anchor" href="#streamsets-etl" aria-label="Permalink to &quot;StreamSets ETL&quot;">​</a></h3><p>双写：<a href="https://blog.csdn.net/pbrlovejava/article/details/125926775" target="_blank" rel="noreferrer">https://blog.csdn.net/pbrlovejava/article/details/125926775</a></p></div></div></main><footer class="VPDocFooter" data-v-39a288b8 data-v-e257564d><!--[--><!--]--><div class="edit-info" data-v-e257564d><div class="edit-link" data-v-e257564d><a class="VPLink link vp-external-link-icon no-icon edit-link-button" href="https://github.com/Kele-Bingtang/vitepress-theme-teek/edit/master/docs/Java/解决方案/数据同步/0_数据同步.md" target="_blank" rel="noreferrer" data-v-e257564d><!--[--><span class="vpi-square-pen edit-link-icon" data-v-e257564d></span> 在 GitHub 上编辑此页<!--]--></a></div><div class="last-updated" data-v-e257564d><p class="VPLastUpdated" data-v-e257564d data-v-e98dd255>上次更新时间: <time datetime="2026-01-03T12:43:45.000Z" data-v-e98dd255></time></p></div></div><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-e257564d><span class="visually-hidden" id="doc-footer-aria-label" data-v-e257564d>Pager</span><div class="pager" data-v-e257564d><!----></div><div class="pager" data-v-e257564d><a class="VPLink link pager-link next" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E5%A4%9A%E7%A7%9F%E6%88%B7/%E5%A4%9A%E7%A7%9F%E6%88%B7.html" data-v-e257564d><!--[--><span class="desc" data-v-e257564d>下一页</span><span class="title" data-v-e257564d>多租户</span><!--]--></a></div></nav></footer><!--[--><!--[--><!--[--><!--[--><!--]--><!--[--><!--[--><!--]--><div class="tk-article-update"><div class="tk-article-update__title flx-align-center"><i class="tk-icon edit-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="m199.04 672.64 193.984 112 224-387.968-193.92-112-224 388.032zm-23.872 60.16 32.896 148.288 144.896-45.696zM455.04 229.248l193.92 112 56.704-98.112-193.984-112-56.64 98.112zM104.32 708.8l384-665.024 304.768 175.936L409.152 884.8h.064l-248.448 78.336zm384 254.272v-64h448v64h-448z"
+    ></path>
+  </svg></i><span>最近更新</span></div><ul><!--[--><li class="flx-center"><span class="tk-article-update--num" aria-hidden="true"></span><div class="tk-article-update__content"><!--v-if--><!--v-if--></div></li><!--]--></ul></div><!--[--><!--]--><!--]--><!--v-if--><!-- 评论区 --><!--v-if--><!--]--><!--]--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div><!--]--></div>
+    
+    
+  </body>
+</html>
