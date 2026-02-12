@@ -96,3 +96,5 @@ Github Pages自定义域名：https://developer.aliyun.com/article/1335710
 GitHub Pages自定义域名：https://www.cnblogs.com/yuelblog/p/15829774.html
 
 Github Pages 绑定个人域名：https://segmentfault.com/a/1190000011203711
+
+[博客搬家到 CLOUDFLARE 啦！ | Ceil.Top](https://ceil.top/EXPERIENCE/cloudflare.html)

@@ -8,11 +8,11 @@ url: /Java/架构设计/分布式/02.分布式搜索/2_搜索引擎Elasticsearch
 
 所以，继续研究elasticsearch的数据搜索功能。分别使用**DSL**和**RestClient**实现搜索。
 
-# 1.DSL查询文档
+## 一、DSL查询文档
 
 elasticsearch的查询依然是基于JSON风格的DSL来实现的。
 
-## 1.1.DSL查询分类
+### 1.1.DSL查询分类
 
 Elasticsearch提供了基于JSON的DSL（[Domain Specific Language](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html)）来定义查询。常见的查询类型包括：
 
@@ -38,13 +38,13 @@ Elasticsearch提供了基于JSON的DSL（[Domain Specific Language](https://www.
 查询的语法基本一致：
 
 ```json
-GET /indexName/_search
+GET /indexName/_search
 {
-  "query": {
-    "查询类型": {
-      "查询条件": "条件值"
-    }
-  }
+  "query": {
+    "查询类型": {
+      "查询条件": "条件值"
+    }
+  }
 }
 ```
 
@@ -55,20 +55,20 @@ GET /indexName/_search
 
 ```json
 // 查询所有
-GET /indexName/_search
+GET /indexName/_search
 {
-  "query": {
-    "match_all": {
+  "query": {
+    "match_all": {
     }
-  }
+  }
 }
 ```
 
 其它查询无非就是**查询类型**、**查询条件**的变化。
 
-## 1.2.全文检索查询
+### 1.2.全文检索查询
 
-### 1.2.1.使用场景
+#### 1.2.1.使用场景
 
 全文检索查询的基本流程如下：
 
@@ -87,7 +87,7 @@ GET /indexName/_search
 
 因为是拿着词条去匹配，因此参与搜索的字段也必须是可分词的text类型的字段。
 
-### 1.2.2.基本语法
+#### 1.2.2.基本语法
 
 常见的全文检索查询包括：
 
@@ -97,31 +97,31 @@ GET /indexName/_search
 match查询语法如下：
 
 ```json
-GET /indexName/_search
+GET /indexName/_search
 {
-  "query": {
-    "match": {
-      "FIELD": "TEXT"
-    }
-  }
+  "query": {
+    "match": {
+      "FIELD": "TEXT"
+    }
+  }
 }
 ```
 
 mulit\_match语法如下：
 
 ```json
-GET /indexName/_search
+GET /indexName/_search
 {
-  "query": {
-    "multi_match": {
-      "query": "TEXT",
-      "fields": ["FIELD1", " FIELD12"]
-    }
-  }
+  "query": {
+    "multi_match": {
+      "query": "TEXT",
+      "fields": ["FIELD1", " FIELD12"]
+    }
+  }
 }
 ```
 
-### 1.2.3.示例
+#### 1.2.3.示例
 
 match查询示例：
 
@@ -137,37 +137,37 @@ multi\_match查询示例：
 
 但是，搜索字段越多，对查询性能影响越大，因此建议采用copy\_to，然后单字段查询的方式。
 
-### 1.2.4.总结
+#### 1.2.4.总结
 
 match和multi\_match的区别是什么？
 
 * match：根据一个字段查询
 * multi\_match：根据多个字段查询，参与查询字段越多，查询性能越差
 
-## 1.3.精准查询
+### 1.3.精准查询
 
 精确查询一般是查找keyword、数值、日期、boolean等类型字段。所以**不会**对搜索条件分词。常见的有：
 
 * term：根据词条精确值查询
 * range：根据值的范围查询
 
-### 1.3.1.term查询
+#### 1.3.1.term查询
 
 因为精确查询的字段搜是不分词的字段，因此查询的条件也必须是**不分词**的词条。查询时，用户输入的内容跟自动值完全匹配时才认为符合条件。如果用户输入的内容过多，反而搜索不到数据。
 
 语法说明：
 
 ```json
-// term查询
-GET /indexName/_search
+// term查询
+GET /indexName/_search
 {
-  "query": {
-    "term": {
-      "FIELD": {
-        "value": "VALUE"
-      }
-    }
-  }
+  "query": {
+    "term": {
+      "FIELD": {
+        "value": "VALUE"
+      }
+    }
+  }
 }
 ```
 
@@ -181,39 +181,37 @@ GET /indexName/_search
 
 ![image-20210721171838378](/assets/image-20210721171838378.B9nU9zMA.png)
 
-### 1.3.2.range查询
+#### 1.3.2.range查询
 
 范围查询，一般应用在对数值类型做范围过滤的时候。比如做价格范围过滤。
 
 基本语法：
 
 ```json
-// range查询
-GET /indexName/_search
+// range查询
+GET /indexName/_search
 {
-  "query": {
-    "range": {
-      "FIELD": {
-        "gte": 10, // 这里的gte代表大于等于，gt则代表大于
-        "lte": 20 // lte代表小于等于，lt则代表小于
-      }
-    }
-  }
+  "query": {
+    "range": {
+      "FIELD": {
+        "gte": 10, // 这里的gte代表大于等于，gt则代表大于
+        "lte": 20 // lte代表小于等于，lt则代表小于
+      }
+    }
+  }
 }
 ```
 
-示例：
+示例：![image-20210721172307172](/assets/image-20210721172307172.DAAwlRA3.png)
 
-![image-20210721172307172](/assets/image-20210721172307172.DAAwlRA3.png)
-
-### 1.3.3.总结
+#### 1.3.3.总结
 
 精确查询常见的有哪些？
 
 * term查询：根据词条精确匹配，一般搜索keyword类型、数值类型、布尔类型、日期类型字段
 * range查询：根据数值范围查询，可以是数值、日期的范围
 
-## 1.4.地理坐标查询
+### 1.4.地理坐标查询
 
 所谓的地理坐标查询，其实就是根据经纬度查询，官方文档：https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-queries.html
 
@@ -231,7 +229,7 @@ GET /indexName/_search
 
 ![image-20210721172654880](assets/image-20210721172654880.png)
 
-### 1.4.1.矩形范围查询
+#### 1.4.1.矩形范围查询
 
 矩形范围查询，也就是geo\_bounding\_box查询，查询坐标落在某个矩形范围的所有文档：
 
@@ -242,29 +240,29 @@ GET /indexName/_search
 语法如下：
 
 ```json
-// geo_bounding_box查询
-GET /indexName/_search
+// geo_bounding_box查询
+GET /indexName/_search
 {
-  "query": {
-    "geo_bounding_box": {
-      "FIELD": {
-        "top_left": { // 左上点
-          "lat": 31.1,
-          "lon": 121.5
-        },
-        "bottom_right": { // 右下点
-          "lat": 30.9,
-          "lon": 121.7
-        }
-      }
-    }
-  }
+  "query": {
+    "geo_bounding_box": {
+      "FIELD": {
+        "top_left": { // 左上点
+          "lat": 31.1,
+          "lon": 121.5
+        },
+        "bottom_right": { // 右下点
+          "lat": 30.9,
+          "lon": 121.7
+        }
+      }
+    }
+  }
 }
 ```
 
 这种并不符合“附近的人”这样的需求，所以我们就不做了。
 
-### 1.4.2.附近查询
+#### 1.4.2.附近查询
 
 附近查询，也叫做距离查询（geo\_distance）：查询到指定中心点小于某个距离值的所有文档。
 
@@ -275,23 +273,21 @@ GET /indexName/_search
 语法说明：
 
 ```json
-// geo_distance 查询
-GET /indexName/_search
+// geo_distance 查询
+GET /indexName/_search
 {
-  "query": {
-    "geo_distance": {
-      "distance": "15km", // 半径
-      "FIELD": "31.21,121.5" // 圆心
-    }
-  }
+  "query": {
+    "geo_distance": {
+      "distance": "15km", // 半径
+      "FIELD": "31.21,121.5" // 圆心
+    }
+  }
 }
 ```
 
 示例：
 
-我们先搜索陆家嘴附近15km的酒店：
-
-![image-20210721175443234](/assets/image-20210721175443234.Bu53QqZn.png)
+我们先搜索陆家嘴附近15km的酒店：![image-20210721175443234](/assets/image-20210721175443234.Bu53QqZn.png)
 
 发现共有47家酒店。
 
@@ -301,14 +297,14 @@ GET /indexName/_search
 
 可以发现，搜索到的酒店数量减少到了5家。
 
-## 1.5.复合查询
+### 1.5.复合查询
 
 复合（compound）查询：复合查询可以将其它简单查询组合起来，实现更复杂的搜索逻辑。常见的有两种：
 
 * fuction score：算分函数查询，可以控制文档相关性算分，控制文档排名
 * bool query：布尔查询，利用逻辑关系组合多个其它的查询，实现复杂搜索
 
-### 1.5.1.相关性算分
+#### 1.5.1.相关性算分
 
 当我们利用match查询时，文档结果会根据与搜索词条的关联度打分（\_score），返回结果时按照分值降序排列。
 
@@ -316,24 +312,24 @@ GET /indexName/_search
 
 ```json
 [
-  {
-    "_score" : 17.850193,
-    "_source" : {
-      "name" : "虹桥如家酒店真不错",
-    }
-  },
-  {
-    "_score" : 12.259849,
-    "_source" : {
-      "name" : "外滩如家酒店真不错",
-    }
-  },
-  {
-    "_score" : 11.91091,
-    "_source" : {
-      "name" : "迪士尼如家酒店真不错",
-    }
-  }
+  {
+    "_score" : 17.850193,
+    "_source" : {
+      "name" : "虹桥如家酒店真不错",
+    }
+  },
+  {
+    "_score" : 12.259849,
+    "_source" : {
+      "name" : "外滩如家酒店真不错",
+    }
+  },
+  {
+    "_score" : 11.91091,
+    "_source" : {
+      "name" : "迪士尼如家酒店真不错",
+    }
+  }
 ]
 ```
 
@@ -354,7 +350,7 @@ TF-IDF算法有一各缺陷，就是词条频率越高，文档得分也会越�
 * TF-IDF算法
 * BM25算法，elasticsearch5.1版本后采用的算法
 
-### 1.5.2.算分函数查询
+#### 1.5.2.算分函数查询
 
 根据相关度打分是比较合理的需求，但**合理的不一定是产品经理需要**的。
 
@@ -364,7 +360,7 @@ TF-IDF算法有一各缺陷，就是词条频率越高，文档得分也会越�
 
 要想认为控制相关性算分，就需要利用elasticsearch中的function score 查询了。
 
-#### 1）语法说明
+##### 1）语法说明
 
 ![image-20210721191544750](/assets/image-20210721191544750.BQXiUG11.png)
 
@@ -395,7 +391,7 @@ function score的运行流程如下：
 * 算分函数：决定函数算分的算法
 * 运算模式：决定最终算分结果
 
-#### 2）示例
+##### 2）示例
 
 需求：给“如家”这个品牌的酒店排名靠前一些
 
@@ -409,24 +405,24 @@ function score的运行流程如下：
 因此最终的DSL语句如下：
 
 ```json
-GET /hotel/_search
+GET /hotel/_search
 {
-  "query": {
-    "function_score": {
-      "query": {  .... }, // 原始查询，可以是任意条件
-      "functions": [ // 算分函数
-        {
-          "filter": { // 满足的条件，品牌必须是如家
-            "term": {
-              "brand": "如家"
-            }
-          },
-          "weight": 2 // 算分权重为2
-        }
-      ],
+  "query": {
+    "function_score": {
+      "query": {  .... }, // 原始查询，可以是任意条件
+      "functions": [ // 算分函数
+        {
+          "filter": { // 满足的条件，品牌必须是如家
+            "term": {
+              "brand": "如家"
+            }
+          },
+          "weight": 2 // 算分权重为2
+        }
+      ],
       "boost_mode": "sum" // 加权模式，求和
-    }
-  }
+    }
+  }
 }
 ```
 
@@ -438,7 +434,7 @@ GET /hotel/_search
 
 ![image-20210721193458182](/assets/image-20210721193458182.BJC_Ezby.png)
 
-#### 3）小结
+##### 3）小结
 
 function score query定义的三要素是什么？
 
@@ -446,7 +442,7 @@ function score query定义的三要素是什么？
 * 算分函数：如何计算function score
 * 加权方式：function score 与 query score如何运算
 
-### 1.5.3.布尔查询
+#### 1.5.3.布尔查询
 
 布尔查询是一个或多个查询子句的组合，每一个子句就是一个**子查询**。子查询的组合方式有：
 
@@ -466,28 +462,28 @@ function score query定义的三要素是什么？
 * 搜索框的关键字搜索，是全文检索查询，使用must查询，参与算分
 * 其它过滤条件，采用filter查询。不参与算分
 
-#### 1）语法示例：
+##### 1）语法示例：
 
 ```json
-GET /hotel/_search
+GET /hotel/_search
 {
-  "query": {
-    "bool": {
-      "must": [
-        {"term": {"city": "上海" }}
-      ],
-      "should": [
-        {"term": {"brand": "皇冠假日" }},
-        {"term": {"brand": "华美达" }}
-      ],
-      "must_not": [
-        { "range": { "price": { "lte": 500 } }}
-      ],
-      "filter": [
-        { "range": {"score": { "gte": 45 } }}
-      ]
-    }
-  }
+  "query": {
+    "bool": {
+      "must": [
+        {"term": {"city": "上海" }}
+      ],
+      "should": [
+        {"term": {"brand": "皇冠假日" }},
+        {"term": {"brand": "华美达" }}
+      ],
+      "must_not": [
+        { "range": { "price": { "lte": 500 } }}
+      ],
+      "filter": [
+        { "range": {"score": { "gte": 45 } }}
+      ]
+    }
+  }
 }
 ```
 
@@ -503,7 +499,7 @@ GET /hotel/_search
 
 ![image-20210721194744183](/assets/image-20210721194744183.BDuY4r3D.png)
 
-#### 3）小结
+##### 3）小结
 
 bool查询有几种逻辑关系？
 
@@ -512,31 +508,31 @@ bool查询有几种逻辑关系？
 * must\_not：必须不匹配的条件，不参与打分
 * filter：必须匹配的条件，不参与打分
 
-# 2.搜索结果处理
+## 二、搜索结果处理
 
 搜索的结果可以按照用户指定的方式去处理或展示。
 
-## 2.1.排序
+### 2.1.排序
 
 elasticsearch默认是根据相关度算分（\_score）来排序，但是也支持自定义方式对搜索[结果排序](https://www.elastic.co/guide/en/elasticsearch/reference/current/sort-search-results.html)。可以排序字段类型有：keyword类型、数值类型、地理坐标类型、日期类型等。
 
-### 2.1.1.普通字段排序
+#### 2.1.1.普通字段排序
 
 keyword、数值、日期类型排序的语法基本一致。
 
 **语法**：
 
 ```json
-GET /indexName/_search
+GET /indexName/_search
 {
-  "query": {
-    "match_all": {}
-  },
-  "sort": [
-    {
-      "FIELD": "desc"  // 排序字段、排序方式ASC、DESC
-    }
-  ]
+  "query": {
+    "match_all": {}
+  },
+  "sort": [
+    {
+      "FIELD": "desc"  // 排序字段、排序方式ASC、DESC
+    }
+  ]
 }
 ```
 
@@ -548,27 +544,27 @@ GET /indexName/_search
 
 ![image-20210721195728306](/assets/image-20210721195728306.B158NSH-.png)
 
-### 2.1.2.地理坐标排序
+#### 2.1.2.地理坐标排序
 
 地理坐标排序略有不同。
 
 **语法说明**：
 
 ```json
-GET /indexName/_search
+GET /indexName/_search
 {
-  "query": {
-    "match_all": {}
-  },
-  "sort": [
-    {
-      "_geo_distance" : {
-          "FIELD" : "纬度，经度", // 文档中geo_point类型的字段名、目标坐标点
-          "order" : "asc", // 排序方式
-          "unit" : "km" // 排序的距离单位
-      }
-    }
-  ]
+  "query": {
+    "match_all": {}
+  },
+  "sort": [
+    {
+      "_geo_distance" : {
+          "FIELD" : "纬度，经度", // 文档中geo_point类型的字段名、目标坐标点
+          "order" : "asc", // 排序方式
+          "unit" : "km" // 排序的距离单位
+      }
+    }
+  ]
 }
 ```
 
@@ -588,7 +584,7 @@ GET /indexName/_search
 
 ![image-20210721200214690](/assets/image-20210721200214690.M8hFi1dy.png)
 
-## 2.2.分页
+### 2.2.分页
 
 elasticsearch 默认情况下只返回top10的数据。而如果要查询更多数据就需要修改分页参数了。elasticsearch中通过修改from、size参数来控制要返回的分页结果：
 
@@ -597,39 +593,39 @@ elasticsearch 默认情况下只返回top10的数据。而如果要查询更多�
 
 类似于mysql中的`limit ?, ?`
 
-### 2.2.1.基本的分页
+#### 2.2.1.基本的分页
 
 分页的基本语法如下：
 
 ```json
-GET /hotel/_search
+GET /hotel/_search
 {
-  "query": {
-    "match_all": {}
-  },
-  "from": 0, // 分页开始的位置，默认为0
-  "size": 10, // 期望获取的文档总数
-  "sort": [
-    {"price": "asc"}
-  ]
+  "query": {
+    "match_all": {}
+  },
+  "from": 0, // 分页开始的位置，默认为0
+  "size": 10, // 期望获取的文档总数
+  "sort": [
+    {"price": "asc"}
+  ]
 }
 ```
 
-### 2.2.2.深度分页问题
+#### 2.2.2.深度分页问题
 
 现在，我要查询990~1000的数据，查询逻辑要这么写：
 
 ```json
-GET /hotel/_search
+GET /hotel/_search
 {
-  "query": {
-    "match_all": {}
-  },
-  "from": 990, // 分页开始的位置，默认为0
-  "size": 10, // 期望获取的文档总数
-  "sort": [
-    {"price": "asc"}
-  ]
+  "query": {
+    "match_all": {}
+  },
+  "from": 990, // 分页开始的位置，默认为0
+  "size": 10, // 期望获取的文档总数
+  "sort": [
+    {"price": "asc"}
+  ]
 }
 ```
 
@@ -658,7 +654,7 @@ GET /hotel/_search
 * search after：分页时需要排序，原理是从上一次的排序值开始，查询下一页数据。官方推荐使用的方式。
 * scroll：原理将排序后的文档id形成快照，保存在内存。官方已经不推荐使用。
 
-### 2.2.3.小结
+#### 2.2.3.小结
 
 分页查询的常见实现方案以及优缺点：
 
@@ -677,9 +673,9 @@ GET /hotel/_search
   * 缺点：会有额外内存消耗，并且搜索结果是非实时的
   * 场景：海量数据的获取和迁移。从ES7.1开始不推荐，建议用 after search方案。
 
-## 2.3.高亮
+### 2.3.高亮
 
-### 2.3.1.高亮原理
+#### 2.3.1.高亮原理
 
 什么是高亮显示呢？
 
@@ -692,26 +688,26 @@ GET /hotel/_search
 * 1）给文档中的所有关键字都添加一个标签，例如`<em>`标签
 * 2）页面给`<em>`标签编写CSS样式
 
-### 2.3.2.实现高亮
+#### 2.3.2.实现高亮
 
 **高亮的语法**：
 
 ```json
-GET /hotel/_search
+GET /hotel/_search
 {
-  "query": {
-    "match": {
-      "FIELD": "TEXT" // 查询条件，高亮一定要使用全文检索查询
-    }
-  },
-  "highlight": {
-    "fields": { // 指定要高亮的字段
-      "FIELD": {
-        "pre_tags": "<em>",  // 用来标记高亮字段的前置标签
-        "post_tags": "</em>" // 用来标记高亮字段的后置标签
-      }
-    }
-  }
+  "query": {
+    "match": {
+      "FIELD": "TEXT" // 查询条件，高亮一定要使用全文检索查询
+    }
+  },
+  "highlight": {
+    "fields": { // 指定要高亮的字段
+      "FIELD": {
+        "pre_tags": "<em>",  // 用来标记高亮字段的前置标签
+        "post_tags": "</em>" // 用来标记高亮字段的后置标签
+      }
+    }
+  }
 }
 ```
 
@@ -725,7 +721,7 @@ GET /hotel/_search
 
 ![image-20210721203349633](/assets/image-20210721203349633.BJPtKN2N.png)
 
-## 2.4.总结
+### 2.4.总结
 
 查询的DSL是一个大的JSON对象，包含下列属性：
 
@@ -738,7 +734,7 @@ GET /hotel/_search
 
 ![image-20210721203657850](/assets/image-20210721203657850.DAP4sV_G.png)
 
-# 3.RestClient查询文档
+## 三、RestClient查询文档
 
 文档的查询同样适用昨天学习的 RestHighLevelClient对象，基本步骤包括：
 
@@ -747,11 +743,11 @@ GET /hotel/_search
 * 3）发起请求
 * 4）解析响应
 
-## 3.1.快速入门
+### 3.1.快速入门
 
 我们以match\_all查询为例
 
-### 3.1.1.发起查询请求
+#### 3.1.1.发起查询请求
 
 ![image-20210721203950559](/assets/image-20210721203950559.T_azR6MF.png)
 
@@ -772,7 +768,7 @@ GET /hotel/_search
 
 ![image-20210721215729236](/assets/image-20210721215729236.BbTSQYoo.png)
 
-### 3.1.2.解析响应
+#### 3.1.2.解析响应
 
 响应结果的解析：
 
@@ -793,7 +789,7 @@ elasticsearch返回的结果是一个JSON字符串，结构包含：
   * `SearchHits#getHits()`：获取SearchHit数组，也就是文档数组
     * `SearchHit#getSourceAsString()`：获取文档结果中的\_source，也就是原始的json文档数据
 
-### 3.1.3.完整代码
+#### 3.1.3.完整代码
 
 完整代码如下：
 
@@ -831,7 +827,7 @@ private void handleResponse(SearchResponse response) {
 }
 ```
 
-### 3.1.4.小结
+#### 3.1.4.小结
 
 查询的基本步骤是：
 
@@ -847,7 +843,7 @@ private void handleResponse(SearchResponse response) {
 
 4. 解析结果（参考JSON结果，从外到内，逐层解析）
 
-## 3.2.match查询
+### 3.2.match查询
 
 全文检索的match和multi\_match查询与match\_all的API基本一致。差别是查询条件，也就是query的部分。
 
@@ -877,7 +873,7 @@ void testMatch() throws IOException {
 }
 ```
 
-## 3.3.精确查询
+### 3.3.精确查询
 
 精确查询主要是两者：
 
@@ -890,7 +886,7 @@ void testMatch() throws IOException {
 
 ![image-20210721220305140](/assets/image-20210721220305140.XQQII4cg.png)
 
-## 3.4.布尔查询
+### 3.4.布尔查询
 
 布尔查询是用must、must\_not、filter等方式组合其它查询，代码示例如下：
 
@@ -922,7 +918,7 @@ void testBool() throws IOException {
 }
 ```
 
-## 3.5.排序、分页
+### 3.5.排序、分页
 
 搜索结果的排序和分页是与query同级的参数，因此同样是使用request.source()来设置。
 
@@ -955,14 +951,14 @@ void testPageAndSort() throws IOException {
 }
 ```
 
-## 3.6.高亮
+### 3.6.高亮
 
 高亮的代码与之前代码差异较大，有两点：
 
 * 查询的DSL：其中除了查询条件，还需要添加高亮条件，同样是与query同级。
 * 结果解析：结果除了要解析\_source文档数据，还要解析高亮结果
 
-### 3.6.1.高亮请求构建
+#### 3.6.1.高亮请求构建
 
 高亮请求的构建API如下：
 
@@ -990,7 +986,7 @@ void testHighlight() throws IOException {
 }
 ```
 
-### 3.6.2.高亮结果解析
+#### 3.6.2.高亮结果解析
 
 高亮的结果与查询的文档结果默认是分离的，并不在一起。
 
@@ -1040,7 +1036,7 @@ private void handleResponse(SearchResponse response) {
 }
 ```
 
-# 4.实战案例
+## 四、实战案例
 
 下面，通过案例来实战演练下之前学习的知识。
 
@@ -1055,11 +1051,11 @@ private void handleResponse(SearchResponse response) {
 
 ![image-20210721223159598](/assets/image-20210721223159598.BDTRO2th.png)
 
-## 4.1.酒店搜索和分页
+### 4.1.酒店搜索和分页
 
 案例需求：实现黑马旅游的酒店搜索功能，完成关键字搜索和分页
 
-### 4.1.1.需求分析
+#### 4.1.1.需求分析
 
 在项目的首页，有一个大大的搜索框，还有分页按钮：
 
@@ -1092,7 +1088,7 @@ private void handleResponse(SearchResponse response) {
 * 步骤二：编写controller，接收页面的请求
 * 步骤三：编写业务实现，利用RestHighLevelClient实现搜索、分页
 
-### 4.1.2.定义实体类
+#### 4.1.2.定义实体类
 
 实体类有两个，一个是前端的请求参数实体，一个是服务端应该返回的响应结果实体。
 
@@ -1156,7 +1152,7 @@ public class PageResult {
 }
 ```
 
-### 4.1.3.定义controller
+#### 4.1.3.定义controller
 
 定义一个HotelController，声明查询接口，满足下列要求：
 
@@ -1184,7 +1180,7 @@ public class HotelController {
 }
 ```
 
-### 4.1.4.实现搜索业务
+#### 4.1.4.实现搜索业务
 
 我们在controller调用了IHotelService，并没有实现该方法，因此下面我们就在IHotelService中定义方法，并且去实现业务逻辑。
 
@@ -1264,11 +1260,11 @@ private PageResult handleResponse(SearchResponse response) {
 }
 ```
 
-## 4.2.酒店结果过滤
+### 4.2.酒店结果过滤
 
 需求：添加品牌、城市、星级、价格等过滤功能
 
-### 4.2.1.需求分析
+#### 4.2.1.需求分析
 
 在页面搜索框下面，会有一些过滤项：
 
@@ -1290,7 +1286,7 @@ private PageResult handleResponse(SearchResponse response) {
 * 修改请求参数的对象RequestParams，接收上述参数
 * 修改业务逻辑，在搜索条件之外，添加一些过滤条件
 
-### 4.2.2.修改实体类
+#### 4.2.2.修改实体类
 
 修改在`cn.itcast.hotel.pojo`包下的实体类RequestParams：
 
@@ -1310,7 +1306,7 @@ public class RequestParams {
 }
 ```
 
-### 4.2.3.修改搜索业务
+#### 4.2.3.修改搜索业务
 
 在HotelService的search方法中，只有一个地方需要修改：requet.source().query( ... )其中的查询条件。
 
@@ -1368,11 +1364,11 @@ private void buildBasicQuery(RequestParams params, SearchRequest request) {
 }
 ```
 
-## 4.3.我周边的酒店
+### 4.3.我周边的酒店
 
 需求：我附近的酒店
 
-### 4.3.1.需求分析
+#### 4.3.1.需求分析
 
 在酒店列表页的右侧，有一个小地图，点击地图的定位按钮，地图会找到你所在的位置：
 
@@ -1387,7 +1383,7 @@ private void buildBasicQuery(RequestParams params, SearchRequest request) {
 * 修改RequestParams参数，接收location字段
 * 修改search方法业务逻辑，如果location有值，添加根据geo\_distance排序的功能
 
-### 4.3.2.修改实体类
+#### 4.3.2.修改实体类
 
 修改在`cn.itcast.hotel.pojo`包下的实体类RequestParams：
 
@@ -1413,7 +1409,7 @@ public class RequestParams {
 
 ```
 
-### 4.3.3.距离排序API
+#### 4.3.3.距离排序API
 
 我们以前学习过排序功能，包括两种：
 
@@ -1423,23 +1419,23 @@ public class RequestParams {
 我们只讲了普通字段排序对应的java写法。地理坐标排序只学过DSL语法，如下：
 
 ```json
-GET /indexName/_search
+GET /indexName/_search
 {
-  "query": {
-    "match_all": {}
-  },
-  "sort": [
-    {
-      "price": "asc"  
-    },
-    {
-      "_geo_distance" : {
-          "FIELD" : "纬度，经度",
-          "order" : "asc",
-          "unit" : "km"
-      }
-    }
-  ]
+  "query": {
+    "match_all": {}
+  },
+  "sort": [
+    {
+      "price": "asc"  
+    },
+    {
+      "_geo_distance" : {
+          "FIELD" : "纬度，经度",
+          "order" : "asc",
+          "unit" : "km"
+      }
+    }
+  ]
 }
 ```
 
@@ -1447,7 +1443,7 @@ GET /indexName/_search
 
 ![image-20210722095227059](/assets/image-20210722095227059.BjMVjuer.png)
 
-### 4.3.4.添加距离排序
+#### 4.3.4.添加距离排序
 
 在`cn.itcast.hotel.service.impl`的`HotelService`的`search`方法中，添加一个排序功能：
 
@@ -1490,7 +1486,7 @@ public PageResult search(RequestParams params) {
 }
 ```
 
-### 4.3.5.排序距离显示
+#### 4.3.5.排序距离显示
 
 重启服务后，测试我的酒店功能：
 
@@ -1560,11 +1556,11 @@ public class HotelDoc {
 
 ![image-20210722100838604](/assets/image-20210722100838604.DwmR5dGW.png)
 
-## 4.4.酒店竞价排名
+### 4.4.酒店竞价排名
 
 需求：让指定的酒店在搜索结果中排名置顶
 
-### 4.4.1.需求分析
+#### 4.4.1.需求分析
 
 要让指定酒店在搜索结果中排名置顶，效果如图：
 
@@ -1601,13 +1597,13 @@ public class HotelDoc {
 
 3. 修改search方法，添加function score功能，给isAD值为true的酒店增加权重
 
-### 4.4.2.修改HotelDoc实体
+#### 4.4.2.修改HotelDoc实体
 
 给`cn.itcast.hotel.pojo`包下的HotelDoc类添加isAD字段：
 
 ![image-20210722101908062](/assets/image-20210722101908062.DGCTPCi0.png)
 
-### 4.4.3.添加广告标记
+#### 4.4.3.添加广告标记
 
 接下来，我们挑几个酒店，添加isAD字段，设置为true：
 
@@ -1638,7 +1634,7 @@ POST /hotel/_update/2056105938
 }
 ```
 
-### 4.4.4.添加算分函数查询
+#### 4.4.4.添加算分函数查询
 
 接下来我们就要修改查询条件了。之前是用的boolean 查询，现在要改成function\_socre查询。
 

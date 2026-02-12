@@ -4,7 +4,7 @@ url: /Java/架构设计/分布式/02.分布式搜索/3_搜索引擎Elasticsearch
 
 # Elasticsearch高级功能
 
-# 1.数据聚合
+## 一、数据聚合
 
 **[聚合（](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html)[aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html)[）](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html)** 可以让我们极其方便的实现对数据的统计、分析、运算。例如：
 
@@ -14,7 +14,7 @@ url: /Java/架构设计/分布式/02.分布式搜索/3_搜索引擎Elasticsearch
 
 实现这些统计功能的比数据库的sql要方便的多，而且查询速度非常快，可以实现近实时搜索效果。
 
-## 1.1.聚合的种类
+### 1.1.聚合的种类
 
 聚合常见的有三类：
 
@@ -32,26 +32,26 @@ url: /Java/架构设计/分布式/02.分布式搜索/3_搜索引擎Elasticsearch
 
 > \*\*注意：\*\*参加聚合的字段必须是keyword、日期、数值、布尔类型
 
-## 1.2.DSL实现聚合
+### 1.2.DSL实现聚合
 
 现在，我们要统计所有数据中的酒店品牌有几种，其实就是按照品牌对数据分组。此时可以根据酒店品牌的名称做聚合，也就是Bucket聚合。
 
-### 1.2.1.Bucket聚合语法
+#### 1.2.1.Bucket聚合语法
 
 语法如下：
 
 ```json
-GET /hotel/_search
+GET /hotel/_search
 {
-  "size": 0,  // 设置size为0，结果中不包含文档，只包含聚合结果
-  "aggs": { // 定义聚合
-    "brandAgg": { //给聚合起个名字
-      "terms": { // 聚合的类型，按照品牌值聚合，所以选择term
-        "field": "brand", // 参与聚合的字段
-        "size": 20 // 希望获取的聚合结果数量
-      }
-    }
-  }
+  "size": 0,  // 设置size为0，结果中不包含文档，只包含聚合结果
+  "aggs": { // 定义聚合
+    "brandAgg": { //给聚合起个名字
+      "terms": { // 聚合的类型，按照品牌值聚合，所以选择term
+        "field": "brand", // 参与聚合的字段
+        "size": 20 // 希望获取的聚合结果数量
+      }
+    }
+  }
 }
 ```
 
@@ -59,55 +59,55 @@ GET /hotel/_search
 
 ![image-20210723171948228](/assets/image-20210723171948228.B5Yp5fz0.png)
 
-### 1.2.2.聚合结果排序
+#### 1.2.2.聚合结果排序
 
 默认情况下，Bucket聚合会统计Bucket内的文档数量，记为\_count，并且按照\_count降序排序。
 
 我们可以指定order属性，自定义聚合的排序方式：
 
 ```json
-GET /hotel/_search
+GET /hotel/_search
 {
-  "size": 0, 
-  "aggs": {
-    "brandAgg": {
-      "terms": {
-        "field": "brand",
-        "order": {
-          "_count": "asc" // 按照_count升序排列
-        },
-        "size": 20
-      }
-    }
-  }
+  "size": 0, 
+  "aggs": {
+    "brandAgg": {
+      "terms": {
+        "field": "brand",
+        "order": {
+          "_count": "asc" // 按照_count升序排列
+        },
+        "size": 20
+      }
+    }
+  }
 }
 ```
 
-### 1.2.3.限定聚合范围
+#### 1.2.3.限定聚合范围
 
 默认情况下，Bucket聚合是对索引库的所有文档做聚合，但真实场景下，用户会输入搜索条件，因此聚合必须是对搜索结果聚合。那么聚合必须添加限定条件。
 
 我们可以限定要聚合的文档范围，只要添加query条件即可：
 
 ```json
-GET /hotel/_search
+GET /hotel/_search
 {
-  "query": {
-    "range": {
-      "price": {
-        "lte": 200 // 只对200元以下的文档聚合
-      }
-    }
-  }, 
-  "size": 0, 
-  "aggs": {
-    "brandAgg": {
-      "terms": {
-        "field": "brand",
-        "size": 20
-      }
-    }
-  }
+  "query": {
+    "range": {
+      "price": {
+        "lte": 200 // 只对200元以下的文档聚合
+      }
+    }
+  }, 
+  "size": 0, 
+  "aggs": {
+    "brandAgg": {
+      "terms": {
+        "field": "brand",
+        "size": 20
+      }
+    }
+  }
 }
 ```
 
@@ -115,7 +115,7 @@ GET /hotel/_search
 
 ![image-20210723172404836](/assets/image-20210723172404836.CDGbWmlX.png)
 
-### 1.2.4.Metric聚合语法
+#### 1.2.4.Metric聚合语法
 
 上节课，我们对酒店按照品牌分组，形成了一个个桶。现在我们需要对桶内的酒店做运算，获取每个品牌的用户评分的min、max、avg等值。
 
@@ -124,24 +124,24 @@ GET /hotel/_search
 语法如下：
 
 ```json
-GET /hotel/_search
+GET /hotel/_search
 {
-  "size": 0, 
-  "aggs": {
-    "brandAgg": { 
-      "terms": { 
-        "field": "brand", 
-        "size": 20
-      },
-      "aggs": { // 是brands聚合的子聚合，也就是分组后对每组分别计算
-        "score_stats": { // 聚合名称
-          "stats": { // 聚合类型，这里stats可以计算min、max、avg等
-            "field": "score" // 聚合字段，这里是score
-          }
-        }
-      }
-    }
-  }
+  "size": 0, 
+  "aggs": {
+    "brandAgg": { 
+      "terms": { 
+        "field": "brand", 
+        "size": 20
+      },
+      "aggs": { // 是brands聚合的子聚合，也就是分组后对每组分别计算
+        "score_stats": { // 聚合名称
+          "stats": { // 聚合类型，这里stats可以计算min、max、avg等
+            "field": "score" // 聚合字段，这里是score
+          }
+        }
+      }
+    }
+  }
 }
 ```
 
@@ -151,7 +151,7 @@ GET /hotel/_search
 
 ![image-20210723172917636](/assets/image-20210723172917636.Bo26ofTG.png)
 
-### 1.2.5.小结
+#### 1.2.5.小结
 
 aggs代表聚合，与query同级，此时query的作用是？
 
@@ -169,21 +169,19 @@ aggs代表聚合，与query同级，此时query的作用是？
 * order：指定聚合结果排序方式
 * field：指定聚合字段
 
-## 1.3.RestAPI实现聚合
+### 1.3.RestAPI实现聚合
 
-### 1.3.1.API语法
+#### 1.3.1.API语法
 
 聚合条件与query条件同级别，因此需要使用request.source()来指定聚合条件。
 
-聚合条件的语法：
-
-![image-20210723173057733](/assets/image-20210723173057733.CFESkWca.png)
+聚合条件的语法：![image-20210723173057733](/assets/image-20210723173057733.CFESkWca.png)
 
 聚合的结果也与查询结果不同，API也比较特殊。不过同样是JSON逐层解析：
 
 ![image-20210723173215728](/assets/image-20210723173215728.wUZwoMgY.png)
 
-### 1.3.2.业务需求
+#### 1.3.2.业务需求
 
 需求：搜索页面的品牌、城市等信息不应该是在页面写死，而是通过聚合索引库中的酒店数据得来的：
 
@@ -218,7 +216,7 @@ aggs代表聚合，与query同级，此时query的作用是？
 * key是字符串，城市、星级、品牌、价格
 * value是集合，例如多个城市的名称
 
-### 1.3.3.业务实现
+#### 1.3.3.业务实现
 
 在`cn.itcast.hotel.web`包的`HotelController`中添加一个方法，遵循下面的要求：
 
@@ -314,7 +312,7 @@ private List<String> getAggByName(Aggregations aggregations, String aggName) {
 }
 ```
 
-# 2.自动补全
+## 二、自动补全
 
 当用户在搜索框输入字符时，我们应该提示出与该字符有关的搜索项，如图：
 
@@ -324,35 +322,39 @@ private List<String> getAggByName(Aggregations aggregations, String aggName) {
 
 因为需要根据拼音字母来推断，因此要用到拼音分词功能。
 
-## 2.1.拼音分词器
+### 2.1.拼音分词器
 
 要实现根据字母做补全，就必须对文档按照拼音分词。在GitHub上恰好有elasticsearch的拼音分词插件。地址：https://github.com/medcl/elasticsearch-analysis-pinyin
 
 ![image-20210723205932746](/assets/image-20210723205932746.BQCf1c5q.png)
 
-课前资料中也提供了拼音分词器的安装包：
+下载后，修改名称为py：
 
 ![image-20210723205722303](/assets/image-20210723205722303.ChFn7bDO.png)
 
 安装方式与IK分词器一样，分三步：
 
-​	①解压
+```
+①解压
 
-​	②上传到虚拟机中，elasticsearch的plugin目录
+②上传到虚拟机中，elasticsearch的plugin目录
 
-​	③重启elasticsearch
+③重启elasticsearch
 
-​	④测试
+④测试
+```
 
 详细安装步骤可以参考IK分词器的安装过程。
+
+[安装ElasticSearch](/java/framework/distributed/elastic-search-install.html#三、安装IK分词器)
 
 测试用法如下：
 
 ```json
-POST /_analyze
+POST /_analyze
 {
-  "text": "如家酒店还不错",
-  "analyzer": "pinyin"
+  "text": "如家酒店还不错",
+  "analyzer": "pinyin"
 }
 ```
 
@@ -360,7 +362,7 @@ POST /_analyze
 
 ![image-20210723210126506](/assets/image-20210723210126506.Dsh7Q3dJ.png)
 
-## 2.2.自定义分词器
+### 2.2.自定义分词器
 
 默认的拼音分词器会将每个汉字单独分为拼音，而我们希望的是每个词条形成一组拼音，需要对拼音分词器做个性化定制，形成自定义分词器。
 
@@ -377,38 +379,38 @@ elasticsearch中分词器（analyzer）的组成包含三部分：
 声明自定义分词器的语法如下：
 
 ```json
-PUT /test
+PUT /test
 {
-  "settings": {
-    "analysis": {
-      "analyzer": { // 自定义分词器
-        "my_analyzer": {  // 分词器名称
-          "tokenizer": "ik_max_word",
-          "filter": "py"
-        }
-      },
-      "filter": { // 自定义tokenizer filter
-        "py": { // 过滤器名称
-          "type": "pinyin", // 过滤器类型，这里是pinyin
-		  "keep_full_pinyin": false,
-          "keep_joined_full_pinyin": true,
-          "keep_original": true,
-          "limit_first_letter_length": 16,
-          "remove_duplicated_term": true,
-          "none_chinese_pinyin_tokenize": false
-        }
-      }
-    }
-  },
-  "mappings": {
-    "properties": {
-      "name": {
-        "type": "text",
-        "analyzer": "my_analyzer",
-        "search_analyzer": "ik_smart"
-      }
-    }
-  }
+  "settings": {
+    "analysis": {
+      "analyzer": { // 自定义分词器
+        "my_analyzer": {  // 分词器名称
+          "tokenizer": "ik_max_word",
+          "filter": "py"
+        }
+      },
+      "filter": { // 自定义tokenizer filter
+        "py": { // 过滤器名称
+          "type": "pinyin", // 过滤器类型，这里是pinyin
+		  "keep_full_pinyin": false,
+          "keep_joined_full_pinyin": true,
+          "keep_original": true,
+          "limit_first_letter_length": 16,
+          "remove_duplicated_term": true,
+          "none_chinese_pinyin_tokenize": false
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "name": {
+        "type": "text",
+        "analyzer": "my_analyzer",
+        "search_analyzer": "ik_smart"
+      }
+    }
+  }
 }
 ```
 
@@ -440,7 +442,7 @@ PUT /test
 
 * 为了避免搜索到同音字，搜索时不要使用拼音分词器
 
-## 2.3.自动补全查询
+### 2.3.自动补全查询
 
 elasticsearch提供了[Completion Suggester](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/search-suggesters.html)查询来实现自动补全功能。这个查询会匹配以用户输入内容开头的词条并返回。为了提高补全查询的效率，对于文档中字段的类型有一些约束：
 
@@ -451,16 +453,16 @@ elasticsearch提供了[Completion Suggester](https://www.elastic.co/guide/en/ela
 比如，一个这样的索引库：
 
 ```json
-// 创建索引库
-PUT test
+// 创建索引库
+PUT test
 {
-  "mappings": {
-    "properties": {
-      "title":{
-        "type": "completion"
-      }
-    }
-  }
+  "mappings": {
+    "properties": {
+      "title":{
+        "type": "completion"
+      }
+    }
+  }
 }
 ```
 
@@ -468,40 +470,40 @@ PUT test
 
 ```json
 // 示例数据
-POST test/_doc
+POST test/_doc
 {
-  "title": ["Sony", "WH-1000XM3"]
+  "title": ["Sony", "WH-1000XM3"]
 }
-POST test/_doc
+POST test/_doc
 {
-  "title": ["SK-II", "PITERA"]
+  "title": ["SK-II", "PITERA"]
 }
-POST test/_doc
+POST test/_doc
 {
-  "title": ["Nintendo", "switch"]
+  "title": ["Nintendo", "switch"]
 }
 ```
 
 查询的DSL语句如下：
 
 ```json
-// 自动补全查询
-GET /test/_search
+// 自动补全查询
+GET /test/_search
 {
-  "suggest": {
-    "title_suggest": {
-      "text": "s", // 关键字
-      "completion": {
-        "field": "title", // 补全查询的字段
-        "skip_duplicates": true, // 跳过重复的
-        "size": 10 // 获取前10条结果
-      }
-    }
-  }
+  "suggest": {
+    "title_suggest": {
+      "text": "s", // 关键字
+      "completion": {
+        "field": "title", // 补全查询的字段
+        "skip_duplicates": true, // 跳过重复的
+        "size": 10 // 获取前10条结果
+      }
+    }
+  }
 }
 ```
 
-## 2.4.实现酒店搜索框自动补全
+### 2.4.实现酒店搜索框自动补全
 
 现在，我们的hotel索引库还没有设置拼音分词器，需要修改索引库中的配置。但是我们知道索引库是无法修改的，只能删除然后重新创建。
 
@@ -519,7 +521,7 @@ GET /test/_search
 
 5. 重新导入数据到hotel库
 
-### 2.4.1.修改酒店映射结构
+#### 2.4.1.修改酒店映射结构
 
 代码如下：
 
@@ -608,7 +610,7 @@ PUT /hotel
 }
 ```
 
-### 2.4.2.修改HotelDoc实体
+#### 2.4.2.修改HotelDoc实体
 
 HotelDoc中要添加一个字段，用来做自动补全，内容可以是酒店品牌、城市、商圈等信息。按照自动补全字段的要求，最好是这些字段的数组。
 
@@ -672,13 +674,13 @@ public class HotelDoc {
 }
 ```
 
-### 2.4.3.重新导入
+#### 2.4.3.重新导入
 
 重新执行之前编写的导入数据功能，可以看到新的酒店数据中包含了suggestion：
 
 ![image-20210723213546183](/assets/image-20210723213546183.BkyZJ5HG.png)
 
-### 2.4.4.自动补全查询的JavaAPI
+#### 2.4.4.自动补全查询的JavaAPI
 
 之前我们学习了自动补全查询的DSL，而没有学习对应的JavaAPI，这里给出一个示例：
 
@@ -688,7 +690,7 @@ public class HotelDoc {
 
 ![image-20210723213917524](/assets/image-20210723213917524.BI0M9kyG.png)
 
-### 2.4.5.实现搜索框自动补全
+#### 2.4.5.实现搜索框自动补全
 
 查看前端页面，可以发现当我们在输入框键入时，前端会发起ajax请求：
 
@@ -748,13 +750,13 @@ public List<String> getSuggestions(String prefix) {
 }
 ```
 
-# 3.数据同步
+## 3.数据同步
 
 elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生改变时，elasticsearch也必须跟着改变，这个就是elasticsearch与mysql之间的**数据同步**。
 
 ![image-20210723214758392](/assets/image-20210723214758392.B2v_rk3C.png)
 
-## 3.1.思路分析
+### 3.1.思路分析
 
 常见的数据同步方案有三种：
 
@@ -762,7 +764,7 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 * 异步通知
 * 监听binlog
 
-### 3.1.1.同步调用
+#### 3.1.1.同步调用
 
 方案一：同步调用
 
@@ -773,7 +775,7 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 * hotel-demo对外提供接口，用来修改elasticsearch中的数据
 * 酒店管理服务在完成数据库操作后，直接调用hotel-demo提供的接口，
 
-### 3.1.2.异步通知
+#### 3.1.2.异步通知
 
 方案二：异步通知
 
@@ -784,7 +786,7 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 * hotel-admin对mysql数据库数据完成增、删、改后，发送MQ消息
 * hotel-demo监听MQ，接收到消息后完成elasticsearch数据修改
 
-### 3.1.3.监听binlog
+#### 3.1.3.监听binlog
 
 方案三：监听binlog
 
@@ -796,7 +798,7 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 * mysql完成增、删、改操作都会记录在binlog中
 * hotel-demo基于canal监听binlog变化，实时更新elasticsearch中的内容
 
-### 3.1.4.选择
+#### 3.1.4.选择
 
 方式一：同步调用
 
@@ -813,9 +815,9 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 * 优点：完全解除服务间耦合
 * 缺点：开启binlog增加数据库负担、实现复杂度高
 
-## 3.2.实现数据同步
+### 3.2.实现数据同步
 
-### 3.2.1.思路
+#### 3.2.1.思路
 
 利用课前资料提供的hotel-admin项目作为酒店管理的微服务。当酒店数据发生增、删、改时，要求对elasticsearch中数据也要完成相同操作。
 
@@ -831,7 +833,7 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 
 * 启动并测试数据同步功能
 
-### 3.2.2.导入demo
+#### 3.2.2.导入demo
 
 导入课前资料提供的hotel-admin项目：
 
@@ -845,13 +847,13 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 
 ![image-20210723220511090](/assets/image-20210723220511090.TJwwKQ8k.png)
 
-### 3.2.3.声明交换机、队列
+#### 3.2.3.声明交换机、队列
 
 MQ结构如图：
 
 ![image-20210723215850307](/assets/image-20210723215850307.WujRKf7h.png)
 
-#### 1）引入依赖
+##### 1）引入依赖
 
 在hotel-admin、hotel-demo中引入rabbitmq的依赖：
 
@@ -863,7 +865,7 @@ MQ结构如图：
 </dependency>
 ```
 
-#### 2）声明队列交换机名称
+##### 2）声明队列交换机名称
 
 在hotel-admin和hotel-demo中的`cn.itcast.hotel.constatnts`包下新建一个类`MqConstants`：
 
@@ -894,7 +896,7 @@ package cn.itcast.hotel.constatnts;
 }
 ```
 
-#### 3）声明队列交换机
+##### 3）声明队列交换机
 
 在hotel-demo中，定义配置类，声明队列、交换机：
 
@@ -938,13 +940,13 @@ public class MqConfig {
 }
 ```
 
-### 3.2.4.发送MQ消息
+#### 3.2.4.发送MQ消息
 
 在hotel-admin中的增、删、改业务中分别发送MQ消息：
 
 ![image-20210723221843816](/assets/image-20210723221843816.8PArv-TZ.png)
 
-### 3.2.5.接收MQ消息
+#### 3.2.5.接收MQ消息
 
 hotel-demo接收到MQ消息要做的事情包括：
 
@@ -1033,7 +1035,7 @@ public class HotelListener {
 }
 ```
 
-# 4.集群
+## 四、集群
 
 单机的elasticsearch做数据存储，必然面临两个问题：海量数据存储问题、单点故障问题。
 
@@ -1058,8 +1060,6 @@ public class HotelListener {
 
 * 副本分片（Replica shard）每个主分片可以有一个或者多个副本，数据和主分片一样。
 
-  ​
-
 数据备份可以保证高可用，但是每个分片备份一份，所需要的节点数量就会翻一倍，成本实在是太高了！
 
 为了在高可用和成本间寻求平衡，我们可以这样做：
@@ -1077,19 +1077,13 @@ public class HotelListener {
 * node1：保存了分片0和2
 * node2：保存了分片1和2
 
-## 4.1.搭建ES集群
+### 4.1.搭建ES集群
 
-参考课前资料的文档：
+参考 [安装ElasticSearch](/java/framework/distributed/elastic-search-install.html#四、部署es集群)
 
-![image-20210723222732427](/assets/image-20210723222732427.BjUimuJ-.png)
+### 4.2.集群脑裂问题
 
-其中的第四章节：
-
-![image-20210723222812619](/assets/image-20210723222812619.DWdE7AVA.png)
-
-## 4.2.集群脑裂问题
-
-### 4.2.1.集群职责划分
+#### 4.2.1.集群职责划分
 
 elasticsearch中集群节点有不同的职责划分：
 
@@ -1109,7 +1103,7 @@ elasticsearch中集群节点有不同的职责划分：
 
 ![image-20210723223629142](/assets/image-20210723223629142.Dx2Q1WoG.png)
 
-### 4.2.2.脑裂问题
+#### 4.2.2.脑裂问题
 
 脑裂是因为集群中的节点失联导致的。
 
@@ -1131,7 +1125,7 @@ elasticsearch中集群节点有不同的职责划分：
 
 例如：3个节点形成的集群，选票必须超过 （3 + 1） / 2 ，也就是2票。node3得到node2和node3的选票，当选为主。node1只有自己1票，没有当选。集群中依然只有1个主节点，没有出现脑裂。
 
-### 4.2.3.小结
+#### 4.2.3.小结
 
 master eligible节点的作用是什么？
 
@@ -1148,11 +1142,11 @@ coordinator节点的作用是什么？
 
 * 合并查询到的结果，返回给用户
 
-## 4.3.集群分布式存储
+### 4.3.集群分布式存储
 
 当新增文档时，应该保存到不同分片，保证数据均衡，那么coordinating node如何确定数据该存储到哪个分片呢？
 
-### 4.3.1.分片存储测试
+#### 4.3.1.分片存储测试
 
 插入三条数据：
 
@@ -1170,7 +1164,7 @@ coordinator节点的作用是什么？
 
 ![image-20210723225342120](/assets/image-20210723225342120.CqnxzPKQ.png)
 
-### 4.3.2.分片存储原理
+#### 4.3.2.分片存储原理
 
 elasticsearch会通过hash算法来计算文档应该存储到哪个分片：
 
@@ -1194,7 +1188,7 @@ elasticsearch会通过hash算法来计算文档应该存储到哪个分片：
 * 5）同步给shard-2的副本replica-2，在node2节点
 * 6）返回结果给coordinating-node节点
 
-## 4.4.集群分布式查询
+### 4.4.集群分布式查询
 
 elasticsearch的查询分成两个阶段：
 
@@ -1204,7 +1198,7 @@ elasticsearch的查询分成两个阶段：
 
 ![image-20210723225809848](/assets/image-20210723225809848.Dci6zVq8.png)
 
-## 4.5.集群故障转移
+### 4.5.集群故障转移
 
 集群的master节点会监控集群中的节点状态，如果发现有节点宕机，会立即将宕机节点的分片数据迁移到其它节点，确保数据安全，这个叫做故障转移。
 

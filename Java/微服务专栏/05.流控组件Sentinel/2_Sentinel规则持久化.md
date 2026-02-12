@@ -77,6 +77,10 @@ public class SentinelRuleService {
 
 这样即可实现**Sentinel规则与监控数据的持久化**，保证系统在重启或故障后快速恢复配置。
 
-[Sentinel 规则数据持久化Mysql\_mob649e81576de1的技术博客\_51CTO博客](https://blog.51cto.com/u_16175446/12954218)
+https://www.cnblogs.com/bigcoder84/p/18250563
 
-[如何将Sentinel监控数据持久化存储至数据库？\_编程语言-CSDN问答](https://ask.csdn.net/questions/8641779)
+https://cloud.tencent.com/developer/article/1655863
+
+https://blog.51cto.com/u\_16175446/12954218
+
+https://ask.csdn.net/questions/8641779

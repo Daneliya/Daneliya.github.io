@@ -261,16 +261,16 @@ mapping是对索引库中文档的约束，常见的mapping属性包括：
 
 ```json
 {
-    "age": 21,
-    "weight": 52.1,
-    "isMarried": false,
-    "info": "我是小小黑",
-    "email": "xxl@126.com",
-    "score": [99.1, 99.5, 98.9],
-    "name": {
-        "firstName": "云",
-        "lastName": "赵"
-    }
+    "age": 21,
+    "weight": 52.1,
+    "isMarried": false,
+    "info": "我是小小黑",
+    "email": "xxl@126.com",
+    "score": [99.1, 99.5, 98.9],
+    "name": {
+        "firstName": "云",
+        "lastName": "赵"
+    }
 }
 ```
 
@@ -301,56 +301,56 @@ mapping是对索引库中文档的约束，常见的mapping属性包括：
 格式：
 
 ```json
-PUT /索引库名称
+PUT /索引库名称
 {
-  "mappings": {
-    "properties": {
-      "字段名":{
-        "type": "text",
-        "analyzer": "ik_smart"
-      },
-      "字段名2":{
-        "type": "keyword",
-        "index": "false"
-      },
-      "字段名3":{
-        "properties": {
-          "子字段": {
-            "type": "keyword"
-          }
-        }
-      },
+  "mappings": {
+    "properties": {
+      "字段名":{
+        "type": "text",
+        "analyzer": "ik_smart"
+      },
+      "字段名2":{
+        "type": "keyword",
+        "index": "false"
+      },
+      "字段名3":{
+        "properties": {
+          "子字段": {
+            "type": "keyword"
+          }
+        }
+      },
       // ...略
-    }
-  }
+    }
+  }
 }
 ```
 
 ##### 示例：
 
 ```sh
-PUT /xxl
+PUT /xxl
 {
-  "mappings": {
-    "properties": {
-      "info":{
-        "type": "text",
-        "analyzer": "ik_smart"
-      },
-      "email":{
-        "type": "keyword",
-        "index": "falsae"
-      },
-      "name":{
-        "properties": {
-          "firstName": {
-            "type": "keyword"
-          }
-        }
-      },
+  "mappings": {
+    "properties": {
+      "info":{
+        "type": "text",
+        "analyzer": "ik_smart"
+      },
+      "email":{
+        "type": "keyword",
+        "index": "falsae"
+      },
+      "name":{
+        "properties": {
+          "firstName": {
+            "type": "keyword"
+          }
+        }
+      },
       // ... 略
-    }
-  }
+    }
+  }
 }
 ```
 
@@ -383,13 +383,13 @@ GET /索引库名
 **语法说明**：
 
 ```json
-PUT /索引库名/_mapping
+PUT /索引库名/_mapping
 {
-  "properties": {
-    "新字段名":{
-      "type": "integer"
-    }
-  }
+  "properties": {
+    "新字段名":{
+      "type": "integer"
+    }
+  }
 }
 ```
 
@@ -433,14 +433,14 @@ DELETE /索引库名
 **语法：**
 
 ```json
-POST /索引库名/_doc/文档id
+POST /索引库名/_doc/文档id
 {
-    "字段1": "值1",
-    "字段2": "值2",
-    "字段3": {
-        "子属性1": "值3",
-        "子属性2": "值4"
-    },
+    "字段1": "值1",
+    "字段2": "值2",
+    "字段3": {
+        "子属性1": "值3",
+        "子属性2": "值4"
+    },
     // ...
 }
 ```
@@ -448,14 +448,14 @@ POST /索引库名/_doc/文档id
 **示例：**
 
 ```json
-POST /xxl/_doc/1
+POST /xxl/_doc/1
 {
-    "info": "黑马程序员Java讲师",
-    "email": "zy@itcast.cn",
-    "name": {
-        "firstName": "云",
-        "lastName": "赵"
-    }
+    "info": "黑马程序员Java讲师",
+    "email": "zy@itcast.cn",
+    "name": {
+        "firstName": "云",
+        "lastName": "赵"
+    }
 }
 ```
 
@@ -523,10 +523,10 @@ DELETE /xxl/_doc/1
 **语法：**
 
 ```json
-PUT /{索引库名}/_doc/文档id
+PUT /{索引库名}/_doc/文档id
 {
-    "字段1": "值1",
-    "字段2": "值2",
+    "字段1": "值1",
+    "字段2": "值2",
     // ... 略
 }
 
@@ -535,14 +535,14 @@ PUT /{索引库名}/_doc/文档id
 **示例：**
 
 ```json
-PUT /xxl/_doc/1
+PUT /xxl/_doc/1
 {
-    "info": "黑马程序员高级Java讲师",
-    "email": "zy@itcast.cn",
-    "name": {
-        "firstName": "云",
-        "lastName": "赵"
-    }
+    "info": "黑马程序员高级Java讲师",
+    "email": "zy@itcast.cn",
+    "name": {
+        "firstName": "云",
+        "lastName": "赵"
+    }
 }
 ```
 
@@ -553,10 +553,10 @@ PUT /xxl/_doc/1
 **语法：**
 
 ```json
-POST /{索引库名}/_update/文档id
+POST /{索引库名}/_update/文档id
 {
-    "doc": {
-         "字段名": "新的值",
+    "doc": {
+         "字段名": "新的值",
     }
 }
 ```
@@ -564,11 +564,11 @@ POST /{索引库名}/_update/文档id
 **示例：**
 
 ```json
-POST /xxl/_update/1
+POST /xxl/_update/1
 {
-  "doc": {
-    "email": "ZhaoYun@itcast.cn"
-  }
+  "doc": {
+    "email": "ZhaoYun@itcast.cn"
+  }
 }
 ```
 
@@ -607,21 +607,21 @@ ES官方提供了各种不同语言的客户端，用来操作ES。这些客户�
 数据结构如下：
 
 ```sql
-CREATE TABLE `tb_hotel` (
-  `id` bigint(20) NOT NULL COMMENT '酒店id',
-  `name` varchar(255) NOT NULL COMMENT '酒店名称；例：7天酒店',
-  `address` varchar(255) NOT NULL COMMENT '酒店地址；例：航头路',
-  `price` int(10) NOT NULL COMMENT '酒店价格；例：329',
-  `score` int(2) NOT NULL COMMENT '酒店评分；例：45，就是4.5分',
-  `brand` varchar(32) NOT NULL COMMENT '酒店品牌；例：如家',
-  `city` varchar(32) NOT NULL COMMENT '所在城市；例：上海',
-  `star_name` varchar(16) DEFAULT NULL COMMENT '酒店星级，从低到高分别是：1星到5星，1钻到5钻',
-  `business` varchar(255) DEFAULT NULL COMMENT '商圈；例：虹桥',
-  `latitude` varchar(32) NOT NULL COMMENT '纬度；例：31.2497',
-  `longitude` varchar(32) NOT NULL COMMENT '经度；例：120.3925',
-  `pic` varchar(255) DEFAULT NULL COMMENT '酒店图片；例:/img/1.jpg',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `tb_hotel` (
+  `id` bigint(20) NOT NULL COMMENT '酒店id',
+  `name` varchar(255) NOT NULL COMMENT '酒店名称；例：7天酒店',
+  `address` varchar(255) NOT NULL COMMENT '酒店地址；例：航头路',
+  `price` int(10) NOT NULL COMMENT '酒店价格；例：329',
+  `score` int(2) NOT NULL COMMENT '酒店评分；例：45，就是4.5分',
+  `brand` varchar(32) NOT NULL COMMENT '酒店品牌；例：如家',
+  `city` varchar(32) NOT NULL COMMENT '所在城市；例：上海',
+  `star_name` varchar(16) DEFAULT NULL COMMENT '酒店星级，从低到高分别是：1星到5星，1钻到5钻',
+  `business` varchar(255) DEFAULT NULL COMMENT '商圈；例：虹桥',
+  `latitude` varchar(32) NOT NULL COMMENT '纬度；例：31.2497',
+  `longitude` varchar(32) NOT NULL COMMENT '经度；例：120.3925',
+  `pic` varchar(255) DEFAULT NULL COMMENT '酒店图片；例:/img/1.jpg',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 
 #### 4.0.2.导入项目
@@ -1298,7 +1298,7 @@ void testBulkRequest() throws IOException {
 }
 ```
 
-## 5.6.小结
+### 5.6.小结
 
 文档操作的基本步骤：
 

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Prompt 工程 | xiaolong</title>
+    
+    <meta name="generator" content="VitePress v1.6.4">
+    <link rel="preload stylesheet" href="/assets/style.Du365hsd.css" as="style">
+    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
+    <script type="module" src="/assets/chunks/metadata.cd7d627e.js"></script>
+    <script type="module" src="/assets/app.TrAhGkIA.js"></script>
+    <link rel="preload" href="/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/assets/chunks/theme.IUoEOP7N.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.CMIDsdwV.js">
+    <link rel="modulepreload" href="/assets/AIGC_AI应用开发_2_Prompt工程.md.CEfQlhwZ.lean.js">
+    <link rel="icon" type="image/svg+xml" href="/logo.svg">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh-CN">
+    <meta property="og:title" content="Teek | VitePress Theme">
+    <meta property="og:site_name" content="Teek">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" description="欢迎来到 vitepress-theme-teek 使用文档,Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置,Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景">
+    <meta name="description" description="欢迎来到 vitepress-theme-teek 使用文档,Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置,Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景">
+    <meta name="author" content="Teek">
+    <meta name="keywords" description="欢迎来到 vitepress-theme-teek 使用文档,Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置,Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6079554807639839" crossorigin="anonymous"></script>
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body><!--teleport start anchor--><div style="display:none;" class="tk-spotlight-hover tk-spotlight-hover__aside" aria-hidden="true" focusable="false"></div><!--teleport anchor-->
+    <div id="app"><!--[--><!--v-if--><!--v-if--><!--v-if--><!--[--><!--v-if--><!----><!--v-if--><div class="tk-right-bottom-button tk-wallpaper-outside flx-column"><!--[--><!--]--><div title="返回顶部" class="tk-right-bottom-button__button back-top" style="--tk-progress:0;display:none;" role="button" aria-label="返回顶部" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span class="content">0</span></div><div title="前往评论" class="tk-right-bottom-button__button" role="button" aria-label="前往评论" style="display:none;"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="M273.536 736H800a64 64 0 0 0 64-64V256a64 64 0 0 0-64-64H224a64 64 0 0 0-64 64v570.88zM296 800 147.968 918.4A32 32 0 0 1 96 893.44V256a128 128 0 0 1 128-128h576a128 128 0 0 1 128 128v416a128 128 0 0 1-128 128z"
+    ></path>
+    <path
+      fill="currentColor"
+      d="M512 499.2a51.2 51.2 0 1 1 0-102.4 51.2 51.2 0 0 1 0 102.4zm192 0a51.2 51.2 0 1 1 0-102.4 51.2 51.2 0 0 1 0 102.4zm-384 0a51.2 51.2 0 1 1 0-102.4 51.2 51.2 0 0 1 0 102.4z"
+    ></path>
+  </svg></i></div><!--v-if--><!--[--><!--]--></div><!--]--><div class="Layout tk-layout has-sidebar-trigger" data-v-9a104c51><!--[--><!--]--><!--[--><span tabindex="-1" data-v-0b0ada53></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-0b0ada53>Skip to content</a><!--]--><!----><header class="VPNav" data-v-9a104c51 data-v-ae24b3ad><div class="VPNavBar" data-v-ae24b3ad data-v-6aa21345><div class="wrapper" data-v-6aa21345><div class="container" data-v-6aa21345><div class="title" data-v-6aa21345><div class="VPNavBarTitle has-sidebar" data-v-6aa21345 data-v-1168a8e4><a class="title" href="/" data-v-1168a8e4><!--[--><!--]--><!--[--><img class="VPImage logo" src="/logo.png" alt data-v-8426fc1a><!--]--><span data-v-1168a8e4>xiaolong</span><!--[--><!--]--></a></div></div><div class="content" data-v-6aa21345><div class="content-body" data-v-6aa21345><!--[--><!--]--><div class="VPNavBarSearch search" data-v-6aa21345><!--[--><!----><div id="local-search"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-6aa21345 data-v-dc692963><span id="main-nav-aria-label" class="visually-hidden" data-v-dc692963> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/" tabindex="0" data-v-dc692963 data-v-e56f3d57><!--[--><span data-v-e56f3d57>🏡主页</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-dc692963 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-cf11d7a2><span class="text" data-v-cf11d7a2><!----><span data-v-cf11d7a2>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/java.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Java</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-cf11d7a2></span></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><div class="items" data-v-b98bc113><!--[--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/Java%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/01.JDK%E6%96%B0%E7%89%B9%E6%80%A7/1_JDK8%E6%96%B0%E7%89%B9%E6%80%A7Optional%E5%AE%B9%E5%99%A8%E7%B1%BB.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/code.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Java开发技巧</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/JVM%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/01.JVM%E6%A6%82%E5%BF%B5/0_JVM%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/JVM.svg" alt="" style="width: 16px; height: 16px;">
+              <span>JVM性能调优</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/1_JUC.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/并发编程.svg" alt="" style="width: 16px; height: 16px;">
+              <span>并发编程</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E5%AE%B9%E5%99%A8/Docker/01.Docker%E6%95%99%E7%A8%8B/0_Docker%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BD%BF%E7%94%A8.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/docker.svg" alt="" style="width: 16px; height: 16px;">
+              <span>容器相关</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01.%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/设计模式.svg" alt="" style="width: 16px; height: 16px;">
+              <span>设计模式</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%93%E6%A0%8F/01.SpringCloud/1_SpringCloud%E7%AE%80%E4%BB%8B.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/mse.svg" alt="" style="width: 16px; height: 16px;">
+              <span>微服务专栏</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E5%88%86%E5%B8%83%E5%BC%8F/01.%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/架构设计.svg" alt="" style="width: 16px; height: 16px;">
+              <span>架构设计</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98API%E5%AF%B9%E6%8E%A5%E6%8C%87%E5%8D%97/1_%E5%95%86%E5%AE%B6%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/解决方案.svg" alt="" style="width: 16px; height: 16px;">
+              <span>解决方案</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/数据结构.svg" alt="" style="width: 16px; height: 16px;">
+              <span>数据结构</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Java/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/1_%E5%B9%82%E7%AD%89%E8%AE%BE%E8%AE%A1.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/系统优化.svg" alt="" style="width: 16px; height: 16px;">
+              <span>系统优化</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-dc692963 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-cf11d7a2><span class="text" data-v-cf11d7a2><!----><span data-v-cf11d7a2>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/python.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Python</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-cf11d7a2></span></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><div class="items" data-v-b98bc113><!--[--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Python/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/Python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/基础语法.svg" alt="" style="width: 16px; height: 16px;">
+              <span>基础语法</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/1_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/数据分析.svg" alt="" style="width: 16px; height: 16px;">
+              <span>数据分析</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Python/%E7%88%AC%E8%99%AB/1_%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/爬虫.svg" alt="" style="width: 16px; height: 16px;">
+              <span>爬虫</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/1_AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A7%91%E6%99%AE.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/人工智能.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AI大模型应用开发</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-dc692963 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-cf11d7a2><span class="text" data-v-cf11d7a2><!----><span data-v-cf11d7a2>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/database.svg" alt="" style="width: 16px; height: 16px;">
+              <span>数据库</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-cf11d7a2></span></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><div class="items" data-v-b98bc113><!--[--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/database/mysql/acid.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/MySQL.svg" alt="" style="width: 16px; height: 16px;">
+              <span>MySQL</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/database/mongodb/mongodb-introduction.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/MongoDB.svg" alt="" style="width: 16px; height: 16px;">
+              <span>MongoDB</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/database/postgresql/postgresql-introduction.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/PostgreSQL.svg" alt="" style="width: 16px; height: 16px;">
+              <span>PostgreSQL</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/database/tidb/tidb-introduction.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/TiDB.svg" alt="" style="width: 16px; height: 16px;">
+              <span>分布式数据库TIDB</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/database/neo4j/neo4j-introduce.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Neo4j.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Neo4j</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/Redis/Redis%E5%9F%BA%E7%A1%80/1_Redis%E7%BC%93%E5%AD%98%E4%B8%89%E5%A4%A7%E9%97%AE%E9%A2%98.html" tabindex="0" data-v-dc692963 data-v-e56f3d57><!--[--><span data-v-e56f3d57>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/redis.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Redis专栏</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-dc692963 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-cf11d7a2><span class="text" data-v-cf11d7a2><!----><span data-v-cf11d7a2>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/framework.svg" alt="" style="width: 16px; height: 16px;">
+              <span>常用框架</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-cf11d7a2></span></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><div class="items" data-v-b98bc113><!--[--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Activiti7/Activiti%E6%95%B4%E5%90%88Spring.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/工作流.svg" alt="" style="width: 16px; height: 16px;">
+              <span>工作流引擎Activiti7</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Caffeine/0_Caffeine%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/缓存.svg" alt="" style="width: 16px; height: 16px;">
+              <span>缓存框架Caffeine</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/EasyCaptcha/0_%E4%BD%BF%E7%94%A8EasyCaptcha%E7%94%9F%E6%88%90%E9%AA%8C%E8%AF%81%E7%A0%81.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/验证码.svg" alt="" style="width: 16px; height: 16px;">
+              <span>验证码EasyCaptcha</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/EasyExcel/0_EasyExcel%E6%A6%82%E8%BF%B0.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/EasyExcel.svg" alt="" style="width: 16px; height: 16px;">
+              <span>表格工具EasyExcel</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/java/framework/distributed/elastic-search-introduction.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/ElasticSearch.svg" alt="" style="width: 16px; height: 16px;">
+              <span>搜索引擎ElasticSearch</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Mybatis/Mybatis-Plus-Join%E8%BF%9E%E8%A1%A8%E6%9F%A5%E8%AF%A2.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Mybatis.svg" alt="" style="width: 16px; height: 16px;">
+              <span>三剑客Mybatis</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/ShardingJdbc/0_ShardingJdbc%E7%9A%84%E6%A6%82%E8%BF%B0.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/手动分表.svg" alt="" style="width: 16px; height: 16px;">
+              <span>分库分表ShardingJdbc</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/1_Spring%E5%AE%B9%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Spring.svg" alt="" style="width: 16px; height: 16px;">
+              <span>三剑客Spring</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/SpringBoot/SpringBoot%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/0_SpringBoot%E7%BC%96%E7%A8%8B%E8%B5%B7%E6%AD%A5.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/SpringBoot.svg" alt="" style="width: 16px; height: 16px;">
+              <span>三剑客SpringBoot</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/framework/springAI/overview.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/spring-ai.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AI框架Spring AI</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/framework/springAIAlibaba/overview.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/阿里巴巴.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AI框架Spring AI Alibaba</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/java/framework/distributed/springBootAdmin.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/监控.svg" alt="" style="width: 16px; height: 16px;">
+              <span>监控工具SpringBootAdmin</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/java/framework/distributed/distributedTaskScheduling.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/xxl-job.svg" alt="" style="width: 16px; height: 16px;">
+              <span>任务调度XXL-JOB</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/framework/thymeleaf/thymeleafBasicGrammar.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/thymeleaf.svg" alt="" style="width: 16px; height: 16px;">
+              <span>模板引擎Thymeleaf</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-b98bc113 data-v-35975db6><a class="VPLink link" href="/framework/retry/springRetry.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/重试.svg" alt="" style="width: 16px; height: 16px;">
+              <span>重试框架Retry</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/Linux/01.Shell%E5%91%BD%E4%BB%A4/0_Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html" tabindex="0" data-v-dc692963 data-v-e56f3d57><!--[--><span data-v-e56f3d57>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/linux.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Linux</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-dc692963 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-cf11d7a2><span class="text" data-v-cf11d7a2><!----><span data-v-cf11d7a2>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/aigc.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AIGC</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-cf11d7a2></span></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><div class="items" data-v-b98bc113><!--[--><!--[--><div class="VPMenuGroup" data-v-b98bc113 data-v-69e747b5><p class="title" data-v-69e747b5>AI 应用开发</p><!--[--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/1_%E5%90%8D%E8%AF%8D%E6%A6%82%E5%BF%B5.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/vuepress.svg" alt="" style="width: 16px; height: 16px;">
+              <span>名词概念</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-b98bc113 data-v-69e747b5><p class="title" data-v-69e747b5>AI 绘画</p><!--[--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/01.StableDiffusion/0_StableDiffusion%E4%BB%8B%E7%BB%8D.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/StableDiffusion.svg" alt="" style="width: 16px; height: 16px;">
+              <span>StableDiffusion</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/02.WebUI/0_WebUI%E4%BB%8B%E7%BB%8D.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/WebUI.svg" alt="" style="width: 16px; height: 16px;">
+              <span>WebUI</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/03.ComfyUI/0_ComfyUI%E7%AE%80%E4%BB%8B.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/ComfyUI.png" alt="" style="width: 16px; height: 16px;">
+              <span>ComfyUI</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/04.Midjourney/0_Midjourney%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Midjourney.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Midjourney</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/05.AIGC/AI%E7%BB%98%E7%94%BB%E6%8F%90%E7%A4%BA%E8%AF%8D.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/其他.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AIGC项目</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-dc692963 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-cf11d7a2><span class="text" data-v-cf11d7a2><!----><span data-v-cf11d7a2>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/notes.svg" alt="" style="width: 16px; height: 16px;">
+              <span>随笔文档</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-cf11d7a2></span></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><div class="items" data-v-b98bc113><!--[--><!--[--><div class="VPMenuGroup" data-v-b98bc113 data-v-69e747b5><p class="title" data-v-69e747b5>博客笔记</p><!--[--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/Vuepress/0_Vuepress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/vuepress.svg" alt="" style="width: 16px; height: 16px;">
+              <span>VuePress</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/VitPress/0_Vitpress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/vuepress-open.svg" alt="" style="width: 16px; height: 16px;">
+              <span>VitPress</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/%E5%85%B6%E4%BB%96%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/Github_Pages%E5%8A%A0%E9%80%9F.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/其他.svg" alt="" style="width: 16px; height: 16px;">
+              <span>其他</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-b98bc113 data-v-69e747b5><p class="title" data-v-69e747b5>日常笔记</p><!--[--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/%E7%8E%A9%E5%AE%A2%E4%BA%91.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/note.svg" alt="" style="width: 16px; height: 16px;">
+              <span>日常笔记</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/0_%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/开源02.svg" alt="" style="width: 16px; height: 16px;">
+              <span>个人项目</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/0_%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/开源.svg" alt="" style="width: 16px; height: 16px;">
+              <span>开源项目</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/考试.svg" alt="" style="width: 16px; height: 16px;">
+              <span>软件设计师</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E9%9D%A2%E8%AF%95%E4%B8%93%E6%A0%8F/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9B%B8%E5%85%B3/1_%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/谈话面试.svg" alt="" style="width: 16px; height: 16px;">
+              <span>面试专栏</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/daily/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/1_%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/数学.svg" alt="" style="width: 16px; height: 16px;">
+              <span>高等数学</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-b98bc113 data-v-69e747b5><p class="title" data-v-69e747b5>关于本站</p><!--[--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/nav.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/官网网站.svg" alt="" style="width: 16px; height: 16px;">
+              <span>网站导航</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/archives.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/归档2.svg" alt="" style="width: 16px; height: 16px;">
+              <span>文章归档</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-69e747b5 data-v-35975db6><a class="VPLink link" href="/articleOverview.html" data-v-35975db6><!--[--><span data-v-35975db6>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/清单2.svg" alt="" style="width: 16px; height: 16px;">
+              <span>文章清单</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-6aa21345 data-v-6c893767><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-6c893767 data-v-5337faa4 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-5337faa4></span><span class="vpi-moon moon" data-v-5337faa4></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-6aa21345 data-v-0394ad82 data-v-7bc22406><!--[--><a class="VPSocialLink no-icon" href="https://gitee.com/xu_xiaolong" aria-label="gitee" target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><span class="vpi-social-gitee"></span></a><a class="VPSocialLink no-icon" href="https://github.com/Daneliya" aria-label="github" target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-6aa21345 data-v-bb2aa2f0 data-v-cf11d7a2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-cf11d7a2><span class="vpi-more-horizontal icon" data-v-cf11d7a2></span></button><div class="menu" data-v-cf11d7a2><div class="VPMenu" data-v-cf11d7a2 data-v-b98bc113><!----><!--[--><!--[--><!----><div class="group" data-v-bb2aa2f0><div class="item appearance" data-v-bb2aa2f0><p class="label" data-v-bb2aa2f0>主题</p><div class="appearance-action" data-v-bb2aa2f0><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-bb2aa2f0 data-v-5337faa4 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-5337faa4></span><span class="vpi-moon moon" data-v-5337faa4></span><!--]--></span></span></button></div></div></div><div class="group" data-v-bb2aa2f0><div class="item social-links" data-v-bb2aa2f0><div class="VPSocialLinks social-links-list" data-v-bb2aa2f0 data-v-7bc22406><!--[--><a class="VPSocialLink no-icon" href="https://gitee.com/xu_xiaolong" aria-label="gitee" target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><span class="vpi-social-gitee"></span></a><a class="VPSocialLink no-icon" href="https://github.com/Daneliya" aria-label="github" target="_blank" rel="noopener" data-v-7bc22406 data-v-bd121fe5><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--[--><!--[--><!--[--><!--]--><!--[--><div class="tk-theme-enhance flx-align-center"><!--[--><i class="tk-icon" style="--icon-size:20px;--icon-color-hover:var(--tk-theme-color);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="m512 863.36 384-54.848v-638.72L525.568 222.72a96 96 0 0 1-27.136 0L128 169.792v638.72zM137.024 106.432l370.432 52.928a32 32 0 0 0 9.088 0l370.432-52.928A64 64 0 0 1 960 169.792v638.72a64 64 0 0 1-54.976 63.36l-388.48 55.488a32 32 0 0 1-9.088 0l-388.48-55.488A64 64 0 0 1 64 808.512v-638.72a64 64 0 0 1 73.024-63.36z"
+    ></path>
+    <path fill="currentColor" d="M480 192h64v704h-64z"></path>
+  </svg></i><!--]--></div><!--teleport start--><!--teleport end--><!--]--><!--]--><!--]--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-6aa21345 data-v-e5dd9c1c><span class="container" data-v-e5dd9c1c><span class="top" data-v-e5dd9c1c></span><span class="middle" data-v-e5dd9c1c></span><span class="bottom" data-v-e5dd9c1c></span></span></button></div></div></div></div><div class="divider" data-v-6aa21345><div class="divider-line" data-v-6aa21345></div></div></div><!----></header><div class="VPLocalNav has-sidebar empty" data-v-9a104c51 data-v-a6f0e41e><div class="container" data-v-a6f0e41e><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-a6f0e41e><span class="vpi-align-left menu-icon" data-v-a6f0e41e></span><span class="menu-text" data-v-a6f0e41e>菜单</span></button><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-a6f0e41e data-v-8a42e2b4><button data-v-8a42e2b4>返回顶部</button><!----></div></div></div><aside class="VPSidebar" data-v-9a104c51 data-v-319d5ca6><div class="curtain" data-v-319d5ca6></div><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-319d5ca6><span class="visually-hidden" id="sidebar-aria-label" data-v-319d5ca6> Sidebar Navigation </span><!--[--><!--[--><!--v-if--><!--]--><!--]--><!--[--><div class="no-transition group" data-v-c40bc020><section class="VPSidebarItem level-0" data-v-c40bc020 data-v-b3fd67f8><!----><div class="items" data-v-b3fd67f8><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/1_%E5%90%8D%E8%AF%8D%E6%A6%82%E5%BF%B5.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>名词概念</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/2_Prompt%E5%B7%A5%E7%A8%8B.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>Prompt 工程</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/3_RAG%E6%A3%80%E7%B4%A2%E5%A2%9E%E5%BC%BA%E7%94%9F%E6%88%90.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>RAG 检索增强生成</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/4_MCP%E5%8D%8F%E8%AE%AE.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>MCP 协议</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/Agent%20Skill.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>Agent Skills</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-c40bc020><section class="VPSidebarItem level-0 collapsible" data-v-c40bc020 data-v-b3fd67f8><div class="item" role="button" tabindex="0" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><h2 class="text" data-v-b3fd67f8>LangGraph4j</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-b3fd67f8><span class="vpi-chevron-right caret-icon" data-v-b3fd67f8></span></div></div><div class="items" data-v-b3fd67f8><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b3fd67f8 data-v-b3fd67f8><div class="item" data-v-b3fd67f8><div class="indicator" data-v-b3fd67f8></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/LangGraph4j/1_LangGraph4j%E5%85%A5%E9%97%A8.html" data-v-b3fd67f8><!--[--><p class="text" data-v-b3fd67f8>LangGraph4j 入门</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-9a104c51 data-v-1428d186><div class="VPDoc has-sidebar has-aside" data-v-1428d186 data-v-39a288b8><!--[--><!--]--><div class="container" data-v-39a288b8><div class="aside" data-v-39a288b8><div class="aside-curtain" data-v-39a288b8></div><div class="aside-container" data-v-39a288b8><div class="aside-content" data-v-39a288b8><div class="VPDocAside" data-v-39a288b8 data-v-3f215769><!--[--><!--]--><!--[--><!--[--><!--[--><!--[--><!--[--><!--[--><!--]--><div class="tk-article-share"><button class="tk-article-share__button flx-center" aria-label="分享此页面" aria-live="polite"><div class="flx-center"><i class="tk-icon" style="margin-right:4px;--icon-color-hover:var(--tk-theme-color);"><svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    aria-hidden="true"
+    role="img"
+    class="iconify iconify iconify--solar"
+    alt="Icon"
+    width="1em"
+    height="1em"
+    viewBox="0 0 24 24"
+    style="vertical-align: -0.125em"
+  >
+    <path
+      fill="currentColor"
+      fill-rule="evenodd"
+      d="M13.803 5.333c0-1.84 1.5-3.333 3.348-3.333A3.34 3.34 0 0 1 20.5 5.333c0 1.841-1.5 3.334-3.349 3.334a3.35 3.35 0 0 1-2.384-.994l-4.635 3.156a3.34 3.34 0 0 1-.182 1.917l5.082 3.34a3.35 3.35 0 0 1 2.12-.753a3.34 3.34 0 0 1 3.348 3.334C20.5 20.507 19 22 17.151 22a3.34 3.34 0 0 1-3.348-3.333a3.3 3.3 0 0 1 .289-1.356L9.05 14a3.35 3.35 0 0 1-2.202.821A3.34 3.34 0 0 1 3.5 11.487a3.34 3.34 0 0 1 3.348-3.333c1.064 0 2.01.493 2.623 1.261l4.493-3.059a3.3 3.3 0 0 1-.161-1.023"
+      clip-rule="evenodd"
+    ></path>
+  </svg></i> 分享此页面</div></button></div><!--[--><!--]--><!--]--><!--[--><!--]--><!--]--><!--]--><!--]--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-3f215769 data-v-a5bbad30><div class="content" data-v-a5bbad30><div class="outline-marker" data-v-a5bbad30></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-a5bbad30>本页导航</div><ul class="VPDocOutlineItem root" data-v-a5bbad30 data-v-b933a997><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-3f215769></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-39a288b8><div class="content-container" data-v-39a288b8><!--[--><!--[--><!--[--><!--[--><!--]--><!--[--><!--[--><!--]--><div class="tk-article-analyze flx-justify-between" aria-label="文章分析"><div class="tk-article-breadcrumb" role="navigation" aria-label="文章面包屑"><div class="tk-breadcrumb" role="navigation" aria-label="面包屑"><!--[--><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><a href="/" title="首页" class="home hover-color" aria-label="首页"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="M192 413.952V896h640V413.952L512 147.328zM139.52 374.4l352-293.312a32 32 0 0 1 40.96 0l352 293.312A32 32 0 0 1 896 398.976V928a32 32 0 0 1-32 32H160a32 32 0 0 1-32-32V398.976a32 32 0 0 1 11.52-24.576"
+    ></path>
+  </svg></i></a><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><!--[--><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><span href title="AIGC" class="" aria-label="AIGC">AIGC</span><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><span href title="AI应用开发" class="" aria-label="AI应用开发">AI应用开发</span><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><!--]--><!--]--></div></div><div class="tk-article-analyze__wrapper flx-align-center"><div class="tk-article-info article" role="group" aria-label="文章信息"><!--[--><!--[--><span class="tk-article-info__item" role="group" aria-label="作者"><i class="tk-icon tk-article-info__icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <path
+    fill="currentColor"
+    d="M512 512a192 192 0 1 0 0-384 192 192 0 0 0 0 384m0 64a256 256 0 1 1 0-512 256 256 0 0 1 0 512m320 320v-96a96 96 0 0 0-96-96H288a96 96 0 0 0-96 96v96a32 32 0 1 1-64 0v-96a160 160 0 0 1 160-160h448a160 160 0 0 1 160 160v96a32 32 0 1 1-64 0"
+  ></path>
+</svg></i><a title="作者" href="https://github.com/Daneliya" target="_blank" class="hover-color" aria-label="xiaolong">xiaolong</a></span><!--]--><!--[--><span class="tk-article-info__item" role="group" aria-label="创建时间"><i class="tk-icon tk-article-info__icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <path
+    fill="currentColor"
+    d="M128 384v512h768V192H768v32a32 32 0 1 1-64 0v-32H320v32a32 32 0 0 1-64 0v-32H128v128h768v64zm192-256h384V96a32 32 0 1 1 64 0v32h160a32 32 0 0 1 32 32v768a32 32 0 0 1-32 32H96a32 32 0 0 1-32-32V160a32 32 0 0 1 32-32h160V96a32 32 0 0 1 64 0zm-32 384h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64m0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64m192-192h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64m0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64m192-192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64m0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64"
+  ></path>
+</svg></i><a title="创建时间" class="hover-color" aria-label="2026-02-06">2026-02-06</a></span><!--]--><!--[--><!--v-if--><!--]--><!--[--><!--v-if--><!--]--><!--[--><!--v-if--><!--]--><!--]--><!--[--><!--]--></div><div class="flx-center"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="m512 863.36 384-54.848v-638.72L525.568 222.72a96 96 0 0 1-27.136 0L128 169.792v638.72zM137.024 106.432l370.432 52.928a32 32 0 0 0 9.088 0l370.432-52.928A64 64 0 0 1 960 169.792v638.72a64 64 0 0 1-54.976 63.36l-388.48 55.488a32 32 0 0 1-9.088 0l-388.48-55.488A64 64 0 0 1 64 808.512v-638.72a64 64 0 0 1 73.024-63.36z"
+    ></path>
+    <path fill="currentColor" d="M480 192h64v704h-64z"></path>
+  </svg></i><a title="文章字数" class="hover-color" aria-label="文章字数">5344</a></div><div class="flx-center"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="M512 896a384 384 0 1 0 0-768 384 384 0 0 0 0 768m0 64a448 448 0 1 1 0-896 448 448 0 0 1 0 896"
+    ></path>
+    <path fill="currentColor" d="M480 256a32 32 0 0 1 32 32v256a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32"></path>
+    <path fill="currentColor" d="M480 512h256q32 0 32 32t-32 32H480q-32 0-32-32t32-32"></path>
+  </svg></i><a title="预计阅读时长" class="hover-color" aria-label="预计阅读时长">19.1m</a></div><!--v-if--></div></div><!--[--><!--]--><!--]--><!----><!----><!----><!--v-if--><!--[--><div class="tk-sidebar-trigger" title="侧边栏展开/折叠" role="button" aria-label="侧边栏展开/折叠"><div class="tk-right-bottom-button__button"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg
+    viewBox="0 0 48 48"
+    display="inline-block"
+    vertical-align="middle"
+    min-width="1.2rem"
+    width="1.2em"
+    height="1.2em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4">
+      <path d="M6 7h36M8 24h32" />
+      <path stroke-linejoin="round" d="M13.99 30L8 24.005L14 18m20.01 0L40 23.995L34 30" />
+      <path d="M6 41h36" />
+    </g>
+  </svg></i></div></div><!--]--><!--]--><!--]--><!--]--><main class="main" data-v-39a288b8><div style="position:relative;" class="vp-doc _AIGC_AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91_2_Prompt%E5%B7%A5%E7%A8%8B" data-v-39a288b8><div><div style="display:none;" hidden="true" aria-hidden="true">Are you an LLM? You can read better optimized documentation at /AIGC\AI应用开发\2_Prompt工程.md for this page in Markdown format</div><h1 id="prompt-工程" tabindex="-1">Prompt 工程 <a class="header-anchor" href="#prompt-工程" aria-label="Permalink to &quot;Prompt 工程&quot;">​</a></h1><h2 id="一、prompt-工程" tabindex="-1">一、Prompt 工程 <a class="header-anchor" href="#一、prompt-工程" aria-label="Permalink to &quot;一、Prompt 工程&quot;">​</a></h2><h3 id="基本概念" tabindex="-1">基本概念 <a class="header-anchor" href="#基本概念" aria-label="Permalink to &quot;基本概念&quot;">​</a></h3><p>Prompt 工程（Prompt Engineering）又叫提示词工程，简单来说，就是输入给 AI 的指令。比如下面这段内容，就是提示词：</p><div class="language-Markdown vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Markdown</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Spring AI Alibaba是个什么框架?</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br></div></div><p>那为什么要叫 “工程” 呢？</p><p>因为 AI 大模型生成的内容是不确定的，构建一个能够按照预期生成内容的提示词既是一门艺术，也是一门科学。提示词的质量直接影响到 AI 大模型输出的结果，因此这也是 AI 应用开发的关键技能，很多公司专门招聘提示词工程师。</p><p>我们学习 Prompt 工程的目标是：通过精心设计和优化输入提示来引导 AI 模型生成符合预期的高质量输出。</p><h3 id="提示词分类" tabindex="-1">提示词分类 <a class="header-anchor" href="#提示词分类" aria-label="Permalink to &quot;提示词分类&quot;">​</a></h3><h4 id="核心-基于角色的分类" tabindex="-1">核心 - 基于角色的分类 <a class="header-anchor" href="#核心-基于角色的分类" aria-label="Permalink to &quot;核心 - 基于角色的分类&quot;">​</a></h4><p>在 AI 对话中，基于角色的分类是最常见的，通常存在 3 种主要类型的 Prompt：</p><p>1）用户 Prompt (User Prompt)：这是用户向 AI 提供的实际问题、指令或信息，传达了用户的直接需求。用户 Prompt 告诉 AI 模型 “做什么”，比如回答问题、编写代码、生成创意内容等。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>用户：帮我写一首关于春天的短诗</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br></div></div><p>2）系统 Prompt (System Prompt)：这是设置 AI 模型行为规则和角色定位的隐藏指令，用户通常不能直接看到。系统 Prompt 相当于给 AI 设定人格和能力边界，即告诉 AI “你是谁？你能做什么？”。</p><div class="language-Markdown vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Markdown</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">系统：你是编程导航的专业编程导师，擅长引导初学者入门编程并制定学习路径。使用友好鼓励的语气，解释复杂概念时要通俗易懂，适当使用比喻让新手理解，避免过于晦涩的技术术语。</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">用户：我完全没有编程基础，想学习编程开发，但不知道从何开始，能给我一些建议吗？</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">助手：欢迎加入编程的世界！作为编程小白，建议你可以按照以下步骤开始学习之旅...</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">【多轮对话继续】</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>不同的系统 Prompt 可以让同一个 AI 模型表现出完全不同的应用特性，这是构建垂直领域 AI 应用（如财务顾问、教育辅导、医疗咨询等）的关键。</p><p>比如 23 年 AI 刚流行的时候，很多 AI 助手平台，都是基于设置不同的系统 Prompt 来提供不同的 AI 助手。</p><p><img src="/assets/Gpg20YswOzuNPfwZ.CUWnEbBf.webp" alt="img" loading="lazy"></p><p>3）助手 Prompt (Assistant Prompt)：这是 AI 模型的响应内容。在多轮对话中，之前的助手回复也会成为当前上下文的一部分，影响后续对话的理解和生成。某些场景下，开发者可以主动预设一些助手消息作为对话历史的一部分，引导后续互动。</p><div class="language-Markdown vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Markdown</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">助手：我是你的恋爱顾问，很高兴能帮助你解决情感问题。你目前遇到了什么样的恋爱困惑呢？可以告诉我你们的关系现状和具体遇到的问题吗？</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br></div></div><p>在实际应用中，这些不同类型的提示词往往会组合使用。举个例子，一个完整的对话可能包含：</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>系统：你是编程导航的专业编程导师，擅长引导初学者入门编程并制定学习路径。使用友好鼓励的语气，解释复杂概念时要通俗易懂，适当使用比喻让新手理解，避免过于晦涩的技术术语。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>用户：我完全没有编程基础，想学习编程开发，但不知道从何开始，能给我一些建议吗？</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>助手：欢迎加入编程的世界！作为编程小白，建议你可以按照以下步骤开始学习之旅...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>【多轮对话继续】</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>AI 大模型开发平台允许用户自主设置各种不同类型的提示词来进行调试：</p><p><img src="/assets/DNXSq73x65VnSOtK.RpEtiPoV.webp" alt="img" loading="lazy"></p><h4 id="扩展知识-基于功能的分类" tabindex="-1">扩展知识 - 基于功能的分类 <a class="header-anchor" href="#扩展知识-基于功能的分类" aria-label="Permalink to &quot;扩展知识 - 基于功能的分类&quot;">​</a></h4><p>除了基于角色的分类外，我们还可以从功能角度对提示词进行分类，仅作了解即可。</p><p>1）指令型提示词（Instructional Prompts）：明确告诉 AI 模型需要执行的任务，通常以命令式语句开头。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>翻译以下文本为英文：春天来了，花儿开了。</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br></div></div><p>2）对话型提示词（Conversational Prompts）：模拟自然对话，以问答形式与 AI 模型交互。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>你认为人工智能会在未来取代人类工作吗？</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br></div></div><p>3）创意型提示词（Creative Prompts）：引导 AI 模型进行创意内容生成，如故事、诗歌、广告文案等。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>写一个发生在未来太空殖民地的短篇科幻故事，主角是一位机器人工程师。</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br></div></div><p>4）角色扮演提示词（Role-Playing Prompts）：让 AI 扮演特定角色或人物进行回答。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>假设你是爱因斯坦，如何用简单的语言解释相对论？</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br></div></div><p>5）少样本学习提示词（Few-Shot Prompts）：提供一些示例，引导 AI 理解所需的输出格式和风格。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>将以下句子改写为正式商务语言：</span></span>
+<span class="line"><span>示例1：</span></span>
+<span class="line"><span>原句：这个想法不错。</span></span>
+<span class="line"><span>改写：该提案展现了相当的潜力和创新性。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>示例2：</span></span>
+<span class="line"><span>原句：我们明天见。</span></span>
+<span class="line"><span>改写：期待明日与您会面，继续我们的商务讨论。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>现在请改写：这个价格太高了。</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h4 id="扩展知识-基于复杂度的分类" tabindex="-1">扩展知识 - 基于复杂度的分类 <a class="header-anchor" href="#扩展知识-基于复杂度的分类" aria-label="Permalink to &quot;扩展知识 - 基于复杂度的分类&quot;">​</a></h4><p>还可以从结构复杂度的角度对提示词进行分类，仅作了解即可。</p><p>1）简单提示词（Simple Prompts）：单一指令或问题，没有复杂的背景或约束条件。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>什么是人工智能？</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br></div></div><p>2）复合提示词（Compound Prompts）：包含多个相关指令或步骤的提示词。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>分析下面这段代码，解释它的功能，找出潜在的错误，并提供改进建议。</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br></div></div><p>3）链式提示词（Chain Prompts）：一系列连续的、相互依赖的提示词，每个提示词基于前一个提示词的输出</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>第一步：生成一个科幻故事的基本情节。</span></span>
+<span class="line"><span>第二步：基于情节创建三个主要角色，包括他们的背景和动机。</span></span>
+<span class="line"><span>第三步：利用这些角色和情节，撰写故事的开篇段落。</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>4）模板提示词（Template Prompts）：包含可替换变量的标准化提示词结构，常用于大规模应用。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>你是一位专业的{领域}专家。请回答以下关于{主题}的问题：{具体问题}。</span></span>
+<span class="line"><span>回答应包含{要点数量}个关键点，并使用{风格}的语言风格。</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>💡 模板提示词的概念还是需要了解一下的，在应用开发过程中，我们可能会用到该特性，来保证提示词是规范统一的。</p><h3 id="token" tabindex="-1">Token <a class="header-anchor" href="#token" aria-label="Permalink to &quot;Token&quot;">​</a></h3><p>Token 是大模型处理文本的基本单位，可能是单词或标点符号，模型的输入和输出都是按 Token 计算的，一般 Token 越多，成本越高，并且输出速度越慢。</p><p>因此在 AI 应用开发中，了解和控制 Token 的消耗至关重要。</p><h4 id="如何计算-token" tabindex="-1">如何计算 Token？ <a class="header-anchor" href="#如何计算-token" aria-label="Permalink to &quot;如何计算 Token？&quot;">​</a></h4><p>首先，不同大模型对 Token 的划分规则略有不同，比如根据 OpenAI 的文档：</p><ul><li>英文文本：一个 token 大约相当于 4 个字符或约 0.75 个英文单词</li><li>中文文本：一个汉字通常会被编码为 1-2 个 token</li><li>空格和标点：也会计入 token 数量</li><li>特殊符号和表情符号：可能需要多个 token 来表示</li></ul><p>简单估算一下，100 个英文单词约等于 75-150 个 Token，而 100 个中文字符约等于 100-200 个 Token。</p><p>实际应用中，更推荐使用工具来估计 Prompt 的 Token 数量，比如：</p><ul><li><a href="https://platform.openai.com/tokenizer" target="_blank" rel="noreferrer">OpenAI Tokenizer</a>：适用于 OpenAI 模型的官方 Token 计算器</li><li><a href="https://tiktoken.aigc2d.com/" target="_blank" rel="noreferrer">非官方的 Token 计算器</a></li></ul><p><img src="/assets/JHpcxjSSPyFYmlcA.DYjYQUto.webp" alt="img" loading="lazy"></p><h4 id="token-成本计算" tabindex="-1">Token 成本计算 <a class="header-anchor" href="#token-成本计算" aria-label="Permalink to &quot;Token 成本计算&quot;">​</a></h4><p>估算成本有个公式：总成本 = (输入token数 × 输入单价) + (输出token数 × 输出单价)</p><p>不同大模型的计费都不太一样，因此要认真阅读官方文档的计费标准，比如阿里系大模型：</p><p><img src="/assets/NREvu3nSJBsFCHY1.DaNjmgjD.webp" alt="img" loading="lazy"></p><p>建议大家估算成本时，可以多去对比不同大模型的价格，参考下列表格去整理一个详细的对比表格，结果一目了然：</p><table tabindex="0"><thead><tr><th>模型</th><th>输入价格(/1K tokens)</th><th>输出价格(/1K tokens)TRQG02HuvSbBCdyta/9OfF/iMg4d5URNJyKR3KkD/fE=</th><th>1000字对话预估成本</th></tr></thead><tbody><tr><td>GPT-xx</td><td>$0.0015</td><td>$0.002</td><td>¥0.02-0.03</td></tr><tr><td>GPT-xxx</td><td>$0.03</td><td>$0.06</td><td>¥0.3-0.5</td></tr><tr><td>Claude-xxx</td><td>$0.00025</td><td>$0.00125yc4QRp8ovNJ57GPA7bri+mKydKIKzxDFmOrjcxZEUcM=</td><td>¥0.01-0.02</td></tr></tbody></table><h4 id="token-成本优化技巧" tabindex="-1">Token 成本优化技巧 <a class="header-anchor" href="#token-成本优化技巧" aria-label="Permalink to &quot;Token 成本优化技巧&quot;">​</a></h4><p>注意，系统提示词、用户提示词和 AI 大模型输出的内容都是消耗成本的，因此我们成本优化主要从这些角度进行。</p><p>1）精简系统提示词：移除冗余表述，保留核心指令。比如将 “你是一个非常专业、经验丰富且非常有耐心的编程导师” 简化为 “你是编程导师”。</p><p>2）定期清理对话历史：对话上下文会随着交互不断累积 Token。在长对话中，可以定期请求 AI 总结之前的对话，然后以总结替代详细历史。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>请总结我们至今的对话要点，后续我们将基于此总结继续讨论。</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br></div></div><p>3）使用向量检索代替直接输入：对于需要处理大量参考文档的场景，不要直接将整个文档作为 Prompt，而是使用向量数据库和检索技术（RAG）获取相关段落。后续教程会带大家实战。</p><p>4）结构化替代自然语言：使用表格、列表等结构化格式代替长段落描述。</p><p>举个例子，优化前：</p><div class="language-Markdown vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Markdown</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">请问如何制作披萨？首先需要准备面粉、酵母、水、盐、橄榄油作为基础面团材料。然后根据口味选择酱料，可以是番茄酱或白酱。接着准备奶酪，最常用的是马苏里拉奶酪。最后准备各种配料如意大利香肠、蘑菇、青椒等。</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br></div></div><p>优化后：</p><div class="language-Markdown vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Markdown</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">披萨制作材料：</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 面团：面粉、酵母、水、盐、橄榄油</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 酱料：番茄酱/白酱</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 奶酪：马苏里拉</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 配料：意大利香肠、蘑菇、青椒等</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">如何制作？</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="二、prompt-优化技巧" tabindex="-1">二、Prompt 优化技巧 <a class="header-anchor" href="#二、prompt-优化技巧" aria-label="Permalink to &quot;二、Prompt 优化技巧&quot;">​</a></h2><p>前面也提到了，‍‍‍‍‍设计 Prompt 是一门‌‌‌‌‌艺术，高质量的 Promp‍‍‍‍‍t 可以显著提升 AI 输‍‍‍‍‍出的质量，因此我们需要重点‍‍‍‍‍掌握 Prompt 优化技巧。</p><h3 id="利用资源" tabindex="-1">利用资源 <a class="header-anchor" href="#利用资源" aria-label="Permalink to &quot;利用资源&quot;">​</a></h3><h4 id="_1、prompt-学习" tabindex="-1">1、Prompt 学习 <a class="header-anchor" href="#_1、prompt-学习" aria-label="Permalink to &quot;1、Prompt 学习&quot;">​</a></h4><p>网上和 Prompt 优化相关的资源非常丰富，几乎各大主流 AI 大模型和 AI 开发框架官方文档都有相关的介绍，推荐先阅读至少 2 篇，比如：</p><ul><li><a href="https://www.promptingguide.ai/zh" target="_blank" rel="noreferrer">Prompt Engineering Guide 提示工程指南</a></li><li><a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank" rel="noreferrer">OpenAI 提示词工程指南</a></li><li><a href="https://docs.spring.io/spring-ai/reference/api/prompt.html#_prompt_engineering" target="_blank" rel="noreferrer">Spring AI 提示工程指南</a></li><li><a href="https://docs.anthropic.com/zh-CN/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noreferrer">Authropic 提示词工程指南</a></li><li><a href="https://github.com/anthropics/prompt-eng-interactive-tutorial" target="_blank" rel="noreferrer">Authropic 提示词工程指南（开源仓库）</a></li><li><a href="https://open.bigmodel.cn/dev/guidelines/LanguageModels" target="_blank" rel="noreferrer">智谱 AI Prompt 设计指南</a></li></ul><p><img src="/assets/IoZbbknGdQt9X6NT.CJWen0lE.webp" alt="img" loading="lazy"></p><h4 id="_2、prompt-提示词库" tabindex="-1">2、Prompt 提示词库 <a class="header-anchor" href="#_2、prompt-提示词库" aria-label="Permalink to &quot;2、Prompt 提示词库&quot;">​</a></h4><p>网上也有很多现成的提示词库，在自主优化提示词前，可以先尝试搜索有没有现成的提示词参考：</p><ul><li>文本对话：<a href="https://docs.anthropic.com/zh-CN/prompt-library/library" target="_blank" rel="noreferrer">Authropic 提示词库</a></li><li>AI 绘画：<a href="https://promptlibrary.org/" target="_blank" rel="noreferrer">Midjourney 提示词库</a></li></ul><p><img src="/assets/cC3ichM0RHwxt1Ty.DMgG34b6.webp" alt="img" loading="lazy"></p><p>鱼皮汇总了来自 OpenAI、Anthropic、智谱 AI 等主流 AI 服务商的提示工程最佳实践，给大家整理了一份完备的 Prompt 优化技巧。</p><h3 id="基础提示技巧" tabindex="-1">基础提示技巧 <a class="header-anchor" href="#基础提示技巧" aria-label="Permalink to &quot;基础提示技巧&quot;">​</a></h3><h4 id="_1、明确指定任务和角色" tabindex="-1">1、明确指定任务和角色 <a class="header-anchor" href="#_1、明确指定任务和角色" aria-label="Permalink to &quot;1、明确指定任务和角色&quot;">​</a></h4><p>为 AI 提供清晰的任务描述和角色定位，帮助模型理解背景和期望。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>系统：你是一位经验丰富的Python教师，擅长向初学者解释编程概念。</span></span>
+<span class="line"><span>用户：请解释 Python 中的列表推导式，包括基本语法和 2-3 个实用示例。</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="_2、提供详细说明和具体示例" tabindex="-1">2、提供详细说明和具体示例 <a class="header-anchor" href="#_2、提供详细说明和具体示例" aria-label="Permalink to &quot;2、提供详细说明和具体示例&quot;">​</a></h4><p>提供足够的上下文信息和期望的输出格式示例，减少模型的不确定性。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>请提供一个社交媒体营销计划，针对一款新上市的智能手表。计划应包含:</span></span>
+<span class="line"><span>1. 目标受众描述</span></span>
+<span class="line"><span>2. 三个内容主题</span></span>
+<span class="line"><span>3. 每个平台的内容类型建议</span></span>
+<span class="line"><span>4. 发布频率建议</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>示例格式:</span></span>
+<span class="line"><span>目标受众: [描述]</span></span>
+<span class="line"><span>内容主题: [主题1], [主题2], [主题3]</span></span>
+<span class="line"><span>平台策略: [平台] - [内容类型] - [频率]</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h4 id="_3、使用结构化格式引导思维" tabindex="-1">3、使用结构化格式引导思维 <a class="header-anchor" href="#_3、使用结构化格式引导思维" aria-label="Permalink to &quot;3、使用结构化格式引导思维&quot;">​</a></h4><p>通过列表、表格等结构化格式，使指令更易理解，输出更有条理。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>分析以下公司的优势和劣势:</span></span>
+<span class="line"><span>公司: Tesla</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>请使用表格格式回答，包含以下列:</span></span>
+<span class="line"><span>- 优势(最少3项)</span></span>
+<span class="line"><span>- 每项优势的简要分析</span></span>
+<span class="line"><span>- 劣势(最少3项)</span></span>
+<span class="line"><span>- 每项劣势的简要分析</span></span>
+<span class="line"><span>- 应对建议</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h4 id="_4、明确输出格式要求" tabindex="-1">4、明确输出格式要求 <a class="header-anchor" href="#_4、明确输出格式要求" aria-label="Permalink to &quot;4、明确输出格式要求&quot;">​</a></h4><p>指定输出的格式、长度、风格等要求，获得更符合预期的结果。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>撰写一篇关于气候变化的科普文章，要求:</span></span>
+<span class="line"><span>- 使用通俗易懂的语言，适合高中生阅读</span></span>
+<span class="line"><span>- 包含5个小标题，每个标题下2-3段文字</span></span>
+<span class="line"><span>- 总字数控制在800字左右</span></span>
+<span class="line"><span>- 结尾提供3个可行的个人行动建议</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="进阶提示技巧" tabindex="-1">进阶提示技巧 <a class="header-anchor" href="#进阶提示技巧" aria-label="Permalink to &quot;进阶提示技巧&quot;">​</a></h3><h4 id="_1、思维链提示法-chain-of-thought" tabindex="-1">1、思维链提示法（Chain-of-Thought） <a class="header-anchor" href="#_1、思维链提示法-chain-of-thought" aria-label="Permalink to &quot;1、思维链提示法（Chain-of-Thought）&quot;">​</a></h4><p>引导模型展示推理过程，逐步思考问题，提高复杂问题的准确性。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>问题：一个商店售卖T恤，每件15元。如果购买5件以上可以享受8折优惠。小明买了7件T恤，他需要支付多少钱？</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>请一步步思考解决这个问题:</span></span>
+<span class="line"><span>1. 首先计算7件T恤的原价</span></span>
+<span class="line"><span>2. 确定是否符合折扣条件</span></span>
+<span class="line"><span>3. 如果符合，计算折扣后的价格</span></span>
+<span class="line"><span>4. 得出最终支付金额</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="_2、少样本学习-few-shot-learning" tabindex="-1">2、少样本学习（Few-Shot Learning） <a class="header-anchor" href="#_2、少样本学习-few-shot-learning" aria-label="Permalink to &quot;2、少样本学习（Few-Shot Learning）&quot;">​</a></h4><p>通过提供几个输入-输出对的示例，帮助模型理解任务模式和期望输出。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>我将给你一些情感分析的例子，然后请你按照同样的方式分析新句子的情感倾向。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输入: &quot;这家餐厅的服务太差了，等了一个小时才上菜&quot;</span></span>
+<span class="line"><span>输出: 负面，因为描述了长时间等待和差评服务</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输入: &quot;新买的手机屏幕清晰，电池也很耐用&quot;</span></span>
+<span class="line"><span>输出: 正面，因为赞扬了产品的多个方面</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>现在分析这个句子:</span></span>
+<span class="line"><span>&quot;这本书内容还行，但是价格有点贵&quot;</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h4 id="_3、分步骤指导-step-by-step" tabindex="-1">3、分步骤指导（Step-by-Step） <a class="header-anchor" href="#_3、分步骤指导-step-by-step" aria-label="Permalink to &quot;3、分步骤指导（Step-by-Step）&quot;">​</a></h4><p>将复杂任务分解为可管理的步骤，确保模型完成每个关键环节。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>请帮我创建一个简单的网站落地页设计方案，按照以下步骤:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>步骤1: 分析目标受众(考虑年龄、职业、需求等因素)</span></span>
+<span class="line"><span>步骤2: 确定页面核心信息(主标题、副标题、价值主张)</span></span>
+<span class="line"><span>步骤3: 设计页面结构(至少包含哪些区块)</span></span>
+<span class="line"><span>步骤4: 制定视觉引导策略(颜色、图像建议)</span></span>
+<span class="line"><span>步骤5: 设计行动召唤(CTA)按钮和文案</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="_4、自我评估和修正" tabindex="-1">4、自我评估和修正 <a class="header-anchor" href="#_4、自我评估和修正" aria-label="Permalink to &quot;4、自我评估和修正&quot;">​</a></h4><p>让模型评估自己的输出并进行改进，提高准确性和质量。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>解决以下概率问题:</span></span>
+<span class="line"><span>从一副标准扑克牌中随机抽取两张牌，求抽到至少一张红桃的概率。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>首先给出你的解答，然后:</span></span>
+<span class="line"><span>1. 检查你的推理过程是否存在逻辑错误</span></span>
+<span class="line"><span>2. 验证你使用的概率公式是否正确</span></span>
+<span class="line"><span>3. 检查计算步骤是否有误</span></span>
+<span class="line"><span>4. 如果发现任何问题，提供修正后的解答</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h4 id="_5、知识检索和引用" tabindex="-1">5、知识检索和引用 <a class="header-anchor" href="#_5、知识检索和引用" aria-label="Permalink to &quot;5、知识检索和引用&quot;">​</a></h4><p>引导模型检索相关信息并明确引用信息来源，提高可靠性。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>请解释光合作用的过程及其在植物生长中的作用。在回答中:</span></span>
+<span class="line"><span>1. 提供光合作用的科学定义</span></span>
+<span class="line"><span>2. 解释主要的化学反应</span></span>
+<span class="line"><span>3. 描述影响光合作用效率的关键因素</span></span>
+<span class="line"><span>4. 说明其对生态系统的重要性</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>对于任何可能需要具体数据或研究支持的陈述，请明确指出这些信息的来源，并说明这些信息的可靠性。</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="_6、多视角分析" tabindex="-1">6、多视角分析 <a class="header-anchor" href="#_6、多视角分析" aria-label="Permalink to &quot;6、多视角分析&quot;">​</a></h4><p>引导模型从不同角度、立场或专业视角分析问题，提供全面见解。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>分析&quot;城市应该禁止私家车进入市中心&quot;这一提议:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>请从以下4个不同角度分析:</span></span>
+<span class="line"><span>1. 环保专家视角</span></span>
+<span class="line"><span>2. 经济学家视角</span></span>
+<span class="line"><span>3. 市中心商户视角</span></span>
+<span class="line"><span>4. 通勤居民视角</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>对每个视角:</span></span>
+<span class="line"><span>- 提供支持该提议的2个论点</span></span>
+<span class="line"><span>- 提供反对该提议的2个论点</span></span>
+<span class="line"><span>- 分析可能的折中方案</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h4 id="_7、多模态思维" tabindex="-1">7、多模态思维 <a class="header-anchor" href="#_7、多模态思维" aria-label="Permalink to &quot;7、多模态思维&quot;">​</a></h4><p>结合不同表达形式进行思考，如文字描述、图表结构、代码逻辑等。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>设计一个智能家居系统的基础架构:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>1. 首先用文字描述系统的主要功能和组件</span></span>
+<span class="line"><span>2. 然后创建一个系统架构图(用ASCII或文本形式表示)</span></span>
+<span class="line"><span>3. 接着提供用户交互流程</span></span>
+<span class="line"><span>4. 最后简述实现这个系统可能面临的技术挑战</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>尝试从不同角度思考:功能性、用户体验、技术实现、安全性等。</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="提示词调试与优化" tabindex="-1">提示词调试与优化 <a class="header-anchor" href="#提示词调试与优化" aria-label="Permalink to &quot;提示词调试与优化&quot;">​</a></h3><p>好的提示词可能很难一步到位，因此我们要学会如何持续调试和优化 Prompt。</p><h4 id="_1、迭代式提示优化" tabindex="-1">1、迭代式提示优化 <a class="header-anchor" href="#_1、迭代式提示优化" aria-label="Permalink to &quot;1、迭代式提示优化&quot;">​</a></h4><p>通过逐步修改和完善提示词，提高输出质量。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>初始提示: 谈谈人工智能的影响。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[收到笼统回答后]</span></span>
+<span class="line"><span>改进提示: 分析人工智能对医疗行业的三大积极影响和两大潜在风险，提供具体应用案例。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[如果回答仍然不够具体]</span></span>
+<span class="line"><span>进一步改进: 详细分析AI在医学影像诊断领域的具体应用，包括:</span></span>
+<span class="line"><span>1. 现有的2-3个成功商业化AI诊断系统及其准确率</span></span>
+<span class="line"><span>2. 这些系统如何辅助放射科医生工作</span></span>
+<span class="line"><span>3. 实施过程中遇到的主要挑战</span></span>
+<span class="line"><span>4. 未来3-5年可能的技术发展方向</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h4 id="_2、边界测试" tabindex="-1">2、边界测试 <a class="header-anchor" href="#_2、边界测试" aria-label="Permalink to &quot;2、边界测试&quot;">​</a></h4><p>通过极限情况测试模型的能力边界，找出优化空间。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>尝试解决以下具有挑战性的数学问题:</span></span>
+<span class="line"><span>证明在三角形中，三条高的交点、三条中线的交点和三条角平分线的交点在同一条直线上。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>如果你发现难以直接证明:</span></span>
+<span class="line"><span>1. 说明你遇到的具体困难</span></span>
+<span class="line"><span>2. 考虑是否有更简单的方法或特例可以探讨</span></span>
+<span class="line"><span>3. 提供一个思路框架，即使无法给出完整证明</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="_3、提示词模板化" tabindex="-1">3、提示词模板化 <a class="header-anchor" href="#_3、提示词模板化" aria-label="Permalink to &quot;3、提示词模板化&quot;">​</a></h4><p>创建结构化模板，便于针对类似任务进行一致性提示，否则每次输出的内容可能会有比较大的区别，不利于调试。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>【专家角色】: {领域}专家</span></span>
+<span class="line"><span>【任务描述】: {任务详细说明}</span></span>
+<span class="line"><span>【所需内容】:</span></span>
+<span class="line"><span>- {要点1}</span></span>
+<span class="line"><span>- {要点2}</span></span>
+<span class="line"><span>- {要点3}</span></span>
+<span class="line"><span>【输出格式】: {格式要求}</span></span>
+<span class="line"><span>【语言风格】: {风格要求}</span></span>
+<span class="line"><span>【限制条件】: {字数、时间或其他限制}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>例如:</span></span>
+<span class="line"><span>【专家角色】: 营养学专家</span></span>
+<span class="line"><span>【任务描述】: 为一位想减重的上班族设计一周健康饮食计划</span></span>
+<span class="line"><span>【所需内容】:</span></span>
+<span class="line"><span>- 七天的三餐安排</span></span>
+<span class="line"><span>- 每餐的大致卡路里</span></span>
+<span class="line"><span>- 准备建议和购物清单</span></span>
+<span class="line"><span>【输出格式】: 按日分段，每餐列出具体食物</span></span>
+<span class="line"><span>【语言风格】: 专业但友好</span></span>
+<span class="line"><span>【限制条件】: 考虑准备时间短，预算有限</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h4 id="_4、错误分析与修正" tabindex="-1">4、错误分析与修正 <a class="header-anchor" href="#_4、错误分析与修正" aria-label="Permalink to &quot;4、错误分析与修正&quot;">​</a></h4><p>系统性分析模型回答中的错误，并针对性优化提示词，这一点在我们使用 Cursor 等 AI 开发工具生成代码时非常有用。</p><div class="language-Plain vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">Plain</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>我发现之前请你生成的Python代码存在以下问题:</span></span>
+<span class="line"><span>1. 没有正确处理文件不存在的情况</span></span>
+<span class="line"><span>2. 数据处理逻辑中存在边界条件错误</span></span>
+<span class="line"><span>3. 代码注释不够详细</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>请重新生成代码，特别注意:</span></span>
+<span class="line"><span>1. 添加完整的异常处理</span></span>
+<span class="line"><span>2. 测试并确保所有边界条件</span></span>
+<span class="line"><span>3. 为每个主要函数和复杂逻辑添加详细注释</span></span>
+<span class="line"><span>4. 遵循PEP 8编码规范</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>虽然前面提到了这么多提示词优化技巧，但总结出来就一句话：任务越复杂，就越要给 Prompt 补充更多细节。</p><p>我们可以把 AI 当成人类，如果你的问题模糊不清，那么得到的答案可能就并不理想。</p><p>此时鱼皮又要掏出那本经典小册<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md" target="_blank" rel="noreferrer">《提问的智慧》</a>了，建议大家认真阅读，做一个聪明的提问者。        ‍‍</p></div></div></main><footer class="VPDocFooter" data-v-39a288b8 data-v-e257564d><!--[--><!--]--><div class="edit-info" data-v-e257564d><div class="edit-link" data-v-e257564d><a class="VPLink link vp-external-link-icon no-icon edit-link-button" href="https://github.com/Kele-Bingtang/vitepress-theme-teek/edit/master/docs/AIGC/AI应用开发/2_Prompt工程.md" target="_blank" rel="noreferrer" data-v-e257564d><!--[--><span class="vpi-square-pen edit-link-icon" data-v-e257564d></span> 在 GitHub 上编辑此页<!--]--></a></div><div class="last-updated" data-v-e257564d><p class="VPLastUpdated" data-v-e257564d data-v-e98dd255>上次更新时间: <time datetime="2026-02-06T09:32:05.000Z" data-v-e98dd255></time></p></div></div><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-e257564d><span class="visually-hidden" id="doc-footer-aria-label" data-v-e257564d>Pager</span><div class="pager" data-v-e257564d><!----></div><div class="pager" data-v-e257564d><a class="VPLink link pager-link next" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/1_%E5%90%8D%E8%AF%8D%E6%A6%82%E5%BF%B5.html" data-v-e257564d><!--[--><span class="desc" data-v-e257564d>下一页</span><span class="title" data-v-e257564d>名词概念</span><!--]--></a></div></nav></footer><!--[--><!--[--><!--[--><!--[--><!--]--><!--[--><!--[--><!--]--><div class="tk-article-update"><div class="tk-article-update__title flx-align-center"><i class="tk-icon edit-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="m199.04 672.64 193.984 112 224-387.968-193.92-112-224 388.032zm-23.872 60.16 32.896 148.288 144.896-45.696zM455.04 229.248l193.92 112 56.704-98.112-193.984-112-56.64 98.112zM104.32 708.8l384-665.024 304.768 175.936L409.152 884.8h.064l-248.448 78.336zm384 254.272v-64h448v64h-448z"
+    ></path>
+  </svg></i><a href="/@pages/archivesPage.html" class="hover-color" aria-label="最近更新">最近更新</a></div><ul><!--[--><li class="flx-center"><span class="tk-article-update--num" aria-hidden="true">01</span><div class="tk-article-update__content"><a href="/Java/Java开发技巧/04.IDEA技巧/3_IDEA+Linux远程开发.html" class="flx-1 hover-color sle" aria-label="IDEA+Linux远程开发"><span class="tk-article-title" aria-label="文章标题"><!--v-if--><!--[--><!--[-->IDEA+Linux远程开发<!--]--><!--]--><!--v-if--></span></a><span class="tk-article-update__content--date">2026-02-12 14:30:27</span></div></li><li class="flx-center"><span class="tk-article-update--num" aria-hidden="true">02</span><div class="tk-article-update__content"><a href="/Java/架构设计/分布式/01.分布式缓存/" class="flx-1 hover-color sle" aria-label="分布式缓存"><span class="tk-article-title" aria-label="文章标题"><!--v-if--><!--[--><!--[-->分布式缓存<!--]--><!--]--><!--v-if--></span></a><span class="tk-article-update__content--date">2026-02-12 14:30:27</span></div></li><li class="flx-center"><span class="tk-article-update--num" aria-hidden="true">03</span><div class="tk-article-update__content"><a href="/Java/架构设计/分布式/02.分布式搜索/5_安装Elasticsearch.html" class="flx-1 hover-color sle" aria-label="安装 ElasticSearch"><span class="tk-article-title" aria-label="文章标题"><!--v-if--><!--[--><!--[-->安装 ElasticSearch<!--]--><!--]--><!--v-if--></span></a><span class="tk-article-update__content--date">2026-02-12 14:30:27</span></div></li><li class="flx-center"><span class="tk-article-update--num" aria-hidden="true"></span><div class="tk-article-update__content"><a href="/@pages/archivesPage.html" class="flx-1 hover-color sle" aria-label="更多文章 &gt;"><span class="tk-article-title" aria-label="文章标题"><!--v-if--><!--[--><!--[-->更多文章 &gt;<!--]--><!--]--><!--v-if--></span></a><!--v-if--></div></li><!--]--></ul></div><!--[--><!--]--><!--]--><!--v-if--><!-- 评论区 --><!--v-if--><!--]--><!--]--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div><!--]--></div>
+    
+    
+  </body>
+</html>
