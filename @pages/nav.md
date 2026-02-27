@@ -52,7 +52,11 @@ url: /@pages/nav.md
   link: https://space.coze.cn
   img: /svg/website/扣子.png
   badge: 零代码AI智能体开发平台
-
+- name: 火山引擎
+  desc: 字节跳动旗下的云与AI服务平台。在AI时代，聚焦豆包大模型和AI云原生技术，为企业提供从 Agent 开发到部署的一站式服务，助力企业AI转型与创新发展。
+  link: https://console.volcengine.com/ark/region:ark+cn-beijing/overview
+  img: /svg/website/火山引擎.svg
+  badge: 零代码AI智能体开发平台
 
 ```
 
@@ -454,6 +458,26 @@ url: /@pages/nav.md
   link: https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html
   img: /svg/website/微信开发者工具.png
   badge: WEB开发
+```
+
+:::
+
+### 网络工具
+
+::: navCard
+
+```yaml
+- name: Fiddler Everywhere
+  desc: 一个位于客户端和服务器端之间的代理工具，也是目前最常用的抓包工具之一。它能够记录客户端和服务器之间的所有请求，可以针对特定的请求，分析请求数据、设置断点、调试web应用、修改请求的数据，甚至可以修改服务器返回的数据，功能非常强大，是web调试的利器。
+  link: https://www.telerik.com/fiddler/fiddler-everywhere/documentation/introduction
+  img: /svg/website/Fiddler.svg
+  badge: 网络工具
+  badgeType: tip
+- name: Charles
+  desc: 一款常用的网络抓包工具，主要用于 HTTP 和 HTTPS 协议的网络请求分析。它通过成为计算机或浏览器的代理服务器，截取并分析网络请求和响应。
+  link: https://www.charlesproxy.com/download/
+  img: /svg/website/Charles.png
+  badge: 网络工具
 ```
 
 :::

@@ -614,7 +614,7 @@ VEHICLE替换为具体的物品工具，例如汽车、相机、手表。
 
 ### 旅游信息图海报
 
-```
+```markdown
 生成一张“【目的地】代表性旅游经典图谱”的超宽屏信息图海报，画面比例 **21:9**，横向构图，**8K超清**。整体采用**陶瓷釉面与玉质温润风**：极简大气、高端时尚、东方轻奢，画面“温润、通透、克制”，像博物馆精品展陈与高级品牌包装的融合。全部文字中文。
 
 ## 背景与整体材质基调
@@ -671,6 +671,209 @@ VEHICLE替换为具体的物品工具，例如汽车、相机、手表。
 
 ### 角色辐射风格化插画
 
-```
+```markdown
 使用上传的照片，为角色创建一幅风格化的插画，描绘出一个来自《辐射》宇宙的快乐、全身角色。以复古未来主义的 20 世纪 50 年代风格进行创作，运用大胆的轮廓、柔和的色调以及略带夸张的人物特征，让人联想到避难所科技海报或哔哔小子插画。添加配饰（背包、手表、霰弹枪）。添加一些微妙的背景元素，例如龟裂的沙漠地形、原子时代的标识或废墟建筑，使其融入末世背景。最终的图像应该看起来像是《辐射》的加载画面、海报或技能卡，富有表现力、粗犷，并与故事背景保持一致。采用正方形宽高比。
+```
+
+### 趣味性插画
+
+```markdown
+Whimsical Illustrations
+
+Gemini Nano Banana Pro Prompt:
+
+“Create a whimsical, playful illustration featuring [CHARACTER / SUBJECT] as the central focus.
+The character is drawn with simplified features, a small rounded head, and minimal facial detail, wearing [HEADWEAR / CLOTHING DESCRIPTION].
+
+They are positioned among oversized abstract shapes and organic elements such as [FLORAL / SYMBOLIC OBJECTS], creating a sense of imaginative scale. The character is interacting with [OBJECT / ACTION], adding narrative interest.
+
+Decorative graphic elements like [SYMBOLS: exclamation points, speech bubbles, scribbles, notes, etc.] float around the subject to enhance expression and energy.
+
+Use clean, simple linework and a limited color palette of [PRIMARY COLORS], keeping the illustration bold and cohesive. The background is a soft neutral tone such as beige or off-white. The overall style is modern, flat, and illustrative, with a lively, creative, and slightly abstract atmosphere.”
+```
+
+### 火车站站台写实摄影
+
+```markdown
+A high-quality mixed-media portrait of a trendy Gen Z teenager (using my uploaded person photo) standing on a train station platform at night. The subject is posing coolly, holding the strap of their olive backpack with one hand. They are wearing a stylish Gen Z outfit (oversized streetwear, layered black hoodie, gray sweatpants, and chunky sneakers).
+
+The background features a realistic 'KRL Jabodetabek' Commuter Line train side view with its signature red striping, with the train doors wide open, bathed in bright, cinematic station lighting and city night ambiance.
+
+Surrounding the realistic main subject are several cute, 3D-style 'Chibi' versions of the theirself. same wears and same face. These chibis are interacting playfully: one is sitting on the subject's shoulder, one is climbing their leg, and another is peeking out from the backpack.
+
+Overlay the image with vibrant, hand-drawn doodle effects: white drawn outlines around the subject, playful scribbles, stars, sparkles, electric sparks, and floating white and black handwritten slogans like 'forever young', 'krl', 'night', and 'gen z vibes'. The style should seamlessly blend hyper-realistic photography with colorful, flat cartoon illustrations. Keeping face and all shape person unchanged.
+```
+
+### 风化的地图
+
+```markdown
+A weathered {MAP_TYPE} map spread across {SURFACE}, bursting with photorealistic miniature worlds erupting from marked locations. {CITY_1} explodes from {CONTINENT} as a living diorama—{LANDMARK_1} towers above {STREET_SCENE}, surrounded by {ATMOSPHERIC_EFFECT} and {MOVING_ELEMENT}. {CITY_2} rises from {CONTINENT} with {LANDMARK_2} emerging through {WEATHER_DRAMA}, tiny {LOCAL_ACTIVITY} frozen mid-motion. {CITY_3} materializes from {CONTINENT} where {LANDMARK_3} pierces through {LIGHTING_EFFECT}, {CULTURAL_DETAIL} spilling across miniature streets. Connecting routes glow as {VISUAL_ELEMENT}—miniature {VEHICLE_TYPE} suspended impossibly between worlds. The map's surface transitions from flat parchment to living terrain: oceans become actual churning water with {WATER_DETAIL}, deserts shimmer with real heat haze, forests sprout miniature trees. Each city exists in its own time: {LIGHTING_CONDITION_1} bathes one, {LIGHTING_CONDITION_2} illuminates another, {LIGHTING_CONDITION_3} glows over the third. {FOREGROUND_OBJECTS} scatter around the map edges. {PHOTOGRAPHY_STYLE}, {COLOR_PALETTE}, extreme depth of field, 8K, {ERA_AESTHETIC} meets magical realism.
+```
+
+### 天气模拟场景模型
+
+```markdown
+Weather Moment Dioramas
+
+Gemini Nano Banana Pro Prompt:
+
+Create a clear 45° top-down isometric miniature 3D diorama depicting [WEATHER TYPE] at its most visually striking moment.
+The scene should feel like a premium, handcrafted display model.
+
+Use soft, refined textures with realistic PBR materials. Lighting should be natural and atmospheric, subtly cinematic, enhancing depth without harsh contrast. Place the diorama on a small raised base.
+
+Show clear environmental effects unique to the weather, such as drifting clouds, falling rain streaks, layered snow buildup, wind-blown elements, fog, or directional sunlight beams interacting with the scene.
+
+Include tiny, stylized people or simple objects reacting to the weather (umbrellas, bent trees, paused vehicles, flowing fabric).
+Figures should be minimal and expressive through pose only, with no facial details.
+
+Maintain clean geometry, balanced composition, and a calm, polished miniature aesthetic.
+
+Use a solid [BACKGROUND COLOR] background with no gradients or visual noise.
+
+Below the diorama, display a clean centered title and icon:
+[WEATHER NAME]
+[WEATHER ICON] (single minimal emoji-style symbol matching the weather)
+
+High detail, sharp focus, realistic scale, cinematic yet playful isometric presentation.
+```
+
+### 季节性城市微观世界 黏土风 × 3D浮雕
+
+```
+Highly detailed clay relief world of [CITY_NAME] during [SEASONAL EVENT]. Tiered 3D composition: background shows iconic skyline with [LANDMARKS], middle layer features [CULTURAL BUILDINGS] with [ORNAMENTAL DETAILS], foreground dense with [CELEBRATION ACTIVITIES], [TRADITIONAL FOOD STALLS], miniature [PEOPLE IN FESTIVE ATTIRE], [TRANSPORTATION], and seasonal [VEGETATION]. Bold embossed "[CITY_NAME]" text crowning the scene. Platform: [THICKNESS] [MATERIAL] with [EDGE FINISH]. [VIEW ANGLE: isometric/three-quarter/bird's eye], Pixar-quality clay render, [STYLE: pure white monochrome/rich color palette], embossed paper texture, cozy miniature meets high-density commercial design, soft studio lighting, clean neutral backdrop.
+```
+
+台北：元宵節
+
+紐約：假日冬季
+
+威尼斯：假面舞會
+
+京都：櫻花季
+
+### 美食之旅 三维地图
+
+```
+Culinary journey 3D relief map of [REGION_NAME] divided into [NUMBER] districts. 
+Dense layered composition showing gastronomic landscape:
+
+[DISTRICT 1]: [SIGNATURE DISH] preparation scene with [CHEF/COOK FIGURES], 
+[KEY INGREDIENTS] displayed, [COOKING METHOD] in action, [TRADITIONAL COOKWARE], 
+regional color palette [COLORS].
+
+[DISTRICT 2]: [ICONIC FOOD] market stall with [VENDORS], [FRESH PRODUCE] arranged artfully, 
+[CUSTOMERS SAMPLING], [CULTURAL DINING SCENE], palette [COLORS].
+
+[DISTRICT 3]: [SPECIALTY CUISINE] restaurant setting, [PLATING PRESENTATION], 
+[DINERS ENJOYING MEAL], [REGIONAL BEVERAGES], [DECORATIVE FOOD ELEMENTS], palette [COLORS].
+
+[Additional districts following same pattern...]
+
+Connecting elements: [TRANSPORTATION] carrying food between regions, [TRADE ROUTES] 
+marked with dotted lines, [AGRICULTURAL LANDSCAPES] showing ingredient origins.
+
+Recipe steps embossed as decorative text borders: "[STEP 1]" "[STEP 2]" etc. 
+Large title text "[REGION] CULINARY MAP" at top. Ingredient icons scattered throughout.
+
+Mounted on [THICKNESS] [MATERIAL - suggest cutting board style] platform with 
+[EDGE TREATMENT - recipe engraved]. Three-quarter/isometric view, Pixar-style clay render, 
+appetizing warm color palette, extremely high detail density, warm kitchen lighting with 
+steam effects, clean neutral or kitchen-themed background. --ar 2:3
+```
+
+https://x.com/0x00\_Krypt/status/2021402067706008053?s=20
+
+### 建筑横截面 3D
+
+```
+Architectural cross-section 3D relief of [CITY/BUILDING_NAME] during [EVENT/TIME]. 
+Vertical slice composition revealing [NUMBER] layers of life:
+
+UNDERGROUND LEVEL: [DEPTH] meters below - [SUBWAY/METRO SYSTEM], [INFRASTRUCTURE], 
+[UNDERGROUND WORKERS], [PIPES/CABLES], [GEOLOGICAL LAYERS], rendered in [COLOR SCHEME].
+
+GROUND LEVEL: Street surface - [PLAZA/MARKET SCENE], [PEDESTRIANS IN ACTIVITY], 
+[STREET VENDORS], [VEHICLES], [STOREFRONTS], [STREET FURNITURE], in [COLOR SCHEME].
+
+MIDDLE FLOORS: [FLOOR 2-5] - Half-exposed interiors showing [RESIDENTIAL LIFE], 
+[OFFICE SPACES], [RESTAURANTS/CAFES], [PEOPLE IN DAILY ACTIVITIES], 
+[FURNITURE AND DECOR], visible through cutaway walls, in [COLOR SCHEME].
+
+UPPER LEVELS: [FLOOR 6-10] - [LUXURY APARTMENTS], [ROOFTOP GARDENS], 
+[PENTHOUSE SCENES], [SKY LOUNGES], partial exterior/interior blend, in [COLOR SCHEME].
+
+ROOFTOP: [MECHANICAL ROOMS], [GARDENS], [OBSERVATION DECK], [ANTENNA/STRUCTURES], 
+[SKY ACTIVITIES], merging into atmosphere, in [COLOR SCHEME].
+
+Architectural details: Visible [BUILDING STRUCTURE], [SUPPORT BEAMS], [STAIRWELLS], 
+[ELEVATOR SHAFTS], [UTILITY SYSTEMS]. Cut surface shows [MATERIAL TEXTURES] - 
+brick, concrete, steel, glass in cross-section.
+
+Embossed labels marking floors: "[B2]" "[GF]" "[RF]" etc. 
+Large architectural title text "[BUILDING/CITY NAME] SECTION" at top.
+
+Mounted on [THICKNESS] [MATERIAL] platform with [TECHNICAL EDGE TREATMENT]. 
+Straight-on frontal view, Pixar-style clay render with architectural precision, 
+stratified color coding by function/level, extreme detail density showing simultaneous life, 
+dramatic side lighting creating depth shadows, technical blueprint-style background 
+with faint grid lines. --ar 2:3
+```
+
+https://x.com/0x00\_Krypt/status/2021408573046259964?s=20
+
+### 动画格子图
+
+```
+I turned Nano Banana into an anime recommendation system. 
+
+Prompt: 
+Function DrawAnimeCel(input anime title)
+Input Variable: [INSERT ANIME TITLE]
+ 
+System Instruction:
+Generate a hyper-realistic, 1:1 photo of a "Cel Animation Lightbox Diorama" (collector miniature).
+Semantic Extraction:
+Identify protagonist, power/skill, tone, and the most iconic “motion moment.”
+Figure: Chibi protagonist with dynamic pose.
+Finish: Matte PVC + subtle translucent parts if powers are glow-like.
+Immutable Container (Lightbox Corner):
+Structure: U-shaped lightbox frame (two walls + floor), desktop size.
+Walls are layered with faux animation cels (transparent acetate look).
+Background (Cel Stacks):
+Walls: B&W keyframes, timing charts, handwritten animator notes (original, inspired).
+Floor: Acetate “motion smears” pop up in layers.
+Integration (2D vs 3D):
+The 3D figure steps through a 2D cel frame, like breaking the plane.
+One 2D effect (speed lines) becomes a 3D ribbon.
+Visual Syntax:
+B&W background notes/keyframes; full color figure.
+Soft lightbox glow, no harsh shadows.
+Label: "[Anime] — [Studio/Creator]"
+Return: ONE image, 1:1, super clean collectible photography.
+<instructions>
+Input: anime title
+Analyze tone, genre, character arcs, visual language. Find 4 MUCH lesser-known anime in the same lane.
+Output: a 2x2 grid, each panel is DrawAnimeCel for a lesser-known recommendation.
+</instructions>
+```
+
+https://x.com/Gdgtify/status/2021195694963314965?s=20
+
+## 动画经典场景微缩复刻
+
+```
+经典场景微缩复刻
+
+展示一个精致的、微缩 3D 卡通风格的疯狂动物城（Zootopia）场景，采用清晰的 45° 俯视等轴侧视角（Isometric view）。
+
+核心构图： 将主体最经典的形象突出地置于中心。自动搭配比例适宜的关键元素图标、象征性物品、迷人的小角色以及能诠释主体故事的道具。整体布局应当充满趣味且紧凑聚集，宛如一套高端的玩具盲盒套装。
+
+渲染与材质： 采用Octane Render 和 Cinema 4D风格进行渲染。建模必须精细、圆润流畅且质感丰富。使用逼真的 PBR 材质：混合用于有机形态的柔和哑光粘土、用于水体/玻璃元素的光泽树脂，以及用于结构组件的光滑 PVC 材质。着重表现具有触感、“看起来手感很好”的纹理细节。
+
+灯光与氛围： 采用柔和、逼真的摄影棚布光配合全局光照（Global Illumination）。利用柔和的阴影营造出温暖、舒适且充满魔力的氛围。
+
+布局： 保持干净、极简的布局，使用与主体配色相协调的纯色背景。
+
+文字： 在顶部中央，使用巨大的、圆润的 3D 字体醒目地展示主体名称，使其轻微悬浮于场景上方。
 ```

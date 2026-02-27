@@ -44,6 +44,8 @@ url: /Java/容器/Docker/01.Docker教程/1_Docker常用命令合集.md
 
 * 删除网络：**docker network rm container\_name\_net**
 
+* 清理资源：docker system prune -a（清理Docker系统中未使用的镜像、容器、网络和数据卷等资源）
+
 容器启动之attached和detached模式
 
 两种模式最简单的对比理解就是：attached模式在前台运行，detached模式在后台运行。
