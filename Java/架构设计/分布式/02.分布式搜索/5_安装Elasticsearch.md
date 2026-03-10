@@ -16,20 +16,34 @@ docker network create es-net
 
 ### 1.2.加载镜像
 
-这里我们采用elasticsearch的7.12.1版本的镜像，这个镜像体积非常大，接近1G。不建议大家自己pull。
+这里我们采用elasticsearch的7.12.1版本的镜像，这个镜像体积非常大，接近1G。
 
 > 下载地址：https://www.elastic.co/downloads/elasticsearch
 
-下载完成后，将其上传到虚拟机中，然后运行命令加载即可：
-
 ```sh
-# 导入数据
-docker load -i es.tar
+docker pull elasticsearch:7.12.1
 ```
 
 同理还有`kibana`的tar包也需要这样做。
 
-### 1.3.运行
+```
+docker pull kibana:7.12.1
+```
+
+**补充**
+
+由于镜像体积过大，如果想在其他环境或快速分析，不建议自己pull，使用 `docker save/docker load` 可以保存镜像，并在其他环境加载
+
+```sh
+# 保存镜像到文件
+docker save -o es.tar elasticsearch:latest
+
+# 下载上面保存的文件完成后，将其上传到其他虚拟机中，然后运行命令加载即可：
+# 导入数据
+docker load -i es.tar
+```
+
+### 1.3.部署单点es，创建es容器
 
 运行docker命令，部署单点es：
 
@@ -59,6 +73,34 @@ elasticsearch:7.12.1
 * `--privileged`：授予逻辑卷访问权
 * `--network es-net` ：加入一个名为es-net的网络中
 * `-p 9200:9200`：端口映射配置
+
+### 1.4.关闭密码安全验证（新版本）
+
+先进入es容器
+
+```sh
+docker exec -it es /bin/bash
+```
+
+跳转到config目录下
+
+```sh
+cd config
+```
+
+关闭 密码安全验证
+
+```sh
+echo 'xpack.security.enabled: false' >> elasticsearch.yml
+```
+
+重启es容器
+
+```sh
+docker restart es
+```
+
+### 1.5.测试
 
 在浏览器中输入：http://192.168.150.101:9200 即可看到elasticsearch的响应结果：
 
@@ -167,6 +209,18 @@ docker volume inspect es-plugins
 也就是`/var/lib/docker/volumes/es-plugins/_data `：
 
 ![image-20210506110704293](/assets/image-20210506110704293.CkGydkjc.png)
+
+> \[!NOTE] 注意
+>
+> 在Mac系统中，**Docker Desktop for Mac 运行在 Linux 虚拟机（HyperKit/LinuxKit）里**，`/var/lib/docker` 是虚拟机内路径，**不在 macOS 宿主机文件系统上**，因此无法打开`/var/lib/docker/volumes`，推荐使用在线安装
+>
+> 解决方法
+>
+> https://blog.csdn.net/qq\_43758789/article/details/121272433
+>
+> https://blog.hwgzhu.com/article/mac-docker-volume-no-such-file-or-directory
+>
+> https://blog.51cto.com/u\_16213398/8101958
 
 #### 4）重启容器
 
@@ -457,3 +511,7 @@ Run `docker-compose` to bring up the cluster:
 ```sh
 docker-compose up
 ```
+
+## 参考资料
+
+https://blog.csdn.net/Acloasia/article/details/130683934

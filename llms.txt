@@ -53,14 +53,26 @@
 
 ### AI应用开发
 
-- [名词概念](/AIGC/AI应用开发/1_名词概念.md)
-- [RAG 检索增强生成](/AIGC/AI应用开发/3_RAG检索增强生成.md)
-- [MCP 协议](/AIGC/AI应用开发/4_MCP协议.md)
-- [Agent Skills](/AIGC/AI应用开发/Agent Skill.md)
+#### 名词概念
+
+- [名词概念](/AIGC/AI应用开发/01.名词概念.md)
+- [名词概念](/AIGC/AI应用开发/01.名词概念/1_名词概念.md)
+- [RAG 检索增强生成](/AIGC/AI应用开发/01.名词概念/3_RAG检索增强生成.md)
+- [MCP 协议](/AIGC/AI应用开发/01.名词概念/4_MCP协议.md)
+- [Agent Skills](/AIGC/AI应用开发/01.名词概念/Agent Skill.md)
 
 #### LangGraph4j
 
-- [LangGraph4j 入门](/AIGC/AI应用开发/LangGraph4j/1_LangGraph4j入门.md)
+- [LangGraph4j](/AIGC/AI应用开发/02.LangGraph4j.md)
+- [LangGraph4j 入门](/AIGC/AI应用开发/02.LangGraph4j/1_LangGraph4j入门.md)
+
+#### OpenClaw
+
+- [OpenClaw](/AIGC/AI应用开发/03.OpenClaw.md)
+- [OpenClaw 安装【Windows版】](/AIGC/AI应用开发/03.OpenClaw/1_OpenClaw安装【Windows版】.md)
+- [OpenClaw 安装【Mac版】](/AIGC/AI应用开发/03.OpenClaw/2_OpenClaw安装【Mac版】.md)
+- [OpenClaw 接入飞书](/AIGC/AI应用开发/03.OpenClaw/3_OpenClaw接入飞书.md)
+- [OpenClaw 配置修改](/AIGC/AI应用开发/03.OpenClaw/4_OpenClaw配置修改.md)
 
 ### AI绘画
 
@@ -105,6 +117,7 @@
 - [Midjourney制作微信表情包](/AIGC/AI绘画/05.AIGC/Midjourney制作微信表情包.md)
 - [Midjourney萌宠治愈频道](/AIGC/AI绘画/05.AIGC/Midjourney萌宠治愈频道.md)
 - [Moltbot个人AI助手部署](/AIGC/AI绘画/05.AIGC/Moltbot个人AI助手部署.md)
+- [Nano Banana 2 免费渠道汇总](/AIGC/AI绘画/05.AIGC/NanoBanana2免费渠道汇总.md)
 
 
 
@@ -294,7 +307,8 @@
 - [Elasticsearch高级功能](/Java/架构设计/分布式/02.分布式搜索/3_搜索引擎Elasticsearch03.md)
 - [Elasticsearch进阶功能](/Java/架构设计/分布式/02.分布式搜索/4_ElasticSearch进阶功能.md)
 - [安装 ElasticSearch](/Java/架构设计/分布式/02.分布式搜索/5_安装Elasticsearch.md)
-- [Easy-Es ORM框架](/Java/架构设计/分布式/02.分布式搜索/6_Easy-Es框架.md)
+- [Spring Data Elasticsearch](/Java/架构设计/分布式/02.分布式搜索/6_Spring Data Elasticsearch.md)
+- [Easy-Es ORM框架](/Java/架构设计/分布式/02.分布式搜索/7_Easy-Es框架.md)
 
 ##### 分布式消息队列
 
@@ -343,6 +357,7 @@
 - [ELK篇之SpringBoot集成ELK](/Java/架构设计/分布式/07.分布式日志收集/3_SpringBoot集成ELK.md)
 - [EFK篇之Filebeat使用](/Java/架构设计/分布式/07.分布式日志收集/4_EFK篇之Filebeat使用.md)
 - [SpringBoot集成Graylog](/Java/架构设计/分布式/07.分布式日志收集/5_SpringBoot集成Graylog.md)
+- [SpringBoot集成ELK](/Java/架构设计/分布式/07.分布式日志收集/SpringBoot集成ELK.md)
 
 #### 高可用
 
@@ -455,6 +470,8 @@
 #### 行为型
 
 - [策略模式](/Java/设计模式/04.行为型/16_strategy.md)
+
+
 
 
 
@@ -733,7 +750,7 @@
 - [PostgreSQL](/数据库/03.PostgreSQL.md)
 - [PostgreSQL介绍](/数据库/03.PostgreSQL/1_PostgreSQL介绍.md)
 - [profile环境配置](/常用框架/SpringBoot/SpringBoot程序开发/20_profile环境配置.md)
-- [Prompt 工程](/AIGC/AI应用开发/2_Prompt工程.md)
+- [Prompt 工程](/AIGC/AI应用开发/01.名词概念/2_Prompt工程.md)
 - [Python发送HTTP请求](/Python/爬虫/2_Python发送HTTP请求.md)
 - [Python基础语法](/Python/基础语法/Python基础语法.md)
 - [Python解析HTML](/Python/爬虫/3_Python解析HTML.md)
