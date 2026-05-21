@@ -210,6 +210,18 @@ docker volume inspect es-plugins
 
 ![image-20210506110704293](/assets/image-20210506110704293.CkGydkjc.png)
 
+> \[!NOTE] 注意
+>
+> 在Mac系统中，**Docker Desktop for Mac 运行在 Linux 虚拟机（HyperKit/LinuxKit）里**，`/var/lib/docker` 是虚拟机内路径，**不在 macOS 宿主机文件系统上**，因此无法打开`/var/lib/docker/volumes`，推荐使用在线安装
+>
+> 解决方法
+>
+> https://blog.csdn.net/qq\_43758789/article/details/121272433
+>
+> https://blog.hwgzhu.com/article/mac-docker-volume-no-such-file-or-directory
+>
+> https://blog.51cto.com/u\_16213398/8101958
+
 #### 4）重启容器
 
 ```shell
@@ -503,3 +515,5 @@ docker-compose up
 ## 参考资料
 
 https://blog.csdn.net/Acloasia/article/details/130683934
+
+Kibana配置教程：https://www.cnblogs.com/chenqionghe/p/12503181.html

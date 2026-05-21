@@ -587,6 +587,33 @@ POST /xxl/_update/1
 
 ES官方提供了各种不同语言的客户端，用来操作ES。这些客户端的本质就是组装DSL语句，通过http请求发送给ES。
 
+### Elasticsearch的JAVA客户端选择
+
+Elasticsearch官方支持的客户端
+
+| 客户端名称                                    | **简介**                                                     | 使用建议                                   |
+| --------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------ |
+| **Elasticsearch Java API Client**（新客户端） | 官方推荐的新客户端，基于 JSON Mapping（如 `ElasticsearchClient` 类），从 Elasticsearch 7.15 开始推出。 | ✅推荐用于 Spring Boot 3+，Elasticsearch 8+ |
+| **RestHighLevelClient**（已废弃）             | 基于 REST 的高级客户端，是 ES 6 ~ 7 的主力客户端，ES 8 中已标记为 deprecated。 | ❌不推荐新项目使用                          |
+| **Low Level REST Client**                     | 底层客户端，只提供 HTTP 封装，不解析 JSON。                  | 🔧适合自定义协议或处理特殊 JSON 请求场景    |
+
+Spring官方对Elasticsearch的封装
+————————————————
+版权声明：本文为CSDN博主「TinpeaV」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/TinpeaV/article/details/149439900
+
+**Spring官方对Elasticsearch的封装**
+
+| 客户端名称                    | **简介**                                                     | 使用建议                                             |
+| ----------------------------- | ------------------------------------------------------------ | ---------------------------------------------------- |
+| **Spring Data Elasticsearch** | Spring 官方对 Elasticsearch 的数据访问封装，支持 Repository 风格的接口编程。 | 👍开发效率高、和 JPA 风格一致，但功能不如原生客户端全 |
+
+**easy-es(dromara团队)，国人之光！**
+
+| 客户端名称  | **简介**                                                     | 使用建议                                                     |
+| ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **easy-es** | 风格类似 MyBatis-Plus，一致的 API 和分页查询方式，Java 开发者易于理解。 | 👍开发效率高、但是是对RestHighLevelClient的深层封装，容易受版本影响，小团队维护 |
+
 > 官方文档地址：https://www.elastic.co/guide/en/elasticsearch/client/index.html
 >
 > Elasticsearch Java API Client 地址：https://www.elastic.co/guide/en/elasticsearch/client/java-api-client/8.8/getting-started-java.html

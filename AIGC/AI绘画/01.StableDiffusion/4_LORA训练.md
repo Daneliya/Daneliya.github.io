@@ -34,4 +34,14 @@ git clone https://github.com/bmaltais/kohya_ss.git
 
 ## 参考资料
 
-[60分钟速通LORA训练！绝对是你看过最好懂的AI绘画模型训练教程！StableDiffusion超详细训练原理讲解+实操教学，LORA参数详解与训练集处理技巧\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV16e411e7Zx/)
+60分钟速通LORA训练！绝对是你看过最好懂的AI绘画模型训练教程：https://www.bilibili.com/video/BV16e411e7Zx/
+
+LoRA从原理到实践：https://www.bilibili.com/video/BV1nL411B7XT
+
+LORA原理：https://www.bilibili.com/video/BV1zZdZYyE79
+
+哩布平台训练lora：https://www.bilibili.com/video/BV1WNdGYWEpw，[Liblib AI 在线训练工具指南](https://zdorongbe5.feishu.cn/docx/QiHzd8wW7o5eecxQ0AOc55uLn1e)
+
+用一张图训练一个FLUX的LORA模型：https://www.bilibili.com/video/BV1FT8gzWEtV
+
+flux lora：https://www.bilibili.com/video/BV1YjAKeTEGF

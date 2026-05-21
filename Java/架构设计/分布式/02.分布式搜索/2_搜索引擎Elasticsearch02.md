@@ -93,6 +93,8 @@ GET /indexName/_search
 
 * match查询：单字段查询
 * multi\_match查询：多字段查询，任意一个字段符合条件就算符合查询条件
+* [query\_string](https://www.elastic.co/docs/reference/query-languages/query-dsl/query-dsl-query-string-query)：字符串匹配
+* [simple\_query\_string](https://www.elastic.co/docs/reference/query-languages/query-dsl/query-dsl-simple-query-string-query)：简单字符串匹配
 
 match查询语法如下：
 
@@ -116,6 +118,35 @@ GET /indexName/_search
     "multi_match": {
       "query": "TEXT",
       "fields": ["FIELD1", " FIELD12"]
+    }
+  }
+}
+```
+
+query\_string语法如下：
+
+https://juejin.cn/post/7475254421695086643
+
+```json
+GET /indexName/_search
+{
+  "query": {
+    "query_string": {
+      "query": "TEXT" // 不指定字段时，默认检索所有可分词的文本字段
+    }
+  }
+}
+```
+
+simple\_query\_string语法如下：
+
+```json
+GET /indexName/_search
+{
+  "query": {
+    "simple_query_string": {
+      "query": "TEXT",
+      "fields": ["*"] // "*" 表示匹配所有字段
     }
   }
 }
@@ -487,7 +518,7 @@ GET /hotel/_search
 }
 ```
 
-#### 2）示例
+##### 2）示例
 
 需求：搜索名字包含“如家”，价格不高于400，在坐标31.21,121.5周围10km范围内的酒店。
 

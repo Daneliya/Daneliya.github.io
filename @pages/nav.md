@@ -140,6 +140,11 @@ url: /@pages/nav.md
   link: https://firebase.google.cn/docs/studio?hl=zh-cn
   img: /svg/website/FirebaseStudio.png
   badge: AI编程工具
+- name: Antigravity
+  desc: 谷歌发布的”Agent-first”开发平台，原生集成 Gemini 3 Pro。
+  link: https://antigravity.google/
+  img: /svg/website/Antigravity.ico
+  badge: AI编程工具
 ```
 
 :::

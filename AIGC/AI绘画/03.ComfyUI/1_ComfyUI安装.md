@@ -8,7 +8,9 @@ url: /AIGC/AI绘画/03.ComfyUI/1_ComfyUI安装.md
 
 如果使用的是Windows平台且为N卡用户，只需要在项目主页的Release页面下载作者提供的“官方整合包”，即可一键开启ComfyUI探索之路：
 
-> 下载地址：https://github.com/comfyanonymous/ComfyUI/releases
+> ComfyUI Portable 下载地址：https://github.com/comfyanonymous/ComfyUI/releases
+>
+> ComfyUI Portable 便捷版说明：https://docs.comfy.org/installation/comfyui\_portable\_windows#download-comfyui-portable
 
 ![image-20240221005044547](/assets/image-20240221005044547.CX302JU4.png)
 
@@ -113,3 +115,31 @@ You can install ComfyUI in Apple Mac silicon (M1 or M2) with any recent macOS ve
 Then you can launch ComfyUI with: `python main.py --directml` `pip install torch-directml`
 
 然后，您可以使用以下命令启动ComfyUI： `python main.py --directml`
+
+## 官网安装包
+
+ComfyUI 新上的官网，可以直接从官网下载安装包安装。
+
+快捷安装：https://www.comfy.org/zh-cn/download，直接下载安装包安装。但无法修改安装目录，只能安装到系统盘。
+
+## 整合包
+
+### 秋叶整合包
+
+秋叶 ComfyUI 整合包使用说明：https://comfyui-wiki.com/zh/install/install-comfyui/aaaki-comfyui-launcher-user-guide
+
+作者主页：https://space.bilibili.com/12566101
+
+### 辣椒酱·铁锅炖
+
+视频介绍：https://www.bilibili.com/video/BV1mz4y1K7Jw
+
+启动器手册：https://shimo.im/docs/B1AwdxZewWhjwe3m
+
+AIGODLIKE社区(支持COMFYUI图像解析)：https://www.aigodlike.com/
+
+### 无限圣杯·Blender
+
+作者主页：https://space.bilibili.com/35723238
+
+手册(含满血整合包)：https://shimo.im/docs/Ee32m0w80rfLp4A2
