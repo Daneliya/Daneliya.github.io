@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "17317594",
+      "name": "cafei",
+      "font_class": "cafei",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    }
+  ]
+}

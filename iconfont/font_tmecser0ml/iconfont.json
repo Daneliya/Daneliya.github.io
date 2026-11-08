@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "125963599",
+      "name": "容器",
+      "font_class": "rongqi",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    }
+  ]
+}

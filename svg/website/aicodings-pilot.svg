@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1b2133"/>
+      <stop offset="100%" stop-color="#0d1017"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="55%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#c4b5fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14.4" fill="url(#tile)"/>
+  <rect x="0.5" y="0.5" width="63" height="63" rx="14.1" fill="none" stroke="rgba(55,65,100,0.6)" stroke-width="1"/>
+  <g transform="translate(10.88 10.88) scale(0.66)">
+    <path d="M 13.6 48.5 L 25.6 17.5 L 37.6 48.5" fill="none" stroke="#f2f3f7" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 46.6 30.5 L 46.6 48.5" fill="none" stroke="url(#brand)" stroke-width="4.8" stroke-linecap="round"/>
+    <path d="M 46.6 13 C 47.3 16.2 49.4 18.3 52.6 19 C 49.4 19.7 47.3 21.8 46.6 25 C 45.9 21.8 43.8 19.7 40.6 19 C 43.8 18.3 45.9 16.2 46.6 13 Z" fill="url(#brand)"/>
+  </g>
+</svg>

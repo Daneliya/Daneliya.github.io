@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>实战1：视频脚本一键生成器 | xiaolong</title>
+    
+    <meta name="generator" content="VitePress v1.6.4">
+    <link rel="preload stylesheet" href="/assets/style.DYVOXO_n.css" as="style">
+    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
+    <script type="module" src="/assets/chunks/metadata.134818b2.js"></script>
+    <script type="module" src="/assets/app.CzrUAs6o.js"></script>
+    <link rel="preload" href="/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/assets/chunks/theme.DZVHRhM6.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.DW3NRN-T.js">
+    <link rel="modulepreload" href="/assets/Python_AI大模型应用开发_7_实战1：视频脚本一键生成器.md.CuPvr5Pi.lean.js">
+    <link rel="icon" type="image/svg+xml" href="/logo.svg">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh-CN">
+    <meta property="og:title" content="Teek | VitePress Theme">
+    <meta property="og:site_name" content="Teek">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" description="欢迎来到 vitepress-theme-teek 使用文档,Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置,Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景">
+    <meta name="description" description="欢迎来到 vitepress-theme-teek 使用文档,Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置,Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景">
+    <meta name="author" content="Teek">
+    <meta name="keywords" description="欢迎来到 vitepress-theme-teek 使用文档,Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置,Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6079554807639839" crossorigin="anonymous"></script>
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body><!--teleport start anchor--><div style="display:none;" class="tk-spotlight-hover tk-spotlight-hover__aside" aria-hidden="true" focusable="false"></div><!--teleport anchor-->
+    <div id="app"><!--[--><!--v-if--><!--v-if--><!--v-if--><!--[--><!--v-if--><!----><!--v-if--><div class="tk-right-bottom-button tk-wallpaper-outside flx-column"><!--[--><!--]--><div title="返回顶部" class="tk-right-bottom-button__button back-top" style="--tk-progress:0;display:none;" role="button" aria-label="返回顶部" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span class="content">0</span></div><div title="前往评论" class="tk-right-bottom-button__button" role="button" aria-label="前往评论" style="display:none;"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="M273.536 736H800a64 64 0 0 0 64-64V256a64 64 0 0 0-64-64H224a64 64 0 0 0-64 64v570.88zM296 800 147.968 918.4A32 32 0 0 1 96 893.44V256a128 128 0 0 1 128-128h576a128 128 0 0 1 128 128v416a128 128 0 0 1-128 128z"
+    ></path>
+    <path
+      fill="currentColor"
+      d="M512 499.2a51.2 51.2 0 1 1 0-102.4 51.2 51.2 0 0 1 0 102.4zm192 0a51.2 51.2 0 1 1 0-102.4 51.2 51.2 0 0 1 0 102.4zm-384 0a51.2 51.2 0 1 1 0-102.4 51.2 51.2 0 0 1 0 102.4z"
+    ></path>
+  </svg></i></div><!--v-if--><!--[--><!--]--></div><!--]--><div class="Layout tk-layout has-sidebar-trigger" data-v-e509d47d><!--[--><!--]--><!--[--><span tabindex="-1" data-v-d2bd82ce></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-d2bd82ce>Skip to content</a><!--]--><!----><header class="VPNav" data-v-e509d47d data-v-4219e3de><div class="VPNavBar" data-v-4219e3de data-v-1ab4d4a0><div class="wrapper" data-v-1ab4d4a0><div class="container" data-v-1ab4d4a0><div class="title" data-v-1ab4d4a0><div class="VPNavBarTitle has-sidebar" data-v-1ab4d4a0 data-v-8718258c><a class="title" href="/" data-v-8718258c><!--[--><!--]--><!--[--><img class="VPImage logo" src="/logo.png" alt data-v-4c447c4f><!--]--><span data-v-8718258c>xiaolong</span><!--[--><!--]--></a></div></div><div class="content" data-v-1ab4d4a0><div class="content-body" data-v-1ab4d4a0><!--[--><!--]--><div class="VPNavBarSearch search" data-v-1ab4d4a0><!--[--><!----><div id="local-search"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-1ab4d4a0 data-v-6fe03c88><span id="main-nav-aria-label" class="visually-hidden" data-v-6fe03c88> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/" tabindex="0" data-v-6fe03c88 data-v-234d0f31><!--[--><span data-v-234d0f31>🏡主页</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-6fe03c88 data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-2a6bf2f7><span class="text" data-v-2a6bf2f7><!----><span data-v-2a6bf2f7>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/java.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Java</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-2a6bf2f7></span></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><div class="items" data-v-328ee30c><!--[--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/Java%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/01.JDK%E6%96%B0%E7%89%B9%E6%80%A7/1_JDK8%E6%96%B0%E7%89%B9%E6%80%A7Optional%E5%AE%B9%E5%99%A8%E7%B1%BB.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/code.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Java开发技巧</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/JVM%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/01.JVM%E6%A6%82%E5%BF%B5/0_JVM%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/JVM.svg" alt="" style="width: 16px; height: 16px;">
+              <span>JVM性能调优</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/1_JUC.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/并发编程.svg" alt="" style="width: 16px; height: 16px;">
+              <span>并发编程</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E5%AE%B9%E5%99%A8/Docker/01.Docker%E6%95%99%E7%A8%8B/0_Docker%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BD%BF%E7%94%A8.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/docker.svg" alt="" style="width: 16px; height: 16px;">
+              <span>容器相关</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01.%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/设计模式.svg" alt="" style="width: 16px; height: 16px;">
+              <span>设计模式</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%93%E6%A0%8F/01.SpringCloud/1_SpringCloud%E7%AE%80%E4%BB%8B.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/mse.svg" alt="" style="width: 16px; height: 16px;">
+              <span>微服务专栏</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E5%88%86%E5%B8%83%E5%BC%8F/01.%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/架构设计.svg" alt="" style="width: 16px; height: 16px;">
+              <span>架构设计</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98API%E5%AF%B9%E6%8E%A5%E6%8C%87%E5%8D%97/1_%E5%95%86%E5%AE%B6%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/解决方案.svg" alt="" style="width: 16px; height: 16px;">
+              <span>解决方案</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/数据结构.svg" alt="" style="width: 16px; height: 16px;">
+              <span>数据结构</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/1_%E5%B9%82%E7%AD%89%E8%AE%BE%E8%AE%A1.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/系统优化.svg" alt="" style="width: 16px; height: 16px;">
+              <span>系统优化</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-6fe03c88 data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-2a6bf2f7><span class="text" data-v-2a6bf2f7><!----><span data-v-2a6bf2f7>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/python.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Python</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-2a6bf2f7></span></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><div class="items" data-v-328ee30c><!--[--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Python/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/Python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/基础语法.svg" alt="" style="width: 16px; height: 16px;">
+              <span>基础语法</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/1_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/数据分析.svg" alt="" style="width: 16px; height: 16px;">
+              <span>数据分析</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Python/%E7%88%AC%E8%99%AB/1_%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/爬虫.svg" alt="" style="width: 16px; height: 16px;">
+              <span>爬虫</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/1_AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A7%91%E6%99%AE.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/人工智能.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AI大模型应用开发</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-6fe03c88 data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-2a6bf2f7><span class="text" data-v-2a6bf2f7><!----><span data-v-2a6bf2f7>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/database.svg" alt="" style="width: 16px; height: 16px;">
+              <span>数据库</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-2a6bf2f7></span></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><div class="items" data-v-328ee30c><!--[--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/database/mysql/acid.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/MySQL.svg" alt="" style="width: 16px; height: 16px;">
+              <span>MySQL</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/database/mongodb/mongodb-introduction.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/MongoDB.svg" alt="" style="width: 16px; height: 16px;">
+              <span>MongoDB</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/database/postgresql/postgresql-introduction.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/PostgreSQL.svg" alt="" style="width: 16px; height: 16px;">
+              <span>PostgreSQL</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/database/tidb/tidb-introduction.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/TiDB.svg" alt="" style="width: 16px; height: 16px;">
+              <span>分布式数据库TIDB</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/database/neo4j/neo4j-introduce.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Neo4j.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Neo4j</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/Redis/Redis%E5%9F%BA%E7%A1%80/1_Redis%E7%BC%93%E5%AD%98%E4%B8%89%E5%A4%A7%E9%97%AE%E9%A2%98.html" tabindex="0" data-v-6fe03c88 data-v-234d0f31><!--[--><span data-v-234d0f31>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/redis.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Redis专栏</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-6fe03c88 data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-2a6bf2f7><span class="text" data-v-2a6bf2f7><!----><span data-v-2a6bf2f7>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/framework.svg" alt="" style="width: 16px; height: 16px;">
+              <span>常用框架</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-2a6bf2f7></span></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><div class="items" data-v-328ee30c><!--[--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Activiti7/Activiti%E6%95%B4%E5%90%88Spring.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/工作流.svg" alt="" style="width: 16px; height: 16px;">
+              <span>工作流引擎Activiti7</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Caffeine/0_Caffeine%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/缓存.svg" alt="" style="width: 16px; height: 16px;">
+              <span>缓存框架Caffeine</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/EasyCaptcha/0_%E4%BD%BF%E7%94%A8EasyCaptcha%E7%94%9F%E6%88%90%E9%AA%8C%E8%AF%81%E7%A0%81.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/验证码.svg" alt="" style="width: 16px; height: 16px;">
+              <span>验证码EasyCaptcha</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/EasyExcel/0_EasyExcel%E6%A6%82%E8%BF%B0.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/EasyExcel.svg" alt="" style="width: 16px; height: 16px;">
+              <span>表格工具EasyExcel</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/java/framework/distributed/elastic-search-introduction.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/ElasticSearch.svg" alt="" style="width: 16px; height: 16px;">
+              <span>搜索引擎ElasticSearch</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Mybatis/Mybatis-Plus-Join%E8%BF%9E%E8%A1%A8%E6%9F%A5%E8%AF%A2.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Mybatis.svg" alt="" style="width: 16px; height: 16px;">
+              <span>三剑客Mybatis</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/ShardingJdbc/0_ShardingJdbc%E7%9A%84%E6%A6%82%E8%BF%B0.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/手动分表.svg" alt="" style="width: 16px; height: 16px;">
+              <span>分库分表ShardingJdbc</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/1_Spring%E5%AE%B9%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Spring.svg" alt="" style="width: 16px; height: 16px;">
+              <span>三剑客Spring</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/SpringBoot/SpringBoot%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/0_SpringBoot%E7%BC%96%E7%A8%8B%E8%B5%B7%E6%AD%A5.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/SpringBoot.svg" alt="" style="width: 16px; height: 16px;">
+              <span>三剑客SpringBoot</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/java/framework/distributed/springBootAdmin.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/监控.svg" alt="" style="width: 16px; height: 16px;">
+              <span>监控工具SpringBootAdmin</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/java/framework/distributed/distributedTaskScheduling.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/xxl-job.svg" alt="" style="width: 16px; height: 16px;">
+              <span>任务调度XXL-JOB</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/framework/thymeleaf/thymeleafBasicGrammar.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/thymeleaf.svg" alt="" style="width: 16px; height: 16px;">
+              <span>模板引擎Thymeleaf</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/framework/retry/springRetry.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/重试.svg" alt="" style="width: 16px; height: 16px;">
+              <span>重试框架Retry</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/Linux/01.Shell%E5%91%BD%E4%BB%A4/0_Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html" tabindex="0" data-v-6fe03c88 data-v-234d0f31><!--[--><span data-v-234d0f31>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/linux.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Linux</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-6fe03c88 data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-2a6bf2f7><span class="text" data-v-2a6bf2f7><!----><span data-v-2a6bf2f7>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/aigc.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AIGC</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-2a6bf2f7></span></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><div class="items" data-v-328ee30c><!--[--><!--[--><div class="VPMenuGroup" data-v-328ee30c data-v-dce236b3><p class="title" data-v-dce236b3>AI 应用开发</p><!--[--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/aigc/development/Introduction.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/vuepress.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AI开发指南</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/aigc/development/langGraph4j/start.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/LangGraph4j.svg" alt="" style="width: 16px; height: 16px;">
+              <span>LangGraph4j</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/aigc/development/springAI/overview.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/spring-ai.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Spring AI</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/aigc/development/springAIAlibaba/overview.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/阿里巴巴.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Spring AI Alibaba</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/aigc/development/open-claw/install-windows.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/openclaw.svg" alt="" style="width: 16px; height: 16px;">
+              <span>OpenClaw</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/aigc/interview/ai-basics.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/AI面试题.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AI面试题</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-328ee30c data-v-dce236b3><p class="title" data-v-dce236b3>AI 绘画</p><!--[--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/01.StableDiffusion/0_StableDiffusion%E4%BB%8B%E7%BB%8D.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/StableDiffusion.svg" alt="" style="width: 16px; height: 16px;">
+              <span>StableDiffusion</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/02.WebUI/0_WebUI%E4%BB%8B%E7%BB%8D.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/WebUI.svg" alt="" style="width: 16px; height: 16px;">
+              <span>WebUI</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/03.ComfyUI/0_ComfyUI%E7%AE%80%E4%BB%8B.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/ComfyUI.png" alt="" style="width: 16px; height: 16px;">
+              <span>ComfyUI</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/04.Midjourney/0_Midjourney%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Midjourney.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Midjourney</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/05.AIGC/AI%E7%BB%98%E7%94%BB%E6%8F%90%E7%A4%BA%E8%AF%8D.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/其他.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AIGC项目</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-6fe03c88 data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-2a6bf2f7><span class="text" data-v-2a6bf2f7><!----><span data-v-2a6bf2f7>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/notes.svg" alt="" style="width: 16px; height: 16px;">
+              <span>随笔文档</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-2a6bf2f7></span></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><div class="items" data-v-328ee30c><!--[--><!--[--><div class="VPMenuGroup" data-v-328ee30c data-v-dce236b3><p class="title" data-v-dce236b3>博客笔记</p><!--[--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/Vuepress/0_Vuepress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/vuepress.svg" alt="" style="width: 16px; height: 16px;">
+              <span>VuePress</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/VitPress/0_Vitpress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/vuepress-open.svg" alt="" style="width: 16px; height: 16px;">
+              <span>VitPress</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/%E5%85%B6%E4%BB%96%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/Github_Pages%E5%8A%A0%E9%80%9F.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/其他.svg" alt="" style="width: 16px; height: 16px;">
+              <span>其他</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-328ee30c data-v-dce236b3><p class="title" data-v-dce236b3>日常笔记</p><!--[--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/%E7%8E%A9%E5%AE%A2%E4%BA%91.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/note.svg" alt="" style="width: 16px; height: 16px;">
+              <span>日常笔记</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/0_%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/开源02.svg" alt="" style="width: 16px; height: 16px;">
+              <span>个人项目</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/0_%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/开源.svg" alt="" style="width: 16px; height: 16px;">
+              <span>开源项目</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/00_%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%80%83%E7%82%B9.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/考试.svg" alt="" style="width: 16px; height: 16px;">
+              <span>软件设计师</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E9%9D%A2%E8%AF%95%E4%B8%93%E6%A0%8F/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9B%B8%E5%85%B3/1_%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/谈话面试.svg" alt="" style="width: 16px; height: 16px;">
+              <span>面试专栏</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/1_%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/数学.svg" alt="" style="width: 16px; height: 16px;">
+              <span>高等数学</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-328ee30c data-v-dce236b3><p class="title" data-v-dce236b3>关于本站</p><!--[--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/nav.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/官网网站.svg" alt="" style="width: 16px; height: 16px;">
+              <span>网站导航</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/archives.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/归档2.svg" alt="" style="width: 16px; height: 16px;">
+              <span>文章归档</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/articleOverview.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/清单2.svg" alt="" style="width: 16px; height: 16px;">
+              <span>文章清单</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-1ab4d4a0 data-v-e1579382><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-e1579382 data-v-0809266a data-v-dc2fcc23><span class="check" data-v-dc2fcc23><span class="icon" data-v-dc2fcc23><!--[--><span class="vpi-sun sun" data-v-0809266a></span><span class="vpi-moon moon" data-v-0809266a></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-1ab4d4a0 data-v-e4d067fb data-v-addc7d74><!--[--><a class="VPSocialLink no-icon" href="https://gitee.com/xu_xiaolong" aria-label="gitee" target="_blank" rel="noopener" data-v-addc7d74 data-v-36549013><span class="vpi-social-gitee"></span></a><a class="VPSocialLink no-icon" href="https://github.com/Daneliya" aria-label="github" target="_blank" rel="noopener" data-v-addc7d74 data-v-36549013><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-1ab4d4a0 data-v-b79ab36b data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-2a6bf2f7><span class="vpi-more-horizontal icon" data-v-2a6bf2f7></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><!----><!--[--><!--[--><!----><div class="group" data-v-b79ab36b><div class="item appearance" data-v-b79ab36b><p class="label" data-v-b79ab36b>主题</p><div class="appearance-action" data-v-b79ab36b><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-b79ab36b data-v-0809266a data-v-dc2fcc23><span class="check" data-v-dc2fcc23><span class="icon" data-v-dc2fcc23><!--[--><span class="vpi-sun sun" data-v-0809266a></span><span class="vpi-moon moon" data-v-0809266a></span><!--]--></span></span></button></div></div></div><div class="group" data-v-b79ab36b><div class="item social-links" data-v-b79ab36b><div class="VPSocialLinks social-links-list" data-v-b79ab36b data-v-addc7d74><!--[--><a class="VPSocialLink no-icon" href="https://gitee.com/xu_xiaolong" aria-label="gitee" target="_blank" rel="noopener" data-v-addc7d74 data-v-36549013><span class="vpi-social-gitee"></span></a><a class="VPSocialLink no-icon" href="https://github.com/Daneliya" aria-label="github" target="_blank" rel="noopener" data-v-addc7d74 data-v-36549013><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--[--><!--[--><!--[--><!--]--><!--[--><div class="tk-theme-enhance flx-align-center"><!--[--><i class="tk-icon" style="--icon-size:20px;--icon-color-hover:var(--tk-theme-color);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="m512 863.36 384-54.848v-638.72L525.568 222.72a96 96 0 0 1-27.136 0L128 169.792v638.72zM137.024 106.432l370.432 52.928a32 32 0 0 0 9.088 0l370.432-52.928A64 64 0 0 1 960 169.792v638.72a64 64 0 0 1-54.976 63.36l-388.48 55.488a32 32 0 0 1-9.088 0l-388.48-55.488A64 64 0 0 1 64 808.512v-638.72a64 64 0 0 1 73.024-63.36z"
+    ></path>
+    <path fill="currentColor" d="M480 192h64v704h-64z"></path>
+  </svg></i><!--]--></div><!--teleport start--><!--teleport end--><!--]--><!--]--><!--]--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-1ab4d4a0 data-v-b7d900be><span class="container" data-v-b7d900be><span class="top" data-v-b7d900be></span><span class="middle" data-v-b7d900be></span><span class="bottom" data-v-b7d900be></span></span></button></div></div></div></div><div class="divider" data-v-1ab4d4a0><div class="divider-line" data-v-1ab4d4a0></div></div></div><!----></header><div class="VPLocalNav has-sidebar empty" data-v-e509d47d data-v-b6580fdf><div class="container" data-v-b6580fdf><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-b6580fdf><span class="vpi-align-left menu-icon" data-v-b6580fdf></span><span class="menu-text" data-v-b6580fdf>菜单</span></button><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-b6580fdf data-v-92fe7168><button data-v-92fe7168>返回顶部</button><!----></div></div></div><aside class="VPSidebar" data-v-e509d47d data-v-e8933ccb><div class="curtain" data-v-e8933ccb></div><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-e8933ccb><span class="visually-hidden" id="sidebar-aria-label" data-v-e8933ccb> Sidebar Navigation </span><!--[--><!--[--><!--v-if--><!--]--><!--]--><!--[--><div class="no-transition group" data-v-40939286><section class="VPSidebarItem level-0 collapsible" data-v-40939286 data-v-b98f694d><div class="item" role="button" tabindex="0" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><h2 class="text" data-v-b98f694d>AI大模型应用开发</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-b98f694d><span class="vpi-chevron-right caret-icon" data-v-b98f694d></span></div></div><div class="items" data-v-b98f694d><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/1_AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A7%91%E6%99%AE.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>AI大模型科普</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/2_OpenAI%E5%A4%A7%E6%A8%A1%E5%9E%8BAPI%E5%9F%BA%E7%A1%80.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>OpenAI大模型API基础</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/3_%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>提示词工程</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/4_API%E7%94%A8%E6%B3%95%E7%A4%BA%E4%BE%8B.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>API用法示例</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/5_LangChain%E4%BB%8B%E7%BB%8D.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>LangChain介绍</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/6_AI%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>AI模型与输入输出</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/7_%E5%AE%9E%E6%88%981%EF%BC%9A%E8%A7%86%E9%A2%91%E8%84%9A%E6%9C%AC%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E5%99%A8.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>实战1：视频脚本一键生成器</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/8_%E5%AE%9E%E6%88%982%EF%BC%9A%E7%88%86%E6%AC%BE%E5%B0%8F%E7%BA%A2%E4%B9%A6%E6%96%87%E6%A1%88%E7%94%9F%E6%88%90%E5%99%A8.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>实战2：爆款小红书文案生成器</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/9_%E7%BB%99AI%E6%A8%A1%E5%9E%8B%E6%B7%BB%E5%8A%A0%E8%AE%B0%E5%BF%86.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>给AI模型添加记忆</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/10_%E5%AE%9E%E6%88%983%EF%BC%9A%E5%85%8B%E9%9A%86AI%E8%81%8A%E5%A4%A9%E5%8A%A9%E6%89%8B.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>实战3：克隆AI聊天助手</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/11_%E7%BB%99AI%E6%A8%A1%E5%9E%8B%E8%AF%BB%E6%96%87%E4%BB%B6%E7%9A%84%E8%83%BD%E5%8A%9B.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>给AI模型读文件的能力</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/12_%E5%AE%9E%E6%88%984%EF%BC%9A%E6%99%BA%E8%83%BDPDF%E9%97%AE%E7%AD%94%E5%B7%A5%E5%85%B7.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>实战4：智能PDF问答工具</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/13_%E7%BB%99AI%E6%A8%A1%E5%9E%8B%E7%94%A8%E5%B7%A5%E5%85%B7%E7%9A%84%E8%83%BD%E5%8A%9B.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>给AI模型用工具的能力</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/14_CSV%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%99%BA%E8%83%BD%E5%B7%A5%E5%85%B7.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>CSV数据分析智能工具</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/15_Assistant%20API.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Assistant API</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/16_Streamlit%E5%85%A5%E9%97%A8.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Streamlit入门</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/17_AI%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>AI应用部署</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-40939286><section class="VPSidebarItem level-0 collapsible" data-v-40939286 data-v-b98f694d><div class="item" role="button" tabindex="0" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><h2 class="text" data-v-b98f694d>基础语法</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-b98f694d><span class="vpi-chevron-right caret-icon" data-v-b98f694d></span></div></div><div class="items" data-v-b98f694d><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/Python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python基础语法</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-40939286><section class="VPSidebarItem level-0 collapsible" data-v-40939286 data-v-b98f694d><div class="item" role="button" tabindex="0" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><h2 class="text" data-v-b98f694d>数据分析</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-b98f694d><span class="vpi-chevron-right caret-icon" data-v-b98f694d></span></div></div><div class="items" data-v-b98f694d><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/1_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/2_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E2%80%94NumPy.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析—NumPy</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/3_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E2%80%94Pandas.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析—Pandas</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E2%80%94Dataframe.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析—Dataframe</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/5_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E2%80%94%E6%95%B0%E6%8D%AE%E6%94%B6%E9%9B%86.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析—数据收集</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/6_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E2%80%94%E8%AF%BB%E5%8F%96JSON.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析—读取JSON</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/7_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E2%80%94%E8%AF%BB%E5%8F%96CSV.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析—读取CSV</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/8_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E2%80%94%E8%AF%84%E4%BC%B0%E6%95%B0%E6%8D%AE.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析—评估数据</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/9_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E2%80%94%E6%B8%85%E7%90%86%E6%95%B0%E6%8D%AE.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析—清理数据</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/10_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E2%80%94%E4%BF%9D%E5%AD%98%E6%95%B0%E6%8D%AE.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析—保存数据</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/11_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E2%80%94%E6%95%B4%E7%90%86%E6%95%B0%E6%8D%AE.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析—整理数据</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/12_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E2%80%94%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%9F%BA%E7%A1%80.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析—统计学基础</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/13_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E2%80%94%E5%8F%AF%E8%A7%86%E5%8C%96%E6%95%B0%E6%8D%AE.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析—可视化数据</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/14_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E2%80%94%E7%BB%9F%E8%AE%A1%E5%AD%A6%E8%BF%9B%E9%98%B6.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python数据分析—统计学进阶</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-40939286><section class="VPSidebarItem level-0 collapsible" data-v-40939286 data-v-b98f694d><div class="item" role="button" tabindex="0" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><h2 class="text" data-v-b98f694d>爬虫</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-b98f694d><span class="vpi-chevron-right caret-icon" data-v-b98f694d></span></div></div><div class="items" data-v-b98f694d><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E7%88%AC%E8%99%AB/1_%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>爬虫的流程</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E7%88%AC%E8%99%AB/2_Python%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python发送HTTP请求</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E7%88%AC%E8%99%AB/3_Python%E8%A7%A3%E6%9E%90HTML.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python解析HTML</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E7%88%AC%E8%99%AB/4_%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1Top250.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>爬取豆瓣电影Top250</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/Python/%E7%88%AC%E8%99%AB/5_Python%E4%BD%BF%E7%94%A8API.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Python使用API</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-e509d47d data-v-418bbb5c><div class="VPDoc has-sidebar has-aside" data-v-418bbb5c data-v-6aab8dc8><!--[--><!--]--><div class="container" data-v-6aab8dc8><div class="aside" data-v-6aab8dc8><div class="aside-curtain" data-v-6aab8dc8></div><div class="aside-container" data-v-6aab8dc8><div class="aside-content" data-v-6aab8dc8><div class="VPDocAside" data-v-6aab8dc8 data-v-380f0925><!--[--><!--]--><!--[--><!--[--><!--[--><!--[--><!--[--><!--[--><!--]--><div class="tk-article-share"><button class="tk-article-share__button flx-center" aria-label="分享此页面" aria-live="polite"><div class="flx-center"><i class="tk-icon" style="margin-right:4px;--icon-color-hover:var(--tk-theme-color);"><svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    aria-hidden="true"
+    role="img"
+    class="iconify iconify iconify--solar"
+    alt="Icon"
+    width="1em"
+    height="1em"
+    viewBox="0 0 24 24"
+    style="vertical-align: -0.125em"
+  >
+    <path
+      fill="currentColor"
+      fill-rule="evenodd"
+      d="M13.803 5.333c0-1.84 1.5-3.333 3.348-3.333A3.34 3.34 0 0 1 20.5 5.333c0 1.841-1.5 3.334-3.349 3.334a3.35 3.35 0 0 1-2.384-.994l-4.635 3.156a3.34 3.34 0 0 1-.182 1.917l5.082 3.34a3.35 3.35 0 0 1 2.12-.753a3.34 3.34 0 0 1 3.348 3.334C20.5 20.507 19 22 17.151 22a3.34 3.34 0 0 1-3.348-3.333a3.3 3.3 0 0 1 .289-1.356L9.05 14a3.35 3.35 0 0 1-2.202.821A3.34 3.34 0 0 1 3.5 11.487a3.34 3.34 0 0 1 3.348-3.333c1.064 0 2.01.493 2.623 1.261l4.493-3.059a3.3 3.3 0 0 1-.161-1.023"
+      clip-rule="evenodd"
+    ></path>
+  </svg></i> 分享此页面</div></button></div><!--[--><!--]--><!--]--><!--[--><!--]--><!--]--><!--]--><!--]--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-380f0925 data-v-d9f36aee><div class="content" data-v-d9f36aee><div class="outline-marker" data-v-d9f36aee></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-d9f36aee>本页导航</div><ul class="VPDocOutlineItem root" data-v-d9f36aee data-v-df18c97e><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-380f0925></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-6aab8dc8><div class="content-container" data-v-6aab8dc8><!--[--><!--[--><!--[--><!--[--><!--]--><!--[--><!--[--><!--]--><div class="tk-article-analyze flx-justify-between" aria-label="文章分析"><div class="tk-article-breadcrumb" role="navigation" aria-label="文章面包屑"><div class="tk-breadcrumb" role="navigation" aria-label="面包屑"><!--[--><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><a href="/" title="首页" class="home hover-color" aria-label="首页"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="M192 413.952V896h640V413.952L512 147.328zM139.52 374.4l352-293.312a32 32 0 0 1 40.96 0l352 293.312A32 32 0 0 1 896 398.976V928a32 32 0 0 1-32 32H160a32 32 0 0 1-32-32V398.976a32 32 0 0 1 11.52-24.576"
+    ></path>
+  </svg></i></a><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><!--[--><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><span href title="Python" class="" aria-label="Python">Python</span><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><span href title="AI大模型应用开发" class="" aria-label="AI大模型应用开发">AI大模型应用开发</span><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><!--]--><!--]--></div></div><div class="tk-article-analyze__wrapper flx-align-center"><div class="tk-article-info article" role="group" aria-label="文章信息"><!--[--><!--[--><span class="tk-article-info__item" role="group" aria-label="作者"><i class="tk-icon tk-article-info__icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <path
+    fill="currentColor"
+    d="M512 512a192 192 0 1 0 0-384 192 192 0 0 0 0 384m0 64a256 256 0 1 1 0-512 256 256 0 0 1 0 512m320 320v-96a96 96 0 0 0-96-96H288a96 96 0 0 0-96 96v96a32 32 0 1 1-64 0v-96a160 160 0 0 1 160-160h448a160 160 0 0 1 160 160v96a32 32 0 1 1-64 0"
+  ></path>
+</svg></i><a title="作者" href="https://github.com/Daneliya" target="_blank" class="hover-color" aria-label="xiaolong">xiaolong</a></span><!--]--><!--[--><span class="tk-article-info__item" role="group" aria-label="创建时间"><i class="tk-icon tk-article-info__icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <path
+    fill="currentColor"
+    d="M128 384v512h768V192H768v32a32 32 0 1 1-64 0v-32H320v32a32 32 0 0 1-64 0v-32H128v128h768v64zm192-256h384V96a32 32 0 1 1 64 0v32h160a32 32 0 0 1 32 32v768a32 32 0 0 1-32 32H96a32 32 0 0 1-32-32V160a32 32 0 0 1 32-32h160V96a32 32 0 0 1 64 0zm-32 384h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64m0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64m192-192h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64m0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64m192-192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64m0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64"
+  ></path>
+</svg></i><a title="创建时间" class="hover-color" aria-label="2026-11-08">2026-11-08</a></span><!--]--><!--[--><!--v-if--><!--]--><!--[--><!--v-if--><!--]--><!--[--><!--v-if--><!--]--><!--]--><!--[--><!--]--></div><div class="flx-center"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="m512 863.36 384-54.848v-638.72L525.568 222.72a96 96 0 0 1-27.136 0L128 169.792v638.72zM137.024 106.432l370.432 52.928a32 32 0 0 0 9.088 0l370.432-52.928A64 64 0 0 1 960 169.792v638.72a64 64 0 0 1-54.976 63.36l-388.48 55.488a32 32 0 0 1-9.088 0l-388.48-55.488A64 64 0 0 1 64 808.512v-638.72a64 64 0 0 1 73.024-63.36z"
+    ></path>
+    <path fill="currentColor" d="M480 192h64v704h-64z"></path>
+  </svg></i><a title="文章字数" class="hover-color" aria-label="文章字数">3009</a></div><div class="flx-center"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="M512 896a384 384 0 1 0 0-768 384 384 0 0 0 0 768m0 64a448 448 0 1 1 0-896 448 448 0 0 1 0 896"
+    ></path>
+    <path fill="currentColor" d="M480 256a32 32 0 0 1 32 32v256a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32"></path>
+    <path fill="currentColor" d="M480 512h256q32 0 32 32t-32 32H480q-32 0-32-32t32-32"></path>
+  </svg></i><a title="预计阅读时长" class="hover-color" aria-label="预计阅读时长">12.4m</a></div><!--v-if--></div></div><!--[--><!--]--><!--]--><!----><!----><!----><!--v-if--><!--[--><div class="tk-sidebar-trigger" title="侧边栏展开/折叠" role="button" aria-label="侧边栏展开/折叠"><div class="tk-right-bottom-button__button"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg
+    viewBox="0 0 48 48"
+    display="inline-block"
+    vertical-align="middle"
+    min-width="1.2rem"
+    width="1.2em"
+    height="1.2em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4">
+      <path d="M6 7h36M8 24h32" />
+      <path stroke-linejoin="round" d="M13.99 30L8 24.005L14 18m20.01 0L40 23.995L34 30" />
+      <path d="M6 41h36" />
+    </g>
+  </svg></i></div></div><!--]--><!--]--><!--]--><!--]--><main class="main" data-v-6aab8dc8><div style="position:relative;" class="vp-doc _Python_AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91_7_%E5%AE%9E%E6%88%981%EF%BC%9A%E8%A7%86%E9%A2%91%E8%84%9A%E6%9C%AC%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E5%99%A8" data-v-6aab8dc8><div><div style="display:none;" hidden="true" aria-hidden="true">Are you an LLM? You can read better optimized documentation at /Python/AI大模型应用开发/7_实战1：视频脚本一键生成器.md for this page in Markdown format</div><h1 id="实战1-视频脚本一键生成器" tabindex="-1">实战1：视频脚本一键生成器 <a class="header-anchor" href="#实战1-视频脚本一键生成器" aria-label="Permalink to &quot;实战1：视频脚本一键生成器&quot;">​</a></h1><h2 id="一、项目介绍" tabindex="-1">一、项目介绍 <a class="header-anchor" href="#一、项目介绍" aria-label="Permalink to &quot;一、项目介绍&quot;">​</a></h2><h3 id="_1、核心功能" tabindex="-1">1、核心功能 <a class="header-anchor" href="#_1、核心功能" aria-label="Permalink to &quot;1、核心功能&quot;">​</a></h3><ul><li>实现视频脚本的一键生成，结合用户需求与外部信息，提升脚本的准确性和实时性。</li></ul><h3 id="_2、界面与用户输入" tabindex="-1">2、界面与用户输入 <a class="header-anchor" href="#_2、界面与用户输入" aria-label="Permalink to &quot;2、界面与用户输入&quot;">​</a></h3><ol><li><strong>侧边栏</strong><ul><li>支持用户输入 API 密钥（如 OpenAI API 密钥），避免仅消耗开发者的 token。</li><li>附官方网站链接，方便用户了解如何获取 API 密钥。</li><li>可灵活适配其他大模型：若使用文心一言等，可替换输入提示语及后端模型；自用场景下，可移除输入框，直接在代码中嵌入密钥。</li></ul></li><li><strong>主页面</strong><ul><li>用户需输入：视频主题（任意主题）、生成脚本的大致时长（任意数字）、创造力参数（范围 0-1，对应 AI 的 Temperature 参数：值越低，随机性和创造性越弱；值越高，随机性和创造性越强，可能出现意外回答）。</li></ul></li></ol><h3 id="_3、生成流程" tabindex="-1">3、生成流程 <a class="header-anchor" href="#_3、生成流程" aria-label="Permalink to &quot;3、生成流程&quot;">​</a></h3><ol><li><strong>点击 “生成脚本” 后</strong><ul><li>先判断用户是否提供 API 密钥，若已提供，显示加载组件，提示用户 AI 正在生成。</li><li>生成完成后，展示视频标题、脚本内容，以及维基百科搜索结果（用户可点击查看详情）。</li></ul></li><li><strong>背后的增强机制</strong><ul><li>调用维基百科 API：在向 AI 模型发送请求前，先通过维基百科 API 获取相关内容，与用户需求结合后一并传给 AI。</li><li>目的：弥补 AI 模型知识受训练日期限制的问题（例如 2024 年 2 月公开的 SORA 模型，此前训练的模型均不了解该内容），确保 AI 获得真实、实时的补充信息，避免胡编乱造。</li></ul></li></ol><h2 id="二、创建项目及安装依赖项" tabindex="-1">二、创建项目及安装依赖项 <a class="header-anchor" href="#二、创建项目及安装依赖项" aria-label="Permalink to &quot;二、创建项目及安装依赖项&quot;">​</a></h2><h3 id="_1、创建项目文件夹" tabindex="-1">1、创建项目文件夹 <a class="header-anchor" href="#_1、创建项目文件夹" aria-label="Permalink to &quot;1、创建项目文件夹&quot;">​</a></h3><ul><li>新建独立文件夹（如命名为<code>video-script-generator</code>），用于存放网站相关的所有代码、图片等资源，实现文件管理的规范化。</li></ul><h3 id="_2、配置venv虚拟环境" tabindex="-1">2、配置venv虚拟环境 <a class="header-anchor" href="#_2、配置venv虚拟环境" aria-label="Permalink to &quot;2、配置venv虚拟环境&quot;">​</a></h3><ol><li><strong>创建方式</strong>： <ul><li>PyCharm 创建项目时默认使用虚拟环境；其他编辑器可搜索对应方法（如<code>python -m venv 虚拟环境名</code>）。</li></ul></li><li><strong>核心作用</strong>： <ul><li><strong>环境隔离</strong>：为不同项目提供独立的开发环境，支持使用不同版本的 Python 解释器（如项目 1 用 3.8，项目 2 用 3.10）。</li><li><strong>依赖管理</strong>：避免不同项目的依赖冲突（例如项目 1 需库 A 1.0 版本，项目 2 需库 A 1.1 版本时，不会相互影响）。</li></ul></li><li><strong>注意事项</strong>： <ul><li>缺点：每个虚拟环境会复制解释器和库，占用较多存储空间。</li><li>例外：临时练习的小项目可省略虚拟环境。</li></ul></li></ol><h3 id="_3、处理依赖文件-requirements-txt" tabindex="-1">3、处理依赖文件（requirements.txt） <a class="header-anchor" href="#_3、处理依赖文件-requirements-txt" aria-label="Permalink to &quot;3、处理依赖文件（requirements.txt）&quot;">​</a></h3><ol><li><p><strong>文件作用</strong>：</p><ul><li>存储项目运行所需的所有依赖库及<strong>精准版本号</strong>，确保项目在不同环境中运行的一致性（避免因版本差异导致代码报错）。</li></ul></li><li><p><strong>使用步骤</strong>：</p><ul><li><p>从项目文件夹新建<code>requirements.txt</code>。</p><div class="language-txt vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">txt</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>aiofiles==23.2.1</span></span>
+<span class="line"><span>aiohttp==3.9.1</span></span>
+<span class="line"><span>aiosignal==1.3.1</span></span>
+<span class="line"><span>altair==5.2.0</span></span>
+<span class="line"><span>annotated-types==0.6.0</span></span>
+<span class="line"><span>anyio==3.7.1</span></span>
+<span class="line"><span>async-timeout==4.0.3</span></span>
+<span class="line"><span>attrs==23.1.0</span></span>
+<span class="line"><span>beautifulsoup4==4.12.2</span></span>
+<span class="line"><span>blinker==1.7.0</span></span>
+<span class="line"><span>Brotli==1.1.0</span></span>
+<span class="line"><span>cachetools==5.3.2</span></span>
+<span class="line"><span>certifi==2023.11.17</span></span>
+<span class="line"><span>charset-normalizer==3.3.2</span></span>
+<span class="line"><span>click==8.1.7</span></span>
+<span class="line"><span>dataclasses-json==0.6.3</span></span>
+<span class="line"><span>distro==1.8.0</span></span>
+<span class="line"><span>duckduckgo-search==3.9.9</span></span>
+<span class="line"><span>exceptiongroup==1.2.0</span></span>
+<span class="line"><span>frozenlist==1.4.0</span></span>
+<span class="line"><span>gitdb==4.0.11</span></span>
+<span class="line"><span>GitPython==3.1.40</span></span>
+<span class="line"><span>greenlet==3.0.1</span></span>
+<span class="line"><span>h11==0.14.0</span></span>
+<span class="line"><span>h2==4.1.0</span></span>
+<span class="line"><span>hpack==4.0.0</span></span>
+<span class="line"><span>httpcore==1.0.2</span></span>
+<span class="line"><span>httpx==0.25.2</span></span>
+<span class="line"><span>hyperframe==6.0.1</span></span>
+<span class="line"><span>idna==3.6</span></span>
+<span class="line"><span>importlib-metadata==6.8.0</span></span>
+<span class="line"><span>Jinja2==3.1.2</span></span>
+<span class="line"><span>jsonpatch==1.33</span></span>
+<span class="line"><span>jsonpointer==2.4</span></span>
+<span class="line"><span>jsonschema==4.20.0</span></span>
+<span class="line"><span>jsonschema-specifications==2023.11.2</span></span>
+<span class="line"><span>langchain==0.1.9</span></span>
+<span class="line"><span>langchain-community==0.0.24</span></span>
+<span class="line"><span>langchain-core==0.1.26</span></span>
+<span class="line"><span>langchain-openai==0.0.7</span></span>
+<span class="line"><span>langsmith==0.1.6</span></span>
+<span class="line"><span>lxml==4.9.3</span></span>
+<span class="line"><span>markdown-it-py==3.0.0</span></span>
+<span class="line"><span>MarkupSafe==2.1.3</span></span>
+<span class="line"><span>marshmallow==3.20.1</span></span>
+<span class="line"><span>mdurl==0.1.2</span></span>
+<span class="line"><span>multidict==6.0.4</span></span>
+<span class="line"><span>mypy-extensions==1.0.0</span></span>
+<span class="line"><span>numpy==1.26.2</span></span>
+<span class="line"><span>openai==1.12.0</span></span>
+<span class="line"><span>orjson==3.9.15</span></span>
+<span class="line"><span>packaging==23.2</span></span>
+<span class="line"><span>pandas==2.1.3</span></span>
+<span class="line"><span>Pillow==10.1.0</span></span>
+<span class="line"><span>protobuf==4.25.1</span></span>
+<span class="line"><span>pyarrow==14.0.1</span></span>
+<span class="line"><span>pydantic==2.5.2</span></span>
+<span class="line"><span>pydantic_core==2.14.5</span></span>
+<span class="line"><span>pydeck==0.8.1b0</span></span>
+<span class="line"><span>Pygments==2.17.2</span></span>
+<span class="line"><span>python-dateutil==2.8.2</span></span>
+<span class="line"><span>pytz==2023.3.post1</span></span>
+<span class="line"><span>PyYAML==6.0.1</span></span>
+<span class="line"><span>referencing==0.31.1</span></span>
+<span class="line"><span>regex==2023.12.25</span></span>
+<span class="line"><span>requests==2.31.0</span></span>
+<span class="line"><span>rich==13.7.0</span></span>
+<span class="line"><span>rpds-py==0.13.2</span></span>
+<span class="line"><span>six==1.16.0</span></span>
+<span class="line"><span>smmap==5.0.1</span></span>
+<span class="line"><span>sniffio==1.3.0</span></span>
+<span class="line"><span>socksio==1.0.0</span></span>
+<span class="line"><span>soupsieve==2.5</span></span>
+<span class="line"><span>SQLAlchemy==2.0.23</span></span>
+<span class="line"><span>streamlit==1.31.1</span></span>
+<span class="line"><span>tenacity==8.2.3</span></span>
+<span class="line"><span>tiktoken==0.6.0</span></span>
+<span class="line"><span>toml==0.10.2</span></span>
+<span class="line"><span>toolz==0.12.0</span></span>
+<span class="line"><span>tornado==6.4</span></span>
+<span class="line"><span>tqdm==4.66.1</span></span>
+<span class="line"><span>typing-inspect==0.9.0</span></span>
+<span class="line"><span>typing_extensions==4.8.0</span></span>
+<span class="line"><span>tzdata==2023.3</span></span>
+<span class="line"><span>tzlocal==5.2</span></span>
+<span class="line"><span>urllib3==2.1.0</span></span>
+<span class="line"><span>validators==0.22.0</span></span>
+<span class="line"><span>wikipedia==1.4.0</span></span>
+<span class="line"><span>yarl==1.9.3</span></span>
+<span class="line"><span>zipp==3.17.0</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br></div></div></li><li><p>在终端运行命令安装依赖：<code>pip install -r requirements.txt</code>，即可自动安装所有指定版本的库。</p></li></ul></li><li><p><strong>文件生成方式</strong>：</p><ul><li>若需自己生成，在虚拟环境中运行命令：<code>pip freeze &gt; requirements.txt</code>，会将当前环境中所有安装包及版本号写入文件。</li></ul></li></ol><h2 id="三、创建ai请求" tabindex="-1">三、创建AI请求 <a class="header-anchor" href="#三、创建ai请求" aria-label="Permalink to &quot;三、创建AI请求&quot;">​</a></h2><h3 id="_1、文件与函数准备" tabindex="-1">1、文件与函数准备 <a class="header-anchor" href="#_1、文件与函数准备" aria-label="Permalink to &quot;1、文件与函数准备&quot;">​</a></h3><ol><li>新建代码文件（如命名为<code>utils.py</code>），用于封装与 AI 大模型交互的代码。</li><li>定义<code>generate_script</code>函数，接收参数：视频主题（<code>subject</code>）、时长（<code>duration</code>）、创造性（<code>creativity</code>）、API 密钥（<code>api_key</code>），用于生成视频标题和脚本。</li></ol><h3 id="_2、提示模板定义" tabindex="-1">2、提示模板定义 <a class="header-anchor" href="#_2、提示模板定义" aria-label="Permalink to &quot;2、提示模板定义&quot;">​</a></h3><p>从<code>LangChain</code>导入<code>ChatPromptTemplate</code>，分别定义生成标题和脚本的提示模板：</p><ul><li><strong>标题模板（<code>title_template</code>）</strong>：通过<code>from_messages</code>方法接收含变量（视频主题<code>subject</code>）的消息列表，用于生成视频标题。</li><li><strong>脚本模板（<code>script_template</code>）</strong>：同样用<code>from_messages</code>方法，消息列表包含多个变量（标题<code>title</code>、时长<code>duration</code>、维基百科搜索结果<code>wikipedia_search</code>），用于生成脚本内容。</li></ul><h3 id="_3、模型配置" tabindex="-1">3、模型配置 <a class="header-anchor" href="#_3、模型配置" aria-label="Permalink to &quot;3、模型配置&quot;">​</a></h3><p>从<code>LangChain.OpenAI</code>导入聊天模型，配置<code>ChatOpenAI</code>：</p><ul><li>传入用户提供的<code>api_key</code>。</li><li>将<code>creativity</code>参数值赋给模型的<code>temperature</code>（控制内容创造性，值越高创造性越强）。</li><li>若使用课程提供的 API 密钥，可补充<code>openai_api_base</code>参数。</li></ul><h3 id="_4、链式调用与结果获取" tabindex="-1">4、链式调用与结果获取 <a class="header-anchor" href="#_4、链式调用与结果获取" aria-label="Permalink to &quot;4、链式调用与结果获取&quot;">​</a></h3><ol><li><strong>生成标题</strong>： <ul><li>组装标题生成链（<code>TitleChain</code>），将<code>TitleTemplate</code>与模型结合。</li><li>调用<code>TitleChain.invoke</code>，传入含<code>subject</code>（用户提供的视频主题）的字典，通过返回消息的<code>content</code>属性获取标题，存入<code>title</code>变量。</li></ul></li><li><strong>获取维基百科搜索结果</strong>： <ul><li>从<code>LangChain.Community.Utilities</code>导入<code>WikipediaAPIWrapper</code>，创建实例并设置<code>lang=&quot;zh&quot;</code>（指定中文搜索，也可默认英文）。</li><li>调用实例的<code>run</code>方法，传入视频主题作为搜索词，获取搜索结果摘要。</li></ul></li><li><strong>生成脚本</strong>： <ul><li>组装脚本生成链（<code>ScriptChain</code>），将<code>ScriptTemplate</code>与模型结合。</li><li>调用<code>ScriptChain.invoke</code>，传入含<code>title</code>（生成的标题）、<code>duration</code>（用户提供的时长）、<code>wikipedia_search</code>（维基百科搜索结果）的字典，通过返回消息的<code>content</code>属性获取脚本内容。</li></ul></li></ol><h3 id="_5、结果返回与测试" tabindex="-1">5、结果返回与测试 <a class="header-anchor" href="#_5、结果返回与测试" aria-label="Permalink to &quot;5、结果返回与测试&quot;">​</a></h3><ul><li>函数最后返回视频标题、脚本内容、维基百科搜索结果。</li><li>测试时调用<code>GenerateScript</code>，传入测试用的视频主题、时长、创造性参数及 API 密钥，打印结果以验证逻辑（运行中若出现维基百科库的警告，一般可忽略，重点关注错误<code>error</code>）。</li></ul><h3 id="_6、完整代码" tabindex="-1">6、完整代码 <a class="header-anchor" href="#_6、完整代码" aria-label="Permalink to &quot;6、完整代码&quot;">​</a></h3><div class="language-python vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">python</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> langchain.prompts </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ChatPromptTemplate</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> langchain_openai </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ChatOpenAI</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> langchain_community.utilities </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> WikipediaAPIWrapper</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># import os</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> generate_script</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(subject, video_length, creativity, api_key):</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    title_template </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ChatPromptTemplate.from_messages(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        [</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            (</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;human&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;请为&#39;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">{subject}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;这个主题的视频想一个吸引人的标题&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        ]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    script_template </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ChatPromptTemplate.from_messages(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        [</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            (</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;human&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">             &quot;&quot;&quot;你是一位短视频频道的博主。根据以下标题和相关信息，为短视频频道写一个视频脚本。</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">             视频标题：</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">{title}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">，视频时长：</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">{duration}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">分钟，生成的脚本的长度尽量遵循视频时长的要求。</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">             要求开头抓住限球，中间提供干货内容，结尾有惊喜，脚本格式也请按照【开头、中间，结尾】分隔。</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">             整体内容的表达方式要尽量轻松有趣，吸引年轻人。</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">             脚本内容可以结合以下维基百科搜索出的信息，但仅作为参考，只结合相关的即可，对不相关的进行忽略：</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">             ```</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">{wikipedia_search}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">```&quot;&quot;&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        ]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    )</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    model </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ChatOpenAI(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">openai_api_key</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">api_key, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">temperature</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">creativity)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    title_chain </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> title_template </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">|</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> model</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    script_chain </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> script_template </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">|</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> model</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    title </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> title_chain.invoke({</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;subject&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: subject}).content</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    search </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> WikipediaAPIWrapper(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">lang</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;zh&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    search_result </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> search.run(subject)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    script </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> script_chain.invoke({</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;title&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: title, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;duration&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: video_length,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">                                  &quot;wikipedia_search&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: search_result}).content</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> search_result, title, script</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># print(generate_script(&quot;sora模型&quot;, 1, 0.7, os.getenv(&quot;OPENAI_API_KEY&quot;)))</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><h2 id="四、创建网站页面" tabindex="-1">四、创建网站页面 <a class="header-anchor" href="#四、创建网站页面" aria-label="Permalink to &quot;四、创建网站页面&quot;">​</a></h2><p>使用 Streamlit 开发视频脚本生成器前端</p><h3 id="_1、前期准备" tabindex="-1">1、前期准备 <a class="header-anchor" href="#_1、前期准备" aria-label="Permalink to &quot;1、前期准备&quot;">​</a></h3><ol><li><strong>文件与依赖</strong><ul><li>删除 / 注释上一节中测试<code>generate_script</code>的代码。</li><li>新建代码文件<code>main.py</code>（作为网站主页），导入<code>streamlit</code>库和上一节创建的<code>generate_script</code>函数（无需再导入 LangChain 相关库）。</li></ul></li><li><strong>运行网页</strong><ul><li>给网页添加标题（如 “视频脚本生成器”），通过命令<code>streamlit run 文件名.py</code>运行网页，实时查看效果。</li></ul></li></ol><h3 id="_2、侧边栏设计-用户-api-密钥相关" tabindex="-1">2、侧边栏设计（用户 API 密钥相关） <a class="header-anchor" href="#_2、侧边栏设计-用户-api-密钥相关" aria-label="Permalink to &quot;2、侧边栏设计（用户 API 密钥相关）&quot;">​</a></h3><p>通过<code>with streamlit.sidebar:</code>创建侧边栏，缩进内容均显示在侧边栏中：</p><ul><li><strong>API 密钥输入框</strong>：使用<code>st.text_input</code>，提示文字为 “请输入 OpenAI API 密钥”，设置<code>type=&quot;password&quot;</code>隐藏输入内容，用变量保存输入的密钥（如<code>api_key</code>）。</li><li><strong>API 密钥获取链接</strong>：用<code>st.markdown</code>添加 Markdown 格式链接（语法：<code>[链接标签](链接地址)</code>），直达 OpenAI 官方密钥创建页面，方便用户获取密钥。</li></ul><h3 id="_3、主页面组件-用户输入相关" tabindex="-1">3、主页面组件（用户输入相关） <a class="header-anchor" href="#_3、主页面组件-用户输入相关" aria-label="Permalink to &quot;3、主页面组件（用户输入相关）&quot;">​</a></h3><p>主页面组件无需缩进（避免归入侧边栏），包括：</p><ol><li><strong>视频主题输入</strong>：<code>st.text_input</code>，提示文字为 “请输入视频的主题”，结果保存到<code>subject</code>变量。</li><li><strong>视频时长输入</strong>：<code>st.number_input</code>，提示文字为 “请输入视频的大致时长”，设置最小值<code>0.1</code>、步长<code>0.1</code>（每次增减 0.1），结果保存到<code>video_length</code>变量。</li><li><strong>创造力调节滑块</strong>：<code>st.slider</code>，控制 AI 的<code>temperature</code>参数，设置最小值<code>0.0</code>、最大值<code>1.0</code>（避免过高导致内容混乱）、默认值<code>0.2</code>、步长<code>0.1</code>，结果保存到<code>creativity</code>变量。</li><li><strong>生成按钮</strong>：<code>st.button</code>，文字为 “生成脚本”，返回布尔值（点击后为<code>True</code>），用于触发后续逻辑。</li></ol><h3 id="_4、用户交互逻辑-点击按钮后处理" tabindex="-1">4、用户交互逻辑（点击按钮后处理） <a class="header-anchor" href="#_4、用户交互逻辑-点击按钮后处理" aria-label="Permalink to &quot;4、用户交互逻辑（点击按钮后处理）&quot;">​</a></h3><ol><li><strong>输入验证</strong>： <ul><li>若用户点击按钮但未提供<code>api_key</code>：用<code>st.info</code>提示 “请输入 API 密钥”，调用<code>st.stop()</code>终止后续代码。</li><li>若未提供<code>subject</code>：提示 “请输入视频的主题” 并终止。</li><li>若<code>video_length</code>小于 0.1：提示 “视频时长需不小于 0.1” 并终止。</li></ul></li><li><strong>调用后端函数与加载状态</strong>： <ul><li>验证通过后，用<code>with st.spinner(&quot;AI正在生成脚本...&quot;):</code>包裹<code>generate_script</code>调用，显示加载动画（动画持续至函数执行完毕）。</li><li>调用<code>generate_script(subject, video_length, creativity, api_key)</code>，获取返回结果：维基百科搜索结果、视频标题、脚本内容。</li></ul></li><li><strong>结果展示</strong>： <ul><li>用<code>st.success(&quot;视频脚本生成成功！&quot;)</code>提示成功。</li><li>展示标题：<code>st.subheader(&quot;视频标题&quot;)</code> + 生成的标题内容。</li><li>展示脚本：<code>st.subheader(&quot;视频脚本&quot;)</code> + 生成的脚本内容。</li><li>展示维基百科结果：用<code>st.expander(&quot;维基百科搜索结果&quot;)</code>创建折叠组件，内容放入其中（用户可自主展开查看）。</li></ul></li></ol><h3 id="_5、完整代码" tabindex="-1">5、完整代码 <a class="header-anchor" href="#_5、完整代码" aria-label="Permalink to &quot;5、完整代码&quot;">​</a></h3><div class="language-python vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">python</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> streamlit </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> st</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> utils </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> generate_script</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">st.title(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;🎬 视频脚本生成器&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">with</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> st.sidebar:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    openai_api_key </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> st.text_input(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;请输入OpenAI API密钥：&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">type</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;password&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    st.markdown(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;[获取OpenAI API密钥](https://platform.openai.com/account/api-keys)&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">subject </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> st.text_input(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;💡 请输入视频的主题&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">video_length </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> st.number_input(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;⏱️ 请输入视频的大致时长（单位：分钟）&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">min_value</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0.1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">step</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0.1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">creativity </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> st.slider(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;✨ 请输入视频脚本的创造力（数字小说明更严谨，数字大说明更多样）&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">min_value</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">                       max_value</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">value</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0.2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">step</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0.1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">submit </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> st.button(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;生成脚本&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> submit </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">and</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> not</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> openai_api_key:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    st.info(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;请输入你的OpenAI API密钥&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    st.stop()</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> submit </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">and</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> not</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> subject:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    st.info(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;请输入视频的主题&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    st.stop()</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> submit </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">and</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> not</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> video_length </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&gt;=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0.1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    st.info(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;视频长度需要大于或等于0.1&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    st.stop()</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> submit:</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    with</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> st.spinner(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;AI正在思考中，请稍等...&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">):</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        search_result, title, script </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> generate_script(subject, video_length, creativity, openai_api_key)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    st.success(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;视频脚本已生成！&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    st.subheader(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;🔥 标题：&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    st.write(title)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    st.subheader(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;📝 视频脚本：&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    st.write(script)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    with</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> st.expander(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;维基百科搜索结果 👀&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">):</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        st.info(search_result)</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><h3 id="_6、页面效果展示" tabindex="-1">6、页面效果展示 <a class="header-anchor" href="#_6、页面效果展示" aria-label="Permalink to &quot;6、页面效果展示&quot;">​</a></h3><p><img src="/assets/image-20250820225827468.s-5SZxb3.png" alt="image-20250820225827468" loading="lazy"></p></div></div></main><footer class="VPDocFooter" data-v-6aab8dc8 data-v-268617e7><!--[--><!--]--><div class="edit-info" data-v-268617e7><div class="edit-link" data-v-268617e7><a class="VPLink link vp-external-link-icon no-icon edit-link-button" href="https://github.com/Kele-Bingtang/vitepress-theme-teek/edit/master/docs/Python/AI大模型应用开发/7_实战1：视频脚本一键生成器.md" target="_blank" rel="noreferrer" data-v-268617e7><!--[--><span class="vpi-square-pen edit-link-icon" data-v-268617e7></span> 在 GitHub 上编辑此页<!--]--></a></div><div class="last-updated" data-v-268617e7><p class="VPLastUpdated" data-v-268617e7 data-v-3aa6bde9>上次更新时间: <time datetime="2026-01-03T12:43:45.000Z" data-v-3aa6bde9></time></p></div></div><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-268617e7><span class="visually-hidden" id="doc-footer-aria-label" data-v-268617e7>Pager</span><div class="pager" data-v-268617e7><!----></div><div class="pager" data-v-268617e7><a class="VPLink link pager-link next" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/1_AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A7%91%E6%99%AE.html" data-v-268617e7><!--[--><span class="desc" data-v-268617e7>下一页</span><span class="title" data-v-268617e7>AI大模型科普</span><!--]--></a></div></nav></footer><!--[--><!--[--><!--[--><!--[--><!--]--><!--[--><!--[--><!--]--><div class="tk-article-update"><div class="tk-article-update__title flx-align-center"><i class="tk-icon edit-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="m199.04 672.64 193.984 112 224-387.968-193.92-112-224 388.032zm-23.872 60.16 32.896 148.288 144.896-45.696zM455.04 229.248l193.92 112 56.704-98.112-193.984-112-56.64 98.112zM104.32 708.8l384-665.024 304.768 175.936L409.152 884.8h.064l-248.448 78.336zm384 254.272v-64h448v64h-448z"
+    ></path>
+  </svg></i><a href="/@pages/archivesPage.html" class="hover-color" aria-label="最近更新">最近更新</a></div><ul><!--[--><li class="flx-center"><span class="tk-article-update--num" aria-hidden="true">01</span><div class="tk-article-update__content"><a href="/daily/开源项目/0_开源项目.html" class="flx-1 hover-color sle" aria-label="开源项目"><span class="tk-article-title" aria-label="文章标题"><!--v-if--><!--[--><!--[-->开源项目<!--]--><!--]--><!--v-if--></span></a><span class="tk-article-update__content--date">2026-11-06 06:15:48</span></div></li><li class="flx-center"><span class="tk-article-update--num" aria-hidden="true">02</span><div class="tk-article-update__content"><a href="/Java/架构设计/分布式/06.分布式监控/2_Prometheus.html" class="flx-1 hover-color sle" aria-label="Prometheus监控"><span class="tk-article-title" aria-label="文章标题"><!--v-if--><!--[--><!--[-->Prometheus监控<!--]--><!--]--><!--v-if--></span></a><span class="tk-article-update__content--date">2026-11-06 05:08:48</span></div></li><li class="flx-center"><span class="tk-article-update--num" aria-hidden="true">03</span><div class="tk-article-update__content"><a href="/Java/Java开发技巧/01.JDK新特性/3_JDK25新特性.html" class="flx-1 hover-color sle" aria-label="JDK25 新特性"><span class="tk-article-title" aria-label="文章标题"><!--v-if--><!--[--><!--[-->JDK25 新特性<!--]--><!--]--><!--v-if--></span></a><span class="tk-article-update__content--date">2026-11-06 03:36:01</span></div></li><li class="flx-center"><span class="tk-article-update--num" aria-hidden="true"></span><div class="tk-article-update__content"><a href="/@pages/archivesPage.html" class="flx-1 hover-color sle" aria-label="更多文章 &gt;"><span class="tk-article-title" aria-label="文章标题"><!--v-if--><!--[--><!--[-->更多文章 &gt;<!--]--><!--]--><!--v-if--></span></a><!--v-if--></div></li><!--]--></ul></div><!--[--><!--]--><!--]--><!--v-if--><!-- 评论区 --><!--v-if--><!--]--><!--]--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div><!--]--></div>
+    
+    
+  </body>
+</html>

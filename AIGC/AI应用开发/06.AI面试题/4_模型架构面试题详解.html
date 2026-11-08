@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>模型架构面试题详解 | xiaolong</title>
+    
+    <meta name="generator" content="VitePress v1.6.4">
+    <link rel="preload stylesheet" href="/assets/style.DYVOXO_n.css" as="style">
+    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
+    <script type="module" src="/assets/chunks/metadata.134818b2.js"></script>
+    <script type="module" src="/assets/app.CzrUAs6o.js"></script>
+    <link rel="preload" href="/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/assets/chunks/theme.DZVHRhM6.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.DW3NRN-T.js">
+    <link rel="modulepreload" href="/assets/AIGC_AI应用开发_06.AI面试题_4_模型架构面试题详解.md.BtFLWHaj.lean.js">
+    <link rel="icon" type="image/svg+xml" href="/logo.svg">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh-CN">
+    <meta property="og:title" content="Teek | VitePress Theme">
+    <meta property="og:site_name" content="Teek">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" description="欢迎来到 vitepress-theme-teek 使用文档,Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置,Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景">
+    <meta name="description" description="欢迎来到 vitepress-theme-teek 使用文档,Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置,Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景">
+    <meta name="author" content="Teek">
+    <meta name="keywords" description="欢迎来到 vitepress-theme-teek 使用文档,Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置,Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6079554807639839" crossorigin="anonymous"></script>
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body><!--teleport start anchor--><div style="display:none;" class="tk-spotlight-hover tk-spotlight-hover__aside" aria-hidden="true" focusable="false"></div><!--teleport anchor-->
+    <div id="app"><!--[--><!--v-if--><!--v-if--><!--v-if--><!--[--><!--v-if--><!----><!--v-if--><div class="tk-right-bottom-button tk-wallpaper-outside flx-column"><!--[--><!--]--><div title="返回顶部" class="tk-right-bottom-button__button back-top" style="--tk-progress:0;display:none;" role="button" aria-label="返回顶部" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span class="content">0</span></div><div title="前往评论" class="tk-right-bottom-button__button" role="button" aria-label="前往评论" style="display:none;"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="M273.536 736H800a64 64 0 0 0 64-64V256a64 64 0 0 0-64-64H224a64 64 0 0 0-64 64v570.88zM296 800 147.968 918.4A32 32 0 0 1 96 893.44V256a128 128 0 0 1 128-128h576a128 128 0 0 1 128 128v416a128 128 0 0 1-128 128z"
+    ></path>
+    <path
+      fill="currentColor"
+      d="M512 499.2a51.2 51.2 0 1 1 0-102.4 51.2 51.2 0 0 1 0 102.4zm192 0a51.2 51.2 0 1 1 0-102.4 51.2 51.2 0 0 1 0 102.4zm-384 0a51.2 51.2 0 1 1 0-102.4 51.2 51.2 0 0 1 0 102.4z"
+    ></path>
+  </svg></i></div><!--v-if--><!--[--><!--]--></div><!--]--><div class="Layout tk-layout has-sidebar-trigger" data-v-e509d47d><!--[--><!--]--><!--[--><span tabindex="-1" data-v-d2bd82ce></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-d2bd82ce>Skip to content</a><!--]--><!----><header class="VPNav" data-v-e509d47d data-v-4219e3de><div class="VPNavBar" data-v-4219e3de data-v-1ab4d4a0><div class="wrapper" data-v-1ab4d4a0><div class="container" data-v-1ab4d4a0><div class="title" data-v-1ab4d4a0><div class="VPNavBarTitle has-sidebar" data-v-1ab4d4a0 data-v-8718258c><a class="title" href="/" data-v-8718258c><!--[--><!--]--><!--[--><img class="VPImage logo" src="/logo.png" alt data-v-4c447c4f><!--]--><span data-v-8718258c>xiaolong</span><!--[--><!--]--></a></div></div><div class="content" data-v-1ab4d4a0><div class="content-body" data-v-1ab4d4a0><!--[--><!--]--><div class="VPNavBarSearch search" data-v-1ab4d4a0><!--[--><!----><div id="local-search"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-1ab4d4a0 data-v-6fe03c88><span id="main-nav-aria-label" class="visually-hidden" data-v-6fe03c88> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/" tabindex="0" data-v-6fe03c88 data-v-234d0f31><!--[--><span data-v-234d0f31>🏡主页</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-6fe03c88 data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-2a6bf2f7><span class="text" data-v-2a6bf2f7><!----><span data-v-2a6bf2f7>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/java.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Java</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-2a6bf2f7></span></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><div class="items" data-v-328ee30c><!--[--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/Java%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/01.JDK%E6%96%B0%E7%89%B9%E6%80%A7/1_JDK8%E6%96%B0%E7%89%B9%E6%80%A7Optional%E5%AE%B9%E5%99%A8%E7%B1%BB.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/code.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Java开发技巧</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/JVM%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/01.JVM%E6%A6%82%E5%BF%B5/0_JVM%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/JVM.svg" alt="" style="width: 16px; height: 16px;">
+              <span>JVM性能调优</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/1_JUC.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/并发编程.svg" alt="" style="width: 16px; height: 16px;">
+              <span>并发编程</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E5%AE%B9%E5%99%A8/Docker/01.Docker%E6%95%99%E7%A8%8B/0_Docker%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BD%BF%E7%94%A8.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/docker.svg" alt="" style="width: 16px; height: 16px;">
+              <span>容器相关</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01.%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/设计模式.svg" alt="" style="width: 16px; height: 16px;">
+              <span>设计模式</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%93%E6%A0%8F/01.SpringCloud/1_SpringCloud%E7%AE%80%E4%BB%8B.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/mse.svg" alt="" style="width: 16px; height: 16px;">
+              <span>微服务专栏</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E5%88%86%E5%B8%83%E5%BC%8F/01.%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/架构设计.svg" alt="" style="width: 16px; height: 16px;">
+              <span>架构设计</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98API%E5%AF%B9%E6%8E%A5%E6%8C%87%E5%8D%97/1_%E5%95%86%E5%AE%B6%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/解决方案.svg" alt="" style="width: 16px; height: 16px;">
+              <span>解决方案</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/数据结构.svg" alt="" style="width: 16px; height: 16px;">
+              <span>数据结构</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Java/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/1_%E5%B9%82%E7%AD%89%E8%AE%BE%E8%AE%A1.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/系统优化.svg" alt="" style="width: 16px; height: 16px;">
+              <span>系统优化</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-6fe03c88 data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-2a6bf2f7><span class="text" data-v-2a6bf2f7><!----><span data-v-2a6bf2f7>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/python.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Python</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-2a6bf2f7></span></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><div class="items" data-v-328ee30c><!--[--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Python/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/Python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/基础语法.svg" alt="" style="width: 16px; height: 16px;">
+              <span>基础语法</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/1_Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/数据分析.svg" alt="" style="width: 16px; height: 16px;">
+              <span>数据分析</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Python/%E7%88%AC%E8%99%AB/1_%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/爬虫.svg" alt="" style="width: 16px; height: 16px;">
+              <span>爬虫</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/Python/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/1_AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A7%91%E6%99%AE.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/人工智能.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AI大模型应用开发</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-6fe03c88 data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-2a6bf2f7><span class="text" data-v-2a6bf2f7><!----><span data-v-2a6bf2f7>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/database.svg" alt="" style="width: 16px; height: 16px;">
+              <span>数据库</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-2a6bf2f7></span></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><div class="items" data-v-328ee30c><!--[--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/database/mysql/acid.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/MySQL.svg" alt="" style="width: 16px; height: 16px;">
+              <span>MySQL</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/database/mongodb/mongodb-introduction.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/MongoDB.svg" alt="" style="width: 16px; height: 16px;">
+              <span>MongoDB</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/database/postgresql/postgresql-introduction.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/PostgreSQL.svg" alt="" style="width: 16px; height: 16px;">
+              <span>PostgreSQL</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/database/tidb/tidb-introduction.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/TiDB.svg" alt="" style="width: 16px; height: 16px;">
+              <span>分布式数据库TIDB</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/database/neo4j/neo4j-introduce.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Neo4j.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Neo4j</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/Redis/Redis%E5%9F%BA%E7%A1%80/1_Redis%E7%BC%93%E5%AD%98%E4%B8%89%E5%A4%A7%E9%97%AE%E9%A2%98.html" tabindex="0" data-v-6fe03c88 data-v-234d0f31><!--[--><span data-v-234d0f31>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/redis.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Redis专栏</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-6fe03c88 data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-2a6bf2f7><span class="text" data-v-2a6bf2f7><!----><span data-v-2a6bf2f7>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/framework.svg" alt="" style="width: 16px; height: 16px;">
+              <span>常用框架</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-2a6bf2f7></span></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><div class="items" data-v-328ee30c><!--[--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Activiti7/Activiti%E6%95%B4%E5%90%88Spring.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/工作流.svg" alt="" style="width: 16px; height: 16px;">
+              <span>工作流引擎Activiti7</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Caffeine/0_Caffeine%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/缓存.svg" alt="" style="width: 16px; height: 16px;">
+              <span>缓存框架Caffeine</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/EasyCaptcha/0_%E4%BD%BF%E7%94%A8EasyCaptcha%E7%94%9F%E6%88%90%E9%AA%8C%E8%AF%81%E7%A0%81.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/验证码.svg" alt="" style="width: 16px; height: 16px;">
+              <span>验证码EasyCaptcha</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/EasyExcel/0_EasyExcel%E6%A6%82%E8%BF%B0.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/EasyExcel.svg" alt="" style="width: 16px; height: 16px;">
+              <span>表格工具EasyExcel</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/java/framework/distributed/elastic-search-introduction.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/ElasticSearch.svg" alt="" style="width: 16px; height: 16px;">
+              <span>搜索引擎ElasticSearch</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Mybatis/Mybatis-Plus-Join%E8%BF%9E%E8%A1%A8%E6%9F%A5%E8%AF%A2.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Mybatis.svg" alt="" style="width: 16px; height: 16px;">
+              <span>三剑客Mybatis</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/ShardingJdbc/0_ShardingJdbc%E7%9A%84%E6%A6%82%E8%BF%B0.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/手动分表.svg" alt="" style="width: 16px; height: 16px;">
+              <span>分库分表ShardingJdbc</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/1_Spring%E5%AE%B9%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Spring.svg" alt="" style="width: 16px; height: 16px;">
+              <span>三剑客Spring</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/SpringBoot/SpringBoot%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/0_SpringBoot%E7%BC%96%E7%A8%8B%E8%B5%B7%E6%AD%A5.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/SpringBoot.svg" alt="" style="width: 16px; height: 16px;">
+              <span>三剑客SpringBoot</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/java/framework/distributed/springBootAdmin.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/监控.svg" alt="" style="width: 16px; height: 16px;">
+              <span>监控工具SpringBootAdmin</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/java/framework/distributed/distributedTaskScheduling.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/xxl-job.svg" alt="" style="width: 16px; height: 16px;">
+              <span>任务调度XXL-JOB</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/framework/thymeleaf/thymeleafBasicGrammar.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/thymeleaf.svg" alt="" style="width: 16px; height: 16px;">
+              <span>模板引擎Thymeleaf</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-328ee30c data-v-93cddc64><a class="VPLink link" href="/framework/retry/springRetry.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/重试.svg" alt="" style="width: 16px; height: 16px;">
+              <span>重试框架Retry</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/Linux/01.Shell%E5%91%BD%E4%BB%A4/0_Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html" tabindex="0" data-v-6fe03c88 data-v-234d0f31><!--[--><span data-v-234d0f31>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/linux.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Linux</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-6fe03c88 data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-2a6bf2f7><span class="text" data-v-2a6bf2f7><!----><span data-v-2a6bf2f7>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/aigc.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AIGC</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-2a6bf2f7></span></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><div class="items" data-v-328ee30c><!--[--><!--[--><div class="VPMenuGroup" data-v-328ee30c data-v-dce236b3><p class="title" data-v-dce236b3>AI 应用开发</p><!--[--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/aigc/development/Introduction.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/vuepress.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AI开发指南</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/aigc/development/langGraph4j/start.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/LangGraph4j.svg" alt="" style="width: 16px; height: 16px;">
+              <span>LangGraph4j</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/aigc/development/springAI/overview.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/spring-ai.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Spring AI</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/aigc/development/springAIAlibaba/overview.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/阿里巴巴.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Spring AI Alibaba</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/aigc/development/open-claw/install-windows.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/openclaw.svg" alt="" style="width: 16px; height: 16px;">
+              <span>OpenClaw</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/aigc/interview/ai-basics.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/AI面试题.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AI面试题</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-328ee30c data-v-dce236b3><p class="title" data-v-dce236b3>AI 绘画</p><!--[--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/01.StableDiffusion/0_StableDiffusion%E4%BB%8B%E7%BB%8D.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/StableDiffusion.svg" alt="" style="width: 16px; height: 16px;">
+              <span>StableDiffusion</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/02.WebUI/0_WebUI%E4%BB%8B%E7%BB%8D.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/WebUI.svg" alt="" style="width: 16px; height: 16px;">
+              <span>WebUI</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/03.ComfyUI/0_ComfyUI%E7%AE%80%E4%BB%8B.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/ComfyUI.png" alt="" style="width: 16px; height: 16px;">
+              <span>ComfyUI</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/04.Midjourney/0_Midjourney%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/Midjourney.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Midjourney</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/AIGC/AI%E7%BB%98%E7%94%BB/05.AIGC/AI%E7%BB%98%E7%94%BB%E6%8F%90%E7%A4%BA%E8%AF%8D.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/其他.svg" alt="" style="width: 16px; height: 16px;">
+              <span>AIGC项目</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-6fe03c88 data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-2a6bf2f7><span class="text" data-v-2a6bf2f7><!----><span data-v-2a6bf2f7>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/notes.svg" alt="" style="width: 16px; height: 16px;">
+              <span>随笔文档</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><span class="vpi-chevron-down text-icon" data-v-2a6bf2f7></span></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><div class="items" data-v-328ee30c><!--[--><!--[--><div class="VPMenuGroup" data-v-328ee30c data-v-dce236b3><p class="title" data-v-dce236b3>博客笔记</p><!--[--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/Vuepress/0_Vuepress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/vuepress.svg" alt="" style="width: 16px; height: 16px;">
+              <span>VuePress</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/VitPress/0_Vitpress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/vuepress-open.svg" alt="" style="width: 16px; height: 16px;">
+              <span>VitPress</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/%E5%85%B6%E4%BB%96%E5%8D%9A%E5%AE%A2%E6%96%87%E6%A1%A3/Github_Pages%E5%8A%A0%E9%80%9F.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/其他.svg" alt="" style="width: 16px; height: 16px;">
+              <span>其他</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-328ee30c data-v-dce236b3><p class="title" data-v-dce236b3>日常笔记</p><!--[--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/%E7%8E%A9%E5%AE%A2%E4%BA%91.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/note.svg" alt="" style="width: 16px; height: 16px;">
+              <span>日常笔记</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/0_%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/开源02.svg" alt="" style="width: 16px; height: 16px;">
+              <span>个人项目</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/0_%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/开源.svg" alt="" style="width: 16px; height: 16px;">
+              <span>开源项目</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/00_%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%80%83%E7%82%B9.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/考试.svg" alt="" style="width: 16px; height: 16px;">
+              <span>软件设计师</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E9%9D%A2%E8%AF%95%E4%B8%93%E6%A0%8F/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9B%B8%E5%85%B3/1_%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/谈话面试.svg" alt="" style="width: 16px; height: 16px;">
+              <span>面试专栏</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/daily/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/1_%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/数学.svg" alt="" style="width: 16px; height: 16px;">
+              <span>高等数学</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-328ee30c data-v-dce236b3><p class="title" data-v-dce236b3>关于本站</p><!--[--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/nav.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/官网网站.svg" alt="" style="width: 16px; height: 16px;">
+              <span>网站导航</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/archives.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/归档2.svg" alt="" style="width: 16px; height: 16px;">
+              <span>文章归档</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-dce236b3 data-v-93cddc64><a class="VPLink link" href="/articleOverview.html" data-v-93cddc64><!--[--><span data-v-93cddc64>
+            <div style="display: flex; align-items: center; gap: 4px;">
+             <img src="/svg/navIcon/清单2.svg" alt="" style="width: 16px; height: 16px;">
+              <span>文章清单</span><span>&nbsp;&nbsp;</span>
+            </div>
+            </span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-1ab4d4a0 data-v-e1579382><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-e1579382 data-v-0809266a data-v-dc2fcc23><span class="check" data-v-dc2fcc23><span class="icon" data-v-dc2fcc23><!--[--><span class="vpi-sun sun" data-v-0809266a></span><span class="vpi-moon moon" data-v-0809266a></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-1ab4d4a0 data-v-e4d067fb data-v-addc7d74><!--[--><a class="VPSocialLink no-icon" href="https://gitee.com/xu_xiaolong" aria-label="gitee" target="_blank" rel="noopener" data-v-addc7d74 data-v-36549013><span class="vpi-social-gitee"></span></a><a class="VPSocialLink no-icon" href="https://github.com/Daneliya" aria-label="github" target="_blank" rel="noopener" data-v-addc7d74 data-v-36549013><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-1ab4d4a0 data-v-b79ab36b data-v-2a6bf2f7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-2a6bf2f7><span class="vpi-more-horizontal icon" data-v-2a6bf2f7></span></button><div class="menu" data-v-2a6bf2f7><div class="VPMenu" data-v-2a6bf2f7 data-v-328ee30c><!----><!--[--><!--[--><!----><div class="group" data-v-b79ab36b><div class="item appearance" data-v-b79ab36b><p class="label" data-v-b79ab36b>主题</p><div class="appearance-action" data-v-b79ab36b><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-b79ab36b data-v-0809266a data-v-dc2fcc23><span class="check" data-v-dc2fcc23><span class="icon" data-v-dc2fcc23><!--[--><span class="vpi-sun sun" data-v-0809266a></span><span class="vpi-moon moon" data-v-0809266a></span><!--]--></span></span></button></div></div></div><div class="group" data-v-b79ab36b><div class="item social-links" data-v-b79ab36b><div class="VPSocialLinks social-links-list" data-v-b79ab36b data-v-addc7d74><!--[--><a class="VPSocialLink no-icon" href="https://gitee.com/xu_xiaolong" aria-label="gitee" target="_blank" rel="noopener" data-v-addc7d74 data-v-36549013><span class="vpi-social-gitee"></span></a><a class="VPSocialLink no-icon" href="https://github.com/Daneliya" aria-label="github" target="_blank" rel="noopener" data-v-addc7d74 data-v-36549013><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--[--><!--[--><!--[--><!--]--><!--[--><div class="tk-theme-enhance flx-align-center"><!--[--><i class="tk-icon" style="--icon-size:20px;--icon-color-hover:var(--tk-theme-color);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="m512 863.36 384-54.848v-638.72L525.568 222.72a96 96 0 0 1-27.136 0L128 169.792v638.72zM137.024 106.432l370.432 52.928a32 32 0 0 0 9.088 0l370.432-52.928A64 64 0 0 1 960 169.792v638.72a64 64 0 0 1-54.976 63.36l-388.48 55.488a32 32 0 0 1-9.088 0l-388.48-55.488A64 64 0 0 1 64 808.512v-638.72a64 64 0 0 1 73.024-63.36z"
+    ></path>
+    <path fill="currentColor" d="M480 192h64v704h-64z"></path>
+  </svg></i><!--]--></div><!--teleport start--><!--teleport end--><!--]--><!--]--><!--]--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-1ab4d4a0 data-v-b7d900be><span class="container" data-v-b7d900be><span class="top" data-v-b7d900be></span><span class="middle" data-v-b7d900be></span><span class="bottom" data-v-b7d900be></span></span></button></div></div></div></div><div class="divider" data-v-1ab4d4a0><div class="divider-line" data-v-1ab4d4a0></div></div></div><!----></header><div class="VPLocalNav has-sidebar empty" data-v-e509d47d data-v-b6580fdf><div class="container" data-v-b6580fdf><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-b6580fdf><span class="vpi-align-left menu-icon" data-v-b6580fdf></span><span class="menu-text" data-v-b6580fdf>菜单</span></button><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-b6580fdf data-v-92fe7168><button data-v-92fe7168>返回顶部</button><!----></div></div></div><aside class="VPSidebar" data-v-e509d47d data-v-e8933ccb><div class="curtain" data-v-e8933ccb></div><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-e8933ccb><span class="visually-hidden" id="sidebar-aria-label" data-v-e8933ccb> Sidebar Navigation </span><!--[--><!--[--><!--v-if--><!--]--><!--]--><!--[--><div class="no-transition group" data-v-40939286><section class="VPSidebarItem level-0" data-v-40939286 data-v-b98f694d><!----><div class="items" data-v-b98f694d><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/06.AI%E9%9D%A2%E8%AF%95%E9%A2%98/1_AI%E5%9F%BA%E7%A1%80%E4%B8%8E%E8%BF%9B%E9%98%B6%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AF%A6%E8%A7%A3.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>AI基础与进阶面试题详解</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/06.AI%E9%9D%A2%E8%AF%95%E9%A2%98/2_RAG%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AF%A6%E8%A7%A3.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>RAG 面试题详解</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/06.AI%E9%9D%A2%E8%AF%95%E9%A2%98/3_Agent%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AF%A6%E8%A7%A3.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>Agent 面试题详解</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/06.AI%E9%9D%A2%E8%AF%95%E9%A2%98/4_%E6%A8%A1%E5%9E%8B%E6%9E%B6%E6%9E%84%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AF%A6%E8%A7%A3.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>模型架构面试题详解</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/06.AI%E9%9D%A2%E8%AF%95%E9%A2%98/5_%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AF%A6%E8%A7%A3.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>模型训练面试题详解</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/06.AI%E9%9D%A2%E8%AF%95%E9%A2%98/6_%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AF%B9%E9%BD%90%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AF%A6%E8%A7%A3.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>强化学习与对齐面试题详解</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/06.AI%E9%9D%A2%E8%AF%95%E9%A2%98/7_%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96%E4%B8%8E%E9%83%A8%E7%BD%B2%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AF%A6%E8%A7%A3.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>推理优化与部署面试题详解</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/06.AI%E9%9D%A2%E8%AF%95%E9%A2%98/8_%E5%90%B4%E5%B8%88%E5%85%84%E5%AD%A6%E5%A4%A7%E6%A8%A1%E5%9E%8B_%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94%E6%B1%87%E6%80%BB.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>吴师兄学大模型_公众号文章问题解答汇总</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b98f694d data-v-b98f694d><div class="item" data-v-b98f694d><div class="indicator" data-v-b98f694d></div><a class="VPLink link link" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/06.AI%E9%9D%A2%E8%AF%95%E9%A2%98/9_LangChain4j%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AF%A6%E8%A7%A3.html" data-v-b98f694d><!--[--><p class="text" data-v-b98f694d>LangChain4j 面试题详解</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-e509d47d data-v-418bbb5c><div class="VPDoc has-sidebar has-aside" data-v-418bbb5c data-v-6aab8dc8><!--[--><!--]--><div class="container" data-v-6aab8dc8><div class="aside" data-v-6aab8dc8><div class="aside-curtain" data-v-6aab8dc8></div><div class="aside-container" data-v-6aab8dc8><div class="aside-content" data-v-6aab8dc8><div class="VPDocAside" data-v-6aab8dc8 data-v-380f0925><!--[--><!--]--><!--[--><!--[--><!--[--><!--[--><!--[--><!--[--><!--]--><div class="tk-article-share"><button class="tk-article-share__button flx-center" aria-label="分享此页面" aria-live="polite"><div class="flx-center"><i class="tk-icon" style="margin-right:4px;--icon-color-hover:var(--tk-theme-color);"><svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    aria-hidden="true"
+    role="img"
+    class="iconify iconify iconify--solar"
+    alt="Icon"
+    width="1em"
+    height="1em"
+    viewBox="0 0 24 24"
+    style="vertical-align: -0.125em"
+  >
+    <path
+      fill="currentColor"
+      fill-rule="evenodd"
+      d="M13.803 5.333c0-1.84 1.5-3.333 3.348-3.333A3.34 3.34 0 0 1 20.5 5.333c0 1.841-1.5 3.334-3.349 3.334a3.35 3.35 0 0 1-2.384-.994l-4.635 3.156a3.34 3.34 0 0 1-.182 1.917l5.082 3.34a3.35 3.35 0 0 1 2.12-.753a3.34 3.34 0 0 1 3.348 3.334C20.5 20.507 19 22 17.151 22a3.34 3.34 0 0 1-3.348-3.333a3.3 3.3 0 0 1 .289-1.356L9.05 14a3.35 3.35 0 0 1-2.202.821A3.34 3.34 0 0 1 3.5 11.487a3.34 3.34 0 0 1 3.348-3.333c1.064 0 2.01.493 2.623 1.261l4.493-3.059a3.3 3.3 0 0 1-.161-1.023"
+      clip-rule="evenodd"
+    ></path>
+  </svg></i> 分享此页面</div></button></div><!--[--><!--]--><!--]--><!--[--><!--]--><!--]--><!--]--><!--]--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-380f0925 data-v-d9f36aee><div class="content" data-v-d9f36aee><div class="outline-marker" data-v-d9f36aee></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-d9f36aee>本页导航</div><ul class="VPDocOutlineItem root" data-v-d9f36aee data-v-df18c97e><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-380f0925></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-6aab8dc8><div class="content-container" data-v-6aab8dc8><!--[--><!--[--><!--[--><!--[--><!--]--><!--[--><!--[--><!--]--><div class="tk-article-analyze flx-justify-between" aria-label="文章分析"><div class="tk-article-breadcrumb" role="navigation" aria-label="文章面包屑"><div class="tk-breadcrumb" role="navigation" aria-label="面包屑"><!--[--><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><a href="/" title="首页" class="home hover-color" aria-label="首页"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="M192 413.952V896h640V413.952L512 147.328zM139.52 374.4l352-293.312a32 32 0 0 1 40.96 0l352 293.312A32 32 0 0 1 896 398.976V928a32 32 0 0 1-32 32H160a32 32 0 0 1-32-32V398.976a32 32 0 0 1 11.52-24.576"
+    ></path>
+  </svg></i></a><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><!--[--><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><span href title="AIGC" class="" aria-label="AIGC">AIGC</span><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><span href title="AI应用开发" class="" aria-label="AI应用开发">AI应用开发</span><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><span class="tk-breadcrumb__item"><span class="tk-breadcrumb__inner" role="link"><!--[--><span href title="AI面试题" class="" aria-label="AI面试题">AI面试题</span><!--]--></span><span class="tk-breadcrumb__separator" role="presentation">/</span></span><!--]--><!--]--></div></div><div class="tk-article-analyze__wrapper flx-align-center"><div class="tk-article-info article" role="group" aria-label="文章信息"><!--[--><!--[--><span class="tk-article-info__item" role="group" aria-label="作者"><i class="tk-icon tk-article-info__icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <path
+    fill="currentColor"
+    d="M512 512a192 192 0 1 0 0-384 192 192 0 0 0 0 384m0 64a256 256 0 1 1 0-512 256 256 0 0 1 0 512m320 320v-96a96 96 0 0 0-96-96H288a96 96 0 0 0-96 96v96a32 32 0 1 1-64 0v-96a160 160 0 0 1 160-160h448a160 160 0 0 1 160 160v96a32 32 0 1 1-64 0"
+  ></path>
+</svg></i><a title="作者" href="https://github.com/Daneliya" target="_blank" class="hover-color" aria-label="xiaolong">xiaolong</a></span><!--]--><!--[--><span class="tk-article-info__item" role="group" aria-label="创建时间"><i class="tk-icon tk-article-info__icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <path
+    fill="currentColor"
+    d="M128 384v512h768V192H768v32a32 32 0 1 1-64 0v-32H320v32a32 32 0 0 1-64 0v-32H128v128h768v64zm192-256h384V96a32 32 0 1 1 64 0v32h160a32 32 0 0 1 32 32v768a32 32 0 0 1-32 32H96a32 32 0 0 1-32-32V160a32 32 0 0 1 32-32h160V96a32 32 0 0 1 64 0zm-32 384h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64m0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64m192-192h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64m0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64m192-192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64m0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64"
+  ></path>
+</svg></i><a title="创建时间" class="hover-color" aria-label="2026-11-08">2026-11-08</a></span><!--]--><!--[--><!--v-if--><!--]--><!--[--><!--v-if--><!--]--><!--[--><!--v-if--><!--]--><!--]--><!--[--><!--]--></div><div class="flx-center"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="m512 863.36 384-54.848v-638.72L525.568 222.72a96 96 0 0 1-27.136 0L128 169.792v638.72zM137.024 106.432l370.432 52.928a32 32 0 0 0 9.088 0l370.432-52.928A64 64 0 0 1 960 169.792v638.72a64 64 0 0 1-54.976 63.36l-388.48 55.488a32 32 0 0 1-9.088 0l-388.48-55.488A64 64 0 0 1 64 808.512v-638.72a64 64 0 0 1 73.024-63.36z"
+    ></path>
+    <path fill="currentColor" d="M480 192h64v704h-64z"></path>
+  </svg></i><a title="文章字数" class="hover-color" aria-label="文章字数">2151</a></div><div class="flx-center"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="M512 896a384 384 0 1 0 0-768 384 384 0 0 0 0 768m0 64a448 448 0 1 1 0-896 448 448 0 0 1 0 896"
+    ></path>
+    <path fill="currentColor" d="M480 256a32 32 0 0 1 32 32v256a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32"></path>
+    <path fill="currentColor" d="M480 512h256q32 0 32 32t-32 32H480q-32 0-32-32t32-32"></path>
+  </svg></i><a title="预计阅读时长" class="hover-color" aria-label="预计阅读时长">8.7m</a></div><!--v-if--></div></div><!--[--><!--]--><!--]--><!----><!----><!----><!--v-if--><!--[--><div class="tk-sidebar-trigger" title="侧边栏展开/折叠" role="button" aria-label="侧边栏展开/折叠"><div class="tk-right-bottom-button__button"><i class="tk-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg
+    viewBox="0 0 48 48"
+    display="inline-block"
+    vertical-align="middle"
+    min-width="1.2rem"
+    width="1.2em"
+    height="1.2em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4">
+      <path d="M6 7h36M8 24h32" />
+      <path stroke-linejoin="round" d="M13.99 30L8 24.005L14 18m20.01 0L40 23.995L34 30" />
+      <path d="M6 41h36" />
+    </g>
+  </svg></i></div></div><!--]--><!--]--><!--]--><!--]--><main class="main" data-v-6aab8dc8><div style="position:relative;" class="vp-doc _AIGC_AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91_06_AI%E9%9D%A2%E8%AF%95%E9%A2%98_4_%E6%A8%A1%E5%9E%8B%E6%9E%B6%E6%9E%84%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AF%A6%E8%A7%A3" data-v-6aab8dc8><div><div style="display:none;" hidden="true" aria-hidden="true">Are you an LLM? You can read better optimized documentation at /AIGC/AI应用开发/06.AI面试题/4_模型架构面试题详解.md for this page in Markdown format</div><h1 id="模型架构面试题详解" tabindex="-1">模型架构面试题详解 <a class="header-anchor" href="#模型架构面试题详解" aria-label="Permalink to &quot;模型架构面试题详解&quot;">​</a></h1><h2 id="一、模型架构概述" tabindex="-1">一、模型架构概述 <a class="header-anchor" href="#一、模型架构概述" aria-label="Permalink to &quot;一、模型架构概述&quot;">​</a></h2><p>模型架构是大模型的基础，理解 Transformer 架构的核心组件及其变体对于大模型工程师至关重要。</p><h3 id="核心组件" tabindex="-1">核心组件 <a class="header-anchor" href="#核心组件" aria-label="Permalink to &quot;核心组件&quot;">​</a></h3><table tabindex="0"><thead><tr><th>组件</th><th>作用</th></tr></thead><tbody><tr><td><strong>Attention</strong></td><td>捕捉序列中的依赖关系</td></tr><tr><td><strong>Normalization</strong></td><td>稳定训练过程</td></tr><tr><td><strong>Position Encoding</strong></td><td>注入位置信息</td></tr><tr><td><strong>Feed Forward</strong></td><td>非线性变换</td></tr></tbody></table><h2 id="二、面试题列表" tabindex="-1">二、面试题列表 <a class="header-anchor" href="#二、面试题列表" aria-label="Permalink to &quot;二、面试题列表&quot;">​</a></h2><h3 id="_2-1-prefix-lm-vs-causal-lm" tabindex="-1">2.1 Prefix LM vs Causal LM <a class="header-anchor" href="#_2-1-prefix-lm-vs-causal-lm" aria-label="Permalink to &quot;2.1 Prefix LM vs Causal LM&quot;">​</a></h3><p><strong>面试题</strong>：快手一面：Prefix LM和Causal LM到底差在哪？</p><p><strong>考察点</strong>：架构对比</p><p><strong>详细解答</strong>：</p><p><strong>核心区别</strong>：对上下文信息的利用方式不同。</p><table tabindex="0"><thead><tr><th>维度</th><th>Causal LM（因果语言模型）</th><th>Prefix LM（前缀语言模型）</th></tr></thead><tbody><tr><td><strong>建模逻辑</strong></td><td>单向建模，每个 token 仅依赖左侧已出现的 token</td><td>分段建模：前缀段双向依赖 + 预测段单向自回归</td></tr><tr><td><strong>注意力机制</strong></td><td>下三角注意力掩码，完全屏蔽右侧信息</td><td>混合注意力掩码：前缀段内双向，预测段内单向</td></tr><tr><td><strong>典型模型</strong></td><td>GPT 系列、LLaMA</td><td>T5、UL2(Prefix LM 模式)、PEGASUS</td></tr><tr><td><strong>适用场景</strong></td><td>纯生成任务：对话、续写、代码生成</td><td>条件生成任务：摘要、翻译、问答</td></tr><tr><td><strong>优点</strong></td><td>工程实现简单，生成速度快</td><td>兼顾理解与生成，灵活性更强</td></tr><tr><td><strong>缺点</strong></td><td>上下文理解受限</td><td>模型结构复杂，推理速度稍慢</td></tr></tbody></table><p><strong>注意力掩码对比</strong>：</p><div class="language- vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Causal LM:</span></span>
+<span class="line"><span>┌─────────────┐</span></span>
+<span class="line"><span>│ 1 0 0 0 0 0 │  token1 只能看到自己</span></span>
+<span class="line"><span>│ 1 1 0 0 0 0 │  token2 可以看到 token1,2</span></span>
+<span class="line"><span>│ 1 1 1 0 0 0 │  token3 可以看到 token1,2,3</span></span>
+<span class="line"><span>│ 1 1 1 1 0 0 │</span></span>
+<span class="line"><span>│ 1 1 1 1 1 0 │</span></span>
+<span class="line"><span>│ 1 1 1 1 1 1 │  token6 可以看到所有</span></span>
+<span class="line"><span>└─────────────┘</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Prefix LM:</span></span>
+<span class="line"><span>┌─────────────┐</span></span>
+<span class="line"><span>│ 1 1 1 0 0 0 │  前缀段双向注意力</span></span>
+<span class="line"><span>│ 1 1 1 0 0 0 │</span></span>
+<span class="line"><span>│ 1 1 1 0 0 0 │</span></span>
+<span class="line"><span>│ 1 1 1 1 0 0 │  预测段单向注意力</span></span>
+<span class="line"><span>│ 1 1 1 1 1 0 │</span></span>
+<span class="line"><span>│ 1 1 1 1 1 1 │</span></span>
+<span class="line"><span>└─────────────┘</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p><strong>关键认知</strong>：Prefix LM 允许上下文样本之间进行全局注意力（双向），在 In-Context Learning 任务中可能优于 Causal LM。</p><hr><h3 id="_2-2-flash-attention" tabindex="-1">2.2 Flash Attention <a class="header-anchor" href="#_2-2-flash-attention" aria-label="Permalink to &quot;2.2 Flash Attention&quot;">​</a></h3><p><strong>面试题</strong>：请解释Flash Attention的算法设计原理，它是如何通过融合计算与I/O优化来提升Transformer注意力机制效率的？</p><p><strong>考察点</strong>：注意力优化</p><p><strong>详细解答</strong>：</p><p><strong>问题背景</strong>：标准 Attention 的 HBM 访问复杂度为 O(N²)，GPU 算力被内存带宽瓶颈严重制约。</p><p><strong>核心设计</strong>：</p><p><strong>1. 分块计算（Tiling）+ Kernel 融合</strong></p><ul><li>将 Q、K、V 分割成小块（如 64/128）</li><li>所有计算在 GPU 高速片上 SRAM 中完成（速度约为 HBM 的 100 倍）</li><li>避免实例化完整的 N×N 注意力矩阵，HBM 读写量从 O(N²) 降至 O(N)</li></ul><p><strong>2. Online Softmax（安全融合）</strong></p><ul><li>维护当前最大值 mᵢ，处理新块时增量更新</li><li>通过缩放因子 e^(m_old - m_new) 调整之前的指数项</li><li>增量更新归一化分母，保证数值稳定性</li></ul><p><strong>算法流程</strong>：</p><div class="language-python vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">python</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 伪代码</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> flash_attention</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(Q, K, V, block_size):</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    # 分块</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    Q_blocks </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> split(Q, block_size)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    K_blocks </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> split(K, block_size)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    V_blocks </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> split(V, block_size)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    # 初始化</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    O </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> zeros_like(Q)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    m </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> full(Q.shape[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">inf)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    l </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> zeros(Q.shape[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    # 分块计算</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i, q </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">in</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> enumerate</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(Q_blocks):</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> j, (k, v) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">in</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> enumerate</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">zip</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(K_blocks, V_blocks)):</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">            # 在 SRAM 中计算</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            s </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> q </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">@</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> k.T</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            m_new </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> max</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(m[i], s.max())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            p </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> exp(s </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_new)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            l_new </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> exp(m[i] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_new) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> l[i] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> p.sum()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            O[i] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (exp(m[i] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_new) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> l[i] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> O[i] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> p </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">@</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> v) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> l_new</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            m[i] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_new</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            l[i] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> l_new</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> O</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p><strong>训练 vs 推理价值</strong>：</p><table tabindex="0"><thead><tr><th>场景</th><th>核心收益</th></tr></thead><tbody><tr><td><strong>训练</strong></td><td>显存从 O(N²)→O(N)，配合重计算策略，支持训练更长序列</td></tr><tr><td><strong>推理</strong></td><td>配合 KV Cache 减少 HBM 访问瓶颈，Prefill 阶段收益显著</td></tr></tbody></table><p><strong>版本演进</strong>：</p><ul><li>v1：证明可行性</li><li>v2：优化非矩阵乘法</li><li>v3：为 Hopper 架构(H100)优化</li></ul><hr><h3 id="_2-3-为什么用-layernorm-而非-batchnorm" tabindex="-1">2.3 为什么用 LayerNorm 而非 BatchNorm <a class="header-anchor" href="#_2-3-为什么用-layernorm-而非-batchnorm" aria-label="Permalink to &quot;2.3 为什么用 LayerNorm 而非 BatchNorm&quot;">​</a></h3><p><strong>面试题</strong>：在大模型架构中，为何Transformer系列普遍采用Layer Normalization而非Batch Normalization？</p><p><strong>考察点</strong>：归一化选型</p><p><strong>详细解答</strong>：</p><table tabindex="0"><thead><tr><th>维度</th><th>BatchNorm</th><th>LayerNorm</th></tr></thead><tbody><tr><td><strong>归一化维度</strong></td><td>跨 batch，同一特征维度</td><td>跨特征，同一样本内</td></tr><tr><td><strong>batch_size 依赖</strong></td><td>强依赖，小 batch 不稳定</td><td>不依赖</td></tr><tr><td><strong>序列长度适应</strong></td><td>差</td><td>好，天然适配变长序列</td></tr><tr><td><strong>训练/推理一致性</strong></td><td>需维护 running mean/var</td><td>天然一致</td></tr></tbody></table><p><strong>BatchNorm 的问题</strong>：</p><ol><li><strong>依赖 batch 统计</strong>：小 batch 时统计量不稳定</li><li><strong>序列长度不一致</strong>：不同长度的序列统计量差异大</li><li><strong>训练推理不一致</strong>：需要维护全局统计量</li></ol><p><strong>LayerNorm 的优势</strong>：</p><ol><li><strong>独立于 batch</strong>：每个样本独立归一化</li><li><strong>适应变长序列</strong>：对每个 token 独立归一化</li><li><strong>训练推理一致</strong>：无需维护全局统计量</li></ol><p><strong>计算公式</strong>：</p><div class="language-python vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">python</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># BatchNorm</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">mean </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> x.mean(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">dim</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 跨 batch</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">std </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> x.std(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">dim</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">y </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> mean) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> std</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># LayerNorm</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">mean </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> x.mean(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">dim</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 跨特征</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">std </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> x.std(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">dim</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">y </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> mean) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> std</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><hr><h3 id="_2-4-layernorm-vs-rmsnorm" tabindex="-1">2.4 LayerNorm vs RMSNorm <a class="header-anchor" href="#_2-4-layernorm-vs-rmsnorm" aria-label="Permalink to &quot;2.4 LayerNorm vs RMSNorm&quot;">​</a></h3><p><strong>面试题</strong>：在大模型的实际应用中，Layer Normalization和RMS Normalization有哪些主要区别？主流模型更倾向于使用哪种？</p><p><strong>考察点</strong>：归一化对比</p><p><strong>详细解答</strong>：</p><table tabindex="0"><thead><tr><th>维度</th><th>LayerNorm</th><th>RMSNorm</th></tr></thead><tbody><tr><td><strong>计算方式</strong></td><td>减均值 + 除标准差</td><td>仅除均方根(RMS)</td></tr><tr><td><strong>计算量</strong></td><td>较高</td><td>减少约 1/3（去掉均值计算）</td></tr><tr><td><strong>训练速度</strong></td><td>较慢</td><td>快 7-15%</td></tr><tr><td><strong>主流选择</strong></td><td>BERT/GPT-2</td><td>LLaMA 系列/PaLM</td></tr></tbody></table><p><strong>计算公式对比</strong>：</p><div class="language-python vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">python</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># LayerNorm</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> layer_norm</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(x, gamma, beta):</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    mean </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> x.mean(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">dim</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">keepdim</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">True</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    std </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> x.std(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">dim</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">keepdim</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">True</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> gamma </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> mean) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> std </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> beta</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># RMSNorm</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> rms_norm</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(x, gamma, eps</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1e-6</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">):</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    rms </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> torch.sqrt(torch.mean(x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">**</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">dim</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">keepdim</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">True</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> eps)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> gamma </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> rms</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><strong>LLaMA 选择 RMSNorm 的原因</strong>：</p><ol><li>计算效率更高</li><li>在训练稳定性上表现不差</li><li>已成为新一代模型标配</li></ol><hr><h3 id="_2-5-位置编码" tabindex="-1">2.5 位置编码 <a class="header-anchor" href="#_2-5-位置编码" aria-label="Permalink to &quot;2.5 位置编码&quot;">​</a></h3><p><strong>面试题</strong>：请解释位置编码在Transformer模型中的作用，并说明为什么它对模型性能至关重要</p><p><strong>考察点</strong>：位置编码</p><p><strong>详细解答</strong>：</p><p><strong>作用</strong>：Transformer 的自注意力机制本身是<strong>置换不变的</strong>（permutation-invariant），位置编码为模型注入序列顺序信息，使其能够区分&quot;我爱你&quot;和&quot;你爱我&quot;。</p><p><strong>主要类型</strong>：</p><p><strong>1. 绝对位置编码</strong></p><div class="language-python vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">python</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 正弦/余弦位置编码</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> sinusoidal_encoding</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(max_len, d_model):</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    pe </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> torch.zeros(max_len, d_model)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    position </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> torch.arange(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, max_len).unsqueeze(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">).float()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    div_term </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> torch.exp(torch.arange(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, d_model, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">).float() </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">                         -</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(math.log(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">10000.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> d_model))</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    pe[:, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">::</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> torch.sin(position </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> div_term)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    pe[:, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">::</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> torch.cos(position </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> div_term)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pe</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p><strong>2. 相对位置编码</strong></p><ul><li>在注意力计算中考虑 token 间相对距离</li><li>更好地捕捉局部依赖关系</li></ul><p><strong>3. 旋转位置编码（RoPE）</strong></p><div class="language-python vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">python</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> rotary_embedding</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(x, seq_len, dim):</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    # 通过旋转矩阵编码相对位置</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    freqs </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 1.0</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> /</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">10000</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> **</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (torch.arange(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, dim, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">).float() </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> dim))</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    t </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> torch.arange(seq_len).float()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    freqs </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> torch.outer(t, freqs)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    sin, cos </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> freqs.sin(), freqs.cos()</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    # 应用旋转</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    x_rot </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> rotate_half(x)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> cos </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> x_rot </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> sin</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p><strong>RoPE 的优势</strong>：</p><ol><li>编码相对位置信息</li><li>支持长度外推</li><li>计算高效</li></ol><p><strong>主流模型选择</strong>：</p><ul><li>GPT 系列：可学习位置编码</li><li>LLaMA/GPT-NeoX：旋转位置编码(RoPE)</li></ul><hr><h3 id="_2-6-llm-面临的主要挑战" tabindex="-1">2.6 LLM 面临的主要挑战 <a class="header-anchor" href="#_2-6-llm-面临的主要挑战" aria-label="Permalink to &quot;2.6 LLM 面临的主要挑战&quot;">​</a></h3><p><strong>面试题</strong>：请简要说明当前大规模语言模型在实际应用和研究中面临的主要挑战和技术瓶颈</p><p><strong>考察点</strong>：LLM 挑战</p><p><strong>详细解答</strong>：</p><table tabindex="0"><thead><tr><th>挑战</th><th>说明</th></tr></thead><tbody><tr><td><strong>计算资源消耗</strong></td><td>训练/推理成本极高，千亿参数模型需要大量 GPU</td></tr><tr><td><strong>推理延迟</strong></td><td>自回归生成速度慢，影响实时应用</td></tr><tr><td><strong>幻觉问题</strong></td><td>生成看似合理但事实错误的内容</td></tr><tr><td><strong>上下文长度限制</strong></td><td>长文本处理能力受限（虽有改进但仍存在）</td></tr><tr><td><strong>可控性与安全性</strong></td><td>难以完全控制输出，存在安全风险</td></tr><tr><td><strong>评估困难</strong></td><td>开放式生成质量难以自动化评估</td></tr></tbody></table><p><strong>各挑战详解</strong>：</p><p><strong>1. 计算资源消耗</strong></p><ul><li>训练 GPT-4 级别模型需要数千张 GPU</li><li>推理成本高，限制大规模部署</li><li>能源消耗和环境影响</li></ul><p><strong>2. 推理延迟</strong></p><ul><li>自回归生成：每个 token 需要一次前向传播</li><li>长文本生成延迟高</li><li>影响用户体验</li></ul><p><strong>3. 幻觉问题</strong></p><ul><li>模型可能生成看似合理但错误的内容</li><li>难以完全消除</li><li>在关键应用场景风险高</li></ul><p><strong>4. 上下文长度限制</strong></p><ul><li>虽然技术在进步（如 128K 上下文）</li><li>长文本处理仍有挑战</li><li>注意力复杂度问题</li></ul><p><strong>5. 可控性与安全性</strong></p><ul><li>难以完全控制模型输出</li><li>可能生成有害内容</li><li>对齐问题</li></ul><p><strong>6. 评估困难</strong></p><ul><li>开放式生成质量难以量化</li><li>人工评估成本高</li><li>自动评估指标不完善</li></ul><h2 id="三、参考资料" tabindex="-1">三、参考资料 <a class="header-anchor" href="#三、参考资料" aria-label="Permalink to &quot;三、参考资料&quot;">​</a></h2><p>[1] 吴师兄学大模型公众号：微信公众号「吴师兄学大模型」</p><p>[2] 吴师兄大模型面试题网站：<a href="https://www.wushixiongai.com/" target="_blank" rel="noreferrer">https://www.wushixiongai.com/</a></p><p>[3] 知乎专栏：<a href="https://www.zhihu.com/column/c_1039097450233057280" target="_blank" rel="noreferrer">https://www.zhihu.com/column/c_1039097450233057280</a></p></div></div></main><footer class="VPDocFooter" data-v-6aab8dc8 data-v-268617e7><!--[--><!--]--><div class="edit-info" data-v-268617e7><div class="edit-link" data-v-268617e7><a class="VPLink link vp-external-link-icon no-icon edit-link-button" href="https://github.com/Kele-Bingtang/vitepress-theme-teek/edit/master/docs/AIGC/AI应用开发/06.AI面试题/4_模型架构面试题详解.md" target="_blank" rel="noreferrer" data-v-268617e7><!--[--><span class="vpi-square-pen edit-link-icon" data-v-268617e7></span> 在 GitHub 上编辑此页<!--]--></a></div><div class="last-updated" data-v-268617e7><p class="VPLastUpdated" data-v-268617e7 data-v-3aa6bde9>上次更新时间: <time datetime="2026-06-22T09:44:11.000Z" data-v-3aa6bde9></time></p></div></div><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-268617e7><span class="visually-hidden" id="doc-footer-aria-label" data-v-268617e7>Pager</span><div class="pager" data-v-268617e7><!----></div><div class="pager" data-v-268617e7><a class="VPLink link pager-link next" href="/AIGC/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/06.AI%E9%9D%A2%E8%AF%95%E9%A2%98/1_AI%E5%9F%BA%E7%A1%80%E4%B8%8E%E8%BF%9B%E9%98%B6%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AF%A6%E8%A7%A3.html" data-v-268617e7><!--[--><span class="desc" data-v-268617e7>下一页</span><span class="title" data-v-268617e7>AI基础与进阶面试题详解</span><!--]--></a></div></nav></footer><!--[--><!--[--><!--[--><!--[--><!--]--><!--[--><!--[--><!--]--><div class="tk-article-update"><div class="tk-article-update__title flx-align-center"><i class="tk-icon edit-icon" style="--icon-color-hover:var(--tk-theme-color);" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path
+      fill="currentColor"
+      d="m199.04 672.64 193.984 112 224-387.968-193.92-112-224 388.032zm-23.872 60.16 32.896 148.288 144.896-45.696zM455.04 229.248l193.92 112 56.704-98.112-193.984-112-56.64 98.112zM104.32 708.8l384-665.024 304.768 175.936L409.152 884.8h.064l-248.448 78.336zm384 254.272v-64h448v64h-448z"
+    ></path>
+  </svg></i><a href="/@pages/archivesPage.html" class="hover-color" aria-label="最近更新">最近更新</a></div><ul><!--[--><li class="flx-center"><span class="tk-article-update--num" aria-hidden="true">01</span><div class="tk-article-update__content"><a href="/daily/开源项目/0_开源项目.html" class="flx-1 hover-color sle" aria-label="开源项目"><span class="tk-article-title" aria-label="文章标题"><!--v-if--><!--[--><!--[-->开源项目<!--]--><!--]--><!--v-if--></span></a><span class="tk-article-update__content--date">2026-11-06 06:15:48</span></div></li><li class="flx-center"><span class="tk-article-update--num" aria-hidden="true">02</span><div class="tk-article-update__content"><a href="/Java/架构设计/分布式/06.分布式监控/2_Prometheus.html" class="flx-1 hover-color sle" aria-label="Prometheus监控"><span class="tk-article-title" aria-label="文章标题"><!--v-if--><!--[--><!--[-->Prometheus监控<!--]--><!--]--><!--v-if--></span></a><span class="tk-article-update__content--date">2026-11-06 05:08:48</span></div></li><li class="flx-center"><span class="tk-article-update--num" aria-hidden="true">03</span><div class="tk-article-update__content"><a href="/Java/Java开发技巧/01.JDK新特性/3_JDK25新特性.html" class="flx-1 hover-color sle" aria-label="JDK25 新特性"><span class="tk-article-title" aria-label="文章标题"><!--v-if--><!--[--><!--[-->JDK25 新特性<!--]--><!--]--><!--v-if--></span></a><span class="tk-article-update__content--date">2026-11-06 03:36:01</span></div></li><li class="flx-center"><span class="tk-article-update--num" aria-hidden="true"></span><div class="tk-article-update__content"><a href="/@pages/archivesPage.html" class="flx-1 hover-color sle" aria-label="更多文章 &gt;"><span class="tk-article-title" aria-label="文章标题"><!--v-if--><!--[--><!--[-->更多文章 &gt;<!--]--><!--]--><!--v-if--></span></a><!--v-if--></div></li><!--]--></ul></div><!--[--><!--]--><!--]--><!--v-if--><!-- 评论区 --><!--v-if--><!--]--><!--]--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div><!--]--></div>
+    
+    
+  </body>
+</html>
