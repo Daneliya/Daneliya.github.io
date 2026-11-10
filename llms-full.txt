@@ -27338,7 +27338,7 @@ url: /Java/数据结构/查找算法.md
 
 ASL (Aerage Search Length）
 
-![img](/assets/image.BLZ5FY7t.png)
+![img](/assets/image.BMw5v_YR.png)
 
 ### 顺序查找
 
@@ -27346,7 +27346,7 @@ ASL (Aerage Search Length）
 
 顺序表、链表
 
-![img](/assets/image.BLZ5FY7t.png)
+![img](/assets/image.BMw5v_YR.png)
 
 ### 折半查找（二分查找法）
 
@@ -54034,7 +54034,7 @@ url: /Java/数据结构/排序算法.md
 
 具体过程为：将第个记录的关键字Ki顺次与其前面记录的关键字Ki-1,ki-2,...ki进行比较，将所有关键字大于K的记录依次向后移动一个位置，直到遇见一个关键字小于或者等于Ki的记录Kj，此时K后面必为空位置，将第i个记录插入空放置即可。
 
-![img](/assets/image.BLZ5FY7t.png)
+![img](/assets/image.BMw5v_YR.png)
 
 ```c
 #include <stdio.h>
@@ -54146,7 +54146,7 @@ void bubble_sort(int arr[], int n) {
 
 用增量来划分子序列的方法，达到减少关键字移动次数的目的。
 
-![img](/assets/image.BLZ5FY7t.png)
+![img](/assets/image.BMw5v_YR.png)
 
 ```c
 void ShellPass(SeqList R, int d)
@@ -97266,7 +97266,7 @@ System.out.println(reversed); // Prints [2, 1, 0]
 
 虚拟线程、平台线程和系统内核线程的关系图如下所示（图源：[How to Use Java 19 Virtual Threads](https://medium.com/javarevisited/how-to-use-java-19-virtual-threads-c16a32bad5f7)）：
 
-![img](/assets/image.BLZ5FY7t.png)
+![img](/assets/image.BMw5v_YR.png)
 
 关于平台线程和系统内核线程的对应关系多提一点：在 Windows 和 Linux 等主流操作系统中，Java 线程采用的是一对一的线程模型，也就是一个平台线程对应一个系统内核线程。Solaris 系统是一个特例，HotSpot VM 在 Solaris 上支持多对多和一对一。具体可以参考 R 大的回答: [JVM 中的线程模型是用户级的么？](https://www.zhihu.com/question/23096638/answer/29617153)。
 
