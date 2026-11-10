@@ -62,6 +62,12 @@
 - [RAG 检索增强生成](/AIGC/AI应用开发/01.AI开发指南/3_RAG检索增强生成.md)
 - [MCP 协议](/AIGC/AI应用开发/01.AI开发指南/4_MCP协议.md)
 - [Agent Skills](/AIGC/AI应用开发/01.AI开发指南/Agent Skill.md)
+- [CC Switch](/AIGC/AI应用开发/01.AI开发指南/CC switch.md)
+- [Claude Code](/AIGC/AI应用开发/01.AI开发指南/Claude Code.md)
+- [CodeBuddy](/AIGC/AI应用开发/01.AI开发指南/CodeBuddy.md)
+- [Codex](/AIGC/AI应用开发/01.AI开发指南/Codex.md)
+- [Cursor](/AIGC/AI应用开发/01.AI开发指南/Cursor教程笔记.md)
+- [SpringBoot 业务接口改造为 CLI / MCP / Skill 供 Agent 调用完整方案](/AIGC/AI应用开发/01.AI开发指南/SpringBoot开发MCP.md)
 
 #### SpringAI
 
@@ -122,9 +128,18 @@
 - [OpenClaw 接入飞书](/AIGC/AI应用开发/05.OpenClaw/3_OpenClaw接入飞书.md)
 - [OpenClaw 配置修改](/AIGC/AI应用开发/05.OpenClaw/4_OpenClaw配置修改.md)
 
-#### 面试题
+#### AI面试题
 
-- [面试题](/AIGC/AI应用开发/06.面试题.md)
+- [AI基础与进阶面试题详解](/AIGC/AI应用开发/06.AI面试题/1_AI基础与进阶面试题详解.md)
+- [面试题](/AIGC/AI应用开发/06.AI面试题.md)
+- [RAG 面试题详解](/AIGC/AI应用开发/06.AI面试题/2_RAG面试题详解.md)
+- [Agent 面试题详解](/AIGC/AI应用开发/06.AI面试题/3_Agent面试题详解.md)
+- [模型架构面试题详解](/AIGC/AI应用开发/06.AI面试题/4_模型架构面试题详解.md)
+- [模型训练面试题详解](/AIGC/AI应用开发/06.AI面试题/5_模型训练面试题详解.md)
+- [强化学习与对齐面试题详解](/AIGC/AI应用开发/06.AI面试题/6_强化学习与对齐面试题详解.md)
+- [推理优化与部署面试题详解](/AIGC/AI应用开发/06.AI面试题/7_推理优化与部署面试题详解.md)
+- [吴师兄学大模型_公众号文章问题解答汇总](/AIGC/AI应用开发/06.AI面试题/8_吴师兄学大模型_公众号文章问题解答汇总.md)
+- [LangChain4j 面试题详解](/AIGC/AI应用开发/06.AI面试题/9_LangChain4j面试题详解.md)
 
 ### AI绘画
 
@@ -317,6 +332,7 @@
 - [Nacos集群搭建](/Java/微服务专栏/03.注册中心/5_Nacos集群搭建.md)
 - [Nacos动态读取xml日志配置](/Java/微服务专栏/03.注册中心/6_Nacos动态读取xml日志配置.md)
 - [Nacos源码分析之ConfigService](/Java/微服务专栏/03.注册中心/7_Nacos源码分析之ConfigService.md)
+- [Nacos 3 安装与避坑指南](/Java/微服务专栏/03.注册中心/8_Nacos3.md)
 
 #### 远程调用Feign
 
@@ -469,9 +485,12 @@
 - [IKAnalyzer 分词器](/Java/解决方案/工具类/IKAnalyzer分词器.md)
 - [Jsoup 爬虫](/Java/解决方案/工具类/Jsoup爬虫.md)
 - [PDF转换](/Java/解决方案/工具类/PDF转换.md)
+- [POI 数据导出](/Java/解决方案/工具类/POI.md)
 - [二维码生成](/Java/解决方案/工具类/二维码生成.md)
 - [加密算法](/Java/解决方案/工具类/加密算法.md)
 - [扫码登录](/Java/解决方案/工具类/扫码登录.md)
+- [消息推送](/Java/解决方案/工具类/消息推送.md)
+- [短信](/Java/解决方案/工具类/短信.md)
 
 #### 接口设计
 
@@ -523,7 +542,6 @@
 #### 行为型
 
 - [策略模式](/Java/设计模式/04.行为型/16_strategy.md)
-
 
 
 
@@ -788,6 +806,7 @@
 - [openEuler](/Linux/05.OpenEuler/1_openEuler.md)
 - [OpenEuler](/Linux/05.OpenEuler.md)
 - [openEuler安装Docker](/Linux/05.OpenEuler/2_openEuler安装Docker.md)
+- [PawSQL优化工具](/数据库/01.MySQL/PawSQL.md)
 - [PostgreSQL](/数据库/03.PostgreSQL.md)
 - [PostgreSQL介绍](/数据库/03.PostgreSQL/1_PostgreSQL介绍.md)
 - [profile环境配置](/常用框架/SpringBoot/SpringBoot程序开发/20_profile环境配置.md)

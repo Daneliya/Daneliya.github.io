@@ -6,7 +6,7 @@ url: /Java/架构设计/分布式/06.分布式监控/2_Prometheus.md
 
 ## 一、前言
 
-ARMS‍ 可以实现系统级的监控，这种方式简单高效，适合‌快速获得全面的监控能力。但 ARMS 主要关‍注通用的系统指标，如果我们想监控业务特有的指‍标，比如大模型的 Token 使用量、用户的‍活跃度等，就需要自定义的监控方案。
+ARMS 可以实现系统级的监控，这种方式简单高效，适合快速获得全面的监控能力。但 ARMS 主要关注通用的系统指标，如果我们想监控业务特有的指标，比如大模型的 Token 使用量、用户的活跃度等，就需要自定义的监控方案。
 
 回到最初的几个核心问题，都需要我们自己来考虑了：
 
@@ -55,7 +55,7 @@ ARMS‍ 可以实现系统级的监控，这种方式简单高效，适合‌快
 
 ### 数据收集方式
 
-在业务监控‍中，数据收集需要开‌发者手动埋点，因为‍只有业务开发者才知‍道要收集什么信息、‍从哪里收集、什么时候收集。
+在业务监控中，数据收集需要开发者手动埋点，因为只有业务开发者才知道要收集什么信息、从哪里收集、什么时候收集。
 
 跟业界主流的可观测性实现方案一样，我们的策略是在业务层收集 **最原始、最细粒度** 的数据，这样在查询层就能进行灵活的聚合分析。
 
@@ -65,11 +65,11 @@ ARMS‍ 可以实现系统级的监控，这种方式简单高效，适合‌快
 >
 > 源码：https://github.com/prometheus/prometheus
 
-即使没有学‍过 Prometh‌eus，也应该知道‍可以通过数据库存储‍的方式实现监控统计‍。
+即使没有学过 Prometheus，也应该知道可以通过数据库存储的方式实现监控统计。
 
-比如将监控数据存储到‍ MySQL 等关系型数据库中（或者 ‌Elasticsearch），之后从数‍据库中读取。适合需要持久化保存详细数据‍的场景，而且比较灵活，可以自己写 SQ‍L 实现复杂的查询和关联分析。
+比如将监控数据存储到 MySQL 等关系型数据库中（或者 Elasticsearch），之后从数据库中读取。适合需要持久化保存详细数据的场景，而且比较灵活，可以自己写 SQL 实现复杂的查询和关联分析。
 
-但缺点是收‍集监控数据可能会比‌较频繁，需要频繁写‍入数据库，容易对应‍用性能产生影响。
+但缺点是收集监控数据可能会比较频繁，需要频繁写入数据库，容易对应用性能产生影响。
 
 因此，专业的事情交给专业的中间件来做吧！
 
@@ -79,7 +79,7 @@ ARMS‍ 可以实现系统级的监控，这种方式简单高效，适合‌快
 
 Prometheus 的核心理念是将所有监控数据以 **时间序列** 的形式存储。根据它的 [数据模型](https://prometheus.io/docs/concepts/data_model/)，每个时间序列都由指标名称和一组标签唯一标识。比如 `http_requests_total{method="POST", handler="/api/xxl/ai"}` 就表示一个记录 POST 请求接口总数的时间序列。
 
-这样一来，Pr‍ometheus 能够高效地‌处理监控场景中的时间范围查询‍，比如过去一小时内各个接口的‍平均响应时间、CPU 使用率‍超过 80% 的服务器列表等。
+这样一来，Prometheus 能够高效地处理监控场景中的时间范围查询，比如过去一小时内各个接口的平均响应时间、CPU 使用率超过 80% 的服务器列表等。
 
 特性：
 
@@ -103,16 +103,16 @@ Prometheus 包含几个关键组件，职责明确：
 * **查询**：内置 PromQL 引擎，支持复杂聚合与分析。
 * **告警**：基于 PromQL 规则触发告警并推送至 Alertmanager。
 
-2）**Exporter（指标采集器）**：翻译‍器，将第三方系统（如数据库、操作系统、消息队列等）‌的指标转换为 Prometheus 格式。比如 N‍ode Exporter 可以收集 Linux 系‍统的 CPU、内存、磁盘等指标，MySQL Exp‍orter 可以收集数据库的性能指标。
+2）**Exporter（指标采集器）**：翻译器，将第三方系统（如数据库、操作系统、消息队列等）的指标转换为 Prometheus 格式。比如 Node Exporter 可以收集 Linux 系统的 CPU、内存、磁盘等指标，MySQL Exporter 可以收集数据库的性能指标。
 
 * **节点级**：Node Exporter（CPU、内存、磁盘等）。
 * **数据库**：MySQL Exporter、Redis Exporter。
 * **中间件**：Nginx Exporter、Kafka Exporter。
 * **黑盒探测**：Blackbox Exporter（HTTP、TCP、ICMP探测）。
 
-3）**Alertmanager（告警管理器）** ：理告警规‌则和通知分发。当指标触发预‍设的告警条件时，它负责将告‍警信息发送给相应的人员或系‍统，支持邮件等多种通知方式。接收 Prometheus Server 推送的告警，执行**去重、分组、静默、抑制**，并路由到邮件、Slack、Webhook 等通知渠道。
+3）**Alertmanager（告警管理器）** ：理告警规则和通知分发。当指标触发预设的告警条件时，它负责将告警信息发送给相应的人员或系统，支持邮件等多种通知方式。接收 Prometheus Server 推送的告警，执行**去重、分组、静默、抑制**，并路由到邮件、Slack、Webhook 等通知渠道。
 
-4）**Client Libraries（客户端库）** ：提供各种编程语言的 SDK‌，用于在自研应用中埋点并暴露自定义指标，支持 Go、Java、Python、Ruby 等语言。
+4）**Client Libraries（客户端库）** ：提供各种编程语言的 SDK，用于在自研应用中埋点并暴露自定义指标，支持 Go、Java、Python、Ruby 等语言。
 
 5）**Pushgateway（推送网关）** 适用于**短生命周期任务**（如 CronJob），允许任务结束前将指标 Push 到 Pushgateway，由 Server 再 Pull 获取。
 
@@ -139,37 +139,37 @@ Prometheus 采用 **拉取模式** 来收集指标数据，而不是由项目主
 
 1）Counter：累积计数器，只能增加或重置为零，适合统计请求总数、错误次数等单调递增的指标。在我们的 AI 监控场景中，`ai_model_requests_total` 大模型请求总数就是一个典型的 Counter 指标。
 
-2）Gau‍ge：仪表盘类型，数‌值可以任意上下波动，‍适合记录当前状态值，‍比如内存使用量、当前‍在线用户数、队列长度等。
+2）Gauge：仪表盘类型，数值可以任意上下波动，适合记录当前状态值，比如内存使用量、当前在线用户数、队列长度等。
 
-3）Histog‍ram：直方图类型，用于观察数据‌分布情况，比如请求响应时间的‍分布。它会自动生成多个时间序列，包括‍各个桶的计数、总和以及总数，可以‍用来计算百分位数等统计指标。
+3）Histogram：直方图类型，用于观察数据分布情况，比如请求响应时间的分布。它会自动生成多个时间序列，包括各个桶的计数、总和以及总数，可以用来计算百分位数等统计指标。
 
-4）Summ‍ary：和 Histog‌ram 类似，但它在客户‍端预先计算百分位数，适合‍需要精确百分位数计算但对‍网络传输有要求的场景。
+4）Summary：和 Histogram 类似，但它在客户端预先计算百分位数，适合需要精确百分位数计算但对网络传输有要求的场景。
 
-通过合理选‍择指标类型，我们可‌以用最小的存储开销‍获得最大的监控价值‍。
+通过合理选择指标类型，我们可以用最小的存储开销获得最大的监控价值。
 
 ### 存储机制
 
 提到拉模式，可能会有朋友误以为 Prometheus 不存储数据，实际上它拥有自己的高性能时间序列数据库 [TSDB](https://prometheus.io/docs/prometheus/latest/storage/)，单节点就能处理数百万个时间序列，满足大部分企业的监控需求。
 
-新写入的数据首先存储‍在内存中，达到时间阈值（每 2 小时一‌个数据块）后批量写入磁盘，这种设计在保‍证查询性能的同时也提供了良好的写入‍吞吐量。预写日志 WAL 机制确保了数据的‍可靠性，即使系统崩溃也不会丢失数据。
+新写入的数据首先存储在内存中，达到时间阈值（每 2 小时一个数据块）后批量写入磁盘，这种设计在保证查询性能的同时也提供了良好的写入吞吐量。预写日志 WAL 机制确保了数据的可靠性，即使系统崩溃也不会丢失数据。
 
 ![img](/assets/NuWNujC70caqIZJ3.DCt4hvcR.webp)
 
 ### 和传统方案的对比
 
-回到我们的业务监控需求‍，可以利用 Prometheus 提供的 ‌Counter 等指标类型，轻松统计 AI‍ 模型的调用次数、响应时间、Token 消‍耗等关键指标。因为只是在内存中进行简单的数‍字递增统计，所以性能比数据库高很多。
+回到我们的业务监控需求，可以利用 Prometheus 提供的 Counter 等指标类型，轻松统计 AI 模型的调用次数、响应时间、Token 消耗等关键指标。因为只是在内存中进行简单的数字递增统计，所以性能比数据库高很多。
 
 具体的对比表格：
 
 | 对比维度 | 数据库方案                        | Prometheus 方案                      |
 | -------- | --------------------------------- | ------------------------------------ |
 | 核心用途 | 审计、深度分析、事后追溯          | 实时监控、性能分析、告警             |
-| 数据粒度 | 极高：记录每个请‍求的全部细节      | 聚合：只记录统计值，丢失个体请求细节 |
-| 性能‌影响 | 较高：每次请求都需要数据库写入    | 极低：只是内存‍中的原子操作           |
-| 实时性   | 差：从海量数据中实时聚合计算很慢 ‍ | 极好：预聚合数据，查询极快           |
-| 存储成本 | 非常高：与请求‍量成正比            | 非常低：与指标基数成正比             |
+| 数据粒度 | 极高：记录每个请求的全部细节      | 聚合：只记录统计值，丢失个体请求细节 |
+| 性能影响 | 较高：每次请求都需要数据库写入    | 极低：只是内存中的原子操作           |
+| 实时性   | 差：从海量数据中实时聚合计算很慢  | 极好：预聚合数据，查询极快           |
+| 存储成本 | 非常高：与请求量成正比            | 非常低：与指标基数成正比             |
 
-因此，我们肯定‍是选择 Prometheu‌s 方案，不仅是因为它更适‍合实时监控分析的需求，而且‍它和 Grafana 也能‍轻松整合，开发成本也很低。
+因此，我们肯定是选择 Prometheus 方案，不仅是因为它更适合实时监控分析的需求，而且它和 Grafana 也能轻松整合，开发成本也很低。
 
 ## 三、数据可视化 - Grafana
 
@@ -179,7 +179,7 @@ Prometheus 采用 **拉取模式** 来收集指标数据，而不是由项目主
 
 ![img](/assets/44cqjd2s4a.C5gH5RaV.png)
 
-虽然 Grafana‍ 是一个功能非常丰富的企业级产品，拥有告‌警管理、用户权限控制、插件生态、云服务集‍成等高级特性，但对于我们目前的需求来说，‍将它当作一个看板工具来使用，知道怎么创建‍看板和接入数据进行展示就足够了。
+虽然 Grafana 是一个功能非常丰富的企业级产品，拥有告警管理、用户权限控制、插件生态、云服务集成等高级特性，但对于我们目前的需求来说，将它当作一个看板工具来使用，知道怎么创建看板和接入数据进行展示就足够了。
 
 ## 四、环境准备
 
@@ -221,7 +221,7 @@ scrape_configs:
           app: "prometheus"
 ```
 
-默认配置会‍监控 Promet‌heus 自己，这‍样我们可以先测试环境是‍否正常。
+默认配置会监控 Prometheus 自己，这样我们可以先测试环境是否正常。
 
 💡 [Prometheus Rules](https://prometheus.io/docs/prometheus/latest/getting_started/#configure-rules-for-aggregating-scraped-data-into-new-time-series) 是用于定义监控指标的逻辑规则，包括：
 
@@ -252,11 +252,11 @@ scrape_configs:
 prometheus_target_interval_length_seconds
 ```
 
-这个指标记录了 ‍Prometheus 抓取目标‌之间的实际时间间隔，比如你配置‍每 15 秒抓取一次，但实际可‍能是 14.8 秒或 15.2‍ 秒，这个指标就记录这些实际值。
+这个指标记录了 Prometheus 抓取目标之间的实际时间间隔，比如你配置每 15 秒抓取一次，但实际可能是 14.8 秒或 15.2 秒，这个指标就记录这些实际值。
 
 ![img](/assets/j8uhh1E1QxHUmcGp.C9BMgPZE.webp)
 
-结果中的每‍一行都是一个时间序‌列，大括号内的是标‍签（维度）。其中：
+结果中的每一行都是一个时间序列，大括号内的是标签（维度）。其中：
 
 * `quantile="0.01"` 表示第 1 百分位数（最快的 1%）
 * `quantile="0.5"` 表示第 50 百分位数（中位数）
@@ -270,7 +270,7 @@ prometheus_target_interval_length_seconds
 prometheus_target_interval_length_seconds{quantile="0.99"}
 ```
 
-7）在 Gr‍aph 页签可以查看可‌视化图表，比如计算过去‍ 1 分钟内 Prom‍etheus 每秒平均‍创建的内存数据块数：
+7）在 Graph 页签可以查看可视化图表，比如计算过去 1 分钟内 Prometheus 每秒平均创建的内存数据块数：
 
 ```sh
 rate(prometheus_tsdb_head_chunks_created_total[1m])
@@ -279,6 +279,23 @@ rate(prometheus_tsdb_head_chunks_created_total[1m])
 如图：
 
 ![img](/assets/SdIqvYk3d221mbHL.DQevCq1i.webp)
+
+### Docker 安装 Prometheus（可选）
+
+除了直接下载二进制包，也可以用 Docker 部署 Prometheus，把配置文件和 TSDB 数据目录挂载到宿主机即可：
+
+```sh
+docker run -d --name prometheus \
+  -p 9090:9090 \
+  -v $(pwd)/prometheus.yml:/etc/prometheus/prometheus.yml \
+  -v $(pwd)/data:/prometheus \
+  prom/prometheus
+```
+
+启动后同样访问 `http://localhost:9090`。更完整的 Prometheus + Grafana 容器化部署步骤可以参考：
+
+* [docker 部署监控 Prometheus + Grafana](https://www.cnblogs.com/misakivv/p/18059352)
+* [Docker 安装 Prometheus](https://developer.aliyun.com/article/935461)
 
 ### Grafana 安装
 
@@ -312,21 +329,36 @@ Grafana 与 Prometheus 打配合的 [工作原理](https://grafana.com/docs/graf
 
 配置 Prometheus 服务器地址，然后测试连接：
 
-💡 除了手动‍配置外，Grafana 还‌支持通过 Provisio‍ning 配置文件自动导入‍数据源和仪表板，这在自动化‍部署（或者多环境）中很有用。
+💡 除了手动配置外，Grafana 还支持通过 Provisioning 配置文件自动导入数据源和仪表板，这在自动化部署（或者多环境）中很有用。
 
-2）快速导‍入现成的仪表板模板‌：  
+2）快速导入现成的仪表板模板：  
 
 3）进入看板页面，查看导入的看板：
 
-4）查看看‍板详情，一个仪表板‌可以包含多个 Pa‍nel（图表面板）‍：
+4）查看看板详情，一个仪表板可以包含多个 Panel（图表面板）：
 
 每个 Panel 都可以查看具体的数据、状态和查询语句：
 
-5）右上角‍可以将整个仪表板导‌出为 JSON 格‍式，便于分享和备份‍：
+5）右上角可以将整个仪表板导出为 JSON 格式，便于分享和备份：
 
 同样也可以通过导入 JSON 快速创建仪表板：
 
 ## 五、SpringBoot集成使用
+
+### 前置概念：Micrometer 与 Prometheus
+
+**Prometheus**：Prometheus 是一个维度时间序列数据库，具有内置的用户界面、自定义查询语言和数学运算功能。Prometheus 设计为基于拉取模型运行，定期从应用实例中抓取指标，基于服务发现机制。
+
+**Micrometer**：Micrometer 在底层使用了 Prometheus 的 Java 客户端；该客户端有两个版本，Micrometer 都支持。如果想使用“新”客户端（1.x），使用 `micrometer-registry-prometheus`；如果想使用“旧”客户端（0.x），使用 `micrometer-registry-prometheus-simpleclient`。
+
+| 依赖 | 底层 Prometheus 客户端 | 说明 |
+| --- | --- | --- |
+| `micrometer-registry-prometheus` | 1.x（新） | 推荐使用，Spring Boot 2.x/3.x 项目通常选它 |
+| `micrometer-registry-prometheus-simpleclient` | 0.x（旧） | 兼容仍依赖旧客户端的项目 |
+
+可以把 Micrometer 理解为应用侧的**指标门面**：业务代码只依赖 Micrometer 的 `Counter`、`Timer`、`Gauge` 等 API，由具体的 registry 实现负责把指标转换成 Prometheus 能识别的格式，并通过 `/actuator/prometheus` 暴露出去。
+
+> `spring-boot-starter-actuator` 只提供 Micrometer 核心能力和 Actuator 端点，要暴露 Prometheus 指标，仍需显式引入 `micrometer-registry-prometheus`（或旧客户端对应的 simpleclient 依赖）。
 
 ### 1.Spring Boot 工程集成 Micrometer
 
@@ -453,7 +485,7 @@ prometheusCustomMonitor.getReportDialResponseTime().record(endTime-startTime, Ti
 
 在浏览器访问 `http://127.0.0.1:9001/actuator/prometheus` ，就可以看到服务的一系列不同类型 metrics 信息，例如`jvm_memory_used_bytes gauge`、`jvm_gc_memory_promoted_bytes_total counter` ，`go_api_report_dial_request_count`等
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/JfTPiahTHJhrkf2DzYicJ84YjNTO9WGE9TB4sQicDO0fhqPIyJDBFMeZfnzsc9YCGW9ricRgZMfS47A51v4jCosOTw/640?wx_fmt=png\&tp=wxpic\&wxfrom=5\&wx_lazy=1\&wx_co=1)
+![img\_1.png](/assets/5f03f6f8-8410-4273-8278-6e27ded6e552.D5O9CRfO.png)
 
 到此，Spring Boot 工程集成 Micrometer 就已经完成，接下里就要与 Prometheus 进行集成了。
 
@@ -497,7 +529,7 @@ scrape_configs:
 docker run -d --name prometheus -p 9090:9090 -v/usr/local/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
 ```
 
-![图片](/assets/640.BE-3mZVN.png)
+![图片](/assets/81c79740-d319-4a3c-84c7-583de07b5e31.BE-3mZVN.png)
 
 ##### 2.2集成配置
 
@@ -517,9 +549,9 @@ scrape_configs:
 
 这里 `localhost:9001` 就是上边本地启动的服务地址，也就是 Prometheus 要监控的服务地址。同时可以添加一些与应用相关的标签，方便后期执行 PromSQL 查询语句区分。最后重启 Prometheus 服务
 
-![图片](/assets/640.BE-3mZVN.png)
+![8736aa45-7c35-4161-90a6-a2fb39f0bad9.png](/assets/8736aa45-7c35-4161-90a6-a2fb39f0bad9.CTxAmR83.png)
 
-![图片](/assets/640.BE-3mZVN.png)
+![c49b1dad-6f63-41da-9c2e-0e13a2fdf22c.png](/assets/c49b1dad-6f63-41da-9c2e-0e13a2fdf22c.CM-2w287.png)
 
 ### 3.使用 Grafana Dashboard 展示监控项
 
@@ -536,22 +568,37 @@ docker run -d --name grafana -p 3000:3000 -v /usr/local/grafana:/var/lib/grafana
 
 ##### 3.2配置prometheus数据源
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/JfTPiahTHJhrkf2DzYicJ84YjNTO9WGE9TrsYHAibSroeibGz7fcJtbdn9o4GzK1vQ8hSbQiacXm98k6juojWp8KJsg/640?wx_fmt=png\&tp=wxpic\&wxfrom=5\&wx_lazy=1\&wx_co=1)
+![87ce18d9-fdfc-4851-9cb3-4dc8574a69f4.png](/assets/87ce18d9-fdfc-4851-9cb3-4dc8574a69f4.BOPX9QAi.png)
 
 ##### 3.3增加jvm面板
 
 模板编号为4701
 
-![图片](/assets/640.BE-3mZVN.png)
+![7014ea9b-1699-4439-ab65-2bf2fd6997c8.png](/assets/7014ea9b-1699-4439-ab65-2bf2fd6997c8.NC3IEUzI.png)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/JfTPiahTHJhrkf2DzYicJ84YjNTO9WGE9T1NNuiaed5icDqURydelENgYzVicp6UjRibhlDSiaVoMscosdmiaG5CqYiaGNw/640?wx_fmt=png\&tp=wxpic\&wxfrom=5\&wx_lazy=1\&wx_co=1)
+![de148a71-3d82-4926-bba5-d35669718628.png](/assets/de148a71-3d82-4926-bba5-d35669718628.tV4yxfCY.png)
 
 ##### 3.4配置业务接口监控面板
 
-![图片](/assets/640.BE-3mZVN.png)
+![2bf4532e-a166-4466-94f3-cb448f737847.png](/assets/2bf4532e-a166-4466-94f3-cb448f737847.D9HH-U--.png)
 
 ## 参考资料
 
-\[1]. [springboot+Prometheus+grafana 实现自定义监控（请求数、响应时间、JVM性能）](https://blog.csdn.net/GZ946/article/details/126619218)
+### 文章
 
-\[2]. https://blog.51cto.com/u\_16099246/7607251
+1. [SpringBoot 实现 QPS 监控：别等系统宕机了才知道加监控](https://mp.weixin.qq.com/s/IfeTwUnZCgY6zOw1q5SMxg)
+2. [使用 Micrometer 与 Prometheus 集成监控 JVM](https://www.cnblogs.com/lizexiong/p/18772595)
+3. [Spring 中关于 Micrometer 的介绍](https://cloud.springdoc.tech/micrometer/implementations/prometheus)
+4. [阿里云 Prometheus 接入 Micrometer](https://help.aliyun.com/zh/prometheus/user-guide/monitor-micrometer-java-applications)
+5. [springboot + Prometheus + grafana 实现自定义监控（请求数、响应时间、JVM 性能）](https://blog.csdn.net/GZ946/article/details/126619218)
+6. [Prometheus + Grafana 监控实践](https://blog.51cto.com/u_16099246/7607251)
+
+### 视频
+
+* [B 站：Prometheus 监控入门](https://www.bilibili.com/video/BV1QPYDztEtW)
+* [B 站：Prometheus + Grafana 实战](https://www.bilibili.com/video/BV18yKLzFEZa)
+
+### Docker 安装 Prometheus
+
+* [docker 部署监控 Prometheus + Grafana](https://www.cnblogs.com/misakivv/p/18059352)
+* [Docker 安装 Prometheus](https://developer.aliyun.com/article/935461)

@@ -130,6 +130,13 @@ url: /@pages/nav.md
   link: https://code.claude.com/docs/zh-CN/overview
   img: /svg/website/ClaudeCode.png
   badge: AI编程工具
+  badgeType: tip
+- name: Codex
+  desc: OpenAI 推出的云端软件工程智能体（AI Agent）。
+  link: https://openai.com/zh-Hans-CN/codex/
+  img: /svg/website/ChatGPT.svg
+  badge: AI编程工具
+  badgeType: tip
 - name: Windsurf
   desc: Codeium公司推出的AI编程工具，采用 AI Flow 范式，支持多步骤、多工具协同，自动维护上下文状态，像 Copilot 一样与开发者协作，像 Agent 一样独立处理复杂任务。
   link: https://windsurf.com/
@@ -184,6 +191,41 @@ url: /@pages/nav.md
 
 :::
 
+#### AI开发工具扩展
+
+::: navCard
+
+```yaml
+- name: CC Switch
+  desc: 一款开源、跨平台的 AI 接口与模型配置管理工具，可在 Windows、macOS、Linux 上集中管理 API Key、Base URL、模型参数，并实现 Claude Code、Codex、Gemini CLI 等工具的一键切换。
+  link: https://ccswitch.io/zh/
+  img: /svg/website/cc-switch.ico
+  badge: AI中转站
+- name: Codex++
+  desc: 一个开源的、基于 Rust + Tauri 的 Codex/ChatGPT 桌面端外部启动器与增强管理工具，可在不修改官方安装文件的前提下，为 Codex 桌面版提供供应商切换、界面增强、会话管理、中文界面等扩展功能。
+  link: https://codexpp.cc/
+  img: /svg/website/Codex++.png
+  badge: AI中转站
+- name: AiCodings Pilot
+  desc: AICodings 提供的跨平台客户端，用于在 Cursor IDE 中启用 AI 功能、续杯、拼车、远程开发等服务，支持 Windows、macOS 与 Linux，并通过登录后选择商品即可启动服务。
+  link: https://cursor.aicodings.club/docs/
+  img: /svg/website/aicodings-pilot.svg
+  badge: AI中转站
+- name: Cursor BYOK
+  desc: 一个运行在本机的 Cursor 模型网关，帮助你在 Cursor 中使用自己配置的模型服务。
+  link: https://github.com/leookun/cursor-byok
+  img: /svg/website/Cursor BYOK.png
+  badge: AI中转站
+- name: Cherry Studio
+  desc: 一款集成了多模型服务的桌面客户端，旨在提升工作效率。它支持超过 300 个行业的智能助手，提供 AI 对话、知识库管理、AI 绘画等多种功能。
+  link: https://cherryai.com/
+  img: /svg/website/Cherry Studio.png
+  badge: 模型客户端
+
+```
+
+:::
+
 ## 🛠️编程开发工具
 
 ### Java必备
@@ -206,7 +248,37 @@ url: /@pages/nav.md
   desc: Maven 作为 Java 项目的核心构建工具，能自动化处理依赖管理、项目编译、打包部署等流程，是 Java 开发者必备技能。
   link: https://maven.apache.org/
   img: /svg/website/Maven.png
-  badge: 构建工具
+  badge: 依赖管理
+- name: Gradle
+  desc: 一个基于 JVM、使用 Groovy 或 Kotlin DSL 的开源自动化构建工具，结合了 Ant 的灵活性与 Maven 的约定式管理，常用于 Java 与 Android 项目的构建与依赖管理。
+  link: https://gradle.org/
+  img: /svg/website/gradle.ico
+  badge: 依赖管理
+```
+
+:::
+
+### JVM调优
+
+::: navCard
+
+```yaml
+- name: Arthas
+  desc: 一款线上监控诊断产品，通过全局视角实时查看应用 load、内存、gc、线程的状态信息，并能在不修改应用代码的情况下，对业务问题进行诊断，包括查看方法调用的出入参、异常，监测方法执行耗时，类加载信息等，大大提升线上问题排查效率。
+  link: https://arthas.aliyun.com/
+  img: /svg/website/Arthas.ico
+  badge: JVM调优
+  badgeType: tip
+- name: JProfiler
+  desc: 一款专业的Java性能分析和JVM监控工具，用于定位性能瓶颈、内存泄漏和线程问题。
+  link: https://jprofiler.cn/
+  img: /svg/website/JProfiler.png
+  badge: JVM调优
+- name: Java Mission Control
+  desc: 一套由 Oracle 提供的高级性能监控与分析工具，用于读取和分析 Java Flight Recorder（JFR）收集的 JVM 运行时数据，帮助开发者以极低开销诊断 Java 应用性能问题。
+  link: https://docs.oracle.com/javacomponents/jmc-5-5/jmc-user-guide/intro.htm#JMCCI109
+  img: /svg/website/Oracle.svg
+  badge: JVM调优
 ```
 
 :::
@@ -237,6 +309,16 @@ url: /@pages/nav.md
   desc: 连接 MongoDB 最快的方式。通过这款现代且可扩展的命令行界面，轻松查询数据、配置设置及执行其他作——配备语法高亮、智能自动补全、上下文帮助和错误信息。
   link: https://www.mongodb.com/try/download/shell
   img: /svg/website/MongoDB.svg
+  badge: 数据库
+- name: PostgreSQL
+  desc: 一个功能强大的开源对象-关系型数据库管理系统（ORDBMS），支持丰富的数据类型和高级扩展功能。
+  link: https://www.postgresql.org/
+  img: /svg/website/PostgreSQL.ico
+  badge: 数据库
+- name: Neo4j
+  desc: 开源的原生图数据库（Graph Database），使用节点（Node）和关系（Relationship）来存储高度关联的数据，适合社交网络、推荐系统和知识图谱等场景，并使用 Cypher 查询语言进行操作。
+  link: https://neo4j.com/
+  img: /svg/website/Neo4j.svg
   badge: 数据库
 ```
 
@@ -532,8 +614,68 @@ url: /@pages/nav.md
   desc: 开源的 应用性能监控（APM） 和 可观测性分析平台，专为 微服务 和 云原生架构 设计。它提供 分布式追踪、服务网格遥测分析、度量聚合 和 可视化 功能，支持多种编程语言的探针。
   link: https://skywalking.apache.org/
   img: /svg/website/Skywalking.png
-  badge: 中间件
+  badge: 链路追踪
   badgeType: tip
+- name: Nacos
+  desc: 阿里巴巴开源的“动态服务发现、配置管理和服务管理平台”，用于解决微服务架构中“服务在哪里”和“配置如何动态生效”等核心问题，支持服务注册发现、动态配置、健康检查，并与 Spring Cloud、Dubbo、Kubernetes 等生态深度集成。
+  link: https://nacos.io/
+  img: /svg/website/nacos.svg
+  badge: 注册/配置中心
+- name: Canal
+  desc: 阿里巴巴开源的用Java开发的基于数据库增量日志解析，提供增量数据订阅&消费的中间件。
+  link: https://github.com/alibaba/canal
+  img: /svg/website/canal.svg
+  badge: 数据同步
+- name: Sentinel
+  desc: 面向分布式、多语言异构化服务架构的流量治理组件，主要以流量为切入点，从流量控制、流量路由、熔断降级、系统自适应保护等多个维度来帮助用户保障微服务的稳定性。
+  link: https://sentinelguard.io/
+  img: /svg/website/Sentinel.ico
+  badge: 流控组件
+- name: Prometheus
+  desc: 一个开源的系统监控与告警工具包，最初由 SoundCloud 开发，现由 CNCF（云原生计算基金会）托管，主要用于以时间序列方式采集、存储和查询监控指标数据，并广泛应用于 Kubernetes、Docker 等云原生环境。
+  link: https://prometheus.io/
+  img: /svg/website/Prometheus.svg
+  badge: 监控系统
+- name: Grafana
+  desc: 一个开源的数据可视化与监控平台，由 Grafana Labs 开发，可连接 Prometheus、InfluxDB、MySQL 等多种数据源，用于构建仪表盘、监控指标并设置告警。
+  link: https://grafana.com/
+  img: /svg/website/Grafana.svg
+  badge: 监控平台
+- name: Seata
+  desc: 一款开源的分布式事务解决方案，致力于在微服务架构下提供高性能和简单易用的分布式事务服务。
+  link: https://seata.apache.org/
+  img: /svg/website/Seata.jpeg
+  badge: 分布式事务
+- name: Zipkin
+  desc: 一个由Twitter开源的分布式链路追踪系统，用于收集、存储和可视化微服务调用链数据，以帮助定位延迟和性能瓶颈。
+  link: https://zipkin.io/
+  img: /svg/website/Zipkin.ico
+  badge: 链路追踪
+- name: Yearning
+  desc: 一个轻量级的Web端的MySQL SQL语句审核平台，提供查询审计，SQL审核，SQL回滚，自定义工作流等多种功能。
+  link: https://yearning.io/
+  img: /svg/website/Yearning.png
+  badge: SQL审计
+- name: Elasticsearch
+  desc: 一个开源的分布式搜索和分析引擎，专为速度、扩展和 AI 应用而打造。
+  link: https://www.elastic.co/cn/elasticsearch
+  img: /svg/website/Elasticsearch.svg
+  badge: 搜索引擎
+- name: Kibana
+  desc: 一个开源的数据分析与可视化平台，专为与 Elasticsearch 协同工作而设计，可通过图表、仪表盘等方式展示和分析存储在 Elasticsearch 中的数据。
+  link: https://www.elastic.co/cn/kibana
+  img: /svg/website/Kibana.svg
+  badge: 可视化平台
+- name: Logstash
+  desc: 一款开源的实时数据收集、处理和传输管道工具，能够从多种来源采集数据，进行转换处理，并输出到指定存储或分析系统。
+  link: https://www.elastic.co/cn/logstash
+  img: /svg/website/Logstash.svg
+  badge: 数据收集
+- name: Filebeat
+  desc: 一款可以从各种来源收集和转发日志和文件的工具，支持 Elasticsearch、Logstash 和 Kibana。
+  link: https://www.elastic.co/cn/beats/filebeat
+  img: /svg/website/Filebeat.svg
+  badge: 日志收集
 
 ```
 
@@ -662,6 +804,22 @@ url: /@pages/nav.md
   link: https://e.dangdang.com/
   img: /svg/website/当当云阅读.png
   badge: 阅读器,APP
+
+```
+
+:::
+
+### 3D建模
+
+::: navCard
+
+```yaml
+- name: Blender
+  desc: 一款永久开源免费的 3D 创作软件，支持整个 3D 创作流程：建模、雕刻、骨骼装配、动画、模拟、实时渲染、合成和运动跟踪，甚至可用作视频编辑及游戏创建。
+  link: https://www.blender.org/
+  img: /svg/website/Blender.svg
+  badge: 3D建模
+  badgeType: tip
 
 ```
 
@@ -799,6 +957,11 @@ url: /@pages/nav.md
   link: https://www.tinymediamanager.org/
   img: /svg/website/TinyMediaManager.svg
   badge: 影片搜刮
+- name: 极影派
+  desc: 一款面向本地影音收藏家、NAS 用户及影音发烧友的专业级管理系统，极影派为您提供一站式的电影管理和远程点播方案。
+  link: https://www.jeenpi.com/
+  img: /svg/website/jeenpi.ico
+  badge: 影片管理
 - name: 格式工厂
   desc: 一款多媒体格式转换软件,支持MP4、MP3、AVI、MOV、JPG、PNG、PDF等格式转换，集合视频转换、视频压缩、音频处理、图片压缩、文档转换等功能。
   link: http://www.pcfreetime.com/formatfactory/CN/index.html
